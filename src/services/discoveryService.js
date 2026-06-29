@@ -55,16 +55,16 @@ export async function updateDiscovery() {
         let gemstones = [];
         let motifs = [];
         try {
-            const gemRes = await query('SELECT DISTINCT gemstone FROM product_gemstone_metrics ORDER BY gemstone');
+            const gemRes = await query('SELECT DISTINCT stone_category as gemstone FROM product_gemstone_metrics ORDER BY gemstone');
             gemstones = gemRes.rows.map(r => r.gemstone);
         } catch (e) {
-            log.warn("[DISCOVERY] product_gemstone_metrics table not found or empty");
+            log.warn("[DISCOVERY] product_gemstone_metrics table not found or empty", { error: e.message });
         }
         try {
             const motifRes = await query('SELECT DISTINCT motif FROM product_motifs ORDER BY motif');
             motifs = motifRes.rows.map(r => r.motif);
         } catch (e) {
-            log.warn("[DISCOVERY] product_motifs table not found or empty");
+            log.warn("[DISCOVERY] product_motifs table not found or empty", { error: e.message });
         }
 
         // 4. Load Ontology mappings

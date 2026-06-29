@@ -31,9 +31,10 @@ const fastify = Fastify({
   disableRequestLogging: true,
 });
 
-// 1. Health Check Endpoint (Highest Priority - BEFORE hooks)
-fastify.get('/health', async () => {
-  return { status: 'ALIVE', uptime: process.uptime() };
+// 1. Health Check Endpoint (Highest Priority - BEFORE any hooks)
+// Using a separate route registration to avoid global hooks for health checks
+fastify.get('/health', { logLevel: 'warn' }, async (request, reply) => {
+  return { status: 'ALIVE', uptime: process.uptime(), timestamp: new Date().toISOString() };
 });
 
 // Trace ID & Request Logging Middleware
@@ -82,7 +83,7 @@ if (ingestionQueue) {
     serverAdapter,
   });
   serverAdapter.setBasePath('/admin/queues');
-  fastify.register(serverAdapter.registerPlugin(), { prefix: '/admin/queues', basePath: '/admin/queues' });
+  fastify.register(serverAdapter.registerPlugin(), { prefix: '/admin/queues' });
   log.info('BullMQ Dashboard available at /admin/queues');
 } else {
   log.warn('BullMQ Queue not initialized. Dashboard disabled.');
@@ -739,13 +740,21 @@ fastify.setNotFoundHandler(async (request, reply) => {
 
 // Bind and boot
 const port = process.env.PORT || 3000;
-try {
-  console.log(`[BOOT] Attempting to listen on port ${port}...`);
-  await fastify.listen({ port, host: '0.0.0.0' });
-  console.log(`\n==========================================================`);
-  console.log(`INDRIYA GATEWAYS ONLINE AT: http://localhost:${port}`);
-  console.log(`==========================================================\n`);
-} catch (err) {
-  fastify.log.error(err);
-  process.exit(1);
-}
+const start = async () => {
+  try {
+    // Ensure all plugins are ready before listening
+    await fastify.ready();
+    
+    console.log(`[BOOT] Attempting to listen on port ${port}...`);
+    await fastify.listen({ port: Number(port), host: '0.0.0.0' });
+    
+    console.log(`\n==========================================================`);
+    console.log(`INDRIYA GATEWAYS ONLINE AT: http://localhost:${port}`);
+    console.log(`==========================================================\n`);
+  } catch (err) {
+    fastify.log.error(err);
+    process.exit(1);
+  }
+};
+
+start();

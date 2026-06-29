@@ -101,37 +101,37 @@ export function buildDynamicPriceSQL(rates) {
   const goldRate = rates['22K'] || 0;
   
   // Luxury Stability Formula: 
-  // We prefer: BasePrice + (GoldWeight * (CurrentRate - BaseGoldRate))
-  // This preserves the expensive diamond/stone value which is often missing or inaccurate in flat-rate calculations.
+  // We prefer: BasePrice + (GoldWeight * (CurrentRate - BaseGoldRate) * 1.03)
+  // This preserves the expensive diamond/stone value and adds GST-corrected delta.
   
   return `COALESCE(
     CASE 
       WHEN base_price > 0 AND base_gold_rate > 0 
-      THEN (base_price + (COALESCE(gold_weight_numeric, 0) * (${goldRate} - base_gold_rate)))
+      THEN (base_price + (COALESCE(gold_weight_numeric, 0) * (${goldRate} - base_gold_rate) * 1.03))
       ELSE NULL 
     END,
     (
       (
         -- Material metal cost
         CASE 
-          WHEN purity = '22K' THEN gold_weight_numeric * ${rates['22K']}
-          WHEN purity = '18K' THEN gold_weight_numeric * ${rates['18K']}
-          WHEN purity = '14K' THEN gold_weight_numeric * ${rates['14K']}
-          WHEN purity = '24K' THEN gold_weight_numeric * ${rates['24K']}
-          ELSE gold_weight_numeric * ${rates['22K']}
+          WHEN purity = '22K' THEN COALESCE(gold_weight_numeric, 0) * ${rates['22K'] || 0}
+          WHEN purity = '18K' THEN COALESCE(gold_weight_numeric, 0) * ${rates['18K'] || 0}
+          WHEN purity = '14K' THEN COALESCE(gold_weight_numeric, 0) * ${rates['14K'] || 0}
+          WHEN purity = '24K' THEN COALESCE(gold_weight_numeric, 0) * ${rates['24K'] || 0}
+          ELSE COALESCE(gold_weight_numeric, 0) * ${rates['22K'] || 0}
         END +
-        (platinum_weight_numeric * ${rates['Platinum']}) +
-        (silver_weight_numeric * ${rates['Silver']})
+        (COALESCE(platinum_weight_numeric, 0) * ${rates['Platinum'] || 0}) +
+        (COALESCE(silver_weight_numeric, 0) * ${rates['Silver'] || 0})
       ) +
       -- Diamond component value
-      (diamond_weight_numeric * diamond_rate_per_carat) +
+      (COALESCE(diamond_weight_numeric, 0) * COALESCE(diamond_rate_per_carat, 0)) +
       -- Color Gemstone component value
-      (gemstone_weight_numeric * gemstone_rate_per_carat) +
+      (COALESCE(gemstone_weight_numeric, 0) * COALESCE(gemstone_rate_per_carat, 0)) +
       -- Labour / Making charges
       (
         CASE 
           WHEN making_charge_type = 'per_gram' THEN COALESCE(gold_weight_numeric, 0) * COALESCE(making_charge_value, 0)
-          WHEN making_charge_type = 'percentage' THEN (COALESCE(gold_weight_numeric, 0) * ${rates['22K']}) * (COALESCE(making_charge_value, 0) / 100)
+          WHEN making_charge_type = 'percentage' THEN (COALESCE(gold_weight_numeric, 0) * ${rates['22K'] || 0}) * (COALESCE(making_charge_value, 0) / 100)
           ELSE COALESCE(making_charge_value, 0)
         END
       )
