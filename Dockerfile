@@ -4,12 +4,16 @@
 # ============================================================================
 
 # Stage 1: Dependency builder & Model Pre-cacher
-FROM node:22-alpine AS builder
+FROM node:22-slim AS builder
 
 WORKDIR /app
 
-# Install build dependencies if needed (e.g. node-gyp pre-requisites)
-RUN apk add --no-cache python3 make g++
+# Install build dependencies for native modules
+RUN apt-get update && apt-get install -y \
+    python3 \
+    make \
+    g++ \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy dependency mappings
 COPY package*.json ./
@@ -25,7 +29,7 @@ COPY . .
 RUN npm run pre-cache
 
 # Stage 2: Clean Lightweight Production Runner
-FROM node:22-alpine AS runner
+FROM node:22-slim AS runner
 
 WORKDIR /app
 
