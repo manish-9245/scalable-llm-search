@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@ai-sdk/google": "^4.0.2",
+    "ai": "^4.0.0",
     "@fastify/multipart": "^9.0.1",
     "@fastify/static": "^8.0.4",
     "@google/genai": "^2.10.0",
