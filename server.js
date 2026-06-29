@@ -771,6 +771,7 @@ fastify.post('/api/chat/message', async (request, reply) => {
     } catch (auditErr) {
       console.error('Audit layer failed, falling back to original AI text');
     }
+    }
 
     // 5. Save AI response and products
     const productsJson = JSON.stringify(products);
