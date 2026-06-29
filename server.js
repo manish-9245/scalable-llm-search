@@ -31,28 +31,34 @@ const fastify = Fastify({
   disableRequestLogging: true,
 });
 
+// 1. Health Check Endpoint (Highest Priority - BEFORE hooks)
+fastify.get('/health', async () => {
+  return { status: 'ALIVE', uptime: process.uptime() };
+});
+
 // Trace ID & Request Logging Middleware
 fastify.addHook('onRequest', async (request, reply) => {
-  const traceId = request.headers['x-trace-id'] || crypto.randomUUID();
-  request.traceId = traceId;
-  request.log = getChildLogger(traceId);
-  request.log.info({ 
-    method: request.method, 
-    url: request.url,
-    remoteAddress: request.ip 
-  }, 'Incoming request');
+  try {
+    const traceId = request.headers['x-trace-id'] || crypto.randomUUID();
+    request.traceId = traceId;
+    request.log = getChildLogger(traceId);
+    request.log.info({ 
+      method: request.method, 
+      url: request.url,
+      remoteAddress: request.ip 
+    }, 'Incoming request');
+  } catch (e) {
+    console.error('Logging hook failed:', e.message);
+  }
 });
 
 fastify.addHook('onResponse', async (request, reply) => {
-  request.log.info({ 
-    statusCode: reply.statusCode, 
-    durationMs: reply.elapsedTime 
-  }, 'Request completed');
-});
-
-// 1. Health Check Endpoint (Highest Priority)
-fastify.get('/health', async () => {
-  return { status: 'ALIVE', uptime: process.uptime() };
+  if (request.log) {
+    request.log.info({ 
+      statusCode: reply.statusCode, 
+      durationMs: reply.elapsedTime 
+    }, 'Request completed');
+  }
 });
 
 // Register plugins WITHOUT await (listen will wait for them)
@@ -69,14 +75,18 @@ fastify.register(fastifyStatic, {
 });
 
 // 1.5 BullMQ Dashboard
-const serverAdapter = new FastifyAdapter();
-createBullBoard({
-  queues: [new BullMQAdapter(ingestionQueue)],
-  serverAdapter,
-});
-serverAdapter.setBasePath('/admin/queues');
-fastify.register(serverAdapter.registerPlugin(), { prefix: '/admin/queues', basePath: '/admin/queues' });
-log.info('BullMQ Dashboard available at /admin/queues');
+if (ingestionQueue) {
+  const serverAdapter = new FastifyAdapter();
+  createBullBoard({
+    queues: [new BullMQAdapter(ingestionQueue)],
+    serverAdapter,
+  });
+  serverAdapter.setBasePath('/admin/queues');
+  fastify.register(serverAdapter.registerPlugin(), { prefix: '/admin/queues', basePath: '/admin/queues' });
+  log.info('BullMQ Dashboard available at /admin/queues');
+} else {
+  log.warn('BullMQ Queue not initialized. Dashboard disabled.');
+}
 
 // Background Tasks
 connectRedis();
