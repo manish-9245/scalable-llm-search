@@ -23,6 +23,7 @@ Indriya is built on a **$0 API Cost** architecture. While it supports advanced A
 | **Vision LLM** | Gemini 2.5 Flash | SOTA multimodal analysis for deep product "dossier" generation. |
 | **Voice/ASR** | Xenova/Whisper-tiny | On-device transcription for high-privacy voice search. |
 | **Caching/Queue** | Redis (BullMQ) | Sub-1ms retrieval + Resilient background job processing. |
+| **Observability** | Pino + BullBoard | Structured distributed tracing + Visual queue management. |
 
 ---
 
@@ -120,7 +121,22 @@ The agent is wrapped in an **Elite Safety Layer**:
 
 ---
 
-## 5. Database Schema
+## 4.5 Observability & Distributed Tracing
+
+### A. BullMQ Dashboard
+Real-time visual monitoring of background ingestion jobs is available at `/admin/queues`. This allows admins to:
+- Monitor active, waiting, and completed jobs.
+- Retry failed ingestion tasks with a single click.
+- Inspect job metadata and AI analysis results.
+
+### B. Trace-based Distributed Logging
+The system implements **End-to-End Distributed Tracing** using a common `traceId`:
+- **Request ID**: Every incoming API request (Search or Ingest) is assigned a unique UUID.
+- **Context Propagation**: The `traceId` is passed from the Fastify request to the BullMQ job and finally into the background worker.
+- **Structured Logs**: Powered by **Pino**, all logs are emitted as structured JSON (or colorized text in dev) tagged with the `traceId`.
+- **Debugging**: You can track the entire lifecycle of an event—from an initial upload to the final database normalization—by filtering for a single ID.
+
+---
 ### `catalog_products`
 - `id` (UUID): Primary key.
 - `embedding` (halfvec(384)): Quantized vector for semantic search.
