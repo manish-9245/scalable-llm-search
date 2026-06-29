@@ -16,7 +16,12 @@ import { DB_SCHEMA, loadSchema, OFFICIAL_CATEGORIES, normalizeProductData, start
 import { generateObject, generateText } from 'ai';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { z } from 'zod';
-import { queueProductIngestion, startIngestionWorker } from './src/config/queue.js';
+import { z } from 'zod';
+import { queueProductIngestion, startIngestionWorker, ingestionQueue } from './src/config/queue.js';
+import { log } from './src/utils/logger.js';
+import { createBullBoard } from '@bull-board/api';
+import { BullMQAdapter } from '@bull-board/api/bullMQAdapter.js';
+import { FastifyAdapter } from '@bull-board/fastify';
 
 dotenv.config();
 
@@ -24,9 +29,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const fastify = Fastify({
-  logger: {
-    level: process.env.NODE_ENV === 'development' ? 'debug' : 'info'
-  }
+  disableRequestLogging: true, // We'll do custom logging with pino
 });
 
 // 1. Health Check Endpoint (Highest Priority)
@@ -46,6 +49,16 @@ fastify.register(fastifyStatic, {
   root: publicPath,
   prefix: '/'
 });
+
+// 1.5 BullMQ Dashboard
+const serverAdapter = new FastifyAdapter();
+createBullBoard({
+  queues: [new BullMQAdapter(ingestionQueue)],
+  serverAdapter,
+});
+serverAdapter.setBasePath('/admin/queues');
+fastify.register(serverAdapter.registerPlugin(), { prefix: '/admin/queues', basePath: '/admin/queues' });
+log.info('BullMQ Dashboard available at /admin/queues');
 
 // Background Tasks
 connectRedis();
@@ -82,10 +95,10 @@ async function invalidateSearchCache() {
         }
       } while (cursor !== 0);
 
-      console.log(`[CACHE] Invalidation: ${count} keys purged.`);
+      log.info(`[CACHE] Invalidation: ${count} keys purged.`);
     }
   } catch (err) {
-    console.warn('⚡ [CACHE] Read Error:', err.message);
+    log.error('⚡ [CACHE] Read Error', { error: err.message });
   }
 }
 

@@ -1,6 +1,7 @@
 import { query } from '../config/db.js';
 import { redisClient } from '../config/redis.js';
 import cron from 'node-cron';
+import { log } from '../utils/logger.js';
 
 export let OFFICIAL_CATEGORIES = []; 
 export let DB_SCHEMA = { numericColumns: [], stringColumns: [], gemstones: [], motifs: [], ontology: {}, categoricalValues: {} };
@@ -11,7 +12,7 @@ export let DB_SCHEMA = { numericColumns: [], stringColumns: [], gemstones: [], m
  */
 export async function updateDiscovery() {
     try {
-        console.log("[DISCOVERY] Querying database for fresh schema metadata...");
+        log.info("[DISCOVERY] Querying database for fresh schema metadata...");
         
         // 1. Update Categories (From Ontology or Data)
         const catRes = await query("SELECT DISTINCT target_value FROM search_ontology WHERE domain = 'category'");
@@ -57,13 +58,13 @@ export async function updateDiscovery() {
             const gemRes = await query('SELECT DISTINCT gemstone FROM product_gemstone_metrics ORDER BY gemstone');
             gemstones = gemRes.rows.map(r => r.gemstone);
         } catch (e) {
-            console.warn("[DISCOVERY] product_gemstone_metrics table not found or empty");
+            log.warn("[DISCOVERY] product_gemstone_metrics table not found or empty");
         }
         try {
             const motifRes = await query('SELECT DISTINCT motif FROM product_motifs ORDER BY motif');
             motifs = motifRes.rows.map(r => r.motif);
         } catch (e) {
-            console.warn("[DISCOVERY] product_motifs table not found or empty");
+            log.warn("[DISCOVERY] product_motifs table not found or empty");
         }
 
         // 4. Load Ontology mappings
@@ -82,7 +83,7 @@ export async function updateDiscovery() {
                 const res = await query(`SELECT DISTINCT ${col} FROM catalog_products WHERE ${col} IS NOT NULL`);
                 categoricalValues[col] = res.rows.map(r => r[col]);
             } catch (e) {
-                console.warn(`[DISCOVERY] Failed to discover values for ${col}`);
+                log.warn(`[DISCOVERY] Failed to discover values for ${col}`);
             }
         }
 
@@ -94,7 +95,7 @@ export async function updateDiscovery() {
         DB_SCHEMA.ontology = ontology;
         DB_SCHEMA.categoricalValues = categoricalValues;
 
-        console.log("[DISCOVERY] Dynamic schema updated:", {
+        log.info("[DISCOVERY] Dynamic schema updated", {
             categories: OFFICIAL_CATEGORIES.length,
             gemstones: gemstones.length,
             motifs: motifs.length
@@ -107,11 +108,11 @@ export async function updateDiscovery() {
                 await redisClient.set('schema:metadata', payload, { EX: 86400 }); // 24h
             }
         } catch (redisErr) {
-            console.warn("[DISCOVERY] Failed to cache schema in Redis:", redisErr.message);
+            log.warn("[DISCOVERY] Failed to cache schema in Redis", { error: redisErr.message });
         }
 
     } catch (e) {
-        console.error('[DISCOVERY] Failed to update discovery:', e.message);
+        log.error('[DISCOVERY] Failed to update discovery', { error: e.message });
     }
 }
 

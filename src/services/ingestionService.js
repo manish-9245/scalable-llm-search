@@ -3,7 +3,7 @@ import { generateEmbedding } from '../config/llm.js';
 import { indriyaAnalyzer } from '../mastra/agent.js';
 import { normalizeProductData } from './discoveryService.js';
 import { redisClient } from '../config/redis.js';
-import crypto from 'crypto';
+import { log } from '../utils/logger.js';
 
 /**
  * The core logic for analyzing a product, generating embeddings, 
@@ -11,7 +11,7 @@ import crypto from 'crypto';
  * This is designed to run in a background worker.
  */
 export async function processProductAnalysis({ sku, name, category, specs }) {
-  console.log(`[INGESTION] Starting analysis for SKU: ${sku}...`);
+  log.info(`[INGESTION] Starting analysis for SKU: ${sku}`, { sku });
 
   try {
     // 1. Fetch existing data (if any) to assist multimodal analysis
@@ -41,7 +41,7 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
     // 3. Multimodal Analysis (Optional Visual Input)
     if (imageUrl) {
       try {
-        console.log(`[INGESTION] Fetching image asset for SKU: ${sku}`);
+        log.debug(`[INGESTION] Fetching image asset for SKU: ${sku}`, { imageUrl });
         const imgRes = await fetch(imageUrl, {
           headers: { 'User-Agent': 'Mozilla/5.0' }
         });
@@ -54,12 +54,12 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
           });
         }
       } catch (imgErr) {
-        console.warn(`[INGESTION] Image fetch failed for ${sku}: ${imgErr.message}`);
+        log.warn(`[INGESTION] Image fetch failed for ${sku}`, { error: imgErr.message });
       }
     }
 
     // 4. Run AI Analysis
-    console.log(`[INGESTION] Calling IndriyaAnalyzer Agent for SKU: ${sku}`);
+    log.info(`[INGESTION] Calling IndriyaAnalyzer Agent for SKU: ${sku}`);
     const result = await indriyaAnalyzer.generate(content.length > 1 ? [{ role: 'user', content }] : prompt);
     let aiDescription = result?.text || '';
 
@@ -77,7 +77,7 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
     JSON.parse(aiDescription);
 
     // 6. Generate Vector Embeddings
-    console.log(`[INGESTION] Generating local embeddings for SKU: ${sku}`);
+    log.info(`[INGESTION] Generating local embeddings for SKU: ${sku}`);
     const embedText = `${name} ${category} ${aiDescription}`;
     const embedding = await generateEmbedding(embedText);
     const embeddingStr = embedding ? `[${embedding.join(',')}]` : null;
@@ -96,7 +96,7 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
     await invalidateLocalSearchCache();
 
     // 9. Structured Normalization (Atomic sub-table updates)
-    console.log(`[INGESTION] Normalizing data for SKU: ${sku}`);
+    log.info(`[INGESTION] Normalizing data for SKU: ${sku}`);
     await normalizeProductData(id, aiDescription);
 
     // 10. Regional Slang Learning
@@ -109,14 +109,14 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
             await learnSlangFromAnalysis(variations, primaryCategory);
         }
     } catch (e) {
-        console.warn(`[INGESTION] Slang learning failed for ${sku}: ${e.message}`);
+        log.warn(`[INGESTION] Slang learning failed for ${sku}`, { error: e.message });
     }
 
-    console.log(`[INGESTION] SUCCESS: SKU ${sku} is now fully indexed and analyzed.`);
+    log.info(`[INGESTION] SUCCESS: SKU ${sku} is now fully indexed and analyzed.`);
     return true;
 
   } catch (error) {
-    console.error(`[INGESTION] FAILED for SKU ${sku}:`, error.message);
+    log.error(`[INGESTION] FAILED for SKU ${sku}`, { error: error.message });
     throw error;
   }
 }
@@ -135,6 +135,6 @@ async function invalidateLocalSearchCache() {
             } while (cursor !== 0);
         }
     } catch (err) {
-        console.warn('⚡ [INGESTION] Cache Invalidation failed:', err.message);
+        log.warn('⚡ [INGESTION] Cache Invalidation failed', { error: err.message });
     }
 }

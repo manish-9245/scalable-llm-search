@@ -1,6 +1,7 @@
 import { Queue, Worker } from 'bullmq';
 import IORedis from 'ioredis';
 import dotenv from 'dotenv';
+import { log } from '../utils/logger.js';
 
 dotenv.config();
 
@@ -11,7 +12,7 @@ const connection = redisUrl ? new IORedis(redisUrl, {
 }) : null;
 
 if (!connection) {
-  console.warn("⚠️ [QUEUE] REDIS_URL is missing. Background jobs will be disabled.");
+  log.warn("⚠️ [QUEUE] REDIS_URL is missing. Background jobs will be disabled.");
 }
 
 // 1. Define the Ingestion Queue
@@ -23,7 +24,7 @@ export const ingestionQueue = connection ? new Queue('product-ingestion', { conn
  */
 export async function queueProductIngestion(data) {
   if (!ingestionQueue) {
-    console.error("[QUEUE] Cannot add job: Queue not initialized.");
+    log.error("[QUEUE] Cannot add job: Queue not initialized.");
     return null;
   }
   
@@ -36,7 +37,7 @@ export async function queueProductIngestion(data) {
     removeOnComplete: true,
   });
   
-  console.log(`[QUEUE] Job ${job.id} queued for SKU: ${data.sku}`);
+  log.info(`[QUEUE] Job ${job.id} queued for SKU: ${data.sku}`, { sku: data.sku, jobId: job.id });
   return job.id;
 }
 
@@ -49,26 +50,26 @@ export function startIngestionWorker() {
 
   const worker = new Worker('product-ingestion', async (job) => {
     const { sku, name, category, specs } = job.data;
-    console.log(`[WORKER] Processing SKU: ${sku} (Job: ${job.id})`);
+    log.info(`[WORKER] Processing SKU: ${sku}`, { jobId: job.id, sku });
 
     // Dynamic import to avoid circular dependencies and ensure services are ready
     const { processProductAnalysis } = await import('../services/ingestionService.js');
     
     await processProductAnalysis({ sku, name, category, specs });
     
-    console.log(`[WORKER] Completed analysis for SKU: ${sku}`);
+    log.info(`[WORKER] Completed analysis for SKU: ${sku}`, { jobId: job.id, sku });
   }, { 
     connection,
     concurrency: 2 // Scale up if needed
   });
 
   worker.on('completed', (job) => {
-    console.log(`[WORKER] Job ${job.id} finished successfully.`);
+    log.debug(`[WORKER] Job ${job.id} finished successfully.`);
   });
 
   worker.on('failed', (job, err) => {
-    console.error(`[WORKER] Job ${job.id} failed: ${err.message}`);
+    log.error(`[WORKER] Job ${job.id} failed`, { jobId: job?.id, error: err.message });
   });
 
-  console.log('[WORKER] Product Ingestion Worker started and listening.');
+  log.info('[WORKER] Product Ingestion Worker started and listening.');
 }
