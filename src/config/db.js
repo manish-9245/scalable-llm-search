@@ -8,8 +8,7 @@ const { Pool } = pg;
 const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
-  console.error("FATAL ERROR: DATABASE_URL environment variable is missing!");
-  process.exit(1);
+  console.warn("⚠️ [DB] DATABASE_URL is missing. Relational layer will be disabled.");
 }
 
 // Strictly configure pg Pool with Railway compatible SSL configs
@@ -20,19 +19,24 @@ const getSslConfig = (url) => {
   return { rejectUnauthorized: false };
 };
 
-export const pool = new Pool({
+export const pool = connectionString ? new Pool({
   connectionString,
   ssl: getSslConfig(connectionString),
-  max: 20, // Max concurrent connections
-  idleTimeoutMillis: 30000, // Close idle connections after 30s
-  connectionTimeoutMillis: 5000 // Return an error if connection takes > 5s
-});
+  max: 20, 
+  idleTimeoutMillis: 30000, 
+  connectionTimeoutMillis: 5000 
+}) : null;
 
-pool.on('error', (err) => {
-  console.error('Unexpected error on idle PostgreSQL client:', err.message);
-});
+if (pool) {
+  pool.on('error', (err) => {
+    console.error('Unexpected error on idle PostgreSQL client:', err.message);
+  });
+}
 
 export async function query(text, params) {
+  if (!pool) {
+    throw new Error('Database pool not initialized. Check DATABASE_URL.');
+  }
   const start = Date.now();
   try {
     const res = await pool.query(text, params);

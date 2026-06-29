@@ -6,13 +6,16 @@ dotenv.config();
 const redisUrl = process.env.REDIS_URL;
 
 if (!redisUrl) {
-  console.error("FATAL ERROR: REDIS_URL environment variable is missing!");
-  process.exit(1);
+  console.warn("⚠️ [REDIS] REDIS_URL is missing. Cache layer will be disabled.");
 }
 
-export const redisClient = createClient({
-  url: redisUrl
-});
+export const redisClient = redisUrl ? createClient({ url: redisUrl }) : { 
+  isOpen: false, 
+  on: () => {}, 
+  get: () => null, 
+  setEx: () => null, 
+  connect: () => Promise.resolve() 
+};
 
 redisClient.on('error', (err) => {
   console.error('Redis Client Error:', err.message);
