@@ -63,6 +63,7 @@ graph TD
     RRF -->|Results| Server
     Server -->|Audit| GeminiCorrection[Hallucination Audit]
     GeminiCorrection --> WebUI
+```
 
 ---
 
@@ -88,7 +89,6 @@ graph LR
         Container -->|gRPC| Gemini[Gemini 2.5 API]
         Container -->|REST| Ollama[Local Ollama Node]
     end
-```
 ```
 
 ---
