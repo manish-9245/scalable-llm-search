@@ -1,7 +1,7 @@
 import { Queue, Worker } from 'bullmq';
 import IORedis from 'ioredis';
 import dotenv from 'dotenv';
-import { log } from '../utils/logger.js';
+import { log, getChildLogger } from '../utils/logger.js';
 
 dotenv.config();
 
@@ -20,7 +20,7 @@ export const ingestionQueue = connection ? new Queue('product-ingestion', { conn
 
 /**
  * Adds a product ingestion job to the queue.
- * @param {object} data - { sku, name, category, specs }
+ * @param {object} data - { sku, name, category, specs, traceId }
  */
 export async function queueProductIngestion(data) {
   if (!ingestionQueue) {
@@ -37,7 +37,11 @@ export async function queueProductIngestion(data) {
     removeOnComplete: true,
   });
   
-  log.info(`[QUEUE] Job ${job.id} queued for SKU: ${data.sku}`, { sku: data.sku, jobId: job.id });
+  log.info(`[QUEUE] Job ${job.id} queued for SKU: ${data.sku}`, { 
+    sku: data.sku, 
+    jobId: job.id, 
+    traceId: data.traceId 
+  });
   return job.id;
 }
 
@@ -49,15 +53,18 @@ export function startIngestionWorker() {
   if (!connection) return;
 
   const worker = new Worker('product-ingestion', async (job) => {
-    const { sku, name, category, specs } = job.data;
-    log.info(`[WORKER] Processing SKU: ${sku}`, { jobId: job.id, sku });
+    const { sku, name, category, specs, traceId } = job.data;
+    const workerLog = getChildLogger(traceId || `worker-${job.id}`);
+    
+    workerLog.info(`[WORKER] Processing SKU: ${sku}`, { jobId: job.id, sku });
 
     // Dynamic import to avoid circular dependencies and ensure services are ready
     const { processProductAnalysis } = await import('../services/ingestionService.js');
     
-    await processProductAnalysis({ sku, name, category, specs });
+    // Pass the trace-aware logger to the processing function
+    await processProductAnalysis({ sku, name, category, specs, traceId }, workerLog);
     
-    log.info(`[WORKER] Completed analysis for SKU: ${sku}`, { jobId: job.id, sku });
+    workerLog.info(`[WORKER] Completed analysis for SKU: ${sku}`, { jobId: job.id, sku });
   }, { 
     connection,
     concurrency: 2 // Scale up if needed
@@ -68,7 +75,9 @@ export function startIngestionWorker() {
   });
 
   worker.on('failed', (job, err) => {
-    log.error(`[WORKER] Job ${job.id} failed`, { jobId: job?.id, error: err.message });
+    const traceId = job?.data?.traceId;
+    const workerLog = traceId ? getChildLogger(traceId) : log;
+    workerLog.error(`[WORKER] Job ${job.id} failed`, { jobId: job?.id, error: err.message });
   });
 
   log.info('[WORKER] Product Ingestion Worker started and listening.');

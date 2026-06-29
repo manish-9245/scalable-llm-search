@@ -16,7 +16,15 @@ export const logger = pino({
       },
 });
 
-// Helper for structured logging across the app
+/**
+ * Creates a child logger with a common traceId.
+ * Used to track the entire chain of events for a single request.
+ */
+export const getChildLogger = (traceId) => {
+  return logger.child({ traceId });
+};
+
+// Default logger for global events
 export const log = {
   info: (msg, obj = {}) => logger.info(obj, msg),
   warn: (msg, obj = {}) => logger.warn(obj, msg),

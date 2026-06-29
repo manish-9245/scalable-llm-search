@@ -3,15 +3,15 @@ import { generateEmbedding } from '../config/llm.js';
 import { indriyaAnalyzer } from '../mastra/agent.js';
 import { normalizeProductData } from './discoveryService.js';
 import { redisClient } from '../config/redis.js';
-import { log } from '../utils/logger.js';
+import { log as globalLog } from '../utils/logger.js';
 
 /**
  * The core logic for analyzing a product, generating embeddings, 
  * updating the DB, and normalizing data. 
  * This is designed to run in a background worker.
  */
-export async function processProductAnalysis({ sku, name, category, specs }) {
-  log.info(`[INGESTION] Starting analysis for SKU: ${sku}`, { sku });
+export async function processProductAnalysis({ sku, name, category, specs, traceId }, logger = globalLog) {
+  logger.info(`[INGESTION] Starting analysis for SKU: ${sku}`, { sku, traceId });
 
   try {
     // 1. Fetch existing data (if any) to assist multimodal analysis
@@ -41,7 +41,7 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
     // 3. Multimodal Analysis (Optional Visual Input)
     if (imageUrl) {
       try {
-        log.debug(`[INGESTION] Fetching image asset for SKU: ${sku}`, { imageUrl });
+        logger.debug(`[INGESTION] Fetching image asset for SKU: ${sku}`, { imageUrl });
         const imgRes = await fetch(imageUrl, {
           headers: { 'User-Agent': 'Mozilla/5.0' }
         });
@@ -54,12 +54,12 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
           });
         }
       } catch (imgErr) {
-        log.warn(`[INGESTION] Image fetch failed for ${sku}`, { error: imgErr.message });
+        logger.warn(`[INGESTION] Image fetch failed for ${sku}`, { error: imgErr.message });
       }
     }
 
     // 4. Run AI Analysis
-    log.info(`[INGESTION] Calling IndriyaAnalyzer Agent for SKU: ${sku}`);
+    logger.info(`[INGESTION] Calling IndriyaAnalyzer Agent for SKU: ${sku}`);
     const result = await indriyaAnalyzer.generate(content.length > 1 ? [{ role: 'user', content }] : prompt);
     let aiDescription = result?.text || '';
 
@@ -77,7 +77,7 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
     JSON.parse(aiDescription);
 
     // 6. Generate Vector Embeddings
-    log.info(`[INGESTION] Generating local embeddings for SKU: ${sku}`);
+    logger.info(`[INGESTION] Generating local embeddings for SKU: ${sku}`);
     const embedText = `${name} ${category} ${aiDescription}`;
     const embedding = await generateEmbedding(embedText);
     const embeddingStr = embedding ? `[${embedding.join(',')}]` : null;
@@ -93,10 +93,10 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
     `, [aiDescription, embeddingStr, id]);
 
     // 8. Invalidate Caches (Broadcast change)
-    await invalidateLocalSearchCache();
+    await invalidateLocalSearchCache(logger);
 
     // 9. Structured Normalization (Atomic sub-table updates)
-    log.info(`[INGESTION] Normalizing data for SKU: ${sku}`);
+    logger.info(`[INGESTION] Normalizing data for SKU: ${sku}`);
     await normalizeProductData(id, aiDescription);
 
     // 10. Regional Slang Learning
@@ -109,14 +109,14 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
             await learnSlangFromAnalysis(variations, primaryCategory);
         }
     } catch (e) {
-        log.warn(`[INGESTION] Slang learning failed for ${sku}`, { error: e.message });
+        logger.warn(`[INGESTION] Slang learning failed for ${sku}`, { error: e.message });
     }
 
-    log.info(`[INGESTION] SUCCESS: SKU ${sku} is now fully indexed and analyzed.`);
+    logger.info(`[INGESTION] SUCCESS: SKU ${sku} is now fully indexed and analyzed.`);
     return true;
 
   } catch (error) {
-    log.error(`[INGESTION] FAILED for SKU ${sku}`, { error: error.message });
+    logger.error(`[INGESTION] FAILED for SKU ${sku}`, { error: error.message });
     throw error;
   }
 }
@@ -124,7 +124,7 @@ export async function processProductAnalysis({ sku, name, category, specs }) {
 /**
  * Helper: Clear search and product list caches in Redis
  */
-async function invalidateLocalSearchCache() {
+async function invalidateLocalSearchCache(logger = globalLog) {
     try {
         if (redisClient.isOpen) {
             let cursor = 0;
@@ -135,6 +135,6 @@ async function invalidateLocalSearchCache() {
             } while (cursor !== 0);
         }
     } catch (err) {
-        log.warn('⚡ [INGESTION] Cache Invalidation failed', { error: err.message });
+        logger.warn('⚡ [INGESTION] Cache Invalidation failed', { error: err.message });
     }
 }

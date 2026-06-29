@@ -16,9 +16,8 @@ import { DB_SCHEMA, loadSchema, OFFICIAL_CATEGORIES, normalizeProductData, start
 import { generateObject, generateText } from 'ai';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { z } from 'zod';
-import { z } from 'zod';
 import { queueProductIngestion, startIngestionWorker, ingestionQueue } from './src/config/queue.js';
-import { log } from './src/utils/logger.js';
+import { log, getChildLogger } from './src/utils/logger.js';
 import { createBullBoard } from '@bull-board/api';
 import { BullMQAdapter } from '@bull-board/api/bullMQAdapter.js';
 import { FastifyAdapter } from '@bull-board/fastify';
@@ -29,7 +28,26 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const fastify = Fastify({
-  disableRequestLogging: true, // We'll do custom logging with pino
+  disableRequestLogging: true,
+});
+
+// Trace ID & Request Logging Middleware
+fastify.addHook('onRequest', async (request, reply) => {
+  const traceId = request.headers['x-trace-id'] || crypto.randomUUID();
+  request.traceId = traceId;
+  request.log = getChildLogger(traceId);
+  request.log.info({ 
+    method: request.method, 
+    url: request.url,
+    remoteAddress: request.ip 
+  }, 'Incoming request');
+});
+
+fastify.addHook('onResponse', async (request, reply) => {
+  request.log.info({ 
+    statusCode: reply.statusCode, 
+    durationMs: reply.elapsedTime 
+  }, 'Request completed');
 });
 
 // 1. Health Check Endpoint (Highest Priority)
@@ -116,15 +134,15 @@ fastify.get('/api/search', async (request, reply) => {
     if (redisClient.isOpen) {
       const cached = await redisClient.get(cacheKey);
       if (cached) {
-        console.log(`[SEARCH:HIT] "${q}" retrieved from cache in ${Date.now() - start}ms`);
+        request.log.info({ query: q, hit: true }, 'Search cache hit');
         return JSON.parse(cached);
       }
     }
   } catch (err) {
-    console.warn('[CACHE:ERROR]', err.message);
+    request.log.warn('Cache read error', { error: err.message });
   }
 
-  console.log(`[SEARCH:MISS] "${q}" executing hybrid engine...`);
+  request.log.info({ query: q, hit: false }, 'Search cache miss, executing hybrid engine');
 
   try {
     const results = await searchCatalogue({
@@ -133,8 +151,6 @@ fastify.get('/api/search', async (request, reply) => {
     });
 
     const duration = Date.now() - start;
-    console.log(`[SEARCH:OK] "${q}" → ${results.products?.length || 0} items [${duration}ms]`);
-
     const finalResult = {
       products: results.products,
       latencyMs: duration,
@@ -144,6 +160,12 @@ fastify.get('/api/search', async (request, reply) => {
     if (redisClient.isOpen) {
       await redisClient.setEx(cacheKey, 3600, JSON.stringify(finalResult));
     }
+
+    request.log.info({ 
+      query: q, 
+      count: results.products?.length || 0,
+      duration: duration 
+    }, 'Search completed');
 
     return finalResult;
   } catch (err) {
@@ -290,17 +312,23 @@ fastify.post('/api/ingest', async (request, reply) => {
       return reply.status(404).send({ error: `Product with SKU ${sku} not found. Please seed the product first.` });
     }
 
-    // Push to background queue
-    const jobId = await queueProductIngestion({ sku, name, category, specs });
+    // Push to background queue with traceId for cross-process tracing
+    const jobId = await queueProductIngestion({ 
+      sku, name, category, specs,
+      traceId: request.traceId 
+    });
+
+    request.log.info({ sku, jobId }, 'Product ingestion queued');
 
     return {
       success: true,
       message: 'Product analysis queued for background processing.',
       sku,
-      jobId
+      jobId,
+      traceId: request.traceId
     };
   } catch (err) {
-    fastify.log.error(err);
+    request.log.error('Failed to queue product ingestion', { error: err.message });
     return reply.status(500).send({ 
       error: 'Failed to queue product ingestion', 
       details: err.message 
