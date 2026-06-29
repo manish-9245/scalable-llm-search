@@ -1,6 +1,7 @@
 import { Mastra } from '@mastra/core';
 import { Agent } from '@mastra/core/agent';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
+import { createOllama } from 'ollama-ai-provider';
 import dotenv from 'dotenv';
 import { queryDatabaseTool } from './tools.js';
 import { getDynamicContext } from '../services/discoveryService.js';
@@ -11,6 +12,7 @@ const google = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
+const ollama = createOllama();
 
 /**
  * Indriya Visual Cataloging and Spec-Driven Ingestion Agent.
@@ -114,7 +116,7 @@ export const chatAgent = new Agent({
     ${getDynamicContext()}
     - **Tone**: Sophisticated, ultra-concise, helpful.
   `,
-  model: google('gemini-2.5-flash'),
+  model: ollama('llama3'),
   tools: { queryDatabase: queryDatabaseTool }
 });
 

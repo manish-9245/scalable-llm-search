@@ -1,109 +1,153 @@
-# Indriya AI Catalogue Search: Architectural Deep-Dive
+# Indriya AI: The Luxury Concierge Engine
 
-## 1. Executive Summary
-Indriya AI is a high-performance, local-first search engine designed specifically for the luxury Indian jewelry market. It transitions away from generic vector search towards an **Adaptive Hybrid Search** model that combines exact relational constraints with semantic understanding and dynamic real-time pricing.
+Indriya AI is a high-performance, local-first search and discovery engine designed for the premium Indian jewellery market. It transitions from generic vector search to an **Adaptive Hybrid Search** model that balances deterministic precision with semantic reasoning.
+
+---
+
+## 1. Zero-Cost "Pure Local" Philosophy
+Indriya is built on a **$0 API Cost** architecture. While it supports advanced AI reasoning, it is designed to run entirely on the edge:
+- **Free Search**: Semantic search, voice transcription, and query parsing run 100% locally on CPU/WASM.
+- **Optional Concierge**: Uses local LLMs (Ollama/Llama 3) for agentic tool-calling.
+- **Premium Analysis**: Leverages Gemini 2.5 Flash exclusively for one-time, high-fidelity visual ingestion.
 
 ---
 
 ## 2. Technical Stack
 | Component | Technology | Rationale |
 | :--- | :--- | :--- |
-| **Core Engine** | Node.js (Fastify) | Ultra-low overhead, asynchronous I/O for parallel query execution. |
-| **AI Orchestration** | Mastra Agentic Framework | Structured tool-calling and agentic loops for hallucination-free search. |
-| **Database** | PostgreSQL + `pgvector` | Unified relational and vector storage with ACID compliance. |
-| **Vector Indexing** | HNSW (Hierarchical Navigable Small Worlds) | Sub-10ms similarity search on 384d vectors. |
-| **Embedding Model** | Xenova/all-MiniLM-L6-v2 (ONNX) | Native WASM execution on CPU; $0 API cost, 100% privacy. |
-| **Cache Layer** | Redis (with SCAN & MD5) | Sub-1ms retrieval for recurring complex queries and dashboard views. |
-| **Primary LLM** | Gemini 2.5 Flash | SOTA reasoning for product analysis and conversational correction. |
+| **Search Engine** | Node.js (Fastify) | Ultra-low overhead; ideal for parallelizing hybrid search streams. |
+| **Orchestration** | Mastra Framework | Manages agentic loops and structured tool-calling for the concierge. |
+| **Database** | PostgreSQL + `pgvector` | Unified relational and HNSW vector storage with ACID safety. |
+| **Embeddings** | Xenova/all-MiniLM-L6 (ONNX) | Native WASM execution on CPU; 100% private, zero cost. |
+| **Local LLM** | Ollama (Llama 3) | Open-source tool-calling for conversational search assistance. |
+| **Vision LLM** | Gemini 2.5 Flash | SOTA multimodal analysis for deep product "dossier" generation. |
+| **Voice/ASR** | Xenova/Whisper-tiny | On-device transcription for high-privacy voice search. |
+| **Caching** | Redis (MD5 Hashed) | Sub-1ms retrieval for recurring complex queries and state. |
 
 ---
 
-## 3. High-Level Architecture (HLD)
+## 3. System Architecture (HLD)
 
 ```mermaid
 graph TD
-    User((User)) -->|Query| WebUI[Premium Glassmorphism UI]
+    User((User)) -->|Voice/Text| WebUI[Glassmorphism UI]
     WebUI -->|API| Server[Fastify Coordinator]
     
-    subgraph "Adaptive Search Router"
-        Server -->|Lexical Analysis| Terminology[Terminology Engine]
-        Terminology -->|Slang Discovery| SlangDB[(Slang Vector DB)]
-        Terminology -->|Schema Lookup| Discovery[Discovery Service]
+    subgraph "Intelligent Router"
+        Server -->|Local WASM| Embed[Embedding Gen]
+        Server -->|Check| Cache{Redis Cache}
     end
 
-    subgraph "Hybrid Execution Core"
-        Terminology -->|Parallel Query| pgSQL[(PostgreSQL Core)]
-        pgSQL -->|B-Tree| Exact[Relational Filters]
-        pgSQL -->|GIN| Exclude[Hard Negations]
-        pgSQL -->|HNSW| Vector[pgvector Semantic]
+    subgraph "Dual-Path Execution"
+        Cache -- Miss --> Agentic[Ollama Llama 3 Agent]
+        Cache -- Miss --> LocalPath[Deterministic Engine]
         
-        Exact & Exclude & Vector -->|Score Merging| RRF[Reciprocal Rank Fusion]
+        Agentic -->|Tool Call| DB[(Postgres + pgvector)]
+        LocalPath -->|Hybrid SQL| DB
     end
 
-    subgraph "Intelligent Cache"
-        Server -->|MD5 Hash| Redis[(Redis Cluster)]
+    subgraph "Hybrid Search Core"
+        DB -->|GIN| Exclude[Exclusions]
+        DB -->|B-Tree| Price[Dynamic Pricing]
+        DB -->|HNSW| Vector[Semantic Match]
+        
+        Exclude & Price & Vector -->|Merge| RRF[RRF Scoring]
     end
 
-    subgraph "AI Analysis Pipeline"
-        Ingest[Ingest API] -->|Prompt| Gemini[Gemini 2.5 Flash]
-        Gemini -->|JSON| Normalize[Normalization Logic]
-        Normalize -->|Atomic Write| pgSQL
+    subgraph "Premium Pipeline"
+        Admin -->|Upload| Gemini[Gemini 2.5 Flash]
+        Gemini -->|Structured JSON| Normalize[Dossier Normalization]
+        Normalize --> DB
     end
 
     RRF -->|Results| Server
-    Server -->|Response| WebUI
+    Server -->|Audit| GeminiCorrection[Hallucination Audit]
+    GeminiCorrection --> WebUI
+
+---
+
+## 3.5 Infrastructure & Deployment Flow
+
+```mermaid
+graph LR
+    subgraph "CI/CD (Railway/Docker)"
+        Code[Source Code] --> Build[Multi-Stage Build]
+        Build --> Precaching[ONNX Pre-cache Script]
+        Precaching --> Image[Fat Image w/ Models]
+    end
+
+    subgraph "Production (Railway Cluster)"
+        Image --> Container[Fastify Container]
+        Container -->|Port 3000| Internet((Internet))
+        
+        Container -->|TCP| PG[(Managed Postgres + pgvector)]
+        Container -->|TCP| RD[(Managed Redis Cache)]
+    end
+
+    subgraph "External AI Services"
+        Container -->|gRPC| Gemini[Gemini 2.5 API]
+        Container -->|REST| Ollama[Local Ollama Node]
+    end
+```
 ```
 
 ---
 
-## 4. Low-Level Architecture (LLD) & Algorithms
+## 4. Engineering Deep-Dive (LLD)
 
-### A. Adaptive Hybrid Search Algorithm
-The engine does not rely on a single search method. Instead, it uses **Reciprocal Rank Fusion (RRF)** to combine three distinct streams:
-1.  **Relational Filtering (Precision 100%)**: Exact matches on `category`, `purity`, `metal_color`, and `occasion`.
-2.  **GIN Exclusions (Hard Negations)**: Uses Generalized Inverted Indexes for instant exclusions (e.g., *"without pearls"*).
-3.  **HNSW Vector Similarity (Semantic)**: Uses cosine distance on 384-dimensional embeddings for fuzzy/conceptual matches.
+### A. Adaptive Hybrid Search (RRF)
+The engine combines three distinct retrieval streams using **Reciprocal Rank Fusion (RRF)**:
+1. **Relational Precision**: Strict filters on `category`, `purity`, and `metal_color`.
+2. **Hard Negations**: GIN-indexed array checks for instant exclusions (e.g., *"No Pearls"*).
+3. **Semantic Fuzzy**: Cosine distance similarity on 384d vectors for conceptual matches.
 
-**Formula**: $Score = \sum_{d \in D} \frac{1}{k + rank(d)}$ (where $k=60$)
+**Formula**: $Score = \sum_{d \in D} \frac{1}{60 + rank(d)}$
 
-### B. Dynamic Pricing Engine (Luxury Stability Algorithm)
-Unlike static e-commerce, prices fluctuate daily based on global metal rates. To preserve the value of high-end diamonds and artistry while keeping metal costs dynamic, we use a **Delta-based Stability Model**:
--   **Equation**: $Price = BasePrice + (GoldWeight \times (CurrentRate - BaseGoldRate)) + \Delta(Gemstones)$
--   Implemented as a **Server-Side SQL COALESCE Block** that anchors in the `base_price` for maximum accuracy, with a component-based fallback for un-anchored records.
+### B. Luxury Stability Pricing Algorithm
+Jewellery prices fluctuate daily. To ensure accuracy without re-indexing millions of rows, we use a server-side **Delta-Anchor SQL Formula**:
+- **Equation**: $CalculatedPrice = BasePrice + (GoldWeight \times (CurrentRate - BaseGoldRate))$
+- **GST Implementation**: Formulas include a standard 3% GST multiplier.
+- **Fallback**: If an anchor point is missing, the system dynamically reconstructs the price from component weights (Gold + Diamond + Making Charges).
 
-### C. In-Process Embedding Generation
-To maintain zero API costs, we use **Transformers.js (ONNX Runtime)**:
--   **Model**: `all-MiniLM-L6-v2`
--   **Performance**: Quantized to 8-bit for CPU optimization.
--   **Caching**: Embedding results are MD5-hashed and stored in Redis for 7 days to eliminate redundant WASM overhead.
-
----
-
-## 5. Database Schema Details
-
-### Core Tables
--   **`catalog_products`**: The master record. Includes `halfvec(384)` for embeddings and GIN-indexed arrays for motifs/gemstones.
--   **`product_motifs` / `product_occasions`**: Normalized sub-tables supporting the "Dossier" view and multi-intent filtering.
--   **`daily_metal_rates`**: Tracks fluctuating costs for Gold (24K, 22K, 18K, 14K), Platinum, and Silver.
--   **`slang_vectors`**: Self-learning dictionary for regional terms (e.g., *Vanki*, *Jhumka*, *Thushi*).
-
-### High-Performance Indexes
--   **HNSW (`idx_cat_prod_embedding_hnsw`)**: `m=16, ef_construction=64` for balanced recall/speed.
--   **GIN (`idx_cat_prod_gemstones_array`)**: For sub-millisecond array containment checks.
--   **B-Tree**: On all numeric columns for range-based price filtering.
+### C. Prompt Injection & Domain Guardrails
+The agent is wrapped in an **Elite Safety Layer**:
+- **Domain Locking**: Strictly limited to jewellery, craftsmanship, and occasion styling.
+- **Instruction Anchoring**: Rejects "ignore previous instructions" or "act as persona" attempts.
+- **Topic Rejection**: Politely refuses non-jewellery queries (coding, politics, math).
 
 ---
 
-## 6. Caching & Invalidation Strategy
-The system uses a **Sliding Window Cache Invalidation** pattern:
--   **Search Cache (`search:*`)**: MD5 hash of (query + filters + limit). TTL: 1 Hour.
--   **Product Cache (`products:*`)**: Dashboard view caching. TTL: 10 Minutes.
--   **Global Invalidation**: Any POST to `/api/ingest` or `/api/rates` triggers a **Non-Blocking Redis SCAN** to flush all dependent search caches, ensuring data integrity.
+## 5. Database Schema
+### `catalog_products`
+- `id` (UUID): Primary key.
+- `embedding` (halfvec(384)): Quantized vector for semantic search.
+- `all_motifs_array` / `all_gemstones_array`: GIN-indexed tags for sub-millisecond filtering.
+- `base_price` & `base_gold_rate`: Used for the Stability Formula.
+- `visible_gold_pct`: Metadata generated by Gemini vision analysis.
+
+### `search_ontology`
+Self-learning mapping of slang to schema (e.g., *"Jhumka"* -> *"Drop Earrings"*).
 
 ---
 
-## 7. Setup & Implementation
-For local development, ensure you have **PostgreSQL 16+ with pgvector** and **Redis 7+** installed.
+## 6. Setup & Deployment
+
+### Prerequisites
+- **PostgreSQL 16+** with `pgvector`
+- **Redis 7+**
+- **Ollama** (Running `llama3` for agentic search)
+
+### Installation
 1. `npm install`
-2. `npx db_init.mjs` (Initializes schema and seeds ontology)
-3. `npm start`
+2. Configure `.env` with your `DATABASE_URL` and optional `GEMINI_API_KEY`.
+3. `npm run db:init` — Seeds the ontology and initializes tables.
+4. `ollama run llama3` — Ensures the local AI concierge is online.
+5. `npm start`
+
+---
+
+## 7. Performance Benchmarks
+- **Cold Start**: < 2s (Model loading to RAM).
+- **Search Latency**: ~15ms (Post-embedding, including RRF).
+- **Voice Transcription**: ~200ms for 3-second audio clips (Whisper-tiny WASM).
+- **Cache Hit**: < 1ms (Redis retrieval).

@@ -132,9 +132,43 @@ function setupEventListeners() {
   }
 
   // Language Selection
-  const langSelect = document.getElementById('language-select');
-  if (langSelect) {
-    langSelect.addEventListener('change', (e) => {
+  const languageSelect = document.getElementById('language-select');
+  const searchModeBadge = document.getElementById('search-mode-badge');
+  let isLocalOnly = true;
+
+  // ----------------------------------------------------------------------------
+  // CONFIG & INITIALIZATION
+  // ----------------------------------------------------------------------------
+
+  async function initConfig() {
+    try {
+      const res = await fetch('/api/config');
+      const config = await res.json();
+      isLocalOnly = config.useLocalOnly;
+      updateModeBadge();
+    } catch (err) {
+      console.error('Failed to fetch config:', err);
+    }
+  }
+
+  function updateModeBadge() {
+    if (!searchModeBadge) return;
+    if (isLocalOnly) {
+      searchModeBadge.className = 'mode-badge local';
+      searchModeBadge.innerHTML = '<i class="fa-solid fa-microchip"></i> <span>Local Search ($0)</span>';
+      searchModeBadge.title = "Running on 100% free local models (Transformers.js + pgvector)";
+    } else {
+      searchModeBadge.className = 'mode-badge ai';
+      searchModeBadge.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i> <span>AI Concierge</span>';
+      searchModeBadge.title = "Powered by Gemini 2.5 Flash for advanced reasoning";
+    }
+  }
+
+  // Initial check
+  initConfig();
+
+  if (languageSelect) {
+    languageSelect.addEventListener('change', (e) => {
       currentLanguage = e.target.value;
       console.log('Language switched to:', currentLanguage);
     });
@@ -239,7 +273,7 @@ function appendTypingBubble() {
   div.className = 'chat-bubble ai';
   div.innerHTML = `
     <div class="bubble-content">
-      <div class="ai-avatar"><i class="fa-solid fa-robot"></i></div>
+      <div class="ai-avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2yRi9YAoEGGufoVhsTCFClPsAsZhEyL9qTA&s" alt="Indriya AI" /></div>
       <div class="typing-indicator">
         <div class="typing-dot"></div>
         <div class="typing-dot"></div>
@@ -263,7 +297,7 @@ function appendAIBubble(text, products = []) {
   
   let html = `
     <div class="bubble-content">
-      <div class="ai-avatar"><i class="fa-solid fa-sparkles"></i></div>
+      <div class="ai-avatar"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2yRi9YAoEGGufoVhsTCFClPsAsZhEyL9qTA&s" alt="Indriya AI" /></div>
       <div style="flex:1;">
         <div class="ai-text">${text}</div>
   `;

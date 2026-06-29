@@ -115,7 +115,39 @@ body {
 .header-right {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 20px;
+}
+
+.mode-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.mode-badge.local {
+  color: #2ecc71;
+  border-color: rgba(46, 204, 113, 0.3);
+  background: rgba(46, 204, 113, 0.05);
+}
+
+.mode-badge.ai {
+  color: #a29bfe;
+  border-color: rgba(162, 155, 254, 0.3);
+  background: rgba(162, 155, 254, 0.05);
+  box-shadow: 0 0 10px rgba(162, 155, 254, 0.1);
+}
+
+.mode-badge i {
+  font-size: 10px;
 }
 
 .language-selector-wrapper {
@@ -1146,17 +1178,21 @@ button {
 }
 
 .ai-avatar {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: var(--gold-gradient);
-  color: var(--bg-deep);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-size: 16px;
-  box-shadow: 0 4px 15px rgba(213, 159, 62, 0.2);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .ai-text {

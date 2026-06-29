@@ -54,6 +54,21 @@ await connectRedis();
 startDiscoveryCron();
 
 /**
+ * Health Check Endpoint for Railway / Cloud Monitoring
+ */
+fastify.get('/health', async () => {
+  const dbStatus = await query('SELECT 1').then(() => 'UP').catch(() => 'DOWN');
+  const redisStatus = redisClient.isOpen ? 'UP' : 'DOWN';
+  return { 
+    status: 'ALIVE',
+    uptime: process.uptime(),
+    db: dbStatus,
+    redis: redisStatus,
+    timestamp: new Date().toISOString()
+  };
+});
+
+/**
  * Helper: Clear all search and product list caches using SCAN (production-safe)
  */
 async function invalidateSearchCache() {
@@ -99,23 +114,32 @@ fastify.get('/api/search', async (request, reply) => {
   if (!q) return reply.status(400).send({ error: 'Missing search query parameter "q"' });
 
   const cacheKey = `search:${crypto.createHash('md5').update(`${q}:${limit}`).digest('hex')}`;
-
+  
   try {
     if (redisClient.isOpen) {
       const cached = await redisClient.get(cacheKey);
-      if (cached) return JSON.parse(cached);
+      if (cached) {
+        console.log(`[SEARCH:HIT] "${q}" retrieved from cache in ${Date.now() - start}ms`);
+        return JSON.parse(cached);
+      }
     }
+  } catch (err) {
+    console.warn('[CACHE:ERROR]', err.message);
+  }
 
+  console.log(`[SEARCH:MISS] "${q}" executing hybrid engine...`);
+
+  try {
     const results = await searchCatalogue({
       queryText: q,
       limit: parseInt(limit, 10)
     });
 
     const duration = Date.now() - start;
-    console.log(`✨ [SEARCH] "${q}" → ${results.length} items [${duration}ms]`);
+    console.log(`[SEARCH:OK] "${q}" → ${results.products?.length || 0} items [${duration}ms]`);
 
     const finalResult = {
-      products: results,
+      products: results.products,
       latencyMs: duration,
       queryText: q
     };
@@ -126,14 +150,25 @@ fastify.get('/api/search', async (request, reply) => {
 
     return finalResult;
   } catch (err) {
-    console.warn('⚡ [CACHE] Write Error:', err.message);
     fastify.log.error(err);
-    return reply.status(500).send({ error: 'Search failed', details: err.message });
+    return reply.status(500).send({ error: 'Search failed' });
   }
 });
 
 /**
- * Endpoint: Local Voice-to-Text Transcription.
+ * Endpoint: Get Server Configuration
+ * Allows frontend to detect if running in Pure Local or AI Mode.
+ */
+fastify.get('/api/config', async (request, reply) => {
+  return { 
+    useLocalOnly: process.env.USE_LOCAL_ONLY === 'true' || !process.env.GEMINI_API_KEY,
+    engine: 'Indriya Hybrid Local v1.0',
+    embeddingModel: 'Xenova/all-MiniLM-L6-v2 (Local)'
+  };
+});
+
+/**
+ * Endpoint: Local Speech-to-Text (Transcribe Audio).
  * Accepts recorded 16kHz mono WAV speech buffer and processes it natively
  * on CPU using local WASM Whisper models. Zero API fees.
  */
@@ -667,24 +702,47 @@ fastify.post('/api/chat/message', async (request, reply) => {
     // 1. Write the User Message
     await query(`INSERT INTO chat_messages (session_id, sender, text) VALUES ($1, 'user', $2)`, [session_id, text]);
 
-    // 2. Execute Agent
-    const prompt = `[Language: ${langName}]\nUser Query: ${text}`;
-    const result = await chatAgent.generate(prompt);
-    
-    let aiText = result?.text || "I'm looking into that for you...";
+    // 2. Determine Execution Path (Open Source LLM vs Local Engine)
+    let aiText = "";
     let products = [];
     let lastToolParams = null;
+    let agentExecutionSuccess = false;
 
-    // 3. Extract tool results and parameters from the Agent's execution trace
-    if (result.toolResults) {
-      const dbToolRes = result.toolResults.find(r => r.toolName === 'queryDatabase');
-      if (dbToolRes && dbToolRes.result) {
-        products = dbToolRes.result.results || [];
-        lastToolParams = dbToolRes.args || dbToolRes.input;
+    try {
+      console.log(`[OS_SEARCH] Attempting agentic search via local LLM...`);
+      const prompt = `[Language: ${langName}]\nUser Query: ${text}`;
+      const result = await chatAgent.generate(prompt);
+      
+      aiText = result?.text || "I'm looking into that for you...";
+
+      // Extract tool results
+      if (result.toolResults) {
+        const dbToolRes = result.toolResults.find(r => r.toolName === 'queryDatabase');
+        if (dbToolRes && dbToolRes.result) {
+          products = dbToolRes.result.results || [];
+          lastToolParams = dbToolRes.args || dbToolRes.input;
+        }
+      }
+      agentExecutionSuccess = true;
+    } catch (agentErr) {
+      console.warn(`[AGENT_FAIL] Local LLM (Ollama) failed or not running: ${agentErr.message}`);
+      console.log(`[FALLBACK] Using deterministic local engine...`);
+      
+      const { searchCatalogue } = await import('./src/services/searchService.js');
+      const searchRes = await searchCatalogue({ queryText: text });
+      products = searchRes.products || [];
+      lastToolParams = searchRes.parsedFilters || {};
+      
+      const count = products.length;
+      if (count > 0) {
+        aiText = `I found ${count} exquisite items for you. Here are the top selections from our local inventory.`;
+      } else {
+        aiText = `I couldn't find any items matching your request in our current local inventory.`;
       }
     }
 
-    // 4. [ELITE PARITY] High-Fidelity Internal Audit for Hallucinations
+    // 4. [ELITE PARITY] Audit Layer (Only if using AI and key exists)
+    if (agentExecutionSuccess && process.env.GEMINI_API_KEY) {
     const google = createGoogleGenerativeAI({ apiKey: process.env.GEMINI_API_KEY });
     try {
       const { object: audit } = await generateObject({
