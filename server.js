@@ -28,6 +28,18 @@ const fastify = Fastify({
   }
 });
 
+/**
+ * 1. Health Check Endpoint (Highest Priority)
+ * Responds immediately to ensure Railway/Cloud probes pass.
+ */
+fastify.get('/health', async () => {
+  return { 
+    status: 'ALIVE',
+    uptime: process.uptime(),
+    timestamp: new Date().toISOString()
+  };
+});
+
 // Configure Multipart for raw WAV binary audio uploads
 await fastify.register(fastifyMultipart, {
   limits: {
@@ -52,21 +64,6 @@ connectRedis();
 
 // Start Dynamic Schema Discovery Cron (non-blocking)
 startDiscoveryCron();
-
-/**
- * Health Check Endpoint for Railway / Cloud Monitoring
- */
-fastify.get('/health', async () => {
-  const dbStatus = await query('SELECT 1').then(() => 'UP').catch(() => 'DOWN');
-  const redisStatus = redisClient.isOpen ? 'UP' : 'DOWN';
-  return { 
-    status: 'ALIVE',
-    uptime: process.uptime(),
-    db: dbStatus,
-    redis: redisStatus,
-    timestamp: new Date().toISOString()
-  };
-});
 
 /**
  * Helper: Clear all search and product list caches using SCAN (production-safe)
