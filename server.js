@@ -28,41 +28,26 @@ const fastify = Fastify({
   }
 });
 
-/**
- * 1. Health Check Endpoint (Highest Priority)
- * Responds immediately to ensure Railway/Cloud probes pass.
- */
+// 1. Health Check Endpoint (Highest Priority)
 fastify.get('/health', async () => {
-  return { 
-    status: 'ALIVE',
-    uptime: process.uptime(),
-    timestamp: new Date().toISOString()
-  };
+  return { status: 'ALIVE', uptime: process.uptime() };
 });
 
-// Configure Multipart for raw WAV binary audio uploads
-await fastify.register(fastifyMultipart, {
-  limits: {
-    fileSize: 15 * 1024 * 1024 // 15MB maximum file limit
-  }
+// Register plugins WITHOUT await (listen will wait for them)
+fastify.register(fastifyMultipart, {
+  limits: { fileSize: 15 * 1024 * 1024 }
 });
 
-// Ensure public folder exists
 const publicPath = path.resolve(__dirname, './public');
-if (!fs.existsSync(publicPath)) {
-  fs.mkdirSync(publicPath, { recursive: true });
-}
+if (!fs.existsSync(publicPath)) fs.mkdirSync(publicPath, { recursive: true });
 
-// Serve public directory statically (stunning SPA lives here)
-await fastify.register(fastifyStatic, {
+fastify.register(fastifyStatic, {
   root: publicPath,
   prefix: '/'
 });
 
-// Connect Redis in background (non-blocking for health check)
+// Background Tasks
 connectRedis();
-
-// Start Dynamic Schema Discovery Cron (non-blocking)
 startDiscoveryCron();
 
 /**
