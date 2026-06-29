@@ -47,10 +47,10 @@ await fastify.register(fastifyStatic, {
   prefix: '/'
 });
 
-// Connect Redis on launch
-await connectRedis();
+// Connect Redis in background (non-blocking for health check)
+connectRedis();
 
-// Start Dynamic Schema Discovery Cron
+// Start Dynamic Schema Discovery Cron (non-blocking)
 startDiscoveryCron();
 
 /**
@@ -801,6 +801,7 @@ fastify.setNotFoundHandler(async (request, reply) => {
 // Bind and boot
 const port = process.env.PORT || 3000;
 try {
+  console.log(`[BOOT] Attempting to listen on port ${port}...`);
   await fastify.listen({ port, host: '0.0.0.0' });
   console.log(`\n==========================================================`);
   console.log(`INDRIYA GATEWAYS ONLINE AT: http://localhost:${port}`);
