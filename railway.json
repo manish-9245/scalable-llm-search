@@ -9,7 +9,6 @@
     "sleepApplication": false,
     "restartPolicyType": "ON_FAILURE",
     "healthcheckPath": "/health",
-    "healthcheckTimeout": 100,
-    "serviceName": "indriya-ai-search"
+    "healthcheckTimeout": 120
   }
 }
