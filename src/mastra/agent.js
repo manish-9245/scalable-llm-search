@@ -1,5 +1,6 @@
 import { Mastra } from '@mastra/core';
 import { Agent } from '@mastra/core/agent';
+import { PostgresStorage } from '@mastra/pg';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { createOllama } from 'ollama-ai-provider';
 import dotenv from 'dotenv';
@@ -7,6 +8,10 @@ import { queryDatabaseTool } from './tools.js';
 import { getDynamicContext } from '../services/discoveryService.js';
 
 dotenv.config();
+
+const storage = new PostgresStorage({
+  connectionString: process.env.DATABASE_URL,
+});
 
 const google = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
@@ -122,5 +127,6 @@ export const chatAgent = new Agent({
 
 // Configure the Mastra orchestrator
 export const mastra = new Mastra({
+  storage,
   agents: { indriyaAnalyzer, chatAgent }
 });

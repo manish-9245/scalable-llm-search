@@ -16,6 +16,7 @@ import { DB_SCHEMA, loadSchema, OFFICIAL_CATEGORIES, normalizeProductData, start
 import { generateObject, generateText } from 'ai';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { z } from 'zod';
+import { queueProductIngestion, startIngestionWorker } from './src/config/queue.js';
 
 dotenv.config();
 
@@ -49,6 +50,7 @@ fastify.register(fastifyStatic, {
 // Background Tasks
 connectRedis();
 startDiscoveryCron();
+startIngestionWorker();
 
 /**
  * Helper: Clear all search and product list caches using SCAN (production-safe)
@@ -258,6 +260,10 @@ fastify.get('/api/proxy-image', async (request, reply) => {
  * Endpoint: One-time Ingestion visual spec analyzer.
  * Triggers background Mastra agent using Google Gemini 2.5 Flash to extract specifications and generate summaries.
  */
+/**
+ * Endpoint: Non-blocking Event-Driven Ingestion.
+ * Offloads heavy AI analysis and embedding to a background worker.
+ */
 fastify.post('/api/ingest', async (request, reply) => {
   const { sku, name, category, specs } = request.body || {};
   if (!sku || !name || !category) {
@@ -265,125 +271,25 @@ fastify.post('/api/ingest', async (request, reply) => {
   }
 
   try {
-    // Fetch image and description to enable multimodal vision and text analysis
-    const prodRes = await query(`SELECT image_urls, description FROM catalog_products WHERE sku = $1`, [sku]);
-    const image_urls = prodRes.rows[0]?.image_urls || [];
-    const imageUrl = image_urls[0];
-
-    const prompt = `
-      Perform professional visual and spec-driven analysis for the following Indriya catalogue item.
-      
-      CRITICAL: You MUST output ONLY a valid JSON object. No Markdown, no conversational text.
-      
-      SKU: ${sku}
-      Name: ${name}
-      Category: ${category}
-      Description: ${prodRes.rows[0]?.description || 'No description provided'}
-      Specifications: ${JSON.stringify(specs || {})}
-    `;
-
-    const content = [{ type: 'text', text: prompt }];
-    
-    if (imageUrl) {
-      try {
-        // Fetch image as buffer for the agent
-        const imgRes = await fetch(imageUrl, {
-          headers: { 'User-Agent': 'Mozilla/5.0' }
-        });
-        if (imgRes.ok) {
-          const buffer = await imgRes.arrayBuffer();
-          content.push({
-            type: 'image',
-            image: Buffer.from(buffer),
-            mimeType: imgRes.headers.get('content-type') || 'image/jpeg'
-          });
-          fastify.log.info(`Passed visual asset to Mastra for SKU: ${sku}`);
-        }
-      } catch (imgErr) {
-        fastify.log.warn(`Failed to fetch image for AI analysis: ${imgErr.message}`);
-      }
+    // Check if product exists first
+    const prodCheck = await query(`SELECT id FROM catalog_products WHERE sku = $1`, [sku]);
+    if (prodCheck.rows.length === 0) {
+      return reply.status(404).send({ error: `Product with SKU ${sku} not found. Please seed the product first.` });
     }
 
-    const result = await indriyaAnalyzer.generate(content.length > 1 ? [{ role: 'user', content }] : prompt);
-    let aiDescription = result?.text || '';
-
-    // Robust JSON extraction: Strip markdown code blocks if present
-    if (aiDescription.includes('```')) {
-      aiDescription = aiDescription.replace(/```json\n?|```/g, '').trim();
-    }
-
-    // Attempt to parse to verify validity
-    try {
-      JSON.parse(aiDescription);
-    } catch (parseErr) {
-      fastify.log.warn(`AI output for ${sku} was not valid JSON, attempting a simple fix...`);
-      // If it has trailing/leading junk, try to find the first { and last }
-      const startIdx = aiDescription.indexOf('{');
-      const endIdx = aiDescription.lastIndexOf('}');
-      if (startIdx !== -1 && endIdx !== -1) {
-        aiDescription = aiDescription.substring(startIdx, endIdx + 1);
-      }
-    }
-
-    // Generate context embedding so it becomes part of query search
-    const embedText = `${name} ${category} ${aiDescription}`;
-    const embedding = await generateEmbedding(embedText);
-    const embeddingStr = embedding ? `[${embedding.join(',')}]` : null;
-
-    // Save to database
-    if (embeddingStr) {
-      // 1. Update Product
-      await query(`
-        UPDATE catalog_products 
-        SET ai_description = $1,
-            embedding = $2::halfvec
-        WHERE sku = $3
-      `, [aiDescription, embeddingStr, sku]);
-
-      // Invalidate search cache as product data has changed
-      await invalidateSearchCache();
-
-      // 1.1 Normalize into sub-tables
-      try {
-          const prodInfo = await query(`SELECT id FROM catalog_products WHERE sku = $1`, [sku]);
-          if (prodInfo.rows[0]) {
-              await normalizeProductData(prodInfo.rows[0].id, aiDescription);
-          }
-      } catch (normErr) {
-          fastify.log.warn(`Normalization failed for ${sku}: ${normErr.message}`);
-      }
-
-      // 2. Learn new slang/traditional names
-      try {
-          const data = JSON.parse(aiDescription);
-          const variations = (data.identification || data.jewellery_identification)?.traditional_name_variations || [];
-          const primaryCategory = (data.identification || data.jewellery_identification)?.indian_category_name || category;
-          if (variations.length > 0) {
-              const { learnSlangFromAnalysis } = await import('./src/utils/slang.js');
-              await learnSlangFromAnalysis(variations, primaryCategory);
-          }
-      } catch (e) {
-          fastify.log.warn(`Slang learning failed for ${sku}: ${e.message}`);
-      }
-    } else {
-      await query(`
-        UPDATE catalog_products 
-        SET ai_description = $1 
-        WHERE sku = $2
-      `, [aiDescription, sku]);
-    }
+    // Push to background queue
+    const jobId = await queueProductIngestion({ sku, name, category, specs });
 
     return {
       success: true,
+      message: 'Product analysis queued for background processing.',
       sku,
-      name,
-      category,
-      aiDescription
+      jobId
     };
   } catch (err) {
     fastify.log.error(err);
     return reply.status(500).send({ 
-      error: 'Mastra specs-driven ingestion background agent execution failed', 
+      error: 'Failed to queue product ingestion', 
       details: err.message 
     });
   }

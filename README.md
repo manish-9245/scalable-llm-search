@@ -22,7 +22,7 @@ Indriya is built on a **$0 API Cost** architecture. While it supports advanced A
 | **Local LLM** | Ollama (Llama 3) | Open-source tool-calling for conversational search assistance. |
 | **Vision LLM** | Gemini 2.5 Flash | SOTA multimodal analysis for deep product "dossier" generation. |
 | **Voice/ASR** | Xenova/Whisper-tiny | On-device transcription for high-privacy voice search. |
-| **Caching** | Redis (MD5 Hashed) | Sub-1ms retrieval for recurring complex queries and state. |
+| **Caching/Queue** | Redis (BullMQ) | Sub-1ms retrieval + Resilient background job processing. |
 
 ---
 
@@ -56,7 +56,9 @@ graph TD
 
     subgraph "Premium Pipeline"
         Admin -->|Upload| Gemini[Gemini 2.5 Flash]
-        Gemini -->|Structured JSON| Normalize[Dossier Normalization]
+        Gemini -->|Push Job| Queue[(BullMQ Redis)]
+        Queue -->|Analyze| Worker[Background Worker]
+        Worker -->|Structured JSON| Normalize[Dossier Normalization]
         Normalize --> DB
     end
 
@@ -82,7 +84,8 @@ graph LR
         Container -->|Port 3000| Internet((Internet))
         
         Container -->|TCP| PG[(Managed Postgres + pgvector)]
-        Container -->|TCP| RD[(Managed Redis Cache)]
+        Container -->|TCP| RD[(Managed Redis Cache + BullMQ)]
+        Container -->|Job| Worker[Ingestion Worker Thread]
     end
 
     subgraph "External AI Services"
