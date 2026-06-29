@@ -69,8 +69,8 @@ export class QueryBuilder {
 
     addNumericFilter(key, operator, value) {
         const idx = this.addParam(value);
-        const col = key === 'price' ? 'base_price' : key;
-        this.addFilter(`p.${col} ${operator} $${idx}`);
+        const col = key === 'price' ? this.dynamicPriceSQL : key;
+        this.addFilter(`(${col}) ${operator} $${idx}`);
     }
 
     addStringFilter(key, operator, value, isNegation = false) {
