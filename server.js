@@ -21,8 +21,16 @@ import { log, getChildLogger } from './src/utils/logger.js';
 import { createBullBoard } from '@bull-board/api';
 import { BullMQAdapter } from '@bull-board/api/bullMQAdapter';
 import { FastifyAdapter } from '@bull-board/fastify';
+import i18next from 'i18next';
+import { resources } from './src/config/translations.js';
 
 dotenv.config();
+
+
+
+const aiProvider = process.env.GEMINI_API_KEY 
+  ? createGoogleGenerativeAI({ apiKey: process.env.GEMINI_API_KEY }) 
+  : null;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -210,7 +218,8 @@ fastify.post('/api/transcribe', async (request, reply) => {
 
   try {
     const rawBuffer = await data.toBuffer();
-    const transcribedText = await transcribeAudio(rawBuffer);
+    const language = request.query.language || 'en-IN';
+    const transcribedText = await transcribeAudio(rawBuffer, language);
     return { query: transcribedText };
   } catch (err) {
     fastify.log.error(err);
@@ -624,28 +633,87 @@ function normalizePriceShorthand(query) {
 /**
  * Generates an instant, brand-aligned concierge response dynamically in 0.1ms with $0 cost.
  */
-function generateTemplateResponse(queryText, products) {
+/**
+ * Generates an instant, brand-aligned concierge response dynamically in 0.1ms with $0 cost.
+ * Fully localized and dynamic to avoid any external or local LLM dependencies (such as Gemini or Ollama).
+ */
+await i18next.init({
+  lng: 'en-IN',
+  fallbackLng: 'en-IN',
+  resources: resources
+});
+
+/**
+ * Generates an instant, brand-aligned concierge response dynamically in 0.1ms with $0 cost.
+ * Fully localized and dynamic using i18next framework to avoid any external or local LLM dependencies (such as Gemini or Ollama).
+ */
+function generateTemplateResponse(queryText, products, language = 'en-IN') {
   const count = products.length;
   const lowercaseQuery = queryText.toLowerCase().trim();
   
   // Handle greetings
-  const greetings = ['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening'];
+  const greetings = ['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening', 'namaste', 'pranam', 'hey there'];
   if (greetings.some(g => lowercaseQuery === g || lowercaseQuery.startsWith(g + ' '))) {
-    return "Welcome to Indriya. How may I assist you in exploring our exquisite collections of gold, diamonds, and luxury jewellery today?";
+    return i18next.t('welcome', { lng: language });
   }
   
   if (count === 0) {
-    return "I couldn't find any matching items in our current inventory. How may I assist you in exploring our other custom jewellery designs?";
+    return i18next.t('noResults', { lng: language });
   }
   
-  const topNames = products.slice(0, 3).map(p => p.name);
-  if (count === 1) {
-    return `I found 1 exquisite item for you. Consider the ${topNames[0]}.`;
-  } else if (count === 2) {
-    return `I found 2 exquisite items for you. Consider the ${topNames[0]} or ${topNames[1]}.`;
-  } else {
-    return `I found ${count} exquisite items for you. Consider the ${topNames[0]}, ${topNames[1]}, or ${topNames[2]}.`;
-  }
+  // Format Price in INR Currency format
+  const formattedPrice = (p) => {
+    const priceToUse = p.calculated_price || p.base_price || p.price || 0;
+    return new Intl.NumberFormat('en-IN', { 
+      style: 'currency', 
+      currency: 'INR', 
+      maximumFractionDigits: 0 
+    }).format(priceToUse);
+  };
+
+  // Compile specific gemstone, gold and diamond metrics dynamically using i18next
+  const getProductDetailsText = (p, lang) => {
+    const parts = [];
+    const purity = p.purity || '18K';
+    
+    if (p.gold_weight_numeric || p.gold_weight) {
+      const weight = p.gold_weight_numeric || p.gold_weight;
+      parts.push(i18next.t('details.gold_weight', { purity, weight, lng: lang }));
+    } else {
+      parts.push(i18next.t('details.gold', { purity, lng: lang }));
+    }
+
+    if (p.diamond_weight_numeric || p.diamond_weight) {
+      const weight = p.diamond_weight_numeric || p.diamond_weight;
+      parts.push(i18next.t('details.diamonds', { weight, lng: lang }));
+    }
+
+    if (p.gemstone_weight_numeric && p.gemstone_weight_numeric > 0) {
+      const weight = p.gemstone_weight_numeric;
+      parts.push(i18next.t('details.gemstones', { weight, lng: lang }));
+    }
+
+    if (parts.length === 0) {
+      return p.description || i18next.t('details.fallback', { lng: lang });
+    }
+    return parts.join(', ');
+  };
+
+  const sampleProducts = products.slice(0, 3);
+  const highlightsText = sampleProducts.map((p, idx) => {
+    const details = getProductDetailsText(p, language);
+    const price = formattedPrice(p);
+    return i18next.t('details.item_format', {
+      idx: idx + 1,
+      name: p.name,
+      sku: p.sku,
+      details,
+      price,
+      lng: language
+    });
+  }).join('');
+
+  return `${i18next.t('foundCount', { count, lng: language })}\n\n${i18next.t('curatedHighlights', { lng: language })}${highlightsText}\n\n${i18next.t('cta', { lng: language })}`;
 }
 
 /**
@@ -678,15 +746,16 @@ fastify.post('/api/chat/message', async (request, reply) => {
     try {
       console.log(`[LOCAL_SEARCH] Parsing query and matching products via WASM-native local-first engine...`);
       const { searchCatalogue } = await import('./src/services/searchService.js');
-      const searchRes = await searchCatalogue({ queryText: text });
+      // Pass limit: 500 to ensure all matching available items in db are returned
+      const searchRes = await searchCatalogue({ queryText: text, limit: 500 });
       products = searchRes.products || [];
       lastToolParams = searchRes.parsedFilters || {};
       
       const count = products.length;
 
-      // 3. Local Luxury Concierge Generation (Lifetime Free, Unlimited & Fast)
-      console.log(`[LOCAL_CONCIERGE] Generating response via local luxury template engine (Fast & $0 Cost)...`);
-      aiText = generateTemplateResponse(text, products);
+      // 3. Dynamic Local Luxury Concierge Generation (Lifetime Free, Unlimited & Fast)
+      console.log(`[LOCAL_CONCIERGE] Generating localized dynamic response...`);
+      aiText = generateTemplateResponse(text, products, language);
       agentExecutionSuccess = true;
     } catch (searchErr) {
       console.error('[LOCAL_SEARCH_FAIL] Local search engine execution failed:', searchErr.message);

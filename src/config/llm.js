@@ -1,5 +1,8 @@
 import { pipeline, env } from '@xenova/transformers';
 import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 // Force Transformers to use local caching directory to enable zero-network cold starts
 env.cacheDir = path.resolve('./onnx_cache');
@@ -17,12 +20,13 @@ export async function getEmbedder() {
   return embedderInstance;
 }
 
-// Initialize ASR transcriber pipeline (whisper-tiny)
+// Initialize ASR transcriber pipeline (defaulting to Xenova/whisper-base for high accuracy and multilingual support)
 export async function getTranscriber() {
   if (!transcriberInstance) {
-    console.log('Loading local WASM Speech-to-Text Model (Xenova/whisper-tiny)...');
-    transcriberInstance = await pipeline('automatic-speech-recognition', 'Xenova/whisper-tiny');
-    console.log('Speech-to-Text model loaded successfully.');
+    const modelName = process.env.SPEECH_TO_TEXT_MODEL || 'Xenova/whisper-base';
+    console.log(`Loading local WASM Speech-to-Text Model (${modelName})...`);
+    transcriberInstance = await pipeline('automatic-speech-recognition', modelName);
+    console.log(`Speech-to-Text model (${modelName}) loaded successfully.`);
   }
   return transcriberInstance;
 }
@@ -125,11 +129,13 @@ function parseWav(buffer) {
 }
 
 /**
- * Transcribes voice recording natively on CPU with 100% $0 API cost
+ * Transcribes voice recording natively on CPU with 100% $0 API cost.
+ * Upgraded to support high-accuracy models and native multilingual routing (e.g. Hindi, Tamil, Telugu).
  * @param {Buffer} wavBuffer - 16kHz, mono 16-bit PCM WAV file
+ * @param {string} langCode - The requested language locale (e.g. 'hi-IN', 'ta-IN')
  * @returns {Promise<string>} - Transcribed text string
  */
-export async function transcribeAudio(wavBuffer) {
+export async function transcribeAudio(wavBuffer, langCode = 'en-IN') {
   if (!wavBuffer || wavBuffer.length === 0) return '';
   
   try {
@@ -140,10 +146,41 @@ export async function transcribeAudio(wavBuffer) {
     
     console.log(`Transcribing voice query of ${audioData.length} samples (~${(audioData.length / 16000).toFixed(2)}s)...`);
     
+    // Map langCode (e.g. 'en-IN', 'hi-IN') to Whisper language names/codes
+    const whisperLanguageMap = {
+      'en-IN': 'english',
+      'hi-IN': 'hindi',
+      'ta-IN': 'tamil',
+      'te-IN': 'telugu',
+      'kn-IN': 'kannada',
+      'ml-IN': 'malayalam',
+      'mr-IN': 'marathi',
+      'bn-IN': 'bengali',
+      'gu-IN': 'gujarati'
+    };
+    
+    // Extract base language code if not fully matched
+    let whisperLanguage = 'english';
+    if (langCode) {
+      const normalizedLang = langCode.trim().toLowerCase();
+      if (whisperLanguageMap[normalizedLang]) {
+        whisperLanguage = whisperLanguageMap[normalizedLang];
+      } else {
+        const baseLang = normalizedLang.split('-')[0];
+        // Check if base code matches any value in mapping keys (e.g. 'hi' matches 'hi-IN')
+        const foundKey = Object.keys(whisperLanguageMap).find(k => k.startsWith(baseLang));
+        if (foundKey) {
+          whisperLanguage = whisperLanguageMap[foundKey];
+        }
+      }
+    }
+
+    console.log(`Whisper language selected: ${whisperLanguage} for requested language locale: ${langCode}`);
+
     const result = await transcriber(audioData, {
       chunk_length_s: 30,
       stride_length_s: 5,
-      language: 'english', // Whisper-tiny works best with English search and Indian-English accent
+      language: whisperLanguage,
       task: 'transcribe'
     });
     

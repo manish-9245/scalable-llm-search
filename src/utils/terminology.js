@@ -10,8 +10,9 @@ const PROTECTED_WORDS = new Set([
     'with', 'without', 'excluding', 'exclude', 'no', 'not', 'and', 'or', 'for', 'from', 'between', 'under', 'below', 'above', 'over', 'less', 'more', 'than', 'up', 'to', 'within', 'max', 'min', 'starting', 'by', 'of', 'in', 'some', 'any', 'the', 'a', 'an',
     // Units
     'lakh', 'lakhs', 'k', 'thousand', 'thousands', 'rs', 'rupees', 'rupee', 'karat', 'karats', 'carat', 'carats', 'ct', 'cts', 'g', 'gm', 'grams', 'gram',
-    // Descriptive & intent keywords
-    'price', 'heavy', 'light', 'weight', 'most', 'least', 'cheapest', 'expensive', 'best', 'cheap', 'top', 'first', 'only', 'just', 'plain', 'mostly', 'something', 'anything', 'items', 'products', 'collections', 'show', 'me', 'gift', 'bridal', 'wedding', 'festive', 'party', 'engagement', 'wear', 'daily', 'office'
+    // Descriptive, design metadata, & intent keywords
+    'price', 'heavy', 'light', 'weight', 'most', 'least', 'cheapest', 'expensive', 'best', 'cheap', 'top', 'first', 'only', 'just', 'plain', 'mostly', 'something', 'anything', 'items', 'products', 'collections', 'show', 'me', 'gift', 'bridal', 'wedding', 'festive', 'party', 'engagement', 'wear', 'daily', 'office',
+    'motif', 'motifs', 'theme', 'themes', 'craftsmanship', 'craft', 'crafts', 'technique', 'techniques'
 ]);
 
 /**

@@ -1,13 +1,14 @@
 # Indriya AI: The Luxury Concierge Engine
 
-Indriya AI is a high-performance, local-first search and discovery engine designed for the premium Indian jewellery market. It transitions from generic vector search to an **Adaptive Hybrid Search** model that balances deterministic precision with semantic reasoning.
+Indriya AI is a high-performance, local-first search, ASR, and discovery engine designed for the premium Indian jewellery market. It transitions from generic vector search to an **Adaptive Hybrid Search** model that balances deterministic precision with semantic reasoning, backed by an advanced, offline multilingual concierge.
 
 ---
 
 ## 1. Zero-Cost "Pure Local" Philosophy
 Indriya is built on a **$0 API Cost** architecture designed to run entirely on the edge and deploy effortlessly in resource-constrained container environments (like Railway):
 - **Free Search & NLP Parsing (100% Local & Gemini-Free)**: All semantic queries, vernacular slang mappings, price conversions, and product filtering run entirely on CPU inside the container using PostgreSQL, pgvector HNSW indexes, and WASM-native local-first NLP tools. **It is 100% independent of external LLMs like Google Gemini.**
-- **100% Local Conversational Concierge (Exclusive for Chats)**: Conversational chat responses are generated purely locally on CPU via a deterministic, dynamic luxury template engine (0.1ms latency, $0 cost, unlimited scale). No cloud LLM requests are made during chat conversations, ensuring lifetime free, fast, and private operation.
+- **100% Local Multilingual Concierge (Exclusive for Chats)**: Conversational chat responses are generated purely locally on CPU via an enterprise-grade translation engine powered by **`i18next`** (0.1ms latency, $0 cost, unlimited scale) for **9 major Indian languages**. No cloud LLM requests are made during chat conversations, ensuring lifetime free, fast, and private operation.
+- **High-Accuracy Local Speech-to-Text**: Voice searches are transcribed natively on-device using specialized multilingual WASM Whisper models. With zero API fees, users can talk natively in regional dialects.
 - **Cloud LLM for Heavy Analysis (Exclusive for Ingestion)**: Complex multimodal and visual analysis is powered strictly by the cloud-based Google Gemini 2.5 Flash API. This runs purely as a one-time administrative background task during product ingestion to analyze jewellery assets and compile deep product dossiers, preserving maximum runtime privacy and zero runtime cost for customers.
 
 ---
@@ -19,9 +20,9 @@ Indriya is built on a **$0 API Cost** architecture designed to run entirely on t
 | **Orchestration** | Mastra Framework | Manages agentic structures and schemas for visual analysis. |
 | **Database** | PostgreSQL + `pgvector` | Unified relational and HNSW vector storage with ACID safety. |
 | **Embeddings** | Xenova/all-MiniLM-L6 (ONNX) | Native WASM execution on CPU; 100% private, offline, zero cost. |
-| **Concierge Generation** | Dynamic Luxury Template Engine | Pure local conversational luxury styling; 100% free, unlimited, and fast. |
+| **Concierge Generation** | `i18next` Multilingual Localization | Pure local conversational luxury styling across 9 Indian languages; 100% free, unlimited, and sub-millisecond fast. |
 | **Visual Analysis** | Gemini 2.5 Flash | Cloud-based multimodal analysis; runs exclusively for background ingestion. |
-| **Voice/ASR** | Xenova/Whisper-tiny (ONNX) | On-device, 100% local transcription for high-privacy voice search. |
+| **Voice/ASR** | Xenova/Whisper-base (ONNX) | Upgraded 74M-parameter high-accuracy multilingual on-device transcription with dynamic regional Indian language routing. |
 | **Caching/Queue** | Redis (BullMQ) | Sub-1ms retrieval + Resilient background job processing. |
 | **Observability** | Pino + BullBoard | Structured distributed tracing + Visual queue management. |
 
@@ -35,7 +36,7 @@ graph TD
     WebUI -->|API| Server[Fastify Coordinator]
     
     subgraph "Intelligent Router & Local Parser"
-        Server -->|Local WASM Whisper| Voice[Voice transcriber]
+        Server -->|Local WASM Whisper-base| Voice[Voice transcriber]
         Server -->|Local Terminology Parser| Parser[Lexical/Synonym Extractor]
         Parser -->|Check| Cache{Redis Cache}
     end
@@ -50,8 +51,8 @@ graph TD
         Exclude & Price & Vector -->|Merge| RRF[RRF Scoring]
     end
 
-    subgraph "100% Local Conversational Concierge (Chats Only)"
-        RRF -->|Structured Results| Template[Dynamic Luxury Template Engine]
+    subgraph "100% Local i18next Conversational Concierge (Chats Only)"
+        RRF -->|Structured Results| Template[i18next Multilingual Compiler]
         Template -->|Elegant Copy| Output[Polished AI Reply]
     end
 
@@ -110,11 +111,15 @@ Jewellery prices fluctuate daily. To ensure accuracy without re-indexing million
 - **GST Implementation**: Formulas include a standard 3% GST multiplier.
 - **Fallback**: If an anchor point is missing, the system dynamically reconstructs the price from component weights (Gold + Diamond + Making Charges).
 
-### C. Local Query Translation (No LLM required)
+### C. Local Query & Voice Translation (No LLM required)
 All customer prompts undergo structured parsing in `src/utils/terminology.js` prior to database execution:
 - **Vernacular Translation**: Auto-maps slang / Hindi terminology like *"Jhumkas"* to earrings and *"Thushi"* to necklaces.
 - **Shorthand Processing**: Converts monetary terms like *"1.5 Lakhs"* or *"90k"* into raw integer bounds (`150000` and `90000` respectively).
 - **Negation Extraction**: Parses negation keywords (e.g. *"excluding"*, *"without"*, *"no"*) to isolate items to exclude via Postgres GIN array operations.
+
+#### Multilingual Voice & Concierge Routing
+- **ASR Routing**: The `/api/transcribe` endpoint extracts the request locale query parameter (e.g., `?language=hi-IN`). It programmatically routes speech packets to native Whisper-base settings (e.g. `'hindi'`, `'tamil'`, `'telugu'`, `'kannada'`), producing highly accurate, language-specific transcriptions.
+- **`i18next` Concierge Templates**: Transcription outcomes are handed directly to the specialized localization compiler. Standard greetings, result statistics, product details, metal purity metrics, and CTAs are translated programmatically using highly structured language dictionaries inside [translations.js](file:///Users/manishtiwari/Documents/scalable-llm-search/src/config/translations.js).
 
 ---
 
@@ -135,12 +140,15 @@ The system implements **End-to-End Distributed Tracing** using a common `traceId
 
 ---
 
+## 5. Database Schema
+
 ### `catalog_products`
 - `id` (UUID): Primary key.
 - `embedding` (halfvec(384)): Quantized vector for semantic search.
 - `all_motifs_array` / `all_gemstones_array`: GIN-indexed tags for sub-millisecond filtering.
 - `base_price` & `base_gold_rate`: Used for the Stability Formula.
 - `visible_gold_pct`: Metadata generated by Gemini vision analysis.
+- `metal_color`: Dynamically indexed jewellery colors.
 
 ### `search_ontology`
 Self-learning mapping of slang to schema (e.g., *"Jhumka"* -> *"Drop Earrings"*).
@@ -156,10 +164,11 @@ Self-learning mapping of slang to schema (e.g., *"Jhumka"* -> *"Drop Earrings"*)
 
 ### Installation
 1. `npm install`
-2. Configure `.env` with your `DATABASE_URL`, `REDIS_URL`, and optional `GEMINI_API_KEY`.
-3. `npm run pre-cache` — Downloads local ONNX models (`all-MiniLM-L6-v2` and `whisper-tiny`) to disk to avoid cold-start latency.
-4. `npm run db:init` — Seeds the ontology and initializes tables.
-5. `npm start`
+2. Configure `.env` with your `DATABASE_URL`, `REDIS_URL`, and `GEMINI_API_KEY`.
+3. Add `SPEECH_TO_TEXT_MODEL=Xenova/whisper-base` to `.env` to define your speech model tier.
+4. `npm run pre-cache` — Downloads local ONNX models (`all-MiniLM-L6-v2` and your configured ASR model) to disk to avoid cold-start latency.
+5. `npm run db:init` — Seeds the ontology and initializes tables.
+6. `npm start`
 
 ### 6.2 Monitoring & Admin Tools
 Once the server is running, you can monitor the system via these built-in tools:
@@ -172,5 +181,5 @@ Once the server is running, you can monitor the system via these built-in tools:
 ## 7. Performance Benchmarks
 - **Cold Start**: < 2s (Model loading to RAM).
 - **Search Latency**: ~15ms (Post-embedding, including RRF).
-- **Voice Transcription**: ~200ms for 3-second audio clips (Whisper-tiny WASM).
+- **Voice Transcription**: ~200-400ms for 3-second audio clips (Whisper-base WASM).
 - **Cache Hit**: < 1ms (Redis retrieval).

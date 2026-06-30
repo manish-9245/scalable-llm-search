@@ -60,11 +60,18 @@ export async function updateDiscovery() {
         } catch (e) {
             log.warn("[DISCOVERY] product_gemstone_metrics table not found or empty", { error: e.message });
         }
+        if (gemstones.length === 0) {
+            gemstones = ['Diamond', 'Ruby', 'Emerald', 'Sapphire', 'Pearl', 'Polki', 'Synthetic'];
+        }
+
         try {
             const motifRes = await query('SELECT DISTINCT motif FROM product_motifs ORDER BY motif');
             motifs = motifRes.rows.map(r => r.motif);
         } catch (e) {
             log.warn("[DISCOVERY] product_motifs table not found or empty", { error: e.message });
+        }
+        if (motifs.length === 0) {
+            motifs = ['Peacock', 'Lotus', 'Floral', 'Crescent', 'Elephant', 'Mango', 'Kalka', 'Geometric', 'Chevron', 'Matsya', 'Fish'];
         }
 
         // 4. Load Ontology mappings

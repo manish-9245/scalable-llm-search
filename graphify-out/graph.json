@@ -34,7 +34,7 @@
       "label": "__filename",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L27",
+      "source_location": "L35",
       "id": "scalable_llm_search_server_filename",
       "community": 11,
       "norm_label": "__filename"
@@ -43,7 +43,7 @@
       "label": "__dirname",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L28",
+      "source_location": "L36",
       "id": "scalable_llm_search_server_dirname",
       "community": 11,
       "norm_label": "__dirname"
@@ -52,7 +52,7 @@
       "label": "fastify",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L30",
+      "source_location": "L38",
       "id": "scalable_llm_search_server_fastify",
       "community": 11,
       "norm_label": "fastify"
@@ -61,7 +61,7 @@
       "label": "publicPath",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L70",
+      "source_location": "L78",
       "id": "scalable_llm_search_server_publicpath",
       "community": 11,
       "norm_label": "publicpath"
@@ -70,7 +70,7 @@
       "label": "serverAdapter",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L80",
+      "source_location": "L88",
       "id": "scalable_llm_search_server_serveradapter",
       "community": 11,
       "norm_label": "serveradapter"
@@ -79,7 +79,7 @@
       "label": "invalidateSearchCache()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L100",
+      "source_location": "L108",
       "id": "scalable_llm_search_server_invalidatesearchcache",
       "community": 11,
       "norm_label": "invalidatesearchcache()"
@@ -88,7 +88,7 @@
       "label": "start",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L138",
+      "source_location": "L146",
       "id": "scalable_llm_search_server_start",
       "community": 11,
       "norm_label": "start"
@@ -97,7 +97,7 @@
       "label": "finalResult",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L165",
+      "source_location": "L173",
       "id": "scalable_llm_search_server_finalresult",
       "community": 11,
       "norm_label": "finalresult"
@@ -106,7 +106,7 @@
       "label": "loadLiveRates()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L256",
+      "source_location": "L265",
       "id": "scalable_llm_search_server_loadliverates",
       "community": 11,
       "norm_label": "loadliverates()"
@@ -115,7 +115,7 @@
       "label": "updateHeaderRatesDisplay()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L260",
+      "source_location": "L269",
       "id": "scalable_llm_search_server_updateheaderratesdisplay",
       "community": 11,
       "norm_label": "updateheaderratesdisplay()"
@@ -124,7 +124,7 @@
       "label": "content",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L379",
+      "source_location": "L388",
       "id": "scalable_llm_search_server_content",
       "community": 11,
       "norm_label": "content"
@@ -133,7 +133,7 @@
       "label": "startIdx",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L408",
+      "source_location": "L417",
       "id": "scalable_llm_search_server_startidx",
       "community": 11,
       "norm_label": "startidx"
@@ -142,7 +142,7 @@
       "label": "endIdx",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L409",
+      "source_location": "L418",
       "id": "scalable_llm_search_server_endidx",
       "community": 11,
       "norm_label": "endidx"
@@ -151,7 +151,7 @@
       "label": "whereClauses",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L465",
+      "source_location": "L474",
       "id": "scalable_llm_search_server_whereclauses",
       "community": 11,
       "norm_label": "whereclauses"
@@ -160,7 +160,7 @@
       "label": "queryParams",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L466",
+      "source_location": "L475",
       "id": "scalable_llm_search_server_queryparams",
       "community": 11,
       "norm_label": "queryparams"
@@ -169,7 +169,7 @@
       "label": "total",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L488",
+      "source_location": "L497",
       "id": "scalable_llm_search_server_total",
       "community": 11,
       "norm_label": "total"
@@ -178,7 +178,7 @@
       "label": "products",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L524",
+      "source_location": "L533",
       "id": "scalable_llm_search_server_products",
       "community": 11,
       "norm_label": "products"
@@ -187,7 +187,7 @@
       "label": "responseData",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L526",
+      "source_location": "L535",
       "id": "scalable_llm_search_server_responsedata",
       "community": 11,
       "norm_label": "responsedata"
@@ -196,7 +196,7 @@
       "label": "normalizePriceShorthand()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L610",
+      "source_location": "L619",
       "id": "scalable_llm_search_server_normalizepriceshorthand",
       "community": 11,
       "norm_label": "normalizepriceshorthand()"
@@ -205,7 +205,7 @@
       "label": "generateTemplateResponse()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L627",
+      "source_location": "L650",
       "id": "scalable_llm_search_server_generatetemplateresponse",
       "community": 11,
       "norm_label": "generatetemplateresponse()"
@@ -214,7 +214,7 @@
       "label": "langMap",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L661",
+      "source_location": "L729",
       "id": "scalable_llm_search_server_langmap",
       "community": 11,
       "norm_label": "langmap"
@@ -223,7 +223,7 @@
       "label": "text",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L666",
+      "source_location": "L734",
       "id": "scalable_llm_search_server_text",
       "community": 11,
       "norm_label": "text"
@@ -232,7 +232,7 @@
       "label": "productsJson",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L697",
+      "source_location": "L766",
       "id": "scalable_llm_search_server_productsjson",
       "community": 11,
       "norm_label": "productsjson"
@@ -261,7 +261,7 @@
       "source_file": "package.json",
       "source_location": "L1",
       "id": "package_json",
-      "community": 2,
+      "community": 4,
       "norm_label": "package.json"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "package.json",
       "source_location": "L2",
       "id": "scalable_llm_search_package_name",
-      "community": 2,
+      "community": 4,
       "norm_label": "name"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "package.json",
       "source_location": "L3",
       "id": "scalable_llm_search_package_version",
-      "community": 2,
+      "community": 4,
       "norm_label": "version"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "package.json",
       "source_location": "L4",
       "id": "scalable_llm_search_package_description",
-      "community": 2,
+      "community": 4,
       "norm_label": "description"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "package.json",
       "source_location": "L5",
       "id": "scalable_llm_search_package_main",
-      "community": 2,
+      "community": 4,
       "norm_label": "main"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L6",
       "id": "scalable_llm_search_package_type",
-      "community": 2,
+      "community": 4,
       "norm_label": "type"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "scalable_llm_search_package_scripts",
-      "community": 2,
+      "community": 4,
       "norm_label": "scripts"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "scalable_llm_search_package_scripts_start",
-      "community": 2,
+      "community": 4,
       "norm_label": "start"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "scalable_llm_search_package_scripts_db_init",
-      "community": 2,
+      "community": 4,
       "norm_label": "db:init"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "scalable_llm_search_package_scripts_test",
-      "community": 2,
+      "community": 4,
       "norm_label": "test"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "package.json",
       "source_location": "L11",
       "id": "scalable_llm_search_package_scripts_pre_cache",
-      "community": 2,
+      "community": 4,
       "norm_label": "pre-cache"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "id": "scalable_llm_search_package_scripts_ollama_pull",
-      "community": 2,
+      "community": 4,
       "norm_label": "ollama:pull"
     },
     {
@@ -499,10 +499,19 @@
       "norm_label": "fuse.js"
     },
     {
-      "label": "ioredis",
+      "label": "i18next",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L29",
+      "id": "scalable_llm_search_package_dependencies_i18next",
+      "community": 2,
+      "norm_label": "i18next"
+    },
+    {
+      "label": "ioredis",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
       "id": "scalable_llm_search_package_dependencies_ioredis",
       "community": 2,
       "norm_label": "ioredis"
@@ -511,7 +520,7 @@
       "label": "node-cron",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "id": "scalable_llm_search_package_dependencies_node_cron",
       "community": 2,
       "norm_label": "node-cron"
@@ -520,7 +529,7 @@
       "label": "ollama-ai-provider",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "id": "scalable_llm_search_package_dependencies_ollama_ai_provider",
       "community": 2,
       "norm_label": "ollama-ai-provider"
@@ -529,7 +538,7 @@
       "label": "pg",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "id": "scalable_llm_search_package_dependencies_pg",
       "community": 2,
       "norm_label": "pg"
@@ -538,7 +547,7 @@
       "label": "pino",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "id": "scalable_llm_search_package_dependencies_pino",
       "community": 2,
       "norm_label": "pino"
@@ -547,7 +556,7 @@
       "label": "pino-pretty",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "id": "scalable_llm_search_package_dependencies_pino_pretty",
       "community": 2,
       "norm_label": "pino-pretty"
@@ -556,7 +565,7 @@
       "label": "redis",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "id": "scalable_llm_search_package_dependencies_redis",
       "community": 2,
       "norm_label": "redis"
@@ -565,7 +574,7 @@
       "label": "zod",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "id": "scalable_llm_search_package_dependencies_zod",
       "community": 2,
       "norm_label": "zod"
@@ -574,18 +583,18 @@
       "label": "engines",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "id": "scalable_llm_search_package_engines",
-      "community": 2,
+      "community": 4,
       "norm_label": "engines"
     },
     {
       "label": "node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "id": "scalable_llm_search_package_engines_node",
-      "community": 2,
+      "community": 4,
       "norm_label": "node"
     },
     {
@@ -778,22 +787,58 @@
       "norm_label": "run()"
     },
     {
-      "label": "flush_redis.js",
+      "label": "test_jewel_search_cases.js",
       "file_type": "code",
-      "source_file": "scratch/flush_redis.js",
+      "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
-      "id": "scratch_flush_redis_js",
-      "community": 3,
-      "norm_label": "flush_redis.js"
+      "id": "scratch_test_jewel_search_cases_js",
+      "community": 1,
+      "norm_label": "test_jewel_search_cases.js"
     },
     {
-      "label": "flush()",
+      "label": "runTestCases()",
       "file_type": "code",
-      "source_file": "scratch/flush_redis.js",
-      "source_location": "L3",
-      "id": "scratch_flush_redis_flush",
-      "community": 3,
-      "norm_label": "flush()"
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L6",
+      "id": "scratch_test_jewel_search_cases_runtestcases",
+      "community": 1,
+      "norm_label": "runtestcases()"
+    },
+    {
+      "label": "apply_replacement.js",
+      "file_type": "code",
+      "source_file": "scratch/apply_replacement.js",
+      "source_location": "L1",
+      "id": "scratch_apply_replacement_js",
+      "community": 21,
+      "norm_label": "apply_replacement.js"
+    },
+    {
+      "label": "content",
+      "file_type": "code",
+      "source_file": "scratch/apply_replacement.js",
+      "source_location": "L5",
+      "id": "scratch_apply_replacement_content",
+      "community": 21,
+      "norm_label": "content"
+    },
+    {
+      "label": "startIndex",
+      "file_type": "code",
+      "source_file": "scratch/apply_replacement.js",
+      "source_location": "L10",
+      "id": "scratch_apply_replacement_startindex",
+      "community": 21,
+      "norm_label": "startindex"
+    },
+    {
+      "label": "endIndex",
+      "file_type": "code",
+      "source_file": "scratch/apply_replacement.js",
+      "source_location": "L16",
+      "id": "scratch_apply_replacement_endindex",
+      "community": 21,
+      "norm_label": "endindex"
     },
     {
       "label": "test_agent.mjs",
@@ -801,7 +846,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L1",
       "id": "scratch_test_agent_mjs",
-      "community": 4,
+      "community": 15,
       "norm_label": "test_agent.mjs"
     },
     {
@@ -810,7 +855,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L6",
       "id": "scratch_test_agent_testagent",
-      "community": 4,
+      "community": 15,
       "norm_label": "testagent()"
     },
     {
@@ -931,12 +976,30 @@
       "norm_label": "testspecificurls()"
     },
     {
+      "label": "test_i18next.js",
+      "file_type": "code",
+      "source_file": "scratch/test_i18next.js",
+      "source_location": "L1",
+      "id": "scratch_test_i18next_js",
+      "community": 22,
+      "norm_label": "test_i18next.js"
+    },
+    {
+      "label": "resources",
+      "file_type": "code",
+      "source_file": "scratch/test_i18next.js",
+      "source_location": "L3",
+      "id": "scratch_test_i18next_resources",
+      "community": 22,
+      "norm_label": "resources"
+    },
+    {
       "label": "test_tool_output.js",
       "file_type": "code",
       "source_file": "scratch/test_tool_output.js",
       "source_location": "L1",
       "id": "scratch_test_tool_output_js",
-      "community": 4,
+      "community": 15,
       "norm_label": "test_tool_output.js"
     },
     {
@@ -945,7 +1008,7 @@
       "source_file": "scratch/test_tool_output.js",
       "source_location": "L3",
       "id": "scratch_test_tool_output_testtool",
-      "community": 4,
+      "community": 15,
       "norm_label": "testtool()"
     },
     {
@@ -990,7 +1053,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L1",
       "id": "scratch_test_typo_search_mjs",
-      "community": 15,
+      "community": 1,
       "norm_label": "test_typo_search.mjs"
     },
     {
@@ -999,7 +1062,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L4",
       "id": "scratch_test_typo_search_testtypo",
-      "community": 15,
+      "community": 1,
       "norm_label": "testtypo()"
     },
     {
@@ -1057,111 +1120,12 @@
       "norm_label": "checksku()"
     },
     {
-      "label": "test_fuse_workspace.js",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L1",
-      "id": "scratch_test_fuse_workspace_js",
-      "community": 19,
-      "norm_label": "test_fuse_workspace.js"
-    },
-    {
-      "label": "DB_SCHEMA",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L3",
-      "id": "scratch_test_fuse_workspace_db_schema",
-      "community": 19,
-      "norm_label": "db_schema"
-    },
-    {
-      "label": "OFFICIAL_CATEGORIES",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L6",
-      "id": "scratch_test_fuse_workspace_official_categories",
-      "community": 19,
-      "norm_label": "official_categories"
-    },
-    {
-      "label": "ontology",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L7",
-      "id": "scratch_test_fuse_workspace_ontology",
-      "community": 19,
-      "norm_label": "ontology"
-    },
-    {
-      "label": "dictionary",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L18",
-      "id": "scratch_test_fuse_workspace_dictionary",
-      "community": 19,
-      "norm_label": "dictionary"
-    },
-    {
-      "label": "dictionaryList",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L27",
-      "id": "scratch_test_fuse_workspace_dictionarylist",
-      "community": 19,
-      "norm_label": "dictionarylist"
-    },
-    {
-      "label": "fuse",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L28",
-      "id": "scratch_test_fuse_workspace_fuse",
-      "community": 19,
-      "norm_label": "fuse"
-    },
-    {
-      "label": "PROTECTED_WORDS",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L34",
-      "id": "scratch_test_fuse_workspace_protected_words",
-      "community": 19,
-      "norm_label": "protected_words"
-    },
-    {
-      "label": "correctSpelling()",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L45",
-      "id": "scratch_test_fuse_workspace_correctspelling",
-      "community": 19,
-      "norm_label": "correctspelling()"
-    },
-    {
-      "label": "testQueries",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L87",
-      "id": "scratch_test_fuse_workspace_testqueries",
-      "community": 19,
-      "norm_label": "testqueries"
-    },
-    {
-      "label": "corrected",
-      "file_type": "code",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L101",
-      "id": "scratch_test_fuse_workspace_corrected",
-      "community": 19,
-      "norm_label": "corrected"
-    },
-    {
       "label": "test_multimodal.js",
       "file_type": "code",
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L1",
       "id": "scratch_test_multimodal_js",
-      "community": 4,
+      "community": 15,
       "norm_label": "test_multimodal.js"
     },
     {
@@ -1170,8 +1134,26 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L4",
       "id": "scratch_test_multimodal_testmultimodal",
-      "community": 4,
+      "community": 15,
       "norm_label": "testmultimodal()"
+    },
+    {
+      "label": "test_whisper_transcription.js",
+      "file_type": "code",
+      "source_file": "scratch/test_whisper_transcription.js",
+      "source_location": "L1",
+      "id": "scratch_test_whisper_transcription_js",
+      "community": 3,
+      "norm_label": "test_whisper_transcription.js"
+    },
+    {
+      "label": "startTime",
+      "file_type": "code",
+      "source_file": "scratch/test_whisper_transcription.js",
+      "source_location": "L9",
+      "id": "scratch_test_whisper_transcription_starttime",
+      "community": 3,
+      "norm_label": "starttime"
     },
     {
       "label": "app.js",
@@ -1701,7 +1683,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L35",
       "id": "mastra_tools_querydatabasetool",
-      "community": 4,
+      "community": 15,
       "norm_label": "querydatabasetool"
     },
     {
@@ -1710,7 +1692,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L1",
       "id": "src_mastra_agent_js",
-      "community": 4,
+      "community": 15,
       "norm_label": "agent.js"
     },
     {
@@ -1719,7 +1701,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L12",
       "id": "mastra_agent_storage",
-      "community": 4,
+      "community": 15,
       "norm_label": "storage"
     },
     {
@@ -1728,7 +1710,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L17",
       "id": "mastra_agent_google",
-      "community": 4,
+      "community": 15,
       "norm_label": "google"
     },
     {
@@ -1737,7 +1719,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L27",
       "id": "mastra_agent_ollama",
-      "community": 4,
+      "community": 15,
       "norm_label": "ollama"
     },
     {
@@ -1746,7 +1728,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L41",
       "id": "mastra_agent_indriyaanalyzer",
-      "community": 4,
+      "community": 15,
       "norm_label": "indriyaanalyzer"
     },
     {
@@ -1755,7 +1737,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L111",
       "id": "mastra_agent_chatagent",
-      "community": 4,
+      "community": 15,
       "norm_label": "chatagent"
     },
     {
@@ -1764,8 +1746,26 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L143",
       "id": "mastra_agent_mastra",
-      "community": 4,
+      "community": 15,
       "norm_label": "mastra"
+    },
+    {
+      "label": "translations.js",
+      "file_type": "code",
+      "source_file": "src/config/translations.js",
+      "source_location": "L1",
+      "id": "src_config_translations_js",
+      "community": 11,
+      "norm_label": "translations.js"
+    },
+    {
+      "label": "resources",
+      "file_type": "code",
+      "source_file": "src/config/translations.js",
+      "source_location": "L2",
+      "id": "config_translations_resources",
+      "community": 11,
+      "norm_label": "resources"
     },
     {
       "label": "llm.js",
@@ -1780,7 +1780,7 @@
       "label": "getEmbedder()",
       "file_type": "code",
       "source_file": "src/config/llm.js",
-      "source_location": "L11",
+      "source_location": "L14",
       "id": "config_llm_getembedder",
       "community": 3,
       "norm_label": "getembedder()"
@@ -1789,7 +1789,7 @@
       "label": "getTranscriber()",
       "file_type": "code",
       "source_file": "src/config/llm.js",
-      "source_location": "L21",
+      "source_location": "L24",
       "id": "config_llm_gettranscriber",
       "community": 3,
       "norm_label": "gettranscriber()"
@@ -1798,7 +1798,7 @@
       "label": "generateEmbedding()",
       "file_type": "code",
       "source_file": "src/config/llm.js",
-      "source_location": "L39",
+      "source_location": "L43",
       "id": "config_llm_generateembedding",
       "community": 3,
       "norm_label": "generateembedding()"
@@ -1807,7 +1807,7 @@
       "label": "parseWav()",
       "file_type": "code",
       "source_file": "src/config/llm.js",
-      "source_location": "L84",
+      "source_location": "L88",
       "id": "config_llm_parsewav",
       "community": 3,
       "norm_label": "parsewav()"
@@ -1816,7 +1816,7 @@
       "label": "transcribeAudio()",
       "file_type": "code",
       "source_file": "src/config/llm.js",
-      "source_location": "L132",
+      "source_location": "L138",
       "id": "config_llm_transcribeaudio",
       "community": 3,
       "norm_label": "transcribeaudio()"
@@ -1953,7 +1953,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L1",
       "id": "src_utils_terminology_js",
-      "community": 15,
+      "community": 20,
       "norm_label": "terminology.js"
     },
     {
@@ -1962,34 +1962,34 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L6",
       "id": "utils_terminology_protected_words",
-      "community": 15,
+      "community": 20,
       "norm_label": "protected_words"
     },
     {
       "label": "resolveTerminology()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L21",
+      "source_location": "L22",
       "id": "utils_terminology_resolveterminology",
-      "community": 15,
+      "community": 1,
       "norm_label": "resolveterminology()"
     },
     {
       "label": "loadOntologyAndSlang()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L419",
+      "source_location": "L420",
       "id": "utils_terminology_loadontologyandslang",
-      "community": 15,
+      "community": 20,
       "norm_label": "loadontologyandslang()"
     },
     {
       "label": "levenshteinDistance()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L428",
+      "source_location": "L429",
       "id": "utils_terminology_levenshteindistance",
-      "community": 15,
+      "community": 20,
       "norm_label": "levenshteindistance()"
     },
     {
@@ -2205,7 +2205,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L1",
       "id": "src_services_discoveryservice_js",
-      "community": 15,
+      "community": 11,
       "norm_label": "discoveryservice.js"
     },
     {
@@ -2214,7 +2214,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L6",
       "id": "services_discoveryservice_official_categories",
-      "community": 15,
+      "community": 11,
       "norm_label": "official_categories"
     },
     {
@@ -2223,7 +2223,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L7",
       "id": "services_discoveryservice_db_schema",
-      "community": 15,
+      "community": 20,
       "norm_label": "db_schema"
     },
     {
@@ -2232,41 +2232,41 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L13",
       "id": "services_discoveryservice_updatediscovery",
-      "community": 15,
+      "community": 11,
       "norm_label": "updatediscovery()"
     },
     {
       "label": "loadSchema()",
       "file_type": "code",
       "source_file": "src/services/discoveryService.js",
-      "source_location": "L122",
+      "source_location": "L129",
       "id": "services_discoveryservice_loadschema",
-      "community": 15,
+      "community": 11,
       "norm_label": "loadschema()"
     },
     {
       "label": "getDynamicContext()",
       "file_type": "code",
       "source_file": "src/services/discoveryService.js",
-      "source_location": "L146",
+      "source_location": "L153",
       "id": "services_discoveryservice_getdynamiccontext",
-      "community": 4,
+      "community": 15,
       "norm_label": "getdynamiccontext()"
     },
     {
       "label": "startDiscoveryCron()",
       "file_type": "code",
       "source_file": "src/services/discoveryService.js",
-      "source_location": "L160",
+      "source_location": "L167",
       "id": "services_discoveryservice_startdiscoverycron",
-      "community": 15,
+      "community": 11,
       "norm_label": "startdiscoverycron()"
     },
     {
       "label": "normalizeProductData()",
       "file_type": "code",
       "source_file": "src/services/discoveryService.js",
-      "source_location": "L169",
+      "source_location": "L176",
       "id": "services_discoveryservice_normalizeproductdata",
       "community": 1,
       "norm_label": "normalizeproductdata()"
@@ -2302,7 +2302,7 @@
       "label": "2. Technical Stack",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L15",
+      "source_location": "L16",
       "id": "scalable_llm_search_readme_2_technical_stack",
       "community": 14,
       "norm_label": "2. technical stack"
@@ -2311,7 +2311,7 @@
       "label": "3. System Architecture (HLD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L30",
+      "source_location": "L31",
       "id": "scalable_llm_search_readme_3_system_architecture_hld",
       "community": 14,
       "norm_label": "3. system architecture (hld)"
@@ -2320,7 +2320,7 @@
       "label": "code:mermaid (graph TD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "id": "scalable_llm_search_readme_codeblock_1",
       "community": 14,
       "norm_label": "code:mermaid (graph td)"
@@ -2329,7 +2329,7 @@
       "label": "3.5 Infrastructure & Deployment Flow",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L71",
+      "source_location": "L72",
       "id": "scalable_llm_search_readme_3_5_infrastructure_deployment_flow",
       "community": 14,
       "norm_label": "3.5 infrastructure & deployment flow"
@@ -2338,7 +2338,7 @@
       "label": "code:mermaid (graph LR)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L73",
+      "source_location": "L74",
       "id": "scalable_llm_search_readme_codeblock_2",
       "community": 14,
       "norm_label": "code:mermaid (graph lr)"
@@ -2347,7 +2347,7 @@
       "label": "4. Engineering Deep-Dive (LLD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L97",
+      "source_location": "L98",
       "id": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
       "community": 14,
       "norm_label": "4. engineering deep-dive (lld)"
@@ -2356,7 +2356,7 @@
       "label": "A. Adaptive Hybrid Search (RRF)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L99",
+      "source_location": "L100",
       "id": "scalable_llm_search_readme_a_adaptive_hybrid_search_rrf",
       "community": 14,
       "norm_label": "a. adaptive hybrid search (rrf)"
@@ -2365,25 +2365,34 @@
       "label": "B. Luxury Stability Pricing Algorithm",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L107",
+      "source_location": "L108",
       "id": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm",
       "community": 14,
       "norm_label": "b. luxury stability pricing algorithm"
     },
     {
-      "label": "C. Local Query Translation (No LLM required)",
+      "label": "C. Local Query & Voice Translation (No LLM required)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L113",
-      "id": "scalable_llm_search_readme_c_local_query_translation_no_llm_required",
+      "source_location": "L114",
+      "id": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required",
       "community": 14,
-      "norm_label": "c. local query translation (no llm required)"
+      "norm_label": "c. local query & voice translation (no llm required)"
+    },
+    {
+      "label": "Multilingual Voice & Concierge Routing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L120",
+      "id": "scalable_llm_search_readme_multilingual_voice_concierge_routing",
+      "community": 14,
+      "norm_label": "multilingual voice & concierge routing"
     },
     {
       "label": "4.5 Observability & Distributed Tracing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L121",
+      "source_location": "L126",
       "id": "scalable_llm_search_readme_4_5_observability_distributed_tracing",
       "community": 14,
       "norm_label": "4.5 observability & distributed tracing"
@@ -2392,7 +2401,7 @@
       "label": "A. BullMQ Dashboard",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L123",
+      "source_location": "L128",
       "id": "scalable_llm_search_readme_a_bullmq_dashboard",
       "community": 14,
       "norm_label": "a. bullmq dashboard"
@@ -2401,16 +2410,25 @@
       "label": "B. Trace-based Distributed Logging",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L129",
+      "source_location": "L134",
       "id": "scalable_llm_search_readme_b_trace_based_distributed_logging",
       "community": 14,
       "norm_label": "b. trace-based distributed logging"
     },
     {
+      "label": "5. Database Schema",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L143",
+      "id": "scalable_llm_search_readme_5_database_schema",
+      "community": 14,
+      "norm_label": "5. database schema"
+    },
+    {
       "label": "`catalog_products`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L138",
+      "source_location": "L145",
       "id": "scalable_llm_search_readme_catalog_products",
       "community": 14,
       "norm_label": "`catalog_products`"
@@ -2419,7 +2437,7 @@
       "label": "`search_ontology`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L145",
+      "source_location": "L153",
       "id": "scalable_llm_search_readme_search_ontology",
       "community": 14,
       "norm_label": "`search_ontology`"
@@ -2428,7 +2446,7 @@
       "label": "6. Setup & Deployment",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L150",
+      "source_location": "L158",
       "id": "scalable_llm_search_readme_6_setup_deployment",
       "community": 14,
       "norm_label": "6. setup & deployment"
@@ -2437,7 +2455,7 @@
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L152",
+      "source_location": "L160",
       "id": "scalable_llm_search_readme_prerequisites",
       "community": 14,
       "norm_label": "prerequisites"
@@ -2446,7 +2464,7 @@
       "label": "Installation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L157",
+      "source_location": "L165",
       "id": "scalable_llm_search_readme_installation",
       "community": 14,
       "norm_label": "installation"
@@ -2455,7 +2473,7 @@
       "label": "6.2 Monitoring & Admin Tools",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L164",
+      "source_location": "L173",
       "id": "scalable_llm_search_readme_6_2_monitoring_admin_tools",
       "community": 14,
       "norm_label": "6.2 monitoring & admin tools"
@@ -2464,7 +2482,7 @@
       "label": "7. Performance Benchmarks",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L172",
+      "source_location": "L181",
       "id": "scalable_llm_search_readme_7_performance_benchmarks",
       "community": 14,
       "norm_label": "7. performance benchmarks"
@@ -2473,10 +2491,145 @@
       "label": "parseQuery",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L418",
+      "source_location": "L419",
       "id": "utils_terminology_parsequery",
-      "community": 15,
+      "community": 20,
       "norm_label": "parsequery"
+    },
+    {
+      "label": "C. Local Query Translation (No LLM required)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L113",
+      "community": 14,
+      "norm_label": "c. local query translation (no llm required)",
+      "id": "scalable_llm_search_readme_c_local_query_translation_no_llm_required"
+    },
+    {
+      "label": "sampleProducts",
+      "file_type": "code",
+      "source_file": "server.js",
+      "source_location": "L697",
+      "community": 11,
+      "norm_label": "sampleproducts",
+      "id": "scalable_llm_search_server_sampleproducts"
+    },
+    {
+      "label": "flush_redis.js",
+      "file_type": "code",
+      "source_file": "scratch/flush_redis.js",
+      "source_location": "L1",
+      "community": 3,
+      "norm_label": "flush_redis.js",
+      "id": "scratch_flush_redis_js"
+    },
+    {
+      "label": "flush()",
+      "file_type": "code",
+      "source_file": "scratch/flush_redis.js",
+      "source_location": "L3",
+      "community": 3,
+      "norm_label": "flush()",
+      "id": "scratch_flush_redis_flush"
+    },
+    {
+      "label": "test_fuse_workspace.js",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L1",
+      "community": 19,
+      "norm_label": "test_fuse_workspace.js",
+      "id": "scratch_test_fuse_workspace_js"
+    },
+    {
+      "label": "DB_SCHEMA",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L3",
+      "community": 19,
+      "norm_label": "db_schema",
+      "id": "scratch_test_fuse_workspace_db_schema"
+    },
+    {
+      "label": "OFFICIAL_CATEGORIES",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L6",
+      "community": 19,
+      "norm_label": "official_categories",
+      "id": "scratch_test_fuse_workspace_official_categories"
+    },
+    {
+      "label": "ontology",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L7",
+      "community": 19,
+      "norm_label": "ontology",
+      "id": "scratch_test_fuse_workspace_ontology"
+    },
+    {
+      "label": "dictionary",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L18",
+      "community": 19,
+      "norm_label": "dictionary",
+      "id": "scratch_test_fuse_workspace_dictionary"
+    },
+    {
+      "label": "dictionaryList",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L27",
+      "community": 19,
+      "norm_label": "dictionarylist",
+      "id": "scratch_test_fuse_workspace_dictionarylist"
+    },
+    {
+      "label": "fuse",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L28",
+      "community": 19,
+      "norm_label": "fuse",
+      "id": "scratch_test_fuse_workspace_fuse"
+    },
+    {
+      "label": "PROTECTED_WORDS",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L34",
+      "community": 19,
+      "norm_label": "protected_words",
+      "id": "scratch_test_fuse_workspace_protected_words"
+    },
+    {
+      "label": "correctSpelling()",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L45",
+      "community": 19,
+      "norm_label": "correctspelling()",
+      "id": "scratch_test_fuse_workspace_correctspelling"
+    },
+    {
+      "label": "testQueries",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L87",
+      "community": 19,
+      "norm_label": "testqueries",
+      "id": "scratch_test_fuse_workspace_testqueries"
+    },
+    {
+      "label": "corrected",
+      "file_type": "code",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L101",
+      "community": 19,
+      "norm_label": "corrected",
+      "id": "scratch_test_fuse_workspace_corrected"
     },
     {
       "label": "google",
@@ -2537,7 +2690,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L4",
-      "community": 15,
+      "community": 20,
       "norm_label": "ontologycache",
       "id": "utils_terminology_ontologycache"
     },
@@ -2546,7 +2699,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L13",
-      "community": 15,
+      "community": 20,
       "norm_label": "slangcache",
       "id": "utils_terminology_slangcache"
     },
@@ -2555,7 +2708,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L57",
-      "community": 15,
+      "community": 20,
       "norm_label": "seeddefaultontology()",
       "id": "utils_terminology_seeddefaultontology"
     },
@@ -2564,7 +2717,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L112",
-      "community": 15,
+      "community": 20,
       "norm_label": "seeddefaultslang()",
       "id": "utils_terminology_seeddefaultslang"
     },
@@ -2573,7 +2726,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L273",
-      "community": 15,
+      "community": 20,
       "norm_label": "createemptyparse()",
       "id": "utils_terminology_createemptyparse"
     },
@@ -2582,7 +2735,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L290",
-      "community": 15,
+      "community": 20,
       "norm_label": "calculatepricevalue()",
       "id": "utils_terminology_calculatepricevalue"
     },
@@ -2591,7 +2744,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L298",
-      "community": 15,
+      "community": 20,
       "norm_label": "maptoexclusionkeyword()",
       "id": "utils_terminology_maptoexclusionkeyword"
     },
@@ -3230,6 +3383,28 @@
       "target": "utils_logger_getchildlogger"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_js",
+      "target": "src_config_translations_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server.js",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_js",
+      "target": "config_translations_resources"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "server.js",
@@ -3458,6 +3633,16 @@
       "confidence_score": 1.0,
       "source": "server_js",
       "target": "scalable_llm_search_server_productsjson"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server.js",
+      "source_location": "L697",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_js",
+      "target": "scalable_llm_search_server_sampleproducts"
     },
     {
       "relation": "contains",
@@ -3852,9 +4037,19 @@
       "source_file": "package.json",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_package_dependencies",
-      "target": "scalable_llm_search_package_dependencies_fuse_js",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_package_dependencies_fuse_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scalable_llm_search_package_dependencies",
+      "target": "scalable_llm_search_package_dependencies_i18next"
     },
     {
       "relation": "contains",
@@ -4253,33 +4448,151 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "scratch/flush_redis.js",
+      "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "scratch_flush_redis_js",
-      "target": "src_config_redis_js",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "src_services_searchservice_js"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "scratch/flush_redis.js",
+      "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
       "weight": 1.0,
-      "source": "scratch_flush_redis_js",
-      "target": "config_redis_redisclient",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "services_searchservice_searchcatalogue"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "src_utils_terminology_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "utils_terminology_resolveterminology"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "config_db_pool"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "src_config_redis_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "config_redis_redisclient"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "scratch/flush_redis.js",
-      "source_location": "L3",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L6",
       "weight": 1.0,
-      "source": "scratch_flush_redis_js",
-      "target": "scratch_flush_redis_flush",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_js",
+      "target": "scratch_test_jewel_search_cases_runtestcases"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_runtestcases",
+      "target": "utils_terminology_resolveterminology"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_jewel_search_cases.js",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_jewel_search_cases_runtestcases",
+      "target": "services_searchservice_searchcatalogue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/apply_replacement.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_apply_replacement_js",
+      "target": "scratch_apply_replacement_content"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/apply_replacement.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_apply_replacement_js",
+      "target": "scratch_apply_replacement_startindex"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/apply_replacement.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_apply_replacement_js",
+      "target": "scratch_apply_replacement_endindex"
     },
     {
       "relation": "imports_from",
@@ -4569,6 +4882,16 @@
       "confidence_score": 1.0,
       "source": "scratch_inspect_images_js",
       "target": "scratch_inspect_images_testspecificurls"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_i18next.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_i18next_js",
+      "target": "scratch_test_i18next_resources"
     },
     {
       "relation": "imports_from",
@@ -4960,106 +5283,6 @@
       "target": "config_db_query"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_db_schema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_official_categories",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_ontology",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_dictionary",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_dictionarylist",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_fuse",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L34",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_protected_words",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_correctspelling",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L87",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_testqueries",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scratch/test_fuse_workspace.js",
-      "source_location": "L101",
-      "weight": 1.0,
-      "source": "scratch_test_fuse_workspace_js",
-      "target": "scratch_test_fuse_workspace_corrected",
-      "confidence_score": 1.0
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -5090,6 +5313,38 @@
       "confidence_score": 1.0,
       "source": "scratch_test_multimodal_js",
       "target": "scratch_test_multimodal_testmultimodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_whisper_transcription.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_whisper_transcription_js",
+      "target": "src_config_llm_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_whisper_transcription.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_whisper_transcription_js",
+      "target": "config_llm_gettranscriber"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_whisper_transcription.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_whisper_transcription_js",
+      "target": "scratch_test_whisper_transcription_starttime"
     },
     {
       "relation": "contains",
@@ -6696,6 +6951,16 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/config/translations.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_config_translations_js",
+      "target": "config_translations_resources"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/config/llm.js",
       "source_location": "L11",
       "weight": 1.0,
@@ -7299,6 +7564,17 @@
       "target": "src_config_redis_js"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/flush_redis.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_flush_redis_js",
+      "target": "src_config_redis_js"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/config/redis.js",
@@ -7464,9 +7740,9 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_utils_terminology_js",
-      "target": "utils_terminology_protected_words",
-      "confidence_score": 1.0
+      "target": "utils_terminology_protected_words"
     },
     {
       "relation": "contains",
@@ -7494,9 +7770,9 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L428",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_utils_terminology_js",
-      "target": "utils_terminology_levenshteindistance",
-      "confidence_score": 1.0
+      "target": "utils_terminology_levenshteindistance"
     },
     {
       "relation": "imports_from",
@@ -8231,6 +8507,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_indriya_ai_the_luxury_concierge_engine",
+      "target": "scalable_llm_search_readme_5_database_schema",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L152",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -8291,6 +8577,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
+      "target": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L117",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -8306,6 +8602,16 @@
       "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
       "target": "scalable_llm_search_readme_c_prompt_injection_domain_guardrails"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required",
+      "target": "scalable_llm_search_readme_multilingual_voice_concierge_routing",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -8346,6 +8652,26 @@
       "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_4_5_observability_distributed_tracing",
       "target": "scalable_llm_search_readme_search_ontology"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_5_database_schema",
+      "target": "scalable_llm_search_readme_catalog_products",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_5_database_schema",
+      "target": "scalable_llm_search_readme_search_ontology",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -8411,6 +8737,127 @@
       "target": "utils_terminology_maptoexclusionkeyword"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/flush_redis.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_flush_redis_js",
+      "target": "config_redis_redisclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/flush_redis.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_flush_redis_js",
+      "target": "scratch_flush_redis_flush"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_db_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_official_categories"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_ontology"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_dictionary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_dictionarylist"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_fuse"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_protected_words"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_correctspelling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_testqueries"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_fuse_workspace.js",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_fuse_workspace_js",
+      "target": "scratch_test_fuse_workspace_corrected"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -8434,5 +8881,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1d866ddfccfc0bfb2033ad7cd05dff2c4fcc2647"
+  "built_at_commit": "2bc0ed7b7a8e7f8d4c2c9d8933bba3ead8f846d5"
 }

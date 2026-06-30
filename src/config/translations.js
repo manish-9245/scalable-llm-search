@@ -1,0 +1,156 @@
+// Dictionary resources for 9 Indian languages supported natively in the Indriya concierge
+export const resources = {
+  'en-IN': {
+    translation: {
+      welcome: "Namaste and Welcome to Indriya. It is my pleasure to guide you through our private vault today.",
+      foundCount: "I have uncovered {{count}} exquisite, hand-selected masterpieces that match your precise criteria.",
+      curatedHighlights: "Here are some stunning highlights from our collection:",
+      cta: "Please tap on any product card below to open its materials dossier, analyze physical specifications, or view it on the official Indriya website.",
+      noResults: "I couldn't locate any direct matches in our active vault. However, I warmly invite you to explore our general collections of Gold, Diamonds, and custom-crafted traditional jewellery.",
+      details: {
+        gold_weight: "crafted in {{purity}} gold ({{weight}}g)",
+        gold: "crafted in {{purity}} gold",
+        diamonds: "adorned with {{weight}}ct diamonds",
+        gemstones: "featuring {{weight}}ct gemstone details",
+        fallback: "a masterfully designed jewellery masterpiece",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, valued at {{price}}"
+      }
+    }
+  },
+  'hi-IN': {
+    translation: {
+      welcome: "नमस्ते और इंद्रिया में आपका स्वागत है। आज हमारे निजी वॉल्ट में आपका मार्गदर्शन करना मेरा सौभाग्य है।",
+      foundCount: "मुझे आपकी पसंद के अनुसार हमारे संग्रह में {{count}} उत्कृष्ट मास्टरपीस मिले हैं।",
+      curatedHighlights: "यहाँ हमारे संग्रह से कुछ चुनिंदा डिज़ाइन दिए गए हैं:",
+      cta: "कृपया किसी भी उत्पाद कार्ड पर टैप करें ताकि आप उसका विस्तृत विवरण, विश्लेषण देख सकें या आधिकारिक इंद्रिया वेबसाइट पर जा सकें।",
+      noResults: "मुझे हमारे वॉल्ट में कोई सीधा मैच नहीं मिला। मैं आपको हमारे सोने, हीरे और हस्तनिर्मित पारंपरिक आभूषणों के व्यापक संग्रह को देखने के लिए आमंत्रित करता हूँ।",
+      details: {
+        gold_weight: "{{purity}} सोने में निर्मित ({{weight}}g)",
+        gold: "{{purity}} सोने में निर्मित",
+        diamonds: "{{weight}}ct हीरों से सुसज्जित",
+        gemstones: "{{weight}}ct रत्न के विवरण के साथ",
+        fallback: "एक उत्कृष्ट रूप से डिज़ाइन किया गया आभूषण उत्कृष्ट कृति",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, मूल्य: {{price}}"
+      }
+    }
+  },
+  'ta-IN': {
+    translation: {
+      welcome: "வணக்கம், இந்திரியாவிற்கு உங்களை வரவேறுகிறோம். இன்று எங்களின் பிரத்யேக ஆபரணங்களை உங்களுக்கு அறிமுகப்படுத்துவதில் மகிழ்ச்சி அடைகிறேன்.",
+      foundCount: "உங்களின் விருப்பத்திற்கு ஏற்ப {{count}} நேர்த்தியான ஆபரணங்களை நான் கண்டறிந்துள்ளேன்.",
+      curatedHighlights: "எங்கள் சேகரிப்பில் உள்ள சில சிறந்த தயாரிப்புகள் இதோ:",
+      cta: "பொருட்களின் விவரங்கள் மற்றும் பகுப்பாய்வை அறிய கீழே உள்ள கார்டுகளை அழுத்தவும், அல்லது இந்திரியா இணையதளத்தில் பார்க்கவும்.",
+      noResults: "உங்களின் தேடலுக்குப் பொருத்தமான பொருட்கள் எதுவும் தற்போது இல்லை. எங்களின் மற்ற தங்கம் மற்றும் வைர நகை வடிவமைப்புகளைப் பார்க்க உங்களை வரவேற்கிறேன்.",
+      details: {
+        gold_weight: "{{purity}} தங்கத்தில் செய்யபட்டது ({{weight}}g)",
+        gold: "{{purity}} தங்கத்தில் செய்யபட்டது",
+        diamonds: "{{weight}}ct வைரங்கள் பதிக்கப்பட்டது",
+        gemstones: "{{weight}}ct கற்கள் பதிக்கப்பட்டது",
+        fallback: "ஒரு அற்புதமான வடிவமைக்கப்பட்ட நகை தலைசிறந்த படைப்பு",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, மதிப்பு: {{price}}"
+      }
+    }
+  },
+  'te-IN': {
+    translation: {
+      welcome: "నమస్కారం! ఇంద్రియాకు మీకు స్వాగతం. నేడు మా అద్భుతమైన ఆభరణాల సేకరణను మీకు చూపించడం నా సంతోషం.",
+      foundCount: "మీ అభిరుచికి సరిపోయేలా {{count}} అద్భుతమైన డిజైన్లను నేను కనుగొన్నాను.",
+      curatedHighlights: "మా సేకరణలోని కొన్ని ప్రత్యేకమైన డిజైన్లు ఇక్కడ ఉన్నాయి:",
+      cta: "ఈ ఆభరణాల పూర్తి వివరాలు మరియు విశ్లేషణ తెలుసుకోవడానికి క్రింది కార్డ్‌లపై ట్యాప్ చేయండి.",
+      noResults: "మీరు కోరిన డిజైన్లు ప్రస్తుతం లభ్యం కాలేదు. దయచేసి మా ఇతర బంగారం మరియు వజ్రాల శ్రేణిని పరిశీలించండి.",
+      details: {
+        gold_weight: "{{purity}} బంగారంతో తయారు చేయబడింది ({{weight}}g)",
+        gold: "{{purity}} బంగారంతో తయారు చేయబడింది",
+        diamonds: "{{weight}}ct వజ్రాలతో అలంకరించబడింది",
+        gemstones: "{{weight}}ct రత్నాలతో అలంకరించబడింది",
+        fallback: "అద్భుతంగా రూపొందించబడిన ఒక ఆభరణం",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, విలువ: {{price}}"
+      }
+    }
+  },
+  'kn-IN': {
+    translation: {
+      welcome: "ನಮಸ್ಕಾರ! ಇಂದ್ರಿಯ ಜ್ಯುವೆಲ್ಲರಿಗೆ ತಮಗೆ ಆತ್ಮೀಯ ಸ್ವಾಗತ. ನಮ್ಮ ಅತ್ಯುತ್ಕೃಷ್ಟ ಆಭರಣಗಳ ಸಂಗ್ರಹವನ್ನು ತಮಗೆ ಪರಿಚಯಿಸಲು ಹರ್ಷಿಸುತ್ತೇನೆ.",
+      foundCount: "ನಿಮ್ಮ ನಿಖರವಾದ ಮಾನದಂಡಗಳಿಗೆ ಹೊಂದುವ {{count}} ಅತ್ಯುತ್ತಮ ವಿನ್ಯಾಸಗಳನ್ನು ನಾನು ಪತ್ತೆಹಚ್ಚಿದ್ದೇನೆ.",
+      curatedHighlights: "ನಮ್ಮ ವಿನ್ಯಾಸಗಳಲ್ಲಿ ಪ್ರಮುಖವಾದ ಕೆಲವು ಹೈಲೈಟ್‌ಗಳು ಇಲ್ಲಿವೆ:",
+      cta: "ಹೆಚ್ಚಿನ ಮಾಹಿತಿ ಮತ್ತು ವಿಶ್ಲೇಷಣೆಗಾಗಿ ದಯವಿಟ್ಟು ಕೆಳಗಿನ ಕಾರ್ಡ್‌ಗಳನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ.",
+      noResults: "ನಿಮ್ಮ ಹುಡುಕಾಟಕ್ಕೆ ಸರಿಹೊಂದುವ ಆಭರಣಗಳು ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ನಮ್ಮ ಇತರ ಚಿನ್ನ ಮತ್ತು ವಜ್ರ ಸಂಗ್ರಹಗಳನ್ನು ಅನ್ವೇಷಿಸಿ.",
+      details: {
+        gold_weight: "{{purity}} ಚಿನ್ನದಲ್ಲಿ ತಯಾರಿಸಲಾಗಿದೆ ({{weight}}g)",
+        gold: "{{purity}} ಚಿನ್ನದಲ್ಲಿ ತಯಾರಿಸಲಾಗಿದೆ",
+        diamonds: "{{weight}}ct ವಜ್ರಗಳಿಂದ ಅಲಂಕರಿಸಲ್ಪಟ್ಟಿದೆ",
+        gemstones: "{{weight}}ct ರತ್ನದ ವಿವರಗಳನ್ನು ಹೊಂದಿದೆ",
+        fallback: "ಒಂದು ಅತ್ಯುತ್ತಮವಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಆಭರಣದ ಮೇರುಕೃತಿ",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, ಮೌಲ್ಯ: {{price}}"
+      }
+    }
+  },
+  'ml-IN': {
+    translation: {
+      welcome: "നമസ്കാരം! ഇന്ദ്രിയയിലേക്ക് സ്വാഗതം. ഞങ്ങളുടെ വിശിഷ്ടമായ സ്വർണ്ണ, വജ്ര ആഭരണങ്ങൾ നിങ്ങൾക്ക് മുന്നിൽ അവതരിപ്പിക്കുന്നതിൽ സന്തോഷമുണ്ട്.",
+      foundCount: "നിങ്ങളുടെ അഭിരുചിക്കിണങ്ങിയ {{count}} അപൂർവ ഡിസൈനുകൾ ഞാൻ കണ്ടെത്തിയിട്ടുണ്ട്.",
+      curatedHighlights: "ഞങ്ങളുടെ ശേഖരത്തിലെ ചില ആകർഷകമായ ഹൈലൈറ്റുകൾ താഴെ നൽകുന്നു:",
+      cta: "വിശദമായ വിശകലനത്തിനായി ദയവായി താഴെയുള്ള കാർഡുകളിൽ ക്ലിക്ക് ചെയ്യുക.",
+      noResults: "നിങ്ങൾ തിരഞ്ഞ ഡിസൈനുകൾ നിലവിൽ ലഭ്യമല്ല. ഞങ്ങളുടെ മറ്റ് സ്വർണ്ണ, വജ്ര ശേഖരങ്ങൾ കാണാൻ താല്പര്യപ്പെടുന്നു.",
+      details: {
+        gold_weight: "{{purity}} സ്വർണ്ണത്തിൽ തീർത്തത് ({{weight}}g)",
+        gold: "{{purity}} സ്വർണ്ണത്തിൽ തീർത്തത്",
+        diamonds: "{{weight}}ct വജ്രങ്ങൾ പതിപ്പിച്ചത്",
+        gemstones: "{{weight}}ct രത്നങ്ങൾ പതിപ്പിച്ചത്",
+        fallback: "മനോഹരമായി രൂപകൽപ്പന ചെയ്ത ഒരു ആഭരണ മാസ്റ്റർപീസ്",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, വില: {{price}}"
+      }
+    }
+  },
+  'mr-IN': {
+    translation: {
+      welcome: "नमस्ते! इंद्रियामध्ये आपले स्वागत आहे. आज आमच्या उत्कृष्ट दागिने संग्रहाचे दर्शन घडवणे हा माझा बहुमान आहे.",
+      foundCount: "तुमच्या आवडीनुसार आमच्या संग्रहात {{count}} उत्कृष्ट अलंकार सापडले आहेत।",
+      curatedHighlights: "आमच्या संग्रहतील काही खास डिझाइन्स खालीलप्रमाणे आहेत:",
+      cta: "अधिक तपशील आणि विश्लेषणासाठी कृपया खालील कार्ड्सवर टॅप करा.",
+      noResults: "तुमच्या शोधानुसार कोणतेही थेट दागिने सापडले नाहीत. कृपया आमचे इतर सुवर्ण व हिरे अलंकार आवर्जून पहावेत.",
+      details: {
+        gold_weight: "{{purity}} सोन्यात घडवलेले ({{weight}}g)",
+        gold: "{{purity}} सोन्यात घडवलेले",
+        diamonds: "{{weight}}ct हिऱ्यांनी सजवलेले",
+        gemstones: "{{weight}}ct रत्नांनी सजवलेले",
+        fallback: "उत्कृष्ट डिझाइन केलेला दागिना",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, किंमत: {{price}}"
+      }
+    }
+  },
+  'bn-IN': {
+    translation: {
+      welcome: "নমস্কার! ইন্দ্রিয়ায় আপনাকে স্বাগত জানাই। আজ আমাদের অনন্য গহনা সংগ্রহে আপনাকে সহায়তা করতে পেরে আমি আনন্দিত।",
+      foundCount: "আপনার পছন্দ অনুযায়ী আমাদের সংগ্রহ থেকে {{count}}টি অসাধারণ গহনা খুঁজে পেয়েছি।",
+      curatedHighlights: "আমাদের সংগ্রহ থেকে কিছু দুর্দান্ত ডিজাইন নিচে দেওয়া হলো:",
+      cta: "বিস্তারিত তথ্যের জন্য অনুগ্রহ করে নিচের যেকোনো প্রোডাক্ট কার্ডে ট্যাপ করুন।",
+      noResults: "আপনার অনুসন্ধান অনুযায়ী কোনো গহনা খুঁজে পাওয়া যায়নি। অনুগ্রহ করে আমাদের অন্যান্য তিলক, সোনা ও হিরের কালেকশনগুলি দেখুন।",
+      details: {
+        gold_weight: "{{purity}} সোনায় নির্মিত ({{weight}}g)",
+        gold: "{{purity}} সোনায় নির্মিত",
+        diamonds: "{{weight}}ct হিরে খচিত",
+        gemstones: "{{weight}}ct রত্ন খচিত",
+        fallback: "একটি নিপুণভাবে ডিজাইন করা গহনা",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, মূল্য: {{price}}"
+      }
+    }
+  },
+  'gu-IN': {
+    translation: {
+      welcome: "નમસ્તે! ઈન્દ્રિયામાં આપનું હાર્દિક સ્વાગત છે. આજે અમારા ઉત્કૃષ્ટ ઘરેણાં સંગ્રહ બતાવવામાં મને ખૂબ આનંદ થાય છે.",
+      foundCount: "આપની પસંદગી અનુસાર અમારા સંગ્રહમાંથી {{count}} અતિ સુંદર ડિઝાઇન્સ મળી આવી છે.",
+      curatedHighlights: "અમારા કલેક્શનમાંથી કેટલીક ખાસ ડિઝાઇન્સ અત્રે પ્રસ્તુત છે:",
+      cta: "વિગતવાર વિશ્લેષણ માટે કૃપા કરીને નીચે આપેલા કાર્ડ્સ પર ક્લિક કરો.",
+      noResults: "આપની પસંદગી મુજબના કોઈ સીધા ઘરેણાં મળ્યા નથી. કૃપા કરીને સોના અને હીરાના અમારા અન્ય સંગ્રહો જુઓ.",
+      details: {
+        gold_weight: "{{purity}} સોનામાં બનેલ ({{weight}}g)",
+        gold: "{{purity}} સોનામાં બનેલ",
+        diamonds: "{{weight}}ct હીરાથી મઢેલ",
+        gemstones: "{{weight}}ct રત્નોથી મઢેલ",
+        fallback: "અતિ સુંદર રીતે ડિઝાઇન કરેલ દાગીનો",
+        item_format: "\n{{idx}}. **{{name}}** (SKU: {{sku}}) - {{details}}, કિંમત: {{price}}"
+      }
+    }
+  }
+};
