@@ -369,6 +369,46 @@ export async function resolveTerminology(query, existingFilters = {}) {
         result.visualSplits.visible_diamond_pct = 50;
     }
 
+    // Metal Type Heuristics (gold, platinum, silver)
+    const hasPlatinum = /\bplatinum\b/i.test(lowerQuery);
+    const hasSilver = /\bsilver\b/i.test(lowerQuery);
+    const hasGold = /\bgold\b/i.test(lowerQuery);
+
+    if (hasPlatinum) {
+        if (isNegated('platinum')) {
+            if (!result.exclusions.includes('platinum')) result.exclusions.push('platinum');
+        } else {
+            result.product_type = 'platinum';
+        }
+    } else if (hasSilver) {
+        if (isNegated('silver')) {
+            if (!result.exclusions.includes('silver')) result.exclusions.push('silver');
+        } else {
+            result.product_type = 'silver';
+        }
+    } else if (hasGold) {
+        if (isNegated('gold')) {
+            if (!result.exclusions.includes('gold')) result.exclusions.push('gold');
+        } else {
+            result.product_type = 'gold';
+        }
+    }
+
+    const isGoldOnly = /\b(?:only\s+gold|gold\s+only|strictly\s+gold|just\s+gold|plain\s+gold)\b/i.test(lowerQuery);
+    if (isGoldOnly) {
+        result.product_type = 'gold';
+        if (!result.exclusions.includes('platinum')) result.exclusions.push('platinum');
+        if (!result.exclusions.includes('silver')) result.exclusions.push('silver');
+    }
+
+    const isPlatinumOnly = /\b(?:only\s+platinum|platinum\s+only|strictly\s+platinum|just\s+platinum|plain\s+platinum)\b/i.test(lowerQuery);
+    if (isPlatinumOnly) {
+        result.product_type = 'platinum';
+        if (!result.exclusions.includes('gold')) result.exclusions.push('gold');
+        if (!result.exclusions.includes('silver')) result.exclusions.push('silver');
+    }
+
+
     // Metal Purity Resolution (14K, 18K, 22K, 24K and variations, plus typo forms like 18000)
     const purityMatches = lowerQuery.match(/\b(14|18|22|24)\s*(?:k|kt|karat|carat|ct)?s?\b/i);
     if (purityMatches) {

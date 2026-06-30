@@ -184,6 +184,14 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
   const bindings = [];
   let paramCounter = 1;
 
+  if (parsed.product_type === 'platinum') {
+    filters.push(`platinum_weight_numeric > 0`);
+  } else if (parsed.product_type === 'silver') {
+    filters.push(`silver_weight_numeric > 0`);
+  } else if (parsed.product_type === 'gold') {
+    filters.push(`gold_weight_numeric > 0`);
+  }
+
   if (parsed.category) {
     filters.push(`category = $${paramCounter++}`);
     bindings.push(parsed.category);
@@ -228,6 +236,14 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
     parsed.exclusions.forEach(ex => {
       if (ex === 'gemstone') {
         filters.push(`NOT (all_gemstones_array && ARRAY['ruby', 'emerald', 'pearl', 'sapphire', 'synthetic']::text[])`);
+      } else if (ex === 'platinum') {
+        filters.push(`platinum_weight_numeric = 0`);
+      } else if (ex === 'gold') {
+        if (parsed.product_type !== 'platinum') {
+          filters.push(`gold_weight_numeric = 0`);
+        }
+      } else if (ex === 'silver') {
+        filters.push(`silver_weight_numeric = 0`);
       } else {
         filters.push(`NOT (all_gemstones_array @> ARRAY[$${paramCounter++}]::text[])`);
         bindings.push(ex);
