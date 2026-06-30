@@ -694,82 +694,260 @@ button {
 }
 
 /* Custom Classy Jewellery Loading Animation */
-.luxury-jewelry-loader {
+.luxury-dossier-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+  width: 100%;
+}
+
+.loader-glass-card {
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 24px auto;
+  background: radial-gradient(135deg, rgba(20, 26, 40, 0.75) 0%, rgba(10, 14, 23, 0.95) 100%);
+  border: 1px solid rgba(213, 159, 62, 0.2);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 40px rgba(213, 159, 62, 0.08);
+  border-radius: 24px;
+  padding: 48px 32px;
+  max-width: 440px;
+  width: 100%;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  text-align: center;
+  overflow: hidden;
+  animation: card-appear 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes card-appear {
+  0% { transform: translateY(15px) scale(0.97); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.jewelry-gyroscope {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 32px auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* The Gold Ring Band */
-.luxury-jewelry-loader .ring-band {
+/* Ambient breathe glow */
+.ambient-pulse {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  border: 4px solid transparent;
-  border-bottom: 4px solid var(--gold-primary);
-  border-left: 4px solid var(--gold-primary);
-  border-right: 4px solid var(--gold-primary);
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
-  transform: rotate(-45deg);
-  animation: shimmer-ring 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  background: radial-gradient(circle, rgba(213, 159, 62, 0.22) 0%, transparent 70%);
+  filter: blur(8px);
+  animation: breathe 2s ease-in-out infinite alternate;
 }
 
-/* The Sparkling Diamond Facet on top */
-.luxury-jewelry-loader .sparkling-diamond {
+@keyframes breathe {
+  0% { transform: scale(0.85); opacity: 0.5; }
+  100% { transform: scale(1.15); opacity: 1; }
+}
+
+/* Outer Orbit with stardust dashes */
+.orbit-outer {
   position: absolute;
-  top: 10px;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, #ffffff, #a2d2ff);
+  width: 100px;
+  height: 100px;
+  border: 1px dashed rgba(213, 159, 62, 0.25);
+  border-radius: 50%;
+  animation: rotate-clockwise 12s linear infinite;
+}
+
+/* 3D Intersecting Gold Ring Bands */
+.jewelry-gyroscope .ring-band {
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+
+.jewelry-gyroscope .gold-band-1 {
+  width: 76px;
+  height: 76px;
+  border-top: 3px solid #fce09c;
+  border-right: 3px solid #d59f3e;
+  border-bottom: 3px solid #a87e2b;
+  box-shadow: 0 0 15px rgba(213, 159, 62, 0.15);
+  animation: gyro-rotate-1 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+}
+
+.jewelry-gyroscope .gold-band-2 {
+  width: 76px;
+  height: 76px;
+  border-left: 3px solid #fce09c;
+  border-bottom: 3px solid #d59f3e;
+  border-top: 3px solid #a87e2b;
+  opacity: 0.8;
+  animation: gyro-rotate-2 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+}
+
+@keyframes gyro-rotate-1 {
+  0% { transform: rotateX(70deg) rotateY(0deg) rotateZ(0deg); }
+  50% { transform: rotateX(70deg) rotateY(180deg) rotateZ(180deg); }
+  100% { transform: rotateX(70deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+@keyframes gyro-rotate-2 {
+  0% { transform: rotateX(-70deg) rotateY(0deg) rotateZ(45deg); }
+  50% { transform: rotateX(-70deg) rotateY(180deg) rotateZ(225deg); }
+  100% { transform: rotateX(-70deg) rotateY(360deg) rotateZ(405deg); }
+}
+
+/* Core Gemstone & Solitaire Setting */
+.gemstone-holder {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float-core 3s ease-in-out infinite alternate;
+}
+
+@keyframes float-core {
+  0% { transform: translateY(-3px); }
+  100% { transform: translateY(3px); }
+}
+
+.core-gemstone {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle, #ffffff 10%, #d5f0ff 45%, #a2d2ff 100%);
   transform: rotate(45deg);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px var(--gold-primary);
-  animation: sparkle-diamond 1.5s ease-in-out infinite alternate;
+  border-radius: 2px;
+  box-shadow: 0 0 20px #ffffff, 0 0 35px #a2d2ff, 0 0 10px rgba(255,255,255,0.5) inset;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-/* Elegant ambient rotating aura */
-.luxury-jewelry-loader .luxury-glow {
+.gemstone-flare {
   position: absolute;
-  width: 70px;
-  height: 70px;
-  border: 1px dashed rgba(255, 255, 255, 0.15);
+  width: 32px;
+  height: 32px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+  transform: scale(1);
+  animation: core-flare 1s ease-in-out infinite alternate;
+}
+
+@keyframes core-flare {
+  0% { transform: scale(0.85) rotate(0deg); opacity: 0.6; }
+  100% { transform: scale(1.3) rotate(90deg); opacity: 1; }
+}
+
+/* Shimmering Star Particles orbiting */
+.star-particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #fff;
   border-radius: 50%;
-  animation: rotate-glow 8s linear infinite;
+  box-shadow: 0 0 10px #fff;
 }
 
-@keyframes shimmer-ring {
-  0% {
-    transform: rotate(-45deg) scale(0.95);
-    box-shadow: 0 0 5px rgba(213, 159, 62, 0.1);
-  }
-  50% {
-    transform: rotate(135deg) scale(1.05);
-    box-shadow: 0 0 15px rgba(213, 159, 62, 0.4);
-  }
-  100% {
-    transform: rotate(315deg) scale(0.95);
-    box-shadow: 0 0 5px rgba(213, 159, 62, 0.1);
-  }
+.star-particle.p1 {
+  top: 15px;
+  left: 20px;
+  animation: orbit-star-1 5s linear infinite;
 }
 
-@keyframes sparkle-diamond {
-  0% {
-    transform: rotate(45deg) scale(0.8);
-    opacity: 0.7;
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
-  }
-  100% {
-    transform: rotate(45deg) scale(1.2);
-    opacity: 1;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1)) drop-shadow(0 0 15px var(--gold-primary));
-  }
+.star-particle.p2 {
+  bottom: 18px;
+  right: 18px;
+  animation: orbit-star-2 6s linear infinite;
 }
 
-@keyframes rotate-glow {
+.star-particle.p3 {
+  top: 45px;
+  right: 15px;
+  width: 3px;
+  height: 3px;
+  animation: orbit-star-3 4s linear infinite;
+}
+
+@keyframes orbit-star-1 {
+  0% { transform: rotate(0deg) translate(46px) rotate(0deg); opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { transform: rotate(360deg) translate(46px) rotate(-360deg); opacity: 0.2; }
+}
+
+@keyframes orbit-star-2 {
+  0% { transform: rotate(120deg) translate(46px) rotate(-120deg); opacity: 0.8; }
+  50% { opacity: 0.1; }
+  100% { transform: rotate(480deg) translate(46px) rotate(-480deg); opacity: 0.8; }
+}
+
+@keyframes orbit-star-3 {
+  0% { transform: rotate(-60deg) translate(35px) rotate(60deg); opacity: 0.1; }
+  50% { opacity: 0.9; }
+  100% { transform: rotate(300deg) translate(35px) rotate(-300deg); opacity: 0.1; }
+}
+
+@keyframes rotate-clockwise {
   100% { transform: rotate(360deg); }
+}
+
+/* Luxury Loading Typography */
+.loading-typography {
+  margin-top: 24px;
+}
+
+.luxury-loading-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gold-primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #fce09c, #d59f3e, #fce09c);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-text 3s linear infinite;
+}
+
+.luxury-loading-subtitle {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@keyframes shimmer-text {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Elegant Progress Track */
+.luxury-progress-track {
+  width: 140px;
+  height: 2px;
+  background: rgba(213, 159, 62, 0.1);
+  margin: 24px auto 0 auto;
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.luxury-progress-bar {
+  width: 45%;
+  height: 100%;
+  background: var(--gold-gradient);
+  border-radius: 1px;
+  animation: luxury-progress 2.2s cubic-bezier(0.65, 0.05, 0.36, 1) infinite;
+}
+
+@keyframes luxury-progress {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(120%); }
+  100% { transform: translateX(200%); }
 }
 
 

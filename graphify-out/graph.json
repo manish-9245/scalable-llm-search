@@ -4,12 +4,39 @@
   "graph": {},
   "nodes": [
     {
+      "label": "test_gemini_direct.js",
+      "file_type": "code",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L1",
+      "id": "test_gemini_direct_js",
+      "community": 28,
+      "norm_label": "test_gemini_direct.js"
+    },
+    {
+      "label": "google",
+      "file_type": "code",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L6",
+      "id": "scalable_llm_search_test_gemini_direct_google",
+      "community": 28,
+      "norm_label": "google"
+    },
+    {
+      "label": "testGemini()",
+      "file_type": "code",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L10",
+      "id": "scalable_llm_search_test_gemini_direct_testgemini",
+      "community": 28,
+      "norm_label": "testgemini()"
+    },
+    {
       "label": "test_chat_integration.js",
       "file_type": "code",
       "source_file": "test_chat_integration.js",
       "source_location": "L1",
       "id": "test_chat_integration_js",
-      "community": 3,
+      "community": 20,
       "norm_label": "test_chat_integration.js"
     },
     {
@@ -18,7 +45,7 @@
       "source_file": "test_chat_integration.js",
       "source_location": "L3",
       "id": "scalable_llm_search_test_chat_integration_runchatintegrationtest",
-      "community": 3,
+      "community": 20,
       "norm_label": "runchatintegrationtest()"
     },
     {
@@ -151,7 +178,7 @@
       "label": "whereClauses",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L476",
+      "source_location": "L477",
       "id": "scalable_llm_search_server_whereclauses",
       "community": 11,
       "norm_label": "whereclauses"
@@ -160,7 +187,7 @@
       "label": "queryParams",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L477",
+      "source_location": "L478",
       "id": "scalable_llm_search_server_queryparams",
       "community": 11,
       "norm_label": "queryparams"
@@ -169,7 +196,7 @@
       "label": "total",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L499",
+      "source_location": "L500",
       "id": "scalable_llm_search_server_total",
       "community": 11,
       "norm_label": "total"
@@ -178,7 +205,7 @@
       "label": "products",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L535",
+      "source_location": "L536",
       "id": "scalable_llm_search_server_products",
       "community": 11,
       "norm_label": "products"
@@ -187,7 +214,7 @@
       "label": "responseData",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L537",
+      "source_location": "L538",
       "id": "scalable_llm_search_server_responsedata",
       "community": 11,
       "norm_label": "responsedata"
@@ -196,7 +223,7 @@
       "label": "normalizePriceShorthand()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L621",
+      "source_location": "L622",
       "id": "scalable_llm_search_server_normalizepriceshorthand",
       "community": 11,
       "norm_label": "normalizepriceshorthand()"
@@ -205,7 +232,7 @@
       "label": "generateTemplateResponse()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L652",
+      "source_location": "L653",
       "id": "scalable_llm_search_server_generatetemplateresponse",
       "community": 11,
       "norm_label": "generatetemplateresponse()"
@@ -214,7 +241,7 @@
       "label": "langMap",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L731",
+      "source_location": "L732",
       "id": "scalable_llm_search_server_langmap",
       "community": 11,
       "norm_label": "langmap"
@@ -223,7 +250,7 @@
       "label": "text",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L736",
+      "source_location": "L737",
       "id": "scalable_llm_search_server_text",
       "community": 11,
       "norm_label": "text"
@@ -232,7 +259,7 @@
       "label": "productsJson",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L776",
+      "source_location": "L777",
       "id": "scalable_llm_search_server_productsjson",
       "community": 11,
       "norm_label": "productsjson"
@@ -243,7 +270,7 @@
       "source_file": "test_search.js",
       "source_location": "L1",
       "id": "test_search_js",
-      "community": 3,
+      "community": 15,
       "norm_label": "test_search.js"
     },
     {
@@ -252,7 +279,7 @@
       "source_file": "test_search.js",
       "source_location": "L10",
       "id": "scalable_llm_search_test_search_runlogicaltests",
-      "community": 3,
+      "community": 15,
       "norm_label": "runlogicaltests()"
     },
     {
@@ -774,7 +801,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L1",
       "id": "scratch_manual_test_js",
-      "community": 3,
+      "community": 15,
       "norm_label": "manual_test.js"
     },
     {
@@ -783,7 +810,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L3",
       "id": "scratch_manual_test_queries",
-      "community": 3,
+      "community": 15,
       "norm_label": "queries"
     },
     {
@@ -792,7 +819,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L17",
       "id": "scratch_manual_test_manualtest",
-      "community": 3,
+      "community": 15,
       "norm_label": "manualtest()"
     },
     {
@@ -846,7 +873,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
       "id": "scratch_test_jewel_search_cases_js",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_jewel_search_cases.js"
     },
     {
@@ -855,7 +882,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L6",
       "id": "scratch_test_jewel_search_cases_runtestcases",
-      "community": 3,
+      "community": 4,
       "norm_label": "runtestcases()"
     },
     {
@@ -1134,7 +1161,7 @@
       "source_file": "scratch/test_tool_output.js",
       "source_location": "L1",
       "id": "scratch_test_tool_output_js",
-      "community": 1,
+      "community": 15,
       "norm_label": "test_tool_output.js"
     },
     {
@@ -1143,7 +1170,7 @@
       "source_file": "scratch/test_tool_output.js",
       "source_location": "L3",
       "id": "scratch_test_tool_output_testtool",
-      "community": 1,
+      "community": 15,
       "norm_label": "testtool()"
     },
     {
@@ -1170,7 +1197,7 @@
       "source_file": "scratch/check_timestamps.js",
       "source_location": "L1",
       "id": "scratch_check_timestamps_js",
-      "community": 3,
+      "community": 20,
       "norm_label": "check_timestamps.js"
     },
     {
@@ -1179,7 +1206,7 @@
       "source_file": "scratch/check_timestamps.js",
       "source_location": "L3",
       "id": "scratch_check_timestamps_checktimestamps",
-      "community": 3,
+      "community": 20,
       "norm_label": "checktimestamps()"
     },
     {
@@ -1278,7 +1305,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L1",
       "id": "scratch_test_typo_search_mjs",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_typo_search.mjs"
     },
     {
@@ -1287,7 +1314,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L4",
       "id": "scratch_test_typo_search_testtypo",
-      "community": 3,
+      "community": 4,
       "norm_label": "testtypo()"
     },
     {
@@ -1314,7 +1341,7 @@
       "source_file": "scratch/test_session_query.js",
       "source_location": "L1",
       "id": "scratch_test_session_query_js",
-      "community": 3,
+      "community": 15,
       "norm_label": "test_session_query.js"
     },
     {
@@ -1323,7 +1350,7 @@
       "source_file": "scratch/test_session_query.js",
       "source_location": "L4",
       "id": "scratch_test_session_query_testsessionquerydirect",
-      "community": 3,
+      "community": 15,
       "norm_label": "testsessionquerydirect()"
     },
     {
@@ -1332,7 +1359,7 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L1",
       "id": "scratch_test_generalized_only_js",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_generalized_only.js"
     },
     {
@@ -1341,7 +1368,7 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L3",
       "id": "scratch_test_generalized_only_runtests",
-      "community": 3,
+      "community": 4,
       "norm_label": "runtests()"
     },
     {
@@ -1386,7 +1413,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L1",
       "id": "scratch_test_dynamic_spelling_with_op_js",
-      "community": 3,
+      "community": 4,
       "norm_label": "test_dynamic_spelling_with_op.js"
     },
     {
@@ -1395,7 +1422,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L3",
       "id": "scratch_test_dynamic_spelling_with_op_runtest",
-      "community": 3,
+      "community": 4,
       "norm_label": "runtest()"
     },
     {
@@ -1440,7 +1467,7 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L1",
       "id": "scratch_test_analyze_sku_js",
-      "community": 4,
+      "community": 24,
       "norm_label": "test_analyze_sku.js"
     },
     {
@@ -1449,7 +1476,7 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L5",
       "id": "scratch_test_analyze_sku_testanalyze",
-      "community": 4,
+      "community": 24,
       "norm_label": "testanalyze()"
     },
     {
@@ -1503,7 +1530,7 @@
       "source_file": "scratch/fetch_09ce2939.js",
       "source_location": "L1",
       "id": "scratch_fetch_09ce2939_js",
-      "community": 3,
+      "community": 20,
       "norm_label": "fetch_09ce2939.js"
     },
     {
@@ -1512,7 +1539,7 @@
       "source_file": "scratch/fetch_09ce2939.js",
       "source_location": "L3",
       "id": "scratch_fetch_09ce2939_fetchsession",
-      "community": 3,
+      "community": 20,
       "norm_label": "fetchsession()"
     },
     {
@@ -1521,7 +1548,7 @@
       "source_file": "scratch/analyze_msg4.js",
       "source_location": "L1",
       "id": "scratch_analyze_msg4_js",
-      "community": 3,
+      "community": 20,
       "norm_label": "analyze_msg4.js"
     },
     {
@@ -1530,7 +1557,7 @@
       "source_file": "scratch/analyze_msg4.js",
       "source_location": "L3",
       "id": "scratch_analyze_msg4_analyzemessageproducts",
-      "community": 3,
+      "community": 20,
       "norm_label": "analyzemessageproducts()"
     },
     {
@@ -1611,7 +1638,7 @@
       "source_file": "scratch/test_session_context.js",
       "source_location": "L1",
       "id": "scratch_test_session_context_js",
-      "community": 3,
+      "community": 15,
       "norm_label": "test_session_context.js"
     },
     {
@@ -1620,7 +1647,7 @@
       "source_file": "scratch/test_session_context.js",
       "source_location": "L4",
       "id": "scratch_test_session_context_runsessioncontextverification",
-      "community": 3,
+      "community": 15,
       "norm_label": "runsessioncontextverification()"
     },
     {
@@ -2113,7 +2140,7 @@
       "label": "p",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1750",
+      "source_location": "L1766",
       "id": "public_app_p",
       "community": 0,
       "norm_label": "p"
@@ -2122,7 +2149,7 @@
       "label": "poll()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1766",
+      "source_location": "L1782",
       "id": "public_app_poll",
       "community": 10,
       "norm_label": "poll()"
@@ -2131,7 +2158,7 @@
       "label": "triggerBulkAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1831",
+      "source_location": "L1847",
       "id": "public_app_triggerbulkanalysis",
       "community": 10,
       "norm_label": "triggerbulkanalysis()"
@@ -2142,7 +2169,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L1",
       "id": "src_mastra_tools_js",
-      "community": 1,
+      "community": 15,
       "norm_label": "tools.js"
     },
     {
@@ -2151,7 +2178,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L13",
       "id": "mastra_tools_detectvisualintent",
-      "community": 1,
+      "community": 15,
       "norm_label": "detectvisualintent()"
     },
     {
@@ -2160,7 +2187,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L35",
       "id": "mastra_tools_querydatabasetool",
-      "community": 1,
+      "community": 15,
       "norm_label": "querydatabasetool"
     },
     {
@@ -2304,7 +2331,7 @@
       "source_file": "src/config/db.js",
       "source_location": "L1",
       "id": "src_config_db_js",
-      "community": 3,
+      "community": 20,
       "norm_label": "db.js"
     },
     {
@@ -2331,7 +2358,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L1",
       "id": "src_config_queue_js",
-      "community": 11,
+      "community": 24,
       "norm_label": "queue.js"
     },
     {
@@ -2340,7 +2367,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L25",
       "id": "config_queue_queueproductingestion",
-      "community": 11,
+      "community": 24,
       "norm_label": "queueproductingestion()"
     },
     {
@@ -2349,7 +2376,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L52",
       "id": "config_queue_startingestionworker",
-      "community": 11,
+      "community": 24,
       "norm_label": "startingestionworker()"
     },
     {
@@ -2394,7 +2421,7 @@
       "source_file": "src/utils/sessionMerge.js",
       "source_location": "L1",
       "id": "src_utils_sessionmerge_js",
-      "community": 3,
+      "community": 15,
       "norm_label": "sessionmerge.js"
     },
     {
@@ -2403,7 +2430,7 @@
       "source_file": "src/utils/sessionMerge.js",
       "source_location": "L6",
       "id": "utils_sessionmerge_mergefilters",
-      "community": 3,
+      "community": 15,
       "norm_label": "mergefilters()"
     },
     {
@@ -2412,7 +2439,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L1",
       "id": "src_utils_logger_js",
-      "community": 4,
+      "community": 24,
       "norm_label": "logger.js"
     },
     {
@@ -2421,7 +2448,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L5",
       "id": "utils_logger_logger",
-      "community": 4,
+      "community": 24,
       "norm_label": "logger"
     },
     {
@@ -2430,7 +2457,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L23",
       "id": "utils_logger_getchildlogger",
-      "community": 11,
+      "community": 24,
       "norm_label": "getchildlogger()"
     },
     {
@@ -2439,7 +2466,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L28",
       "id": "utils_logger_log",
-      "community": 4,
+      "community": 24,
       "norm_label": "log"
     },
     {
@@ -2448,7 +2475,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L1",
       "id": "src_utils_terminology_js",
-      "community": 1,
+      "community": 4,
       "norm_label": "terminology.js"
     },
     {
@@ -2457,7 +2484,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L6",
       "id": "utils_terminology_protected_words",
-      "community": 1,
+      "community": 4,
       "norm_label": "protected_words"
     },
     {
@@ -2466,7 +2493,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L25",
       "id": "utils_terminology_resolveterminology",
-      "community": 3,
+      "community": 4,
       "norm_label": "resolveterminology()"
     },
     {
@@ -2475,7 +2502,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L528",
       "id": "utils_terminology_loadontologyandslang",
-      "community": 1,
+      "community": 4,
       "norm_label": "loadontologyandslang()"
     },
     {
@@ -2484,7 +2511,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L537",
       "id": "utils_terminology_levenshteindistance",
-      "community": 1,
+      "community": 4,
       "norm_label": "levenshteindistance()"
     },
     {
@@ -2673,7 +2700,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L1",
       "id": "src_services_ingestionservice_js",
-      "community": 4,
+      "community": 24,
       "norm_label": "ingestionservice.js"
     },
     {
@@ -2682,7 +2709,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L13",
       "id": "services_ingestionservice_processproductanalysis",
-      "community": 4,
+      "community": 24,
       "norm_label": "processproductanalysis()"
     },
     {
@@ -2691,7 +2718,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L127",
       "id": "services_ingestionservice_invalidatelocalsearchcache",
-      "community": 4,
+      "community": 24,
       "norm_label": "invalidatelocalsearchcache()"
     },
     {
@@ -2700,7 +2727,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L1",
       "id": "src_services_searchservice_js",
-      "community": 3,
+      "community": 15,
       "norm_label": "searchservice.js"
     },
     {
@@ -2709,7 +2736,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L9",
       "id": "services_searchservice_exclusion_metal_colors",
-      "community": 3,
+      "community": 15,
       "norm_label": "exclusion_metal_colors"
     },
     {
@@ -2745,7 +2772,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L162",
       "id": "services_searchservice_searchcatalogue",
-      "community": 3,
+      "community": 15,
       "norm_label": "searchcatalogue()"
     },
     {
@@ -2754,7 +2781,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L1",
       "id": "src_services_discoveryservice_js",
-      "community": 1,
+      "community": 27,
       "norm_label": "discoveryservice.js"
     },
     {
@@ -2763,7 +2790,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L6",
       "id": "services_discoveryservice_official_categories",
-      "community": 1,
+      "community": 27,
       "norm_label": "official_categories"
     },
     {
@@ -2772,7 +2799,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L7",
       "id": "services_discoveryservice_db_schema",
-      "community": 1,
+      "community": 27,
       "norm_label": "db_schema"
     },
     {
@@ -2781,7 +2808,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L13",
       "id": "services_discoveryservice_updatediscovery",
-      "community": 1,
+      "community": 27,
       "norm_label": "updatediscovery()"
     },
     {
@@ -2790,7 +2817,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L129",
       "id": "services_discoveryservice_loadschema",
-      "community": 1,
+      "community": 27,
       "norm_label": "loadschema()"
     },
     {
@@ -2808,7 +2835,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L167",
       "id": "services_discoveryservice_startdiscoverycron",
-      "community": 1,
+      "community": 27,
       "norm_label": "startdiscoverycron()"
     },
     {
@@ -3060,7 +3087,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L527",
       "id": "utils_terminology_parsequery",
-      "community": 1,
+      "community": 4,
       "norm_label": "parsequery"
     },
     {
@@ -3257,7 +3284,7 @@
       "file_type": "code",
       "source_file": "src/config/db.js",
       "source_location": "L23",
-      "community": 3,
+      "community": 20,
       "norm_label": "pool",
       "id": "config_db_pool"
     },
@@ -3275,7 +3302,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L4",
-      "community": 1,
+      "community": 4,
       "norm_label": "ontologycache",
       "id": "utils_terminology_ontologycache"
     },
@@ -3284,7 +3311,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L13",
-      "community": 1,
+      "community": 4,
       "norm_label": "slangcache",
       "id": "utils_terminology_slangcache"
     },
@@ -3293,7 +3320,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L57",
-      "community": 1,
+      "community": 4,
       "norm_label": "seeddefaultontology()",
       "id": "utils_terminology_seeddefaultontology"
     },
@@ -3302,7 +3329,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L112",
-      "community": 1,
+      "community": 4,
       "norm_label": "seeddefaultslang()",
       "id": "utils_terminology_seeddefaultslang"
     },
@@ -3311,7 +3338,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L273",
-      "community": 1,
+      "community": 4,
       "norm_label": "createemptyparse()",
       "id": "utils_terminology_createemptyparse"
     },
@@ -3320,7 +3347,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L290",
-      "community": 1,
+      "community": 4,
       "norm_label": "calculatepricevalue()",
       "id": "utils_terminology_calculatepricevalue"
     },
@@ -3329,7 +3356,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L298",
-      "community": 1,
+      "community": 4,
       "norm_label": "maptoexclusionkeyword()",
       "id": "utils_terminology_maptoexclusionkeyword"
     },
@@ -3599,12 +3626,43 @@
       "file_type": "code",
       "source_file": "test_search.js",
       "source_location": "L10",
-      "community": 3,
+      "community": 15,
       "norm_label": "runtests()",
       "id": "scalable_llm_search_test_search_runtests"
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "test_gemini_direct_js",
+      "target": "scalable_llm_search_test_gemini_direct_google",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "test_gemini_direct_js",
+      "target": "scalable_llm_search_test_gemini_direct_testgemini",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "scalable_llm_search_test_gemini_direct_testgemini",
+      "target": "scalable_llm_search_test_gemini_direct_google",
+      "confidence_score": 1.0
+    },
     {
       "relation": "imports_from",
       "context": "import",
@@ -10945,5 +11003,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "fc340492cb0f5b132949f81e7cc8ccbb18036b24"
+  "built_at_commit": "7c7ef8ebfe909ac0052ae67ebab96bcf68b7b740"
 }

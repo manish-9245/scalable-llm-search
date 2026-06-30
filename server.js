@@ -458,13 +458,14 @@ fastify.post('/api/refine-analysis', async (request, reply) => {
  * Supports paginated queries with global search, status filtering, and sorting.
  */
 fastify.get('/api/products', async (request, reply) => {
-  const { page = 1, limit = 25, search = '', sort = 'default', filter = 'all' } = request.query || {};
+  const { page = 1, limit = 25, search = '', sort = 'default', filter = 'all', _t, nocache } = request.query || {};
 
   const cacheKey = `products:${crypto.createHash('md5').update(`${page}:${limit}:${search}:${sort}:${filter}`).digest('hex')}`;
+  const useCache = redisClient.isOpen && !_t && !nocache;
 
   try {
     // 1. Check Cache
-    if (redisClient.isOpen) {
+    if (useCache) {
       const cached = await redisClient.get(cacheKey);
       if (cached) return JSON.parse(cached);
     }
@@ -538,8 +539,8 @@ fastify.get('/api/products', async (request, reply) => {
       products, total, page: pageNum, limit: limitNum, totalPages: Math.ceil(total / limitNum) 
     };
 
-    // Cache for 10 minutes
-    if (redisClient.isOpen) {
+    // Cache for 10 minutes if caching is active
+    if (useCache) {
       await redisClient.setEx(cacheKey, 600, JSON.stringify(responseData));
     }
 

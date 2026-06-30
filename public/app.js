@@ -1736,13 +1736,29 @@ window.triggerAnalysis = async function(sku, name, category) {
   const contentArea = document.getElementById('dossier-content-area');
   
   contentArea.innerHTML = `
-    <div class="loading-state" style="padding: 60px 0; text-align:center;">
-      <div class="luxury-jewelry-loader">
-        <div class="luxury-glow"></div>
-        <div class="ring-band"></div>
-        <div class="sparkling-diamond"></div>
+    <div class="luxury-dossier-loader">
+      <div class="loader-glass-card">
+        <div class="jewelry-gyroscope">
+          <div class="ambient-pulse"></div>
+          <div class="orbit-outer"></div>
+          <div class="ring-band gold-band-1"></div>
+          <div class="ring-band gold-band-2"></div>
+          <div class="gemstone-holder">
+            <div class="core-gemstone"></div>
+            <div class="gemstone-flare"></div>
+          </div>
+          <div class="star-particle p1"></div>
+          <div class="star-particle p2"></div>
+          <div class="star-particle p3"></div>
+        </div>
+        <div class="loading-typography">
+          <span class="luxury-loading-title">Analyzing Masterpiece</span>
+          <p class="luxury-loading-subtitle">Gemini is evaluating visual specifications & craftsmanship details</p>
+        </div>
+        <div class="luxury-progress-track">
+          <div class="luxury-progress-bar"></div>
+        </div>
       </div>
-      <p style="color: var(--gold-primary); font-weight: 500; font-family: var(--font-display); letter-spacing: 0.5px; font-size: 16px; margin-top: 16px;">AI evaluation in progress...</p>
     </div>
   `;
 
