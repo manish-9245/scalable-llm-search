@@ -13,7 +13,7 @@ export const resources = {
         diamonds: "adorned with {{weight}}ct diamonds",
         gemstones: "featuring {{weight}}ct gemstone details",
         fallback: "a masterfully designed jewellery masterpiece",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   },
@@ -30,7 +30,7 @@ export const resources = {
         diamonds: "{{weight}}ct हीरों से सुसज्जित",
         gemstones: "{{weight}}ct रत्न के विवरण के साथ",
         fallback: "एक उत्कृष्ट रूप से डिज़ाइन किया गया आभूषण उत्कृष्ट कृति",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   },
@@ -47,7 +47,7 @@ export const resources = {
         diamonds: "{{weight}}ct வைரங்கள் பதிக்கப்பட்டது",
         gemstones: "{{weight}}ct கற்கள் பதிக்கப்பட்டது",
         fallback: "ஒரு அற்புதமான வடிவமைக்கப்பட்ட நகை தலைசிறந்த படைப்பு",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   },
@@ -64,7 +64,7 @@ export const resources = {
         diamonds: "{{weight}}ct వజ్రాలతో అలంకరించబడింది",
         gemstones: "{{weight}}ct రత్నాలతో అలంకరించబడింది",
         fallback: "అద్భుతంగా రూపొందించబడిన ఒక ఆభరణం",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   },
@@ -81,7 +81,7 @@ export const resources = {
         diamonds: "{{weight}}ct ವಜ್ರಗಳಿಂದ ಅಲಂಕರಿಸಲ್ಪಟ್ಟಿದೆ",
         gemstones: "{{weight}}ct ರತ್ನದ ವಿವರಗಳನ್ನು ಹೊಂದಿದೆ",
         fallback: "ಒಂದು ಅತ್ಯುತ್ತಮವಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಆಭರಣದ ಮೇರುಕೃತಿ",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   },
@@ -98,7 +98,7 @@ export const resources = {
         diamonds: "{{weight}}ct വജ്രങ്ങൾ പതിപ്പിച്ചത്",
         gemstones: "{{weight}}ct രത്നങ്ങൾ പതിപ്പിച്ചത്",
         fallback: "മനോഹരമായി രൂപകൽപ്പന ചെയ്ത ഒരു ആഭരണ മാസ്റ്റർപീസ്",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   },
@@ -115,7 +115,7 @@ export const resources = {
         diamonds: "{{weight}}ct हिऱ्यांनी सजवलेले",
         gemstones: "{{weight}}ct रत्नांनी सजवलेले",
         fallback: "उत्कृष्ट डिझाइन केलेला दागिना",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   },
@@ -132,7 +132,7 @@ export const resources = {
         diamonds: "{{weight}}ct হিরে খচিত",
         gemstones: "{{weight}}ct রত্ন খচিত",
         fallback: "একটি নিপুণভাবে ডিজাইন করা গহনা",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   },
@@ -149,7 +149,7 @@ export const resources = {
         diamonds: "{{weight}}ct હીરાથી મઢેલ",
         gemstones: "{{weight}}ct રત્નોથી મઢેલ",
         fallback: "અતિ સુંદર રીતે ડિઝાઇન કરેલ દાગીનો",
-        item_format: "\n{{idx}}. **{{name}}** - {{details}}"
+        item_format: "\n{{idx}}. {{name}} - {{details}}"
       }
     }
   }
