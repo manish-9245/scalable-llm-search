@@ -1,4 +1,4 @@
-import { chatAgent } from './src/mastra/agent.js';
+import { chatAgent } from '../src/mastra/agent.js';
 import dotenv from 'dotenv';
 
 dotenv.config();

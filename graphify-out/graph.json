@@ -18,7 +18,7 @@
       "source_file": "test_chat_integration.js",
       "source_location": "L3",
       "id": "scalable_llm_search_test_chat_integration_runchatintegrationtest",
-      "community": 4,
+      "community": 1,
       "norm_label": "runchatintegrationtest()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "package.json",
       "source_location": "L1",
       "id": "package_json",
-      "community": 3,
+      "community": 2,
       "norm_label": "package.json"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "package.json",
       "source_location": "L2",
       "id": "scalable_llm_search_package_name",
-      "community": 3,
+      "community": 2,
       "norm_label": "name"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "package.json",
       "source_location": "L3",
       "id": "scalable_llm_search_package_version",
-      "community": 3,
+      "community": 2,
       "norm_label": "version"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "package.json",
       "source_location": "L4",
       "id": "scalable_llm_search_package_description",
-      "community": 3,
+      "community": 2,
       "norm_label": "description"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L5",
       "id": "scalable_llm_search_package_main",
-      "community": 3,
+      "community": 2,
       "norm_label": "main"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "package.json",
       "source_location": "L6",
       "id": "scalable_llm_search_package_type",
-      "community": 3,
+      "community": 2,
       "norm_label": "type"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "scalable_llm_search_package_scripts",
-      "community": 3,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "scalable_llm_search_package_scripts_start",
-      "community": 3,
+      "community": 2,
       "norm_label": "start"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "scalable_llm_search_package_scripts_db_init",
-      "community": 3,
+      "community": 2,
       "norm_label": "db:init"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "scalable_llm_search_package_scripts_test",
-      "community": 3,
+      "community": 2,
       "norm_label": "test"
     },
     {
@@ -360,14 +360,23 @@
       "source_file": "package.json",
       "source_location": "L11",
       "id": "scalable_llm_search_package_scripts_pre_cache",
-      "community": 3,
+      "community": 2,
       "norm_label": "pre-cache"
+    },
+    {
+      "label": "ollama:pull",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "id": "scalable_llm_search_package_scripts_ollama_pull",
+      "community": 2,
+      "norm_label": "ollama:pull"
     },
     {
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L13",
+      "source_location": "L14",
       "id": "scalable_llm_search_package_dependencies",
       "community": 2,
       "norm_label": "dependencies"
@@ -376,7 +385,7 @@
       "label": "@ai-sdk/google",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "id": "scalable_llm_search_package_dependencies_ai_sdk_google",
       "community": 2,
       "norm_label": "@ai-sdk/google"
@@ -385,7 +394,7 @@
       "label": "@bull-board/api",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "id": "scalable_llm_search_package_dependencies_bull_board_api",
       "community": 2,
       "norm_label": "@bull-board/api"
@@ -394,7 +403,7 @@
       "label": "@bull-board/fastify",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L17",
       "id": "scalable_llm_search_package_dependencies_bull_board_fastify",
       "community": 2,
       "norm_label": "@bull-board/fastify"
@@ -403,7 +412,7 @@
       "label": "@fastify/multipart",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "id": "scalable_llm_search_package_dependencies_fastify_multipart",
       "community": 2,
       "norm_label": "@fastify/multipart"
@@ -412,7 +421,7 @@
       "label": "@fastify/static",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L19",
       "id": "scalable_llm_search_package_dependencies_fastify_static",
       "community": 2,
       "norm_label": "@fastify/static"
@@ -421,7 +430,7 @@
       "label": "@google/genai",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "id": "scalable_llm_search_package_dependencies_google_genai",
       "community": 2,
       "norm_label": "@google/genai"
@@ -430,7 +439,7 @@
       "label": "@mastra/core",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "id": "scalable_llm_search_package_dependencies_mastra_core",
       "community": 2,
       "norm_label": "@mastra/core"
@@ -439,7 +448,7 @@
       "label": "@mastra/pg",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "id": "scalable_llm_search_package_dependencies_mastra_pg",
       "community": 2,
       "norm_label": "@mastra/pg"
@@ -448,7 +457,7 @@
       "label": "@xenova/transformers",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "id": "scalable_llm_search_package_dependencies_xenova_transformers",
       "community": 2,
       "norm_label": "@xenova/transformers"
@@ -457,7 +466,7 @@
       "label": "ai",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "id": "scalable_llm_search_package_dependencies_ai",
       "community": 2,
       "norm_label": "ai"
@@ -466,7 +475,7 @@
       "label": "bullmq",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "id": "scalable_llm_search_package_dependencies_bullmq",
       "community": 2,
       "norm_label": "bullmq"
@@ -475,7 +484,7 @@
       "label": "dotenv",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "id": "scalable_llm_search_package_dependencies_dotenv",
       "community": 2,
       "norm_label": "dotenv"
@@ -484,7 +493,7 @@
       "label": "fastify",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "id": "scalable_llm_search_package_dependencies_fastify",
       "community": 2,
       "norm_label": "fastify"
@@ -493,7 +502,7 @@
       "label": "ioredis",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "id": "scalable_llm_search_package_dependencies_ioredis",
       "community": 2,
       "norm_label": "ioredis"
@@ -502,7 +511,7 @@
       "label": "node-cron",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "id": "scalable_llm_search_package_dependencies_node_cron",
       "community": 2,
       "norm_label": "node-cron"
@@ -511,7 +520,7 @@
       "label": "ollama-ai-provider",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "id": "scalable_llm_search_package_dependencies_ollama_ai_provider",
       "community": 2,
       "norm_label": "ollama-ai-provider"
@@ -520,7 +529,7 @@
       "label": "pg",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "id": "scalable_llm_search_package_dependencies_pg",
       "community": 2,
       "norm_label": "pg"
@@ -529,7 +538,7 @@
       "label": "pino",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "id": "scalable_llm_search_package_dependencies_pino",
       "community": 2,
       "norm_label": "pino"
@@ -538,7 +547,7 @@
       "label": "pino-pretty",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "id": "scalable_llm_search_package_dependencies_pino_pretty",
       "community": 2,
       "norm_label": "pino-pretty"
@@ -547,7 +556,7 @@
       "label": "redis",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "id": "scalable_llm_search_package_dependencies_redis",
       "community": 2,
       "norm_label": "redis"
@@ -556,7 +565,7 @@
       "label": "zod",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "id": "scalable_llm_search_package_dependencies_zod",
       "community": 2,
       "norm_label": "zod"
@@ -565,18 +574,18 @@
       "label": "engines",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "id": "scalable_llm_search_package_engines",
-      "community": 3,
+      "community": 2,
       "norm_label": "engines"
     },
     {
       "label": "node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "id": "scalable_llm_search_package_engines_node",
-      "community": 3,
+      "community": 2,
       "norm_label": "node"
     },
     {
@@ -720,7 +729,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L1",
       "id": "scratch_manual_test_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "manual_test.js"
     },
     {
@@ -729,7 +738,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L3",
       "id": "scratch_manual_test_queries",
-      "community": 4,
+      "community": 1,
       "norm_label": "queries"
     },
     {
@@ -738,7 +747,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L17",
       "id": "scratch_manual_test_manualtest",
-      "community": 4,
+      "community": 1,
       "norm_label": "manualtest()"
     },
     {
@@ -767,6 +776,24 @@
       "id": "scratch_seed_ontology_run",
       "community": 1,
       "norm_label": "run()"
+    },
+    {
+      "label": "test_agent.mjs",
+      "file_type": "code",
+      "source_file": "scratch/test_agent.mjs",
+      "source_location": "L1",
+      "id": "scratch_test_agent_mjs",
+      "community": 15,
+      "norm_label": "test_agent.mjs"
+    },
+    {
+      "label": "testAgent()",
+      "file_type": "code",
+      "source_file": "scratch/test_agent.mjs",
+      "source_location": "L6",
+      "id": "scratch_test_agent_testagent",
+      "community": 15,
+      "norm_label": "testagent()"
     },
     {
       "label": "re_normalize_all.mjs",
@@ -828,7 +855,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L1",
       "id": "scratch_test_new_pricing_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "test_new_pricing.js"
     },
     {
@@ -837,7 +864,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L4",
       "id": "scratch_test_new_pricing_testnewpricing",
-      "community": 4,
+      "community": 1,
       "norm_label": "testnewpricing()"
     },
     {
@@ -909,7 +936,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L1",
       "id": "scratch_test_fix_session_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "test_fix_session.js"
     },
     {
@@ -918,7 +945,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L5",
       "id": "scratch_test_fix_session_test",
-      "community": 4,
+      "community": 1,
       "norm_label": "test()"
     },
     {
@@ -1564,7 +1591,7 @@
       "label": "google",
       "file_type": "code",
       "source_file": "src/mastra/agent.js",
-      "source_location": "L16",
+      "source_location": "L17",
       "id": "mastra_agent_google",
       "community": 15,
       "norm_label": "google"
@@ -1573,7 +1600,7 @@
       "label": "ollama",
       "file_type": "code",
       "source_file": "src/mastra/agent.js",
-      "source_location": "L20",
+      "source_location": "L24",
       "id": "mastra_agent_ollama",
       "community": 15,
       "norm_label": "ollama"
@@ -1582,7 +1609,7 @@
       "label": "indriyaAnalyzer",
       "file_type": "code",
       "source_file": "src/mastra/agent.js",
-      "source_location": "L27",
+      "source_location": "L33",
       "id": "mastra_agent_indriyaanalyzer",
       "community": 15,
       "norm_label": "indriyaanalyzer"
@@ -1591,7 +1618,7 @@
       "label": "chatAgent",
       "file_type": "code",
       "source_file": "src/mastra/agent.js",
-      "source_location": "L97",
+      "source_location": "L103",
       "id": "mastra_agent_chatagent",
       "community": 15,
       "norm_label": "chatagent"
@@ -1600,7 +1627,7 @@
       "label": "mastra",
       "file_type": "code",
       "source_file": "src/mastra/agent.js",
-      "source_location": "L129",
+      "source_location": "L135",
       "id": "mastra_agent_mastra",
       "community": 15,
       "norm_label": "mastra"
@@ -1807,7 +1834,7 @@
       "label": "loadOntologyAndSlang()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L311",
+      "source_location": "L330",
       "id": "utils_terminology_loadontologyandslang",
       "community": 15,
       "norm_label": "loadontologyandslang()"
@@ -1818,7 +1845,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L1",
       "id": "src_utils_querybuilder_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "querybuilder.js"
     },
     {
@@ -1827,7 +1854,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L2",
       "id": "utils_querybuilder_getrawsql",
-      "community": 4,
+      "community": 1,
       "norm_label": "getrawsql()"
     },
     {
@@ -1980,7 +2007,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L1",
       "id": "src_services_searchservice_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "searchservice.js"
     },
     {
@@ -1989,7 +2016,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L13",
       "id": "services_searchservice_repairimageurls",
-      "community": 4,
+      "community": 1,
       "norm_label": "repairimageurls()"
     },
     {
@@ -1998,7 +2025,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L40",
       "id": "services_searchservice_getlatestmetalrates",
-      "community": 4,
+      "community": 1,
       "norm_label": "getlatestmetalrates()"
     },
     {
@@ -2007,7 +2034,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L100",
       "id": "services_searchservice_builddynamicpricesql",
-      "community": 4,
+      "community": 1,
       "norm_label": "builddynamicpricesql()"
     },
     {
@@ -2016,7 +2043,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L151",
       "id": "services_searchservice_searchcatalogue",
-      "community": 4,
+      "community": 1,
       "norm_label": "searchcatalogue()"
     },
     {
@@ -2293,7 +2320,7 @@
       "label": "parseQuery",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L310",
+      "source_location": "L329",
       "id": "utils_terminology_parsequery",
       "community": 15,
       "norm_label": "parsequery"
@@ -3493,6 +3520,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scalable_llm_search_package_scripts",
+      "target": "scalable_llm_search_package_scripts_ollama_pull"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4016,6 +4053,38 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/test_agent.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_agent_mjs",
+      "target": "src_mastra_agent_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_agent.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_agent_mjs",
+      "target": "mastra_agent_chatagent"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_agent.mjs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_agent_mjs",
+      "target": "scratch_test_agent_testagent"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L2",
       "weight": 1.0,
@@ -4492,9 +4561,9 @@
       "source_file": "scratch/inspect_mastra.mjs",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_inspect_mastra_mjs",
-      "target": "scratch_inspect_mastra_store",
-      "confidence_score": 1.0
+      "target": "scratch_inspect_mastra_store"
     },
     {
       "relation": "imports_from",
@@ -7866,9 +7935,9 @@
       "source_file": "README.md",
       "source_location": "L167",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_6_setup_deployment",
-      "target": "scalable_llm_search_readme_6_2_monitoring_admin_tools",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_6_2_monitoring_admin_tools"
     },
     {
       "relation": "calls",
@@ -7927,5 +7996,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "887f3d3df22d33a523eab6c370131917f66f7eee"
+  "built_at_commit": "bba8309d708031698c771062ae15ac87a7d05c41"
 }

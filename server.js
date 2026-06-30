@@ -733,6 +733,58 @@ fastify.post('/api/chat/message', async (request, reply) => {
   }
 });
 
+/**
+ * Endpoint: Pull Model on Deployed Ollama Instance.
+ * Allows triggering the pull of llama3.2 remotely.
+ */
+fastify.post('/api/ollama/pull', async (request, reply) => {
+  const { model = 'llama3.2' } = request.body || {};
+  const ollamaUrl = process.env.OLLAMA_API_URL || 'http://localhost:11434/api';
+  const pullUrl = `${ollamaUrl.replace(/\/$/, '')}/pull`;
+  
+  request.log.info({ model, pullUrl }, 'Triggering remote Ollama model pull');
+  
+  try {
+    const res = await fetch(pullUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: model, stream: false })
+    });
+    
+    if (!res.ok) {
+      const errText = await res.text();
+      return reply.status(res.status).send({ error: 'Failed to pull model', details: errText });
+    }
+    
+    const data = await res.json();
+    return { success: true, data };
+  } catch (err) {
+    request.log.error(err, 'Error pulling remote model');
+    return reply.status(500).send({ error: 'Ollama pull execution failed', details: err.message });
+  }
+});
+
+/**
+ * Endpoint: Get Deployed Ollama Status / Tags.
+ * Lists already downloaded models.
+ */
+fastify.get('/api/ollama/tags', async (request, reply) => {
+  const ollamaUrl = process.env.OLLAMA_API_URL || 'http://localhost:11434/api';
+  const tagsUrl = `${ollamaUrl.replace(/\/$/, '')}/tags`;
+  
+  try {
+    const res = await fetch(tagsUrl);
+    if (!res.ok) {
+      const errText = await res.text();
+      return reply.status(res.status).send({ error: 'Failed to fetch tags', details: errText });
+    }
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    return reply.status(500).send({ error: 'Ollama tags fetch failed', details: err.message });
+  }
+});
+
 // Fallback path: All unknown URLs redirect to serve SPA Single Page Application
 fastify.setNotFoundHandler(async (request, reply) => {
   return reply.sendFile('index.html');

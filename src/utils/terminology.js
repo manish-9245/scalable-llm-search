@@ -28,8 +28,27 @@ export async function resolveTerminology(query, existingFilters = {}) {
         broadIntent: false,
         resetContext: false,
         negativeKeywordsToPrune: [],
-        negativeKeywordsToAdd: []
+        negativeKeywordsToAdd: [],
+        sortBy: null,
+        customLimit: null
     };
+
+    // --- Sort By & Custom Limit Parsing ---
+    if (/\b(?:most\s+expensive|highest\s+price|price\s+high\s+to\s+low|highest\s+to\s+lowest|costliest)\b/i.test(lowerQuery)) {
+        result.sortBy = 'price_desc';
+    } else if (/\b(?:cheapest|lowest\s+price|price\s+low\s+to\s+high|lowest\s+to\s+highest|affordable)\b/i.test(lowerQuery)) {
+        result.sortBy = 'price_asc';
+    } else if (/\b(?:heavy\s+weight|heaviest|weight\s+high\s+to\s+low)\b/i.test(lowerQuery)) {
+        result.sortBy = 'weight_desc';
+    } else if (/\b(?:light\s+weight|lightest|weight\s+low\s+to\s+high)\b/i.test(lowerQuery)) {
+        result.sortBy = 'weight_asc';
+    }
+
+    const limitMatch = lowerQuery.match(/\b(?:top|first)\s+(\d+)\b/i);
+    if (limitMatch) {
+        result.customLimit = parseInt(limitMatch[1], 10);
+    }
+
 
     // --- Price Boundary Parsing ---
     const pricePatterns = [
