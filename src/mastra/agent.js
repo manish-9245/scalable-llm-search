@@ -18,7 +18,9 @@ const google = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
-const ollama = createOllama();
+const ollama = createOllama({
+  baseURL: process.env.OLLAMA_API_URL || 'http://localhost:11434/api',
+});
 
 /**
  * Indriya Visual Cataloging and Spec-Driven Ingestion Agent.

@@ -158,7 +158,7 @@ Self-learning mapping of slang to schema (e.g., *"Jhumka"* -> *"Drop Earrings"*)
 
 ### Installation
 1. `npm install`
-2. Configure `.env` with your `DATABASE_URL` and optional `GEMINI_API_KEY`.
+2. Configure `.env` with your `DATABASE_URL`, `GEMINI_API_KEY`, and `OLLAMA_API_URL` (e.g., `http://ollama.railway.internal:11434/api`).
 3. `npm run pre-cache` — Downloads local ONNX models to disk to avoid cold-start latency.
 4. `npm run db:init` — Seeds the ontology and initializes tables.
 5. `ollama run llama3` — Ensures the local AI concierge is online.
