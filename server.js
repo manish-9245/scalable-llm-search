@@ -651,7 +651,7 @@ fastify.post('/api/chat/message', async (request, reply) => {
     try {
       console.log(`[OS_SEARCH] Attempting agentic search via local LLM...`);
       const prompt = `[Language: ${langName}]\nUser Query: ${text}`;
-      const result = await chatAgent.generate(prompt);
+      const result = await chatAgent.generateLegacy(prompt);
       
       aiText = result?.text || "I'm looking into that for you...";
 
