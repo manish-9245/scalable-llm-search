@@ -197,6 +197,16 @@ export async function searchCatalogue({ queryText, limit = 12 }) {
     bindings.push(`%${parsed.occasion}%`);
     paramCounter++;
   }
+  if (parsed.gender) {
+    if (parsed.gender === 'Men') {
+      filters.push(`gender IN ('Men', 'Unisex')`);
+    } else if (parsed.gender === 'Women') {
+      filters.push(`gender IN ('Women', 'Unisex')`);
+    } else {
+      filters.push(`gender = $${paramCounter++}`);
+      bindings.push(parsed.gender);
+    }
+  }
   if (parsed.motifs && parsed.motifs.length > 0) {
     parsed.motifs.forEach(m => {
       filters.push(`(all_motifs_array @> ARRAY[$${paramCounter}]::text[] OR EXISTS (SELECT 1 FROM product_motifs WHERE product_id = catalog_products.id AND motif ILIKE $${paramCounter}))`);
@@ -284,7 +294,7 @@ export async function searchCatalogue({ queryText, limit = 12 }) {
     if (embedding) {
       const embeddingStr = `[${embedding.join(',')}]`;
       const vectorQuery = `
-        SELECT id, sku, name, category, sub_category, collection, description, image_urls, product_url, availability,
+        SELECT id, sku, name, category, sub_category, collection, gender, description, image_urls, product_url, availability,
                gold_weight_numeric, purity, platinum_weight_numeric, silver_weight_numeric,
                diamond_weight_numeric, diamond_rate_per_carat, gemstone_weight_numeric, gemstone_rate_per_carat, gemstone_type,
                making_charge_type, making_charge_value,
@@ -310,7 +320,7 @@ export async function searchCatalogue({ queryText, limit = 12 }) {
   try {
     const textQueryIdx = paramCounter;
     const textQuery = `
-      SELECT id, sku, name, category, sub_category, collection, description, image_urls, product_url, availability,
+      SELECT id, sku, name, category, sub_category, collection, gender, description, image_urls, product_url, availability,
              gold_weight_numeric, purity, platinum_weight_numeric, silver_weight_numeric,
              diamond_weight_numeric, diamond_rate_per_carat, gemstone_weight_numeric, gemstone_rate_per_carat, gemstone_type,
              making_charge_type, making_charge_value,

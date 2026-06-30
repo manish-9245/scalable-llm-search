@@ -10,6 +10,8 @@ const PROTECTED_WORDS = new Set([
     'with', 'without', 'excluding', 'exclude', 'no', 'not', 'and', 'or', 'for', 'from', 'between', 'under', 'below', 'above', 'over', 'less', 'more', 'than', 'up', 'to', 'within', 'max', 'min', 'starting', 'by', 'of', 'in', 'some', 'any', 'the', 'a', 'an',
     // Units
     'lakh', 'lakhs', 'k', 'thousand', 'thousands', 'rs', 'rupees', 'rupee', 'karat', 'karats', 'carat', 'carats', 'ct', 'cts', 'g', 'gm', 'grams', 'gram',
+    // Gender keywords
+    'men', 'mens', 'women', 'womens', 'unisex', 'kids', 'kid', 'boys', 'boy', 'girls', 'girl', 'ladies', 'gentlemen',
     // Descriptive, design metadata, & intent keywords
     'price', 'heavy', 'light', 'weight', 'most', 'least', 'cheapest', 'expensive', 'best', 'cheap', 'top', 'first', 'only', 'just', 'plain', 'mostly', 'something', 'anything', 'items', 'products', 'collections', 'show', 'me', 'gift', 'bridal', 'wedding', 'festive', 'party', 'engagement', 'wear', 'daily', 'office',
     'motif', 'motifs', 'theme', 'themes', 'craftsmanship', 'craft', 'crafts', 'technique', 'techniques',
@@ -109,7 +111,8 @@ export async function resolveTerminology(query, existingFilters = {}) {
         negativeKeywordsToPrune: [],
         negativeKeywordsToAdd: [],
         sortBy: null,
-        customLimit: null
+        customLimit: null,
+        gender: null
     };
 
     // --- Sort By & Custom Limit Parsing ---
@@ -378,13 +381,25 @@ export async function resolveTerminology(query, existingFilters = {}) {
         result.purity = '14K';
     }
 
+    // Gender Resolution (Men, Women, Kids, Unisex)
+    if (/\b(?:men|mens|man|gentlemen|gents|male)\b/i.test(lowerQuery)) {
+        result.gender = 'Men';
+    } else if (/\b(?:women|womens|woman|ladies|lady|female|girls|girl)\b/i.test(lowerQuery)) {
+        result.gender = 'Women';
+    } else if (/\b(?:kids|kid|boys|boy|children|child)\b/i.test(lowerQuery)) {
+        result.gender = 'Kids';
+    } else if (/\b(?:unisex)\b/i.test(lowerQuery)) {
+        result.gender = 'Unisex';
+    }
+
     console.log(`[TERMINOLOGY] Resolved for "${query}":`, {
         category: result.category,
         subCategory: result.subCategory,
         gemstone: result.gemstone,
         exclusions: result.exclusions,
         minPrice: result.minPrice,
-        maxPrice: result.maxPrice
+        maxPrice: result.maxPrice,
+        gender: result.gender
     });
 
     // 6. Persistence Conflict Resolution

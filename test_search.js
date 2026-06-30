@@ -219,6 +219,25 @@ async function runLogicalTests() {
     assert(avgLatency < 1000, 'Average end-to-end local-first search latency satisfies sub-1000ms CPU budget (WASM-native).');
 
 
+    // Stage 8: Strict Gender Parsing & Query Constraints Verification
+    console.log('\n--- STAGE 8: Strict Gender Constraints & Query Parsing Assertions ---');
+    const queryH = await searchCatalogue({ queryText: 'mens rings uner 1L' });
+    assert(queryH.parsedFilters.gender === 'Men', 'Parsed gender filter is "Men" for query "mens rings uner 1L".');
+    if (queryH.products.length > 0) {
+      let strictlyMensOrUnisex = true;
+      queryH.products.forEach(p => {
+        const prodGender = p.gender;
+        if (prodGender && prodGender !== 'Men' && prodGender !== 'Unisex') {
+          strictlyMensOrUnisex = false;
+          console.error(`  [ERROR] SKU ${p.sku} ("${p.name}") is for "${prodGender}", which is NOT Men or Unisex!`);
+        }
+      });
+      assert(strictlyMensOrUnisex, 'Strict gender matching: All returned items are categorized as Men or Unisex.');
+    } else {
+      console.log('[WARN] No products returned for "mens rings uner 1L". Skipping products gender verification.');
+    }
+
+
     // Summarize
     console.log('\n========================================================================');
     console.log(`               LOGICAL VERIFICATION RESULTS:`);

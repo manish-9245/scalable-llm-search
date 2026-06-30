@@ -828,7 +828,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
       "id": "scratch_test_jewel_search_cases_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "test_jewel_search_cases.js"
     },
     {
@@ -837,7 +837,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L6",
       "id": "scratch_test_jewel_search_cases_runtestcases",
-      "community": 1,
+      "community": 20,
       "norm_label": "runtestcases()"
     },
     {
@@ -945,7 +945,7 @@
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L1",
       "id": "scratch_re_normalize_all_mjs",
-      "community": 11,
+      "community": 15,
       "norm_label": "re_normalize_all.mjs"
     },
     {
@@ -954,7 +954,7 @@
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L5",
       "id": "scratch_re_normalize_all_run",
-      "community": 11,
+      "community": 15,
       "norm_label": "run()"
     },
     {
@@ -999,7 +999,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L1",
       "id": "scratch_test_new_pricing_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_new_pricing.js"
     },
     {
@@ -1008,7 +1008,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L4",
       "id": "scratch_test_new_pricing_testnewpricing",
-      "community": 20,
+      "community": 1,
       "norm_label": "testnewpricing()"
     },
     {
@@ -1129,12 +1129,30 @@
       "norm_label": "run()"
     },
     {
+      "label": "check_genders.js",
+      "file_type": "code",
+      "source_file": "scratch/check_genders.js",
+      "source_location": "L1",
+      "id": "scratch_check_genders_js",
+      "community": 20,
+      "norm_label": "check_genders.js"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scratch/check_genders.js",
+      "source_location": "L3",
+      "id": "scratch_check_genders_main",
+      "community": 20,
+      "norm_label": "main()"
+    },
+    {
       "label": "test_fix_session.js",
       "file_type": "code",
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L1",
       "id": "scratch_test_fix_session_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_fix_session.js"
     },
     {
@@ -1143,7 +1161,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L5",
       "id": "scratch_test_fix_session_test",
-      "community": 20,
+      "community": 1,
       "norm_label": "test()"
     },
     {
@@ -1260,7 +1278,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L1",
       "id": "scratch_test_dynamic_spelling_with_op_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "test_dynamic_spelling_with_op.js"
     },
     {
@@ -1269,7 +1287,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L3",
       "id": "scratch_test_dynamic_spelling_with_op_runtest",
-      "community": 1,
+      "community": 20,
       "norm_label": "runtest()"
     },
     {
@@ -1890,7 +1908,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L1",
       "id": "src_mastra_tools_js",
-      "community": 20,
+      "community": 15,
       "norm_label": "tools.js"
     },
     {
@@ -1899,7 +1917,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L13",
       "id": "mastra_tools_detectvisualintent",
-      "community": 20,
+      "community": 15,
       "norm_label": "detectvisualintent()"
     },
     {
@@ -2142,7 +2160,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L1",
       "id": "src_utils_logger_js",
-      "community": 11,
+      "community": 3,
       "norm_label": "logger.js"
     },
     {
@@ -2151,7 +2169,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L5",
       "id": "utils_logger_logger",
-      "community": 11,
+      "community": 3,
       "norm_label": "logger"
     },
     {
@@ -2169,7 +2187,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L28",
       "id": "utils_logger_log",
-      "community": 11,
+      "community": 3,
       "norm_label": "log"
     },
     {
@@ -2194,16 +2212,16 @@
       "label": "resolveTerminology()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L23",
+      "source_location": "L25",
       "id": "utils_terminology_resolveterminology",
-      "community": 1,
+      "community": 20,
       "norm_label": "resolveterminology()"
     },
     {
       "label": "loadOntologyAndSlang()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L421",
+      "source_location": "L436",
       "id": "utils_terminology_loadontologyandslang",
       "community": 1,
       "norm_label": "loadontologyandslang()"
@@ -2212,7 +2230,7 @@
       "label": "levenshteinDistance()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L430",
+      "source_location": "L445",
       "id": "utils_terminology_levenshteindistance",
       "community": 1,
       "norm_label": "levenshteindistance()"
@@ -2223,7 +2241,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L1",
       "id": "src_utils_querybuilder_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "querybuilder.js"
     },
     {
@@ -2232,7 +2250,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L2",
       "id": "utils_querybuilder_getrawsql",
-      "community": 20,
+      "community": 1,
       "norm_label": "getrawsql()"
     },
     {
@@ -2430,7 +2448,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L1",
       "id": "src_services_searchservice_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "searchservice.js"
     },
     {
@@ -2439,7 +2457,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L13",
       "id": "services_searchservice_repairimageurls",
-      "community": 11,
+      "community": 1,
       "norm_label": "repairimageurls()"
     },
     {
@@ -2448,7 +2466,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L40",
       "id": "services_searchservice_getlatestmetalrates",
-      "community": 20,
+      "community": 1,
       "norm_label": "getlatestmetalrates()"
     },
     {
@@ -2457,7 +2475,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L100",
       "id": "services_searchservice_builddynamicpricesql",
-      "community": 20,
+      "community": 1,
       "norm_label": "builddynamicpricesql()"
     },
     {
@@ -2475,7 +2493,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L1",
       "id": "src_services_discoveryservice_js",
-      "community": 11,
+      "community": 15,
       "norm_label": "discoveryservice.js"
     },
     {
@@ -2484,7 +2502,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L6",
       "id": "services_discoveryservice_official_categories",
-      "community": 11,
+      "community": 15,
       "norm_label": "official_categories"
     },
     {
@@ -2493,7 +2511,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L7",
       "id": "services_discoveryservice_db_schema",
-      "community": 11,
+      "community": 15,
       "norm_label": "db_schema"
     },
     {
@@ -2502,7 +2520,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L13",
       "id": "services_discoveryservice_updatediscovery",
-      "community": 11,
+      "community": 15,
       "norm_label": "updatediscovery()"
     },
     {
@@ -2511,7 +2529,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L129",
       "id": "services_discoveryservice_loadschema",
-      "community": 11,
+      "community": 15,
       "norm_label": "loadschema()"
     },
     {
@@ -2529,7 +2547,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L167",
       "id": "services_discoveryservice_startdiscoverycron",
-      "community": 11,
+      "community": 15,
       "norm_label": "startdiscoverycron()"
     },
     {
@@ -2538,7 +2556,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L176",
       "id": "services_discoveryservice_normalizeproductdata",
-      "community": 11,
+      "community": 15,
       "norm_label": "normalizeproductdata()"
     },
     {
@@ -2779,7 +2797,7 @@
       "label": "parseQuery",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L420",
+      "source_location": "L435",
       "id": "utils_terminology_parsequery",
       "community": 1,
       "norm_label": "parsequery"
@@ -2978,7 +2996,7 @@
       "file_type": "code",
       "source_file": "src/config/db.js",
       "source_location": "L23",
-      "community": 1,
+      "community": 20,
       "norm_label": "pool",
       "id": "config_db_pool"
     },
@@ -5591,6 +5609,49 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/check_genders.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_check_genders_js",
+      "target": "src_config_db_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_genders.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_check_genders_js",
+      "target": "config_db_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_genders.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_check_genders_js",
+      "target": "scratch_check_genders_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_genders.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scratch_check_genders_main",
+      "target": "config_db_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L1",
       "weight": 1.0,
@@ -5994,9 +6055,9 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_dynamic_spelling_with_op_js",
-      "target": "src_utils_terminology_js",
-      "confidence_score": 1.0
+      "target": "src_utils_terminology_js"
     },
     {
       "relation": "imports",
@@ -6005,9 +6066,9 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_dynamic_spelling_with_op_js",
-      "target": "utils_terminology_resolveterminology",
-      "confidence_score": 1.0
+      "target": "utils_terminology_resolveterminology"
     },
     {
       "relation": "contains",
@@ -6015,9 +6076,9 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_dynamic_spelling_with_op_js",
-      "target": "scratch_test_dynamic_spelling_with_op_runtest",
-      "confidence_score": 1.0
+      "target": "scratch_test_dynamic_spelling_with_op_runtest"
     },
     {
       "relation": "calls",
@@ -6026,9 +6087,9 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_dynamic_spelling_with_op_runtest",
-      "target": "utils_terminology_resolveterminology",
-      "confidence_score": 1.0
+      "target": "utils_terminology_resolveterminology"
     },
     {
       "relation": "imports_from",
@@ -10012,5 +10073,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7214f77adf8d5a28c50e7dd62ec42bd3aee7bcb4"
+  "built_at_commit": "d3db07d92f45e5f9bcb8c8a78154e24bbef3a87a"
 }
