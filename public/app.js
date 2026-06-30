@@ -1052,7 +1052,20 @@ function parseNarrativeToTabs(description, p = {}) {
         // Ensure consistent text properties for template fallback
         materialsText: (craftsmanship.techniques?.join(', ') || '') + (craftsmanship.details ? ` \n${craftsmanship.details}` : '') || `Gold: ${p.gold_weight_numeric || 0}g, Diamond: ${p.diamond_weight_numeric || 0}ct`,
         motifsText: motifs.motif_details?.map(m => `<div style="margin-bottom:8px;"><strong>${m.motif_name}</strong> <span style="font-size:10px; opacity:0.7; text-transform:uppercase;">(${m.prominence})</span>: ${m.symbolic_cultural_association}</div>`).join('') || (p.collection ? `Collection: ${p.collection}` : 'Heritage design motifs.'),
-        stylingText: [...(styling.outfit_pairings || []), ...(styling.festive_styling || []), ...(styling.sarees || []), ...(styling.lehengas || [])].join(', ') || 'Ideal for festive and special occasions.'
+        stylingText: (() => {
+          const getArray = (val) => {
+            if (!val) return [];
+            if (Array.isArray(val)) return val;
+            if (typeof val === 'string') return [val];
+            return [];
+          };
+          return [
+            ...getArray(styling.outfit_pairings),
+            ...getArray(styling.festive_styling),
+            ...getArray(styling.sarees),
+            ...getArray(styling.lehengas)
+          ].join(', ') || 'Ideal for festive and special occasions.';
+        })()
       };
     }
   } catch (e) {
@@ -1435,11 +1448,17 @@ function selectProductForAnalysis(product, imageUrl, pushState = true) {
         <div class="tag-cloud">
           ${(() => {
             const styling = narrative.styling || {};
+            const getArray = (val) => {
+              if (!val) return [];
+              if (Array.isArray(val)) return val;
+              if (typeof val === 'string') return [val];
+              return [];
+            };
             const pairings = [
-              ...(styling.outfit_pairings || []),
-              ...(styling.sarees || []),
-              ...(styling.lehengas || []),
-              ...(styling.festive_styling || [])
+              ...getArray(styling.outfit_pairings),
+              ...getArray(styling.sarees),
+              ...getArray(styling.lehengas),
+              ...getArray(styling.festive_styling)
             ];
             return pairings.length > 0 
               ? [...new Set(pairings)].map(p => `<span class="tag-chip">${p}</span>`).join('')
