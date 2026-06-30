@@ -41,7 +41,7 @@ graph TD
     end
 
     subgraph "Deterministic & Vector Matching (100% Local / Gemini-Free)"
-        Cache -- Miss --> DB[(Postgres + pgvector)]
+        Cache -- Miss --> DB[("Postgres + pgvector")]
         
         DB -->|GIN Index| Exclude[Exclusions / Negations]
         DB -->|B-Tree Index| Price[Dynamic Stability Price]
@@ -82,13 +82,13 @@ graph LR
         Image --> Container[Fastify Container]
         Container -->|Port 3000| Internet((Internet))
         
-        Container -->|TCP| PG[(Managed Postgres + pgvector)]
-        Container -->|TCP| RD[(Managed Redis Cache + BullMQ)]
+        Container -->|TCP| PG[("Managed Postgres + pgvector")]
+        Container -->|TCP| RD[("Managed Redis Cache + BullMQ")]
         Container -->|Job| Worker[Ingestion Worker Thread]
     end
 
     subgraph "External AI Services"
-        Container -->|gRPC| Gemini[Gemini 2.5 API (Ingestion & Visual Analysis Only)]
+        Container -->|gRPC| Gemini["Gemini 2.5 API (Ingestion & Visual Analysis Only)"]
     end
 ```
 
