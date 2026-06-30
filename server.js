@@ -684,35 +684,10 @@ fastify.post('/api/chat/message', async (request, reply) => {
       
       const count = products.length;
 
-      // 3. Dynamic Concierge Text Generation (100% Cloud-Native & Lifetime Free)
-      if (process.env.GEMINI_API_KEY) {
-        console.log(`[CONCIERGE_AI] Generating brand-aligned concierge text using free cloud Gemini tier...`);
-        try {
-          const google = createGoogleGenerativeAI({ apiKey: process.env.GEMINI_API_KEY });
-          const { text: geminiResponse } = await generateText({
-            model: google('gemini-2.5-flash'),
-            prompt: `
-              You are an elegant, elite concierge for Indriya luxury jewellery.
-              The user asked: "${text}".
-              We searched our database and found ${count} products.
-              Here are the top products found: ${JSON.stringify(products.slice(0, 3).map(p => p.name))}
-              
-              Rules:
-              1. Start with: "I found [X] exquisite items for you." (If 0, say: "I couldn't find any matching items...")
-              2. Keep it sophisticated and ultra-concise (< 25 words).
-              3. Mention the top 2-3 products if found.
-            `
-          });
-          aiText = geminiResponse.trim();
-          agentExecutionSuccess = true;
-        } catch (geminiErr) {
-          console.warn('[CONCIERGE_AI_FAIL] Gemini generation failed, falling back to instant luxury template:', geminiErr.message);
-          aiText = generateTemplateResponse(text, products);
-        }
-      } else {
-        console.log(`[CONCIERGE_TEMPLATE] Generating response via instant luxury template...`);
-        aiText = generateTemplateResponse(text, products);
-      }
+      // 3. Local Luxury Concierge Generation (Lifetime Free, Unlimited & Fast)
+      console.log(`[LOCAL_CONCIERGE] Generating response via local luxury template engine (Fast & $0 Cost)...`);
+      aiText = generateTemplateResponse(text, products);
+      agentExecutionSuccess = true;
     } catch (searchErr) {
       console.error('[LOCAL_SEARCH_FAIL] Local search engine execution failed:', searchErr.message);
       aiText = "I encountered an error while searching our inventory. Please allow me a moment to assist you.";

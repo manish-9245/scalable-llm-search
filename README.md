@@ -7,10 +7,8 @@ Indriya AI is a high-performance, local-first search and discovery engine design
 ## 1. Zero-Cost "Pure Local" Philosophy
 Indriya is built on a **$0 API Cost** architecture designed to run entirely on the edge and deploy effortlessly in resource-constrained container environments (like Railway):
 - **Free Search & NLP Parsing (100% Local & Gemini-Free)**: All semantic queries, vernacular slang mappings, price conversions, and product filtering run entirely on CPU inside the container using PostgreSQL, pgvector HNSW indexes, and WASM-native local-first NLP tools. **It is 100% independent of external LLMs like Google Gemini.**
-- **Dual-Layer Conversational Concierge**: 
-  1. *Primary Cloud Layer*: Uses the Google Gemini 2.5 Flash free-tier API to generate elegant, brand-aligned luxury replies using the local search results.
-  2. *Instant Local Fallback*: Automatically falls back to a deterministic, dynamic luxury template engine (0ms, $0 cost) if Gemini is offline, rate-limited, or unconfigured, ensuring 100% service uptime.
-- **Premium Analysis**: Ingestion pipelines leverage Gemini 2.5 Flash exclusively for one-time, high-fidelity visual analysis and product data extraction.
+- **100% Local Conversational Concierge (Exclusive for Chats)**: Conversational chat responses are generated purely locally on CPU via a deterministic, dynamic luxury template engine (0.1ms latency, $0 cost, unlimited scale). No cloud LLM requests are made during chat conversations, ensuring lifetime free, fast, and private operation.
+- **Cloud LLM for Heavy Analysis (Exclusive for Ingestion)**: Complex multimodal and visual analysis is powered strictly by the cloud-based Google Gemini 2.5 Flash API. This runs purely as a one-time administrative background task during product ingestion to analyze jewellery assets and compile deep product dossiers, preserving maximum runtime privacy and zero runtime cost for customers.
 
 ---
 
@@ -18,10 +16,11 @@ Indriya is built on a **$0 API Cost** architecture designed to run entirely on t
 | Component | Technology | Rationale |
 | :--- | :--- | :--- |
 | **Search Engine** | Node.js (Fastify) | Ultra-low overhead; ideal for parallelizing hybrid search streams. |
-| **Orchestration** | Mastra Framework | Manages agentic structures and schemas for concierge. |
+| **Orchestration** | Mastra Framework | Manages agentic structures and schemas for visual analysis. |
 | **Database** | PostgreSQL + `pgvector` | Unified relational and HNSW vector storage with ACID safety. |
 | **Embeddings** | Xenova/all-MiniLM-L6 (ONNX) | Native WASM execution on CPU; 100% private, offline, zero cost. |
-| **Concierge Generation** | Gemini 2.5 Flash / Template Fallback | Dual-layer conversational luxury styling with lifetime free scalability. |
+| **Concierge Generation** | Dynamic Luxury Template Engine | Pure local conversational luxury styling; 100% free, unlimited, and fast. |
+| **Visual Analysis** | Gemini 2.5 Flash | Cloud-based multimodal analysis; runs exclusively for background ingestion. |
 | **Voice/ASR** | Xenova/Whisper-tiny (ONNX) | On-device, 100% local transcription for high-privacy voice search. |
 | **Caching/Queue** | Redis (BullMQ) | Sub-1ms retrieval + Resilient background job processing. |
 | **Observability** | Pino + BullBoard | Structured distributed tracing + Visual queue management. |
@@ -51,15 +50,12 @@ graph TD
         Exclude & Price & Vector -->|Merge| RRF[RRF Scoring]
     end
 
-    subgraph "Dual-Layer Conversational Concierge"
-        RRF -->|Structured Results| GenRouter{Gemini Active?}
-        GenRouter -->|Yes| Gemini[Gemini 2.5 Flash Free Tier]
-        GenRouter -->|No/Fallback| Template[Dynamic Luxury Template Engine]
-        Gemini -->|Elegant Copy| Output[Polished AI Reply]
-        Template -->|Elegant Copy| Output
+    subgraph "100% Local Conversational Concierge (Chats Only)"
+        RRF -->|Structured Results| Template[Dynamic Luxury Template Engine]
+        Template -->|Elegant Copy| Output[Polished AI Reply]
     end
 
-    subgraph "Premium Ingestion Pipeline"
+    subgraph "Premium Ingestion Pipeline (Cloud LLM Analysis)"
         Admin -->|Upload| GeminiIngest[Gemini 2.5 Flash Vision]
         GeminiIngest -->|Push Job| Queue[(BullMQ Redis)]
         Queue -->|Analyze| Worker[Background Worker]
@@ -92,7 +88,7 @@ graph LR
     end
 
     subgraph "External AI Services"
-        Container -->|gRPC| Gemini[Gemini 2.5 API (Concierge & Ingestion)]
+        Container -->|gRPC| Gemini[Gemini 2.5 API (Ingestion & Visual Analysis Only)]
     end
 ```
 
@@ -156,7 +152,7 @@ Self-learning mapping of slang to schema (e.g., *"Jhumka"* -> *"Drop Earrings"*)
 ### Prerequisites
 - **PostgreSQL 16+** with `pgvector`
 - **Redis 7+**
-- **Google Gemini API Key** (Required for visual ingestion and primary conversational concierge text)
+- **Google Gemini API Key** (Required strictly for background product ingestion/multimodal analysis)
 
 ### Installation
 1. `npm install`
