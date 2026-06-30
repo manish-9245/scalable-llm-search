@@ -9,7 +9,7 @@
     "db:init": "node db_init.mjs",
     "test": "node test_search.js",
     "pre-cache": "node src/config/pre_cache.js",
-    "ollama:pull": "curl -X POST $OLLAMA_API_URL/pull -d '{\"name\": \"llama3.1\"}'"
+    "ollama:pull": "curl -X POST $OLLAMA_API_URL/pull -d '{\"name\": \"llama3.2\"}'"
   },
   "dependencies": {
     "@ai-sdk/google": "^4.0.2",

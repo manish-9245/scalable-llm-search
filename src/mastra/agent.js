@@ -127,7 +127,7 @@ export const chatAgent = new Agent({
     ${getDynamicContext()}
     - **Tone**: Sophisticated, ultra-concise, helpful.
   `,
-  model: ollama('llama3.1'),
+  model: ollama('llama3.2'),
   tools: { queryDatabase: queryDatabaseTool }
 });
 
