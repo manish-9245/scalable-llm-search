@@ -1,7 +1,7 @@
 # Graph Report - scalable-llm-search  (2026-06-30)
 
 ## Corpus Check
-- 40 files · ~25,554 words
+- 40 files · ~25,929 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `bba8309d`
+- Built from commit: `4a401086`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

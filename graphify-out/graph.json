@@ -232,7 +232,7 @@
       "label": "google",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L686",
+      "source_location": "L679",
       "id": "scalable_llm_search_server_google",
       "community": 11,
       "norm_label": "google"
@@ -241,7 +241,7 @@
       "label": "productsJson",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L717",
+      "source_location": "L746",
       "id": "scalable_llm_search_server_productsjson",
       "community": 11,
       "norm_label": "productsjson"
@@ -4056,9 +4056,9 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_agent_mjs",
-      "target": "src_mastra_agent_js",
-      "confidence_score": 1.0
+      "target": "src_mastra_agent_js"
     },
     {
       "relation": "imports",
@@ -7996,5 +7996,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "bba8309d708031698c771062ae15ac87a7d05c41"
+  "built_at_commit": "4a4010865f8922a8ae296c5db08a405af79c75b2"
 }

@@ -666,7 +666,6 @@ fastify.post('/api/chat/message', async (request, reply) => {
       agentExecutionSuccess = true;
     } catch (agentErr) {
       console.warn(`[AGENT_FAIL] Local LLM (Ollama) failed or not running: ${agentErr.message}`);
-      console.log(`[FALLBACK] Using deterministic local engine...`);
       
       const { searchCatalogue } = await import('./src/services/searchService.js');
       const searchRes = await searchCatalogue({ queryText: text });
@@ -674,10 +673,40 @@ fastify.post('/api/chat/message', async (request, reply) => {
       lastToolParams = searchRes.parsedFilters || {};
       
       const count = products.length;
-      if (count > 0) {
-        aiText = `I found ${count} exquisite items for you. Here are the top selections from our local inventory.`;
+      if (process.env.GEMINI_API_KEY) {
+        console.log(`[FALLBACK] Generating elegant concierge response using Gemini...`);
+        try {
+          const google = createGoogleGenerativeAI({ apiKey: process.env.GEMINI_API_KEY });
+          const { text: geminiResponse } = await generateText({
+            model: google('gemini-2.5-flash'),
+            prompt: `
+              You are an elegant, elite concierge for Indriya luxury jewellery.
+              The user asked: "${text}".
+              We searched our database and found ${count} products.
+              Here are the top products found: ${JSON.stringify(products.slice(0, 3).map(p => p.name))}
+              
+              Rules:
+              1. Start with: "I found [X] exquisite items for you." (If 0, say: "I couldn't find any matching items...")
+              2. Keep it sophisticated and ultra-concise (< 25 words).
+              3. Mention the top 2-3 products if found.
+            `
+          });
+          aiText = geminiResponse.trim();
+        } catch (geminiErr) {
+          console.error('[FALLBACK_FAIL] Gemini fallback generation failed, using static fallback:', geminiErr);
+          if (count > 0) {
+            aiText = `I found ${count} exquisite items for you. Here are the top selections from our local inventory.`;
+          } else {
+            aiText = `I couldn't find any items matching your request in our current local inventory.`;
+          }
+        }
       } else {
-        aiText = `I couldn't find any items matching your request in our current local inventory.`;
+        console.log(`[FALLBACK] Using static fallback message...`);
+        if (count > 0) {
+          aiText = `I found ${count} exquisite items for you. Here are the top selections from our local inventory.`;
+        } else {
+          aiText = `I couldn't find any items matching your request in our current local inventory.`;
+        }
       }
     }
 
