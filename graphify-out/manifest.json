@@ -5,8 +5,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/server.js": {
-    "mtime": 1782830946.7991686,
-    "ast_hash": "ba7825400e34bd05106b9006926d3335",
+    "mtime": 1782838126.916019,
+    "ast_hash": "ca8e48451089cd46b7393404864196ae",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/test_search.js": {
@@ -25,8 +25,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/public/app.js": {
-    "mtime": 1782820459.598148,
-    "ast_hash": "8948e258a02fb7d837435685641dc84b",
+    "mtime": 1782837391.1740787,
+    "ast_hash": "46ec871b20f120eac63efee27ee8b4b9",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/mastra/agent.js": {
@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/services/searchService.js": {
-    "mtime": 1782763344.8475933,
-    "ast_hash": "a177a0f7d7c86b28842dbe50b3991373",
+    "mtime": 1782837381.9827747,
+    "ast_hash": "e7dd01e26ad8b61098f91586434ad6a4",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/public/index.html": {
@@ -145,8 +145,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/scratch/check_product.js": {
-    "mtime": 1782757735.0698082,
-    "ast_hash": "c6fabd46dc46b8afdb000b102727f21e",
+    "mtime": 1782835516.3299584,
+    "ast_hash": "50988c474dc0516c8fdb4af80258dc88",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/scratch/check_product_details.js": {
@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/README.md": {
-    "mtime": 1782831478.3409595,
-    "ast_hash": "1ae2afea33c1f0fc57d81afb77fb2a8f",
+    "mtime": 1782838322.9432924,
+    "ast_hash": "73bb504d7671d49975630ca2e9e0e678",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/scratch/inspect_mastra.mjs": {
@@ -232,6 +232,71 @@
   "/Users/manishtiwari/Documents/scalable-llm-search/src/config/translations.js": {
     "mtime": 1782830721.3821557,
     "ast_hash": "b5439da123ed15905f394ee5e4963620",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/view_some_products.mjs": {
+    "mtime": 1782832294.3706996,
+    "ast_hash": "e81d3f23dea1d00e060e8feeb7db3af6",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/verify_catalog_pricing.mjs": {
+    "mtime": 1782837343.730904,
+    "ast_hash": "4c727af10d7a1de70d65f7c35aa6c680",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/calculate_test_price.mjs": {
+    "mtime": 1782832704.4390073,
+    "ast_hash": "289ca80b9e671fc87100e9ee39103be9",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/calibrate_base_rates.mjs": {
+    "mtime": 1782835612.430243,
+    "ast_hash": "6fe8753b309c7d4395019c5366da4615",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/check_daily_rates.mjs": {
+    "mtime": 1782835323.9216235,
+    "ast_hash": "473de3c77f1866cf4e1a8c895bf5e0b5",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/check_single_product.mjs": {
+    "mtime": 1782832786.856154,
+    "ast_hash": "dd1a951b7fffb1748ead7f6425a9307d",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/check_gold_rates.mjs": {
+    "mtime": 1782835533.5435839,
+    "ast_hash": "77d59438b73281f62199b3f1eec93f7f",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/flush_redis.mjs": {
+    "mtime": 1782837478.7141583,
+    "ast_hash": "29b4ec0475d2d3dc68c894239b4090ee",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/fetch_product_page.mjs": {
+    "mtime": 1782836223.0626864,
+    "ast_hash": "a53c12a8452af63a4b10a3870065e705",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/update_live_rates.mjs": {
+    "mtime": 1782836652.4608762,
+    "ast_hash": "7045739a34011fdcd64dcd86720fb307",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/product_page.html": {
+    "mtime": 1782836251.001563,
+    "ast_hash": "6c099683abd06bfa8ba1f77d60f2e683",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/test_rate_fetcher.mjs": {
+    "mtime": 1782838146.0344117,
+    "ast_hash": "46fc5f2fa61703905b974f801ba47919",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/src/services/rateFetcherService.js": {
+    "mtime": 1782838097.7017555,
+    "ast_hash": "5f80d989a6b1f921aaf3e14cf7cdf00d",
     "semantic_hash": ""
   }
 }

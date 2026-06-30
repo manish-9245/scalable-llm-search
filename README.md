@@ -6,7 +6,7 @@ Indriya AI is a high-performance, local-first search, ASR, and discovery engine 
 
 ## 1. Zero-Cost "Pure Local" Philosophy
 Indriya is built on a **$0 API Cost** architecture designed to run entirely on the edge and deploy effortlessly in resource-constrained container environments (like Railway):
-- **Free Search & NLP Parsing (100% Local & Gemini-Free)**: All semantic queries, vernacular slang mappings, price conversions, and product filtering run entirely on CPU inside the container using PostgreSQL, pgvector HNSW indexes, and WASM-native local-first NLP tools. **It is 100% independent of external LLMs like Google Gemini.**
+- **Free Search & NLP Parsing (100% Local & Gemini-Free)**: All semantic queries, dynamic spelling/typo corrections (via **`Fuse.js`**), vernacular slang mappings, price conversions, and product filtering run entirely on CPU inside the container using PostgreSQL, pgvector HNSW indexes, and local-first NLP tools. **It is 100% independent of external LLMs like Google Gemini.**
 - **100% Local Multilingual Concierge (Exclusive for Chats)**: Conversational chat responses are generated purely locally on CPU via an enterprise-grade translation engine powered by **`i18next`** (0.1ms latency, $0 cost, unlimited scale) for **9 major Indian languages**. No cloud LLM requests are made during chat conversations, ensuring lifetime free, fast, and private operation.
 - **High-Accuracy Local Speech-to-Text**: Voice searches are transcribed natively on-device using specialized multilingual WASM Whisper models. With zero API fees, users can talk natively in regional dialects.
 - **Cloud LLM for Heavy Analysis (Exclusive for Ingestion)**: Complex multimodal and visual analysis is powered strictly by the cloud-based Google Gemini 2.5 Flash API. This runs purely as a one-time administrative background task during product ingestion to analyze jewellery assets and compile deep product dossiers, preserving maximum runtime privacy and zero runtime cost for customers.
@@ -20,6 +20,7 @@ Indriya is built on a **$0 API Cost** architecture designed to run entirely on t
 | **Orchestration** | Mastra Framework | Manages agentic structures and schemas for visual analysis. |
 | **Database** | PostgreSQL + `pgvector` | Unified relational and HNSW vector storage with ACID safety. |
 | **Embeddings** | Xenova/all-MiniLM-L6 (ONNX) | Native WASM execution on CPU; 100% private, offline, zero cost. |
+| **Fuzzy Spelling Correction** | `Fuse.js` | Sub-millisecond local spelling and typo correction dynamically built from live schema and ontology dictionaries. |
 | **Concierge Generation** | `i18next` Multilingual Localization | Pure local conversational luxury styling across 9 Indian languages; 100% free, unlimited, and sub-millisecond fast. |
 | **Visual Analysis** | Gemini 2.5 Flash | Cloud-based multimodal analysis; runs exclusively for background ingestion. |
 | **Voice/ASR** | Xenova/Whisper-base (ONNX) | Upgraded 74M-parameter high-accuracy multilingual on-device transcription with dynamic regional Indian language routing. |
@@ -37,7 +38,7 @@ graph TD
     
     subgraph "Intelligent Router & Local Parser"
         Server -->|Local WASM Whisper-base| Voice[Voice transcriber]
-        Server -->|Local Terminology Parser| Parser[Lexical/Synonym Extractor]
+        Server -->|Local Terminology Parser| Parser[Fuse.js Spelling & Lexical Extractor]
         Parser -->|Check| Cache{Redis Cache}
     end
 
@@ -49,6 +50,12 @@ graph TD
         DB -->|HNSW Index| Vector[Local 384d Embeddings]
         
         Exclude & Price & Vector -->|Merge| RRF[RRF Scoring]
+    end
+
+    subgraph "Live Daily Rates Sync (Background node-cron)"
+        Indriya[Indriya.com Footer HTML] -->|WASM HTTP Get| RateService[rateFetcherService]
+        RateService -->|Upsert SQL| DB
+        RateService -->|Flush Cache Keys| Cache
     end
 
     subgraph "100% Local i18next Conversational Concierge (Chats Only)"
@@ -105,14 +112,26 @@ The engine combines three distinct retrieval streams using **Reciprocal Rank Fus
 
 **Formula**: $Score = \sum_{d \in D} \frac{1}{60 + rank(d)}$
 
-### B. Luxury Stability Pricing Algorithm
+### B. Luxury Stability Pricing Algorithm & Live Rates Fetcher
 Jewellery prices fluctuate daily. To ensure accuracy without re-indexing millions of rows, we use a server-side **Delta-Anchor SQL Formula**:
 - **Equation**: $CalculatedPrice = BasePrice + (GoldWeight \times (CurrentRate - BaseGoldRate) \times 1.03)$
-- **GST Implementation**: Formulas include a standard 3% GST multiplier.
+- **GST Implementation**: Formulas include a standard 3% GST multiplier (`1.03`).
 - **Fallback**: If an anchor point is missing, the system dynamically reconstructs the price from component weights (Gold + Diamond + Making Charges).
 
-### C. Local Query & Voice Translation (No LLM required)
+#### Live Gold & Metal Rates Sync (`src/services/rateFetcherService.js`):
+- **Web Polling**: Automatically fetches from Indriya's official dynamic experience fragment footer URL (`https://www.indriya.com/content/experience-fragments/noveljewels/in/en/site/footer/master/_jcr_content/root/footer/gold-rate.nocache.html`) using the global fetch client with browser-like headers.
+- **Regex-Based Extraction**: Parses today's live 22KT gold price per gram using robust pattern matching completely offline (e.g. `13,015.00 INR/g`).
+- **Mathematical Purity Derivation**: Dynamically scales the 22KT rate to compute matching 24KT, 18KT, and 14KT rates based on exact mathematically-proportional industry ratios.
+- **Pt & Ag Retention**: Queries PostgreSQL for the latest Platinum and Silver values to populate the daily catalog completely, falling back to baseline parameters if empty.
+- **Resilient Background Cron**: Schedules a daily background job at 9:05 AM IST using `node-cron`. If Indriya's website is unreachable, the system gracefully logs warnings and falls back to stable database rates.
+- **Real-time Cache Invalidation**: Triggers on successful updates to clear the Redis cache key `latest_metal_rates` and executes an asynchronous cache invalidation callback to purge all cached search and product lists (`search:*` and `products:*` keys).
+
+### C. Local Query, Fuzzy Spelling Correction & Voice Translation (No LLM required)
 All customer prompts undergo structured parsing in `src/utils/terminology.js` prior to database execution:
+- **Dynamic Fuzzy Spelling Correction (`Fuse.js`)**: Sub-millisecond client/server-side typo handling (e.g., *"safire"* -> *"sapphire"*, *"dimonds"* -> *"diamond"*) using an on-device dictionary completely offline on CPU.
+  - **Dynamic Dictionary Compilation**: Compiles spelling candidates directly from live PostgreSQL database schemas and search ontology keys (gemstones, categories, sub-categories, motifs).
+  - **Protected Keywords Safeguard**: Core database terms (like metal names, units such as *lakh/k/carat*, operators like *with/without*, and negative words) are protected from being modified by spelling correction to prevent false matches.
+  - **Adaptive Scoring Thresholds**: Integrates custom length-based threshold heuristics (e.g., threshold of `0.25` for $\le 4$ chars, `0.35` for $\le 5$ chars, and `0.5` for longer strings) to prevent false corrections of short queries.
 - **Vernacular Translation**: Auto-maps slang / Hindi terminology like *"Jhumkas"* to earrings and *"Thushi"* to necklaces.
 - **Shorthand Processing**: Converts monetary terms like *"1.5 Lakhs"* or *"90k"* into raw integer bounds (`150000` and `90000` respectively).
 - **Negation Extraction**: Parses negation keywords (e.g. *"excluding"*, *"without"*, *"no"*) to isolate items to exclude via Postgres GIN array operations.
@@ -142,13 +161,24 @@ The system implements **End-to-End Distributed Tracing** using a common `traceId
 
 ## 5. Database Schema
 
+### `daily_metal_rates`
+Stores daily fluctuating metal rates to support live Delta-Anchor price calculations:
+- `id` (SERIAL): Primary key.
+- `record_date` (DATE): The date of the rate recording.
+- `metal_type` (VARCHAR): e.g., `'22KT Gold'`, `'18KT Gold'`, `'14KT Gold'`, `'24KT Gold'`, `'Platinum'`, `'Silver'`.
+- `rate_per_gram` (NUMERIC(12, 2)): The value in INR per gram.
+- **Unique Constraint**: `unique_metal_rate_date` on `(record_date, metal_type)`.
+
 ### `catalog_products`
-- `id` (UUID): Primary key.
+Master catalog containing high-performance fields compiled during Gemini ingestion:
+- `id` (INT): Primary key.
+- `sku` (VARCHAR): Unique product identifier.
+- `name` (VARCHAR): Name of the product.
 - `embedding` (halfvec(384)): Quantized vector for semantic search.
 - `all_motifs_array` / `all_gemstones_array`: GIN-indexed tags for sub-millisecond filtering.
-- `base_price` & `base_gold_rate`: Used for the Stability Formula.
-- `visible_gold_pct`: Metadata generated by Gemini vision analysis.
-- `metal_color`: Dynamically indexed jewellery colors.
+- `base_price` & `base_gold_rate`: Calibration parameters used for the stability formula.
+- `visible_gold_pct`: Metal content weight percentage.
+- `metal_color`: Dynamically indexed jewellery color (e.g. Rose, White, Yellow).
 
 ### `search_ontology`
 Self-learning mapping of slang to schema (e.g., *"Jhumka"* -> *"Drop Earrings"*).
@@ -181,5 +211,6 @@ Once the server is running, you can monitor the system via these built-in tools:
 ## 7. Performance Benchmarks
 - **Cold Start**: < 2s (Model loading to RAM).
 - **Search Latency**: ~15ms (Post-embedding, including RRF).
+- **Spelling Correction (`Fuse.js`)**: < 1ms overhead per query token.
 - **Voice Transcription**: ~200-400ms for 3-second audio clips (Whisper-base WASM).
 - **Cache Hit**: < 1ms (Redis retrieval).

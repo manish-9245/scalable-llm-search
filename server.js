@@ -13,6 +13,7 @@ import { transcribeAudio, generateEmbedding } from './src/config/llm.js';
 import { searchCatalogue, getLatestMetalRates, repairImageUrls } from './src/services/searchService.js';
 import { indriyaAnalyzer, chatAgent } from './src/mastra/agent.js';
 import { DB_SCHEMA, loadSchema, OFFICIAL_CATEGORIES, normalizeProductData, startDiscoveryCron } from './src/services/discoveryService.js';
+import { startRateFetcherCron } from './src/services/rateFetcherService.js';
 import { generateObject, generateText } from 'ai';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { z } from 'zod';
@@ -101,6 +102,7 @@ if (ingestionQueue) {
 connectRedis();
 startDiscoveryCron();
 startIngestionWorker();
+startRateFetcherCron(invalidateSearchCache);
 
 /**
  * Helper: Clear all search and product list caches using SCAN (production-safe)

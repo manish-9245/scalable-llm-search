@@ -9,7 +9,7 @@
       "source_file": "test_chat_integration.js",
       "source_location": "L1",
       "id": "test_chat_integration_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "test_chat_integration.js"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "test_chat_integration.js",
       "source_location": "L3",
       "id": "scalable_llm_search_test_chat_integration_runchatintegrationtest",
-      "community": 1,
+      "community": 20,
       "norm_label": "runchatintegrationtest()"
     },
     {
@@ -34,7 +34,7 @@
       "label": "__filename",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L35",
+      "source_location": "L36",
       "id": "scalable_llm_search_server_filename",
       "community": 11,
       "norm_label": "__filename"
@@ -43,7 +43,7 @@
       "label": "__dirname",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L36",
+      "source_location": "L37",
       "id": "scalable_llm_search_server_dirname",
       "community": 11,
       "norm_label": "__dirname"
@@ -52,7 +52,7 @@
       "label": "fastify",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L38",
+      "source_location": "L39",
       "id": "scalable_llm_search_server_fastify",
       "community": 11,
       "norm_label": "fastify"
@@ -61,7 +61,7 @@
       "label": "publicPath",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L78",
+      "source_location": "L79",
       "id": "scalable_llm_search_server_publicpath",
       "community": 11,
       "norm_label": "publicpath"
@@ -70,7 +70,7 @@
       "label": "serverAdapter",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L88",
+      "source_location": "L89",
       "id": "scalable_llm_search_server_serveradapter",
       "community": 11,
       "norm_label": "serveradapter"
@@ -79,7 +79,7 @@
       "label": "invalidateSearchCache()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L108",
+      "source_location": "L110",
       "id": "scalable_llm_search_server_invalidatesearchcache",
       "community": 11,
       "norm_label": "invalidatesearchcache()"
@@ -88,7 +88,7 @@
       "label": "start",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L146",
+      "source_location": "L148",
       "id": "scalable_llm_search_server_start",
       "community": 11,
       "norm_label": "start"
@@ -97,7 +97,7 @@
       "label": "finalResult",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L173",
+      "source_location": "L175",
       "id": "scalable_llm_search_server_finalresult",
       "community": 11,
       "norm_label": "finalresult"
@@ -106,7 +106,7 @@
       "label": "loadLiveRates()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L265",
+      "source_location": "L267",
       "id": "scalable_llm_search_server_loadliverates",
       "community": 11,
       "norm_label": "loadliverates()"
@@ -115,7 +115,7 @@
       "label": "updateHeaderRatesDisplay()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L269",
+      "source_location": "L271",
       "id": "scalable_llm_search_server_updateheaderratesdisplay",
       "community": 11,
       "norm_label": "updateheaderratesdisplay()"
@@ -124,7 +124,7 @@
       "label": "content",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L388",
+      "source_location": "L390",
       "id": "scalable_llm_search_server_content",
       "community": 11,
       "norm_label": "content"
@@ -133,7 +133,7 @@
       "label": "startIdx",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L417",
+      "source_location": "L419",
       "id": "scalable_llm_search_server_startidx",
       "community": 11,
       "norm_label": "startidx"
@@ -142,7 +142,7 @@
       "label": "endIdx",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L418",
+      "source_location": "L420",
       "id": "scalable_llm_search_server_endidx",
       "community": 11,
       "norm_label": "endidx"
@@ -151,7 +151,7 @@
       "label": "whereClauses",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L474",
+      "source_location": "L476",
       "id": "scalable_llm_search_server_whereclauses",
       "community": 11,
       "norm_label": "whereclauses"
@@ -160,7 +160,7 @@
       "label": "queryParams",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L475",
+      "source_location": "L477",
       "id": "scalable_llm_search_server_queryparams",
       "community": 11,
       "norm_label": "queryparams"
@@ -169,7 +169,7 @@
       "label": "total",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L497",
+      "source_location": "L499",
       "id": "scalable_llm_search_server_total",
       "community": 11,
       "norm_label": "total"
@@ -178,7 +178,7 @@
       "label": "products",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L533",
+      "source_location": "L535",
       "id": "scalable_llm_search_server_products",
       "community": 11,
       "norm_label": "products"
@@ -187,7 +187,7 @@
       "label": "responseData",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L535",
+      "source_location": "L537",
       "id": "scalable_llm_search_server_responsedata",
       "community": 11,
       "norm_label": "responsedata"
@@ -196,7 +196,7 @@
       "label": "normalizePriceShorthand()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L619",
+      "source_location": "L621",
       "id": "scalable_llm_search_server_normalizepriceshorthand",
       "community": 11,
       "norm_label": "normalizepriceshorthand()"
@@ -205,7 +205,7 @@
       "label": "generateTemplateResponse()",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L650",
+      "source_location": "L652",
       "id": "scalable_llm_search_server_generatetemplateresponse",
       "community": 11,
       "norm_label": "generatetemplateresponse()"
@@ -214,7 +214,7 @@
       "label": "langMap",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L729",
+      "source_location": "L731",
       "id": "scalable_llm_search_server_langmap",
       "community": 11,
       "norm_label": "langmap"
@@ -223,7 +223,7 @@
       "label": "text",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L734",
+      "source_location": "L736",
       "id": "scalable_llm_search_server_text",
       "community": 11,
       "norm_label": "text"
@@ -232,7 +232,7 @@
       "label": "productsJson",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L766",
+      "source_location": "L768",
       "id": "scalable_llm_search_server_productsjson",
       "community": 11,
       "norm_label": "productsjson"
@@ -621,7 +621,7 @@
       "source_file": "check_synonyms.js",
       "source_location": "L1",
       "id": "check_synonyms_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "check_synonyms.js"
     },
     {
@@ -630,7 +630,7 @@
       "source_file": "check_synonyms.js",
       "source_location": "L3",
       "id": "scalable_llm_search_check_synonyms_check",
-      "community": 1,
+      "community": 20,
       "norm_label": "check()"
     },
     {
@@ -733,6 +733,42 @@
       "norm_label": "healthchecktimeout"
     },
     {
+      "label": "view_some_products.mjs",
+      "file_type": "code",
+      "source_file": "scratch/view_some_products.mjs",
+      "source_location": "L1",
+      "id": "scratch_view_some_products_mjs",
+      "community": 20,
+      "norm_label": "view_some_products.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/view_some_products.mjs",
+      "source_location": "L3",
+      "id": "scratch_view_some_products_run",
+      "community": 20,
+      "norm_label": "run()"
+    },
+    {
+      "label": "flush_redis.mjs",
+      "file_type": "code",
+      "source_file": "scratch/flush_redis.mjs",
+      "source_location": "L1",
+      "id": "scratch_flush_redis_mjs",
+      "community": 3,
+      "norm_label": "flush_redis.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/flush_redis.mjs",
+      "source_location": "L3",
+      "id": "scratch_flush_redis_run",
+      "community": 3,
+      "norm_label": "run()"
+    },
+    {
       "label": "manual_test.js",
       "file_type": "code",
       "source_file": "scratch/manual_test.js",
@@ -765,7 +801,7 @@
       "source_file": "scratch/seed_ontology.mjs",
       "source_location": "L1",
       "id": "scratch_seed_ontology_mjs",
-      "community": 1,
+      "community": 20,
       "norm_label": "seed_ontology.mjs"
     },
     {
@@ -774,7 +810,7 @@
       "source_file": "scratch/seed_ontology.mjs",
       "source_location": "L4",
       "id": "scratch_seed_ontology_seeddata",
-      "community": 1,
+      "community": 20,
       "norm_label": "seeddata"
     },
     {
@@ -783,7 +819,7 @@
       "source_file": "scratch/seed_ontology.mjs",
       "source_location": "L21",
       "id": "scratch_seed_ontology_run",
-      "community": 1,
+      "community": 20,
       "norm_label": "run()"
     },
     {
@@ -803,6 +839,33 @@
       "id": "scratch_test_jewel_search_cases_runtestcases",
       "community": 1,
       "norm_label": "runtestcases()"
+    },
+    {
+      "label": "verify_catalog_pricing.mjs",
+      "file_type": "code",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L1",
+      "id": "scratch_verify_catalog_pricing_mjs",
+      "community": 20,
+      "norm_label": "verify_catalog_pricing.mjs"
+    },
+    {
+      "label": "fetchLivePrice()",
+      "file_type": "code",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L4",
+      "id": "scratch_verify_catalog_pricing_fetchliveprice",
+      "community": 20,
+      "norm_label": "fetchliveprice()"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L24",
+      "id": "scratch_verify_catalog_pricing_run",
+      "community": 20,
+      "norm_label": "run()"
     },
     {
       "label": "apply_replacement.js",
@@ -841,6 +904,24 @@
       "norm_label": "endindex"
     },
     {
+      "label": "fetch_product_page.mjs",
+      "file_type": "code",
+      "source_file": "scratch/fetch_product_page.mjs",
+      "source_location": "L1",
+      "id": "scratch_fetch_product_page_mjs",
+      "community": 25,
+      "norm_label": "fetch_product_page.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/fetch_product_page.mjs",
+      "source_location": "L4",
+      "id": "scratch_fetch_product_page_run",
+      "community": 25,
+      "norm_label": "run()"
+    },
+    {
       "label": "test_agent.mjs",
       "file_type": "code",
       "source_file": "scratch/test_agent.mjs",
@@ -864,7 +945,7 @@
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L1",
       "id": "scratch_re_normalize_all_mjs",
-      "community": 1,
+      "community": 11,
       "norm_label": "re_normalize_all.mjs"
     },
     {
@@ -873,7 +954,7 @@
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L5",
       "id": "scratch_re_normalize_all_run",
-      "community": 1,
+      "community": 11,
       "norm_label": "run()"
     },
     {
@@ -900,7 +981,7 @@
       "source_file": "scratch/check_chat_history.js",
       "source_location": "L1",
       "id": "scratch_check_chat_history_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "check_chat_history.js"
     },
     {
@@ -909,7 +990,7 @@
       "source_file": "scratch/check_chat_history.js",
       "source_location": "L3",
       "id": "scratch_check_chat_history_checkchathistory",
-      "community": 1,
+      "community": 20,
       "norm_label": "checkchathistory()"
     },
     {
@@ -918,7 +999,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L1",
       "id": "scratch_test_new_pricing_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "test_new_pricing.js"
     },
     {
@@ -927,7 +1008,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L4",
       "id": "scratch_test_new_pricing_testnewpricing",
-      "community": 1,
+      "community": 20,
       "norm_label": "testnewpricing()"
     },
     {
@@ -956,6 +1037,24 @@
       "id": "scratch_count_products_main",
       "community": 13,
       "norm_label": "main()"
+    },
+    {
+      "label": "update_live_rates.mjs",
+      "file_type": "code",
+      "source_file": "scratch/update_live_rates.mjs",
+      "source_location": "L1",
+      "id": "scratch_update_live_rates_mjs",
+      "community": 20,
+      "norm_label": "update_live_rates.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/update_live_rates.mjs",
+      "source_location": "L3",
+      "id": "scratch_update_live_rates_run",
+      "community": 20,
+      "norm_label": "run()"
     },
     {
       "label": "inspect_images.js",
@@ -1012,12 +1111,30 @@
       "norm_label": "testtool()"
     },
     {
+      "label": "test_rate_fetcher.mjs",
+      "file_type": "code",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L1",
+      "id": "scratch_test_rate_fetcher_mjs",
+      "community": 20,
+      "norm_label": "test_rate_fetcher.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L5",
+      "id": "scratch_test_rate_fetcher_run",
+      "community": 20,
+      "norm_label": "run()"
+    },
+    {
       "label": "test_fix_session.js",
       "file_type": "code",
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L1",
       "id": "scratch_test_fix_session_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "test_fix_session.js"
     },
     {
@@ -1026,8 +1143,44 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L5",
       "id": "scratch_test_fix_session_test",
-      "community": 1,
+      "community": 20,
       "norm_label": "test()"
+    },
+    {
+      "label": "calculate_test_price.mjs",
+      "file_type": "code",
+      "source_file": "scratch/calculate_test_price.mjs",
+      "source_location": "L1",
+      "id": "scratch_calculate_test_price_mjs",
+      "community": 20,
+      "norm_label": "calculate_test_price.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/calculate_test_price.mjs",
+      "source_location": "L3",
+      "id": "scratch_calculate_test_price_run",
+      "community": 20,
+      "norm_label": "run()"
+    },
+    {
+      "label": "calibrate_base_rates.mjs",
+      "file_type": "code",
+      "source_file": "scratch/calibrate_base_rates.mjs",
+      "source_location": "L1",
+      "id": "scratch_calibrate_base_rates_mjs",
+      "community": 20,
+      "norm_label": "calibrate_base_rates.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/calibrate_base_rates.mjs",
+      "source_location": "L3",
+      "id": "scratch_calibrate_base_rates_run",
+      "community": 20,
+      "norm_label": "run()"
     },
     {
       "label": "check_product.js",
@@ -1035,7 +1188,7 @@
       "source_file": "scratch/check_product.js",
       "source_location": "L1",
       "id": "scratch_check_product_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "check_product.js"
     },
     {
@@ -1044,7 +1197,7 @@
       "source_file": "scratch/check_product.js",
       "source_location": "L3",
       "id": "scratch_check_product_checkproduct",
-      "community": 1,
+      "community": 20,
       "norm_label": "checkproduct()"
     },
     {
@@ -1089,7 +1242,7 @@
       "source_file": "scratch/check_product_details.js",
       "source_location": "L1",
       "id": "scratch_check_product_details_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "check_product_details.js"
     },
     {
@@ -1098,8 +1251,44 @@
       "source_file": "scratch/check_product_details.js",
       "source_location": "L3",
       "id": "scratch_check_product_details_checkproductdetails",
-      "community": 1,
+      "community": 20,
       "norm_label": "checkproductdetails()"
+    },
+    {
+      "label": "check_daily_rates.mjs",
+      "file_type": "code",
+      "source_file": "scratch/check_daily_rates.mjs",
+      "source_location": "L1",
+      "id": "scratch_check_daily_rates_mjs",
+      "community": 20,
+      "norm_label": "check_daily_rates.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/check_daily_rates.mjs",
+      "source_location": "L3",
+      "id": "scratch_check_daily_rates_run",
+      "community": 20,
+      "norm_label": "run()"
+    },
+    {
+      "label": "check_single_product.mjs",
+      "file_type": "code",
+      "source_file": "scratch/check_single_product.mjs",
+      "source_location": "L1",
+      "id": "scratch_check_single_product_mjs",
+      "community": 20,
+      "norm_label": "check_single_product.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/check_single_product.mjs",
+      "source_location": "L3",
+      "id": "scratch_check_single_product_run",
+      "community": 20,
+      "norm_label": "run()"
     },
     {
       "label": "check_sku.js",
@@ -1107,7 +1296,7 @@
       "source_file": "scratch/check_sku.js",
       "source_location": "L1",
       "id": "scratch_check_sku_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "check_sku.js"
     },
     {
@@ -1116,8 +1305,26 @@
       "source_file": "scratch/check_sku.js",
       "source_location": "L3",
       "id": "scratch_check_sku_checksku",
-      "community": 1,
+      "community": 20,
       "norm_label": "checksku()"
+    },
+    {
+      "label": "check_gold_rates.mjs",
+      "file_type": "code",
+      "source_file": "scratch/check_gold_rates.mjs",
+      "source_location": "L1",
+      "id": "scratch_check_gold_rates_mjs",
+      "community": 20,
+      "norm_label": "check_gold_rates.mjs"
+    },
+    {
+      "label": "run()",
+      "file_type": "code",
+      "source_file": "scratch/check_gold_rates.mjs",
+      "source_location": "L3",
+      "id": "scratch_check_gold_rates_run",
+      "community": 20,
+      "norm_label": "run()"
     },
     {
       "label": "test_multimodal.js",
@@ -1665,7 +1872,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L1",
       "id": "src_mastra_tools_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "tools.js"
     },
     {
@@ -1674,7 +1881,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L13",
       "id": "mastra_tools_detectvisualintent",
-      "community": 1,
+      "community": 20,
       "norm_label": "detectvisualintent()"
     },
     {
@@ -1827,7 +2034,7 @@
       "source_file": "src/config/db.js",
       "source_location": "L1",
       "id": "src_config_db_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "db.js"
     },
     {
@@ -1845,7 +2052,7 @@
       "source_file": "src/config/db.js",
       "source_location": "L36",
       "id": "config_db_query",
-      "community": 1,
+      "community": 20,
       "norm_label": "query()"
     },
     {
@@ -1953,7 +2160,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L1",
       "id": "src_utils_terminology_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "terminology.js"
     },
     {
@@ -1962,7 +2169,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L6",
       "id": "utils_terminology_protected_words",
-      "community": 20,
+      "community": 1,
       "norm_label": "protected_words"
     },
     {
@@ -1980,7 +2187,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L420",
       "id": "utils_terminology_loadontologyandslang",
-      "community": 20,
+      "community": 1,
       "norm_label": "loadontologyandslang()"
     },
     {
@@ -1989,7 +2196,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L429",
       "id": "utils_terminology_levenshteindistance",
-      "community": 20,
+      "community": 1,
       "norm_label": "levenshteindistance()"
     },
     {
@@ -1998,7 +2205,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L1",
       "id": "src_utils_querybuilder_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "querybuilder.js"
     },
     {
@@ -2007,7 +2214,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L2",
       "id": "utils_querybuilder_getrawsql",
-      "community": 1,
+      "community": 20,
       "norm_label": "getrawsql()"
     },
     {
@@ -2128,6 +2335,51 @@
       "norm_label": "learnslangfromanalysis()"
     },
     {
+      "label": "rateFetcherService.js",
+      "file_type": "code",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L1",
+      "id": "src_services_ratefetcherservice_js",
+      "community": 20,
+      "norm_label": "ratefetcherservice.js"
+    },
+    {
+      "label": "fetchLiveGoldRate()",
+      "file_type": "code",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L21",
+      "id": "services_ratefetcherservice_fetchlivegoldrate",
+      "community": 20,
+      "norm_label": "fetchlivegoldrate()"
+    },
+    {
+      "label": "getPreviousMetalRates()",
+      "file_type": "code",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L69",
+      "id": "services_ratefetcherservice_getpreviousmetalrates",
+      "community": 20,
+      "norm_label": "getpreviousmetalrates()"
+    },
+    {
+      "label": "fetchAndSyncRates()",
+      "file_type": "code",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L102",
+      "id": "services_ratefetcherservice_fetchandsyncrates",
+      "community": 20,
+      "norm_label": "fetchandsyncrates()"
+    },
+    {
+      "label": "startRateFetcherCron()",
+      "file_type": "code",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L169",
+      "id": "services_ratefetcherservice_startratefetchercron",
+      "community": 20,
+      "norm_label": "startratefetchercron()"
+    },
+    {
       "label": "ingestionService.js",
       "file_type": "code",
       "source_file": "src/services/ingestionService.js",
@@ -2160,7 +2412,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L1",
       "id": "src_services_searchservice_js",
-      "community": 1,
+      "community": 20,
       "norm_label": "searchservice.js"
     },
     {
@@ -2178,7 +2430,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L40",
       "id": "services_searchservice_getlatestmetalrates",
-      "community": 1,
+      "community": 20,
       "norm_label": "getlatestmetalrates()"
     },
     {
@@ -2187,7 +2439,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L100",
       "id": "services_searchservice_builddynamicpricesql",
-      "community": 1,
+      "community": 20,
       "norm_label": "builddynamicpricesql()"
     },
     {
@@ -2223,7 +2475,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L7",
       "id": "services_discoveryservice_db_schema",
-      "community": 20,
+      "community": 11,
       "norm_label": "db_schema"
     },
     {
@@ -2268,7 +2520,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L176",
       "id": "services_discoveryservice_normalizeproductdata",
-      "community": 1,
+      "community": 11,
       "norm_label": "normalizeproductdata()"
     },
     {
@@ -2311,7 +2563,7 @@
       "label": "3. System Architecture (HLD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L31",
+      "source_location": "L32",
       "id": "scalable_llm_search_readme_3_system_architecture_hld",
       "community": 14,
       "norm_label": "3. system architecture (hld)"
@@ -2320,7 +2572,7 @@
       "label": "code:mermaid (graph TD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L33",
+      "source_location": "L34",
       "id": "scalable_llm_search_readme_codeblock_1",
       "community": 14,
       "norm_label": "code:mermaid (graph td)"
@@ -2329,7 +2581,7 @@
       "label": "3.5 Infrastructure & Deployment Flow",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L72",
+      "source_location": "L79",
       "id": "scalable_llm_search_readme_3_5_infrastructure_deployment_flow",
       "community": 14,
       "norm_label": "3.5 infrastructure & deployment flow"
@@ -2338,7 +2590,7 @@
       "label": "code:mermaid (graph LR)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L74",
+      "source_location": "L81",
       "id": "scalable_llm_search_readme_codeblock_2",
       "community": 14,
       "norm_label": "code:mermaid (graph lr)"
@@ -2347,7 +2599,7 @@
       "label": "4. Engineering Deep-Dive (LLD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L98",
+      "source_location": "L105",
       "id": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
       "community": 14,
       "norm_label": "4. engineering deep-dive (lld)"
@@ -2356,34 +2608,43 @@
       "label": "A. Adaptive Hybrid Search (RRF)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L100",
+      "source_location": "L107",
       "id": "scalable_llm_search_readme_a_adaptive_hybrid_search_rrf",
       "community": 14,
       "norm_label": "a. adaptive hybrid search (rrf)"
     },
     {
-      "label": "B. Luxury Stability Pricing Algorithm",
+      "label": "B. Luxury Stability Pricing Algorithm & Live Rates Fetcher",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L108",
-      "id": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm",
+      "source_location": "L115",
+      "id": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm_live_rates_fetcher",
       "community": 14,
-      "norm_label": "b. luxury stability pricing algorithm"
+      "norm_label": "b. luxury stability pricing algorithm & live rates fetcher"
     },
     {
-      "label": "C. Local Query & Voice Translation (No LLM required)",
+      "label": "Live Gold & Metal Rates Sync (`src/services/rateFetcherService.js`):",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L114",
-      "id": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required",
+      "source_location": "L121",
+      "id": "scalable_llm_search_readme_live_gold_metal_rates_sync_src_services_ratefetcherservice_js",
       "community": 14,
-      "norm_label": "c. local query & voice translation (no llm required)"
+      "norm_label": "live gold & metal rates sync (`src/services/ratefetcherservice.js`):"
+    },
+    {
+      "label": "C. Local Query, Fuzzy Spelling Correction & Voice Translation (No LLM required)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L129",
+      "id": "scalable_llm_search_readme_c_local_query_fuzzy_spelling_correction_voice_translation_no_llm_required",
+      "community": 14,
+      "norm_label": "c. local query, fuzzy spelling correction & voice translation (no llm required)"
     },
     {
       "label": "Multilingual Voice & Concierge Routing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L120",
+      "source_location": "L139",
       "id": "scalable_llm_search_readme_multilingual_voice_concierge_routing",
       "community": 14,
       "norm_label": "multilingual voice & concierge routing"
@@ -2392,7 +2653,7 @@
       "label": "4.5 Observability & Distributed Tracing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L126",
+      "source_location": "L145",
       "id": "scalable_llm_search_readme_4_5_observability_distributed_tracing",
       "community": 14,
       "norm_label": "4.5 observability & distributed tracing"
@@ -2401,7 +2662,7 @@
       "label": "A. BullMQ Dashboard",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L128",
+      "source_location": "L147",
       "id": "scalable_llm_search_readme_a_bullmq_dashboard",
       "community": 14,
       "norm_label": "a. bullmq dashboard"
@@ -2410,7 +2671,7 @@
       "label": "B. Trace-based Distributed Logging",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L134",
+      "source_location": "L153",
       "id": "scalable_llm_search_readme_b_trace_based_distributed_logging",
       "community": 14,
       "norm_label": "b. trace-based distributed logging"
@@ -2419,16 +2680,25 @@
       "label": "5. Database Schema",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L143",
+      "source_location": "L162",
       "id": "scalable_llm_search_readme_5_database_schema",
       "community": 14,
       "norm_label": "5. database schema"
     },
     {
+      "label": "`daily_metal_rates`",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L164",
+      "id": "scalable_llm_search_readme_daily_metal_rates",
+      "community": 14,
+      "norm_label": "`daily_metal_rates`"
+    },
+    {
       "label": "`catalog_products`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L145",
+      "source_location": "L172",
       "id": "scalable_llm_search_readme_catalog_products",
       "community": 14,
       "norm_label": "`catalog_products`"
@@ -2437,7 +2707,7 @@
       "label": "`search_ontology`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L153",
+      "source_location": "L183",
       "id": "scalable_llm_search_readme_search_ontology",
       "community": 14,
       "norm_label": "`search_ontology`"
@@ -2446,7 +2716,7 @@
       "label": "6. Setup & Deployment",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L158",
+      "source_location": "L188",
       "id": "scalable_llm_search_readme_6_setup_deployment",
       "community": 14,
       "norm_label": "6. setup & deployment"
@@ -2455,7 +2725,7 @@
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L160",
+      "source_location": "L190",
       "id": "scalable_llm_search_readme_prerequisites",
       "community": 14,
       "norm_label": "prerequisites"
@@ -2464,7 +2734,7 @@
       "label": "Installation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L165",
+      "source_location": "L195",
       "id": "scalable_llm_search_readme_installation",
       "community": 14,
       "norm_label": "installation"
@@ -2473,7 +2743,7 @@
       "label": "6.2 Monitoring & Admin Tools",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L173",
+      "source_location": "L203",
       "id": "scalable_llm_search_readme_6_2_monitoring_admin_tools",
       "community": 14,
       "norm_label": "6.2 monitoring & admin tools"
@@ -2482,7 +2752,7 @@
       "label": "7. Performance Benchmarks",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L181",
+      "source_location": "L211",
       "id": "scalable_llm_search_readme_7_performance_benchmarks",
       "community": 14,
       "norm_label": "7. performance benchmarks"
@@ -2493,8 +2763,26 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L419",
       "id": "utils_terminology_parsequery",
-      "community": 20,
+      "community": 1,
       "norm_label": "parsequery"
+    },
+    {
+      "label": "B. Luxury Stability Pricing Algorithm",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L109",
+      "community": 14,
+      "norm_label": "b. luxury stability pricing algorithm",
+      "id": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm"
+    },
+    {
+      "label": "C. Local Query & Voice Translation (No LLM required)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "community": 14,
+      "norm_label": "c. local query & voice translation (no llm required)",
+      "id": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required"
     },
     {
       "label": "C. Local Query Translation (No LLM required)",
@@ -2690,7 +2978,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L4",
-      "community": 20,
+      "community": 1,
       "norm_label": "ontologycache",
       "id": "utils_terminology_ontologycache"
     },
@@ -2699,7 +2987,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L13",
-      "community": 20,
+      "community": 1,
       "norm_label": "slangcache",
       "id": "utils_terminology_slangcache"
     },
@@ -2708,7 +2996,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L57",
-      "community": 20,
+      "community": 1,
       "norm_label": "seeddefaultontology()",
       "id": "utils_terminology_seeddefaultontology"
     },
@@ -2717,7 +3005,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L112",
-      "community": 20,
+      "community": 1,
       "norm_label": "seeddefaultslang()",
       "id": "utils_terminology_seeddefaultslang"
     },
@@ -2726,7 +3014,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L273",
-      "community": 20,
+      "community": 1,
       "norm_label": "createemptyparse()",
       "id": "utils_terminology_createemptyparse"
     },
@@ -2735,7 +3023,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L290",
-      "community": 20,
+      "community": 1,
       "norm_label": "calculatepricevalue()",
       "id": "utils_terminology_calculatepricevalue"
     },
@@ -2744,7 +3032,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L298",
-      "community": 20,
+      "community": 1,
       "norm_label": "maptoexclusionkeyword()",
       "id": "utils_terminology_maptoexclusionkeyword"
     },
@@ -3315,6 +3603,28 @@
       "confidence_score": 1.0,
       "source": "server_js",
       "target": "services_discoveryservice_startdiscoverycron"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_js",
+      "target": "src_services_ratefetcherservice_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_js",
+      "target": "services_ratefetcherservice_startratefetchercron"
     },
     {
       "relation": "imports_from",
@@ -4342,6 +4652,103 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/view_some_products.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_view_some_products_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/view_some_products.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_view_some_products_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/view_some_products.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_view_some_products_mjs",
+      "target": "scratch_view_some_products_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/view_some_products.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_view_some_products_run",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/flush_redis.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_flush_redis_mjs",
+      "target": "src_config_redis_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/flush_redis.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_flush_redis_mjs",
+      "target": "config_redis_redisclient"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/flush_redis.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_flush_redis_mjs",
+      "target": "config_redis_connectredis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/flush_redis.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_flush_redis_mjs",
+      "target": "scratch_flush_redis_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/flush_redis.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_flush_redis_run",
+      "target": "config_redis_connectredis"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/manual_test.js",
       "source_location": "L1",
       "weight": 1.0,
@@ -4565,6 +4972,70 @@
       "target": "services_searchservice_searchcatalogue"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_verify_catalog_pricing_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_verify_catalog_pricing_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_verify_catalog_pricing_mjs",
+      "target": "scratch_verify_catalog_pricing_fetchliveprice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_verify_catalog_pricing_mjs",
+      "target": "scratch_verify_catalog_pricing_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_verify_catalog_pricing_run",
+      "target": "scratch_verify_catalog_pricing_fetchliveprice"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/verify_catalog_pricing.mjs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_verify_catalog_pricing_run",
+      "target": "config_db_query"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scratch/apply_replacement.js",
@@ -4593,6 +5064,16 @@
       "confidence_score": 1.0,
       "source": "scratch_apply_replacement_js",
       "target": "scratch_apply_replacement_endindex"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fetch_product_page.mjs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_fetch_product_page_mjs",
+      "target": "scratch_fetch_product_page_run"
     },
     {
       "relation": "imports_from",
@@ -4874,6 +5355,49 @@
       "target": "scratch_count_products_main"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_live_rates.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_live_rates_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_live_rates.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_live_rates_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_live_rates.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_live_rates_mjs",
+      "target": "scratch_update_live_rates_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/update_live_rates.mjs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_update_live_rates_run",
+      "target": "config_db_query"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "scratch/inspect_images.js",
@@ -4924,6 +5448,126 @@
       "confidence_score": 1.0,
       "source": "scratch_test_tool_output_js",
       "target": "scratch_test_tool_output_testtool"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_mjs",
+      "target": "src_services_ratefetcherservice_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_mjs",
+      "target": "services_ratefetcherservice_fetchandsyncrates"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_mjs",
+      "target": "src_config_redis_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_mjs",
+      "target": "config_redis_redisclient"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_mjs",
+      "target": "config_redis_connectredis"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_mjs",
+      "target": "scratch_test_rate_fetcher_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_run",
+      "target": "config_redis_connectredis"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_run",
+      "target": "services_ratefetcherservice_fetchandsyncrates"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_rate_fetcher.mjs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_test_rate_fetcher_run",
+      "target": "config_db_query"
     },
     {
       "relation": "imports_from",
@@ -5065,6 +5709,92 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "scratch_test_fix_session_test",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/calculate_test_price.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_calculate_test_price_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/calculate_test_price.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_calculate_test_price_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/calculate_test_price.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_calculate_test_price_mjs",
+      "target": "scratch_calculate_test_price_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/calculate_test_price.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_calculate_test_price_run",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/calibrate_base_rates.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_calibrate_base_rates_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/calibrate_base_rates.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_calibrate_base_rates_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/calibrate_base_rates.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_calibrate_base_rates_mjs",
+      "target": "scratch_calibrate_base_rates_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/calibrate_base_rates.mjs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_calibrate_base_rates_run",
       "target": "config_db_query"
     },
     {
@@ -5243,6 +5973,92 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/check_daily_rates.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_daily_rates_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_daily_rates.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_daily_rates_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_daily_rates.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_daily_rates_mjs",
+      "target": "scratch_check_daily_rates_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_daily_rates.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_daily_rates_run",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_single_product.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_single_product_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_single_product.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_single_product_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_single_product.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_single_product_mjs",
+      "target": "scratch_check_single_product_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_single_product.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_single_product_run",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/check_sku.js",
       "source_location": "L1",
       "weight": 1.0,
@@ -5280,6 +6096,49 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "scratch_check_sku_checksku",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_gold_rates.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_gold_rates_mjs",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_gold_rates.mjs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_gold_rates_mjs",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_gold_rates.mjs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_gold_rates_mjs",
+      "target": "scratch_check_gold_rates_run"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_gold_rates.mjs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_check_gold_rates_run",
       "target": "config_db_query"
     },
     {
@@ -7263,6 +8122,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/services/ingestionService.js",
       "source_location": "L1",
       "weight": 1.0,
@@ -7328,6 +8198,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/services/ingestionService.js",
       "source_location": "L1",
       "weight": 1.0,
@@ -7361,6 +8242,17 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_ratefetcherservice_getpreviousmetalrates",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/utils/slang.js",
       "source_location": "L27",
@@ -7377,6 +8269,17 @@
       "source_location": "L76",
       "weight": 1.0,
       "source": "utils_slang_learnslangfromanalysis",
+      "target": "config_db_query"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "services_ratefetcherservice_fetchandsyncrates",
       "target": "config_db_query"
     },
     {
@@ -7534,6 +8437,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "src_config_redis_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/services/ingestionService.js",
       "source_location": "L5",
       "weight": 1.0,
@@ -7628,6 +8542,17 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "src_utils_logger_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/services/ingestionService.js",
       "source_location": "L6",
       "weight": 1.0,
@@ -7645,6 +8570,17 @@
       "confidence_score": 1.0,
       "source": "src_services_discoveryservice_js",
       "target": "src_utils_logger_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "utils_logger_log"
     },
     {
       "relation": "imports",
@@ -8150,6 +9086,90 @@
       "target": "utils_slang_learnslangfromanalysis"
     },
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "config_redis_redisclient"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "services_ratefetcherservice_fetchlivegoldrate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "services_ratefetcherservice_getpreviousmetalrates"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "services_ratefetcherservice_fetchandsyncrates"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L169",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_services_ratefetcherservice_js",
+      "target": "services_ratefetcherservice_startratefetchercron"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L104",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_ratefetcherservice_fetchandsyncrates",
+      "target": "services_ratefetcherservice_fetchlivegoldrate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_ratefetcherservice_fetchandsyncrates",
+      "target": "services_ratefetcherservice_getpreviousmetalrates"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/services/rateFetcherService.js",
+      "source_location": "L172",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "services_ratefetcherservice_startratefetchercron",
+      "target": "services_ratefetcherservice_fetchandsyncrates"
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -8509,9 +9529,9 @@
       "source_file": "README.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_indriya_ai_the_luxury_concierge_engine",
-      "target": "scalable_llm_search_readme_5_database_schema",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_5_database_schema"
     },
     {
       "relation": "contains",
@@ -8567,6 +9587,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
+      "target": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm_live_rates_fetcher",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
+      "target": "scalable_llm_search_readme_c_local_query_fuzzy_spelling_correction_voice_translation_no_llm_required"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L110",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -8579,9 +9619,9 @@
       "source_file": "README.md",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
-      "target": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required"
     },
     {
       "relation": "contains",
@@ -8607,11 +9647,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm_live_rates_fetcher",
+      "target": "scalable_llm_search_readme_live_gold_metal_rates_sync_src_services_ratefetcherservice_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L125",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scalable_llm_search_readme_c_local_query_fuzzy_spelling_correction_voice_translation_no_llm_required",
+      "target": "scalable_llm_search_readme_multilingual_voice_concierge_routing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required",
-      "target": "scalable_llm_search_readme_multilingual_voice_concierge_routing",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_multilingual_voice_concierge_routing"
     },
     {
       "relation": "contains",
@@ -8657,11 +9717,21 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
-      "source_location": "L145",
+      "source_location": "L164",
       "weight": 1.0,
       "source": "scalable_llm_search_readme_5_database_schema",
-      "target": "scalable_llm_search_readme_catalog_products",
+      "target": "scalable_llm_search_readme_daily_metal_rates",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L145",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scalable_llm_search_readme_5_database_schema",
+      "target": "scalable_llm_search_readme_catalog_products"
     },
     {
       "relation": "contains",
@@ -8669,9 +9739,9 @@
       "source_file": "README.md",
       "source_location": "L153",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_5_database_schema",
-      "target": "scalable_llm_search_readme_search_ontology",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_search_ontology"
     },
     {
       "relation": "contains",
@@ -8881,5 +9951,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2bc0ed7b7a8e7f8d4c2c9d8933bba3ead8f846d5"
+  "built_at_commit": "efdf4f40f1185d12c8811ef19efcafacff9ccaea"
 }

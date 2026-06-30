@@ -53,10 +53,10 @@ export async function getLatestMetalRates() {
     `);
 
     const rates = {
-      '22K': 7335.00,
-      '18K': 6001.00,
-      '14K': 4668.00,
-      '24K': 8000.00,
+      '22K': 13080.00,
+      '18K': 10710.00,
+      '14K': 8330.00,
+      '24K': 14270.00,
       'Platinum': 3550.00,
       'Silver': 88.00
     };
@@ -81,10 +81,10 @@ export async function getLatestMetalRates() {
   } catch (error) {
     console.warn('Database error while fetching metal rates, using fallback baseline:', error.message);
     return {
-      '22K': 7335.00,
-      '18K': 6001.00,
-      '14K': 4668.00,
-      '24K': 8000.00,
+      '22K': 13080.00,
+      '18K': 10710.00,
+      '14K': 8330.00,
+      '24K': 14270.00,
       'Platinum': 3550.00,
       'Silver': 88.00
     };
@@ -289,6 +289,7 @@ export async function searchCatalogue({ queryText, limit = 12 }) {
                diamond_weight_numeric, diamond_rate_per_carat, gemstone_weight_numeric, gemstone_rate_per_carat, gemstone_type,
                making_charge_type, making_charge_value,
                visible_gold_pct, visible_diamond_pct, visible_enamel_pct, all_gemstones_array,
+               base_price, base_gold_rate,
                (1 - (embedding <=> $${paramCounter}::halfvec)) AS similarity,
                ${dynamicPriceSQL} AS calculated_price
         FROM catalog_products
@@ -314,6 +315,7 @@ export async function searchCatalogue({ queryText, limit = 12 }) {
              diamond_weight_numeric, diamond_rate_per_carat, gemstone_weight_numeric, gemstone_rate_per_carat, gemstone_type,
              making_charge_type, making_charge_value,
              visible_gold_pct, visible_diamond_pct, visible_enamel_pct, all_gemstones_array,
+             base_price, base_gold_rate,
              0.5 AS similarity,
              ${dynamicPriceSQL} AS calculated_price
       FROM catalog_products
