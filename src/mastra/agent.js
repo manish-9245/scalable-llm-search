@@ -18,8 +18,11 @@ const google = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
+const ollamaBaseUrl = process.env.OLLAMA_API_URL || 'http://localhost:11434/api';
+console.log(`[Ollama] Initializing with baseURL: ${ollamaBaseUrl}`);
+
 const ollama = createOllama({
-  baseURL: process.env.OLLAMA_API_URL || 'http://localhost:11434/api',
+  baseURL: ollamaBaseUrl,
 });
 
 /**
