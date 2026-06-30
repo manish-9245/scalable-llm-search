@@ -19,7 +19,7 @@ import { z } from 'zod';
 import { queueProductIngestion, startIngestionWorker, ingestionQueue } from './src/config/queue.js';
 import { log, getChildLogger } from './src/utils/logger.js';
 import { createBullBoard } from '@bull-board/api';
-import { BullMQAdapter } from '@bull-board/api/bullMQAdapter.js';
+import { BullMQAdapter } from '@bull-board/api/bullMQAdapter';
 import { FastifyAdapter } from '@bull-board/fastify';
 
 dotenv.config();
