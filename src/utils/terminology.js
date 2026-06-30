@@ -1,5 +1,18 @@
+import Fuse from 'fuse.js';
 import { discoverSlang } from './slang.js';
 import { DB_SCHEMA, OFFICIAL_CATEGORIES, loadSchema } from '../services/discoveryService.js';
+
+// Robust list of protected keywords that must NEVER undergo spelling correction
+const PROTECTED_WORDS = new Set([
+    // Colors & metals
+    'gold', 'silver', 'platinum', 'rose', 'white', 'yellow', 'pink', 'red', 'blue', 'green', 'black',
+    // Stopwords & operators
+    'with', 'without', 'excluding', 'exclude', 'no', 'not', 'and', 'or', 'for', 'from', 'between', 'under', 'below', 'above', 'over', 'less', 'more', 'than', 'up', 'to', 'within', 'max', 'min', 'starting', 'by', 'of', 'in', 'some', 'any', 'the', 'a', 'an',
+    // Units
+    'lakh', 'lakhs', 'k', 'thousand', 'thousands', 'rs', 'rupees', 'rupee', 'karat', 'karats', 'carat', 'carats', 'ct', 'cts', 'g', 'gm', 'grams', 'gram',
+    // Descriptive & intent keywords
+    'price', 'heavy', 'light', 'weight', 'most', 'least', 'cheapest', 'expensive', 'best', 'cheap', 'top', 'first', 'only', 'just', 'plain', 'mostly', 'something', 'anything', 'items', 'products', 'collections', 'show', 'me', 'gift', 'bridal', 'wedding', 'festive', 'party', 'engagement', 'wear', 'daily', 'office'
+]);
 
 /**
  * Robustly resolves a search term into its components (category, material, motif)
@@ -7,17 +20,71 @@ import { DB_SCHEMA, OFFICIAL_CATEGORIES, loadSchema } from '../services/discover
  */
 export async function resolveTerminology(query, existingFilters = {}) {
     await loadSchema();
-    const lowerQuery = query.toLowerCase()
-        .replace(/\bdiamon\b/g, 'diamond')
-        .replace(/\bdimond\b/g, 'diamond')
-        .replace(/\bdiamnd\b/g, 'diamond')
-        .replace(/\bdiamand\b/g, 'diamond')
-        .replace(/\bdimon\b/g, 'diamond')
-        .replace(/\bemrald\b/g, 'emerald')
-        .replace(/\bsafire\b/g, 'sapphire')
-        .replace(/\bsaphire\b/g, 'sapphire')
-        .replace(/\brubi\b/g, 'ruby')
-        .replace(/\bperl\b/g, 'pearl');
+
+    // 1. Dynamically build spelling correction dictionary from live schema & ontology
+    const ontology = DB_SCHEMA.ontology || {};
+    const dictionary = new Set();
+    
+    if (DB_SCHEMA.gemstones) DB_SCHEMA.gemstones.forEach(g => dictionary.add(g.toLowerCase()));
+    if (ontology.gemstone) Object.keys(ontology.gemstone).forEach(g => dictionary.add(g.toLowerCase()));
+    ['diamond', 'ruby', 'emerald', 'pearl', 'sapphire', 'synthetic', 'polki'].forEach(g => dictionary.add(g));
+
+    if (OFFICIAL_CATEGORIES) OFFICIAL_CATEGORIES.forEach(c => dictionary.add(c.toLowerCase()));
+    if (ontology.category) {
+        Object.keys(ontology.category).forEach(c => dictionary.add(c.toLowerCase()));
+        Object.values(ontology.category).forEach(c => dictionary.add(c.toLowerCase()));
+    }
+    if (ontology.sub_category) {
+        Object.keys(ontology.sub_category).forEach(s => dictionary.add(s.toLowerCase()));
+        Object.values(ontology.sub_category).forEach(s => dictionary.add(s.toLowerCase()));
+    }
+
+    const dictionaryList = Array.from(dictionary);
+    const fuse = new Fuse(dictionaryList, {
+        includeScore: true,
+        threshold: 0.5 // Allows safire -> sapphire, but we protect common words!
+    });
+
+    // 2. Perform dynamic, non-hardcoded Fuse.js spelling correction
+    const words = query.toLowerCase().split(/\b/);
+    const correctedWords = words.map(w => {
+        const cleanW = w.toLowerCase().trim();
+        if (cleanW.length < 3 || /^\d+$/.test(cleanW)) {
+            return w; // Keep short terms, punctuation, spaces and numbers intact
+        }
+        
+        if (PROTECTED_WORDS.has(cleanW)) {
+            return w; // NEVER correct protected keywords
+        }
+
+        if (dictionary.has(cleanW)) {
+            return w; // Exact match, no correction needed
+        }
+
+        const fuseResult = fuse.search(cleanW);
+        if (fuseResult.length > 0) {
+            const bestMatch = fuseResult[0].item;
+            const score = fuseResult[0].score;
+            
+            // Adaptive score thresholds based on word length to prevent false matches on short words
+            let maxAllowedScore = 0.5; // Default for normal words
+            if (cleanW.length <= 4) {
+                maxAllowedScore = 0.25; // Strict for very short words
+            } else if (cleanW.length <= 5) {
+                maxAllowedScore = 0.35; // Moderately strict for 5-char words
+            }
+
+            if (score <= maxAllowedScore) {
+                console.log(`✨ [SPELLING_CORRECT] Dynamic typo correction: "${cleanW}" -> "${bestMatch}" (score: ${score.toFixed(4)})`);
+                return bestMatch;
+            }
+        }
+
+        return w;
+    });
+
+    const lowerQuery = correctedWords.join('');
+
     const result = {
         category: null,
         subCategory: null,
@@ -110,7 +177,7 @@ export async function resolveTerminology(query, existingFilters = {}) {
         result.maxPrice = parseFloat(kMatch[1]) * 1000;
     }
 
-    const ontology = DB_SCHEMA.ontology || {};
+
 
     // Check for negations first (e.g. "non-diamond", "no pearls", "do not need diamond")
     const isNegated = (term) => {
@@ -353,3 +420,29 @@ export const loadOntologyAndSlang = async () => {
     // Slang and Ontology are now handled dynamically by discoveryService
     return true;
 };
+
+/**
+ * Computes the Levenshtein edit distance between two strings.
+ * Used for dynamic, non-hardcoded fuzzy matching and spelling corrections.
+ */
+export function levenshteinDistance(s1, s2) {
+    const len1 = s1.length;
+    const len2 = s2.length;
+    if (Math.abs(len1 - len2) > 3) return 999;
+
+    const matrix = [];
+    for (let i = 0; i <= len1; i++) matrix[i] = [i];
+    for (let j = 0; j <= len2; j++) matrix[0][j] = j;
+
+    for (let i = 1; i <= len1; i++) {
+        for (let j = 1; j <= len2; j++) {
+            const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
+            matrix[i][j] = Math.min(
+                matrix[i - 1][j] + 1,
+                matrix[i][j - 1] + 1,
+                matrix[i - 1][j - 1] + cost
+            );
+        }
+    }
+    return matrix[len1][len2];
+}

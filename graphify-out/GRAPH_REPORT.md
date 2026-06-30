@@ -1,16 +1,16 @@
 # Graph Report - scalable-llm-search  (2026-06-30)
 
 ## Corpus Check
-- 41 files · ~26,154 words
+- 43 files · ~27,149 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 302 nodes · 515 edges · 20 communities (16 shown, 4 thin omitted)
+- 318 nodes · 531 edges · 20 communities (16 shown, 4 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0109d26f`
+- Built from commit: `1d866ddf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,7 +41,7 @@
 4. `QueryBuilder` - 12 edges
 5. `getLatestMetalRates()` - 9 edges
 6. `Indriya AI: The Luxury Concierge Engine` - 9 edges
-7. `redisClient` - 8 edges
+7. `redisClient` - 9 edges
 8. `handleSendMessage()` - 7 edges
 9. `filterAndRenderAnalysisProducts()` - 7 edges
 10. `loadProductsForAnalysis()` - 7 edges
@@ -69,12 +69,12 @@ Cohesion: 0.12
 Nodes (22): pool, query(), check(), runChatIntegrationTest(), runLogicalTests(), runTests(), checkChatHistory(), checkProduct() (+14 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.09
-Nodes (22): dependencies, ai, @ai-sdk/google, @bull-board/api, @bull-board/fastify, bullmq, dotenv, fastify (+14 more)
+Cohesion: 0.05
+Nodes (36): dependencies, ai, @ai-sdk/google, @bull-board/api, @bull-board/fastify, bullmq, dotenv, fastify (+28 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.18
-Nodes (16): getSslConfig(), generateEmbedding(), getEmbedder(), getTranscriber(), parseWav(), transcribeAudio(), preCache(), connectRedis() (+8 more)
+Cohesion: 0.19
+Nodes (14): getSslConfig(), generateEmbedding(), getEmbedder(), getTranscriber(), parseWav(), transcribeAudio(), preCache(), connectRedis() (+6 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.15
@@ -98,26 +98,26 @@ Nodes (13): filterAndRenderAnalysisProducts(), handleRouting(), loadProductsForA
 
 ### Community 11 - "Community 11"
 Cohesion: 0.07
-Nodes (25): queueProductIngestion(), startIngestionWorker(), content, dbToolRes, __dirname, endIdx, fastify, __filename (+17 more)
+Nodes (27): queueProductIngestion(), startIngestionWorker(), content, dbToolRes, __dirname, endIdx, fastify, __filename (+19 more)
 
 ### Community 14 - "Community 14"
 Cohesion: 0.09
 Nodes (22): 1. Zero-Cost "Pure Local" Philosophy, 2. Technical Stack, 3.5 Infrastructure & Deployment Flow, 3. System Architecture (HLD), 4.5 Observability & Distributed Tracing, 4. Engineering Deep-Dive (LLD), 6.2 Monitoring & Admin Tools, 6. Setup & Deployment (+14 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.18
-Nodes (16): testTypo(), DB_SCHEMA, loadSchema(), OFFICIAL_CATEGORIES, startDiscoveryCron(), updateDiscovery(), calculatePriceValue(), createEmptyParse() (+8 more)
+Cohesion: 0.16
+Nodes (17): testTypo(), DB_SCHEMA, loadSchema(), OFFICIAL_CATEGORIES, startDiscoveryCron(), updateDiscovery(), calculatePriceValue(), createEmptyParse() (+9 more)
 
 ### Community 16 - "Community 16"
 Cohesion: 0.18
 Nodes (10): build, builder, dockerfilePath, deploy, healthcheckPath, healthcheckTimeout, numReplicas, restartPolicyType (+2 more)
 
 ### Community 19 - "Community 19"
-Cohesion: 0.14
-Nodes (13): description, engines, node, main, name, scripts, db:init, ollama:pull (+5 more)
+Cohesion: 0.18
+Nodes (9): corrected, DB_SCHEMA, dictionary, dictionaryList, fuse, OFFICIAL_CATEGORIES, ontology, PROTECTED_WORDS (+1 more)
 
 ## Knowledge Gaps
-- **133 isolated node(s):** `__filename`, `__dirname`, `fastify`, `publicPath`, `serverAdapter` (+128 more)
+- **144 isolated node(s):** `__filename`, `__dirname`, `fastify`, `publicPath`, `serverAdapter` (+139 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -125,16 +125,16 @@ Nodes (13): description, engines, node, main, name, scripts, db:init, ollama:pul
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `query()` connect `Community 1` to `Community 3`, `Community 11`, `Community 15`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+  _High betweenness centrality (0.043) - this node is a cross-community bridge._
 - **Why does `QueryBuilder` connect `Community 18` to `Community 1`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **Why does `searchCatalogue()` connect `Community 1` to `Community 3`, `Community 11`, `Community 15`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **What connects `__filename`, `__dirname`, `fastify` to the rest of the system?**
-  _133 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _144 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.1241565452091768 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05405405405405406 - nodes in this community are weakly interconnected._
