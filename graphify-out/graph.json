@@ -603,7 +603,7 @@
       "source_file": "db_init.mjs",
       "source_location": "L1",
       "id": "db_init_mjs",
-      "community": 20,
+      "community": 3,
       "norm_label": "db_init.mjs"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "db_init.mjs",
       "source_location": "L20",
       "id": "scalable_llm_search_db_init_run",
-      "community": 20,
+      "community": 3,
       "norm_label": "run()"
     },
     {
@@ -823,12 +823,30 @@
       "norm_label": "run()"
     },
     {
+      "label": "test_live_server.js",
+      "file_type": "code",
+      "source_file": "scratch/test_live_server.js",
+      "source_location": "L1",
+      "id": "scratch_test_live_server_js",
+      "community": 26,
+      "norm_label": "test_live_server.js"
+    },
+    {
+      "label": "testLiveServer()",
+      "file_type": "code",
+      "source_file": "scratch/test_live_server.js",
+      "source_location": "L1",
+      "id": "scratch_test_live_server_testliveserver",
+      "community": 26,
+      "norm_label": "testliveserver()"
+    },
+    {
       "label": "test_jewel_search_cases.js",
       "file_type": "code",
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
       "id": "scratch_test_jewel_search_cases_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_jewel_search_cases.js"
     },
     {
@@ -837,7 +855,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L6",
       "id": "scratch_test_jewel_search_cases_runtestcases",
-      "community": 20,
+      "community": 1,
       "norm_label": "runtestcases()"
     },
     {
@@ -927,7 +945,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L1",
       "id": "scratch_test_agent_mjs",
-      "community": 11,
+      "community": 23,
       "norm_label": "test_agent.mjs"
     },
     {
@@ -936,7 +954,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L6",
       "id": "scratch_test_agent_testagent",
-      "community": 11,
+      "community": 23,
       "norm_label": "testagent()"
     },
     {
@@ -1098,7 +1116,7 @@
       "source_file": "scratch/test_tool_output.js",
       "source_location": "L1",
       "id": "scratch_test_tool_output_js",
-      "community": 1,
+      "community": 18,
       "norm_label": "test_tool_output.js"
     },
     {
@@ -1107,7 +1125,7 @@
       "source_file": "scratch/test_tool_output.js",
       "source_location": "L3",
       "id": "scratch_test_tool_output_testtool",
-      "community": 1,
+      "community": 18,
       "norm_label": "testtool()"
     },
     {
@@ -1127,6 +1145,24 @@
       "id": "scratch_test_rate_fetcher_run",
       "community": 4,
       "norm_label": "run()"
+    },
+    {
+      "label": "check_timestamps.js",
+      "file_type": "code",
+      "source_file": "scratch/check_timestamps.js",
+      "source_location": "L1",
+      "id": "scratch_check_timestamps_js",
+      "community": 20,
+      "norm_label": "check_timestamps.js"
+    },
+    {
+      "label": "checkTimestamps()",
+      "file_type": "code",
+      "source_file": "scratch/check_timestamps.js",
+      "source_location": "L3",
+      "id": "scratch_check_timestamps_checktimestamps",
+      "community": 20,
+      "norm_label": "checktimestamps()"
     },
     {
       "label": "check_genders.js",
@@ -1255,12 +1291,30 @@
       "norm_label": "main()"
     },
     {
+      "label": "test_session_query.js",
+      "file_type": "code",
+      "source_file": "scratch/test_session_query.js",
+      "source_location": "L1",
+      "id": "scratch_test_session_query_js",
+      "community": 1,
+      "norm_label": "test_session_query.js"
+    },
+    {
+      "label": "testSessionQueryDirect()",
+      "file_type": "code",
+      "source_file": "scratch/test_session_query.js",
+      "source_location": "L4",
+      "id": "scratch_test_session_query_testsessionquerydirect",
+      "community": 1,
+      "norm_label": "testsessionquerydirect()"
+    },
+    {
       "label": "test_generalized_only.js",
       "file_type": "code",
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L1",
       "id": "scratch_test_generalized_only_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_generalized_only.js"
     },
     {
@@ -1269,7 +1323,7 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L3",
       "id": "scratch_test_generalized_only_runtests",
-      "community": 20,
+      "community": 1,
       "norm_label": "runtests()"
     },
     {
@@ -1314,7 +1368,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L1",
       "id": "scratch_test_dynamic_spelling_with_op_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_dynamic_spelling_with_op.js"
     },
     {
@@ -1323,7 +1377,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L3",
       "id": "scratch_test_dynamic_spelling_with_op_runtest",
-      "community": 20,
+      "community": 1,
       "norm_label": "runtest()"
     },
     {
@@ -1381,6 +1435,42 @@
       "norm_label": "checksku()"
     },
     {
+      "label": "fetch_09ce2939.js",
+      "file_type": "code",
+      "source_file": "scratch/fetch_09ce2939.js",
+      "source_location": "L1",
+      "id": "scratch_fetch_09ce2939_js",
+      "community": 20,
+      "norm_label": "fetch_09ce2939.js"
+    },
+    {
+      "label": "fetchSession()",
+      "file_type": "code",
+      "source_file": "scratch/fetch_09ce2939.js",
+      "source_location": "L3",
+      "id": "scratch_fetch_09ce2939_fetchsession",
+      "community": 20,
+      "norm_label": "fetchsession()"
+    },
+    {
+      "label": "analyze_msg4.js",
+      "file_type": "code",
+      "source_file": "scratch/analyze_msg4.js",
+      "source_location": "L1",
+      "id": "scratch_analyze_msg4_js",
+      "community": 20,
+      "norm_label": "analyze_msg4.js"
+    },
+    {
+      "label": "analyzeMessageProducts()",
+      "file_type": "code",
+      "source_file": "scratch/analyze_msg4.js",
+      "source_location": "L3",
+      "id": "scratch_analyze_msg4_analyzemessageproducts",
+      "community": 20,
+      "norm_label": "analyzemessageproducts()"
+    },
+    {
       "label": "check_gold_rates.mjs",
       "file_type": "code",
       "source_file": "scratch/check_gold_rates.mjs",
@@ -1404,7 +1494,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L1",
       "id": "scratch_test_multimodal_js",
-      "community": 11,
+      "community": 23,
       "norm_label": "test_multimodal.js"
     },
     {
@@ -1413,7 +1503,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L4",
       "id": "scratch_test_multimodal_testmultimodal",
-      "community": 11,
+      "community": 23,
       "norm_label": "testmultimodal()"
     },
     {
@@ -1962,7 +2052,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L1",
       "id": "src_mastra_tools_js",
-      "community": 1,
+      "community": 18,
       "norm_label": "tools.js"
     },
     {
@@ -1971,7 +2061,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L13",
       "id": "mastra_tools_detectvisualintent",
-      "community": 1,
+      "community": 18,
       "norm_label": "detectvisualintent()"
     },
     {
@@ -1980,7 +2070,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L35",
       "id": "mastra_tools_querydatabasetool",
-      "community": 1,
+      "community": 18,
       "norm_label": "querydatabasetool"
     },
     {
@@ -1989,7 +2079,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L1",
       "id": "src_mastra_agent_js",
-      "community": 11,
+      "community": 23,
       "norm_label": "agent.js"
     },
     {
@@ -1998,7 +2088,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L12",
       "id": "mastra_agent_storage",
-      "community": 11,
+      "community": 23,
       "norm_label": "storage"
     },
     {
@@ -2007,7 +2097,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L17",
       "id": "mastra_agent_google",
-      "community": 11,
+      "community": 23,
       "norm_label": "google"
     },
     {
@@ -2016,7 +2106,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L27",
       "id": "mastra_agent_ollama",
-      "community": 11,
+      "community": 23,
       "norm_label": "ollama"
     },
     {
@@ -2025,7 +2115,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L41",
       "id": "mastra_agent_indriyaanalyzer",
-      "community": 11,
+      "community": 23,
       "norm_label": "indriyaanalyzer"
     },
     {
@@ -2034,7 +2124,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L111",
       "id": "mastra_agent_chatagent",
-      "community": 11,
+      "community": 23,
       "norm_label": "chatagent"
     },
     {
@@ -2043,7 +2133,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L143",
       "id": "mastra_agent_mastra",
-      "community": 11,
+      "community": 23,
       "norm_label": "mastra"
     },
     {
@@ -2097,7 +2187,7 @@
       "source_file": "src/config/llm.js",
       "source_location": "L43",
       "id": "config_llm_generateembedding",
-      "community": 20,
+      "community": 3,
       "norm_label": "generateembedding()"
     },
     {
@@ -2133,7 +2223,7 @@
       "source_file": "src/config/db.js",
       "source_location": "L15",
       "id": "config_db_getsslconfig",
-      "community": 20,
+      "community": 3,
       "norm_label": "getsslconfig()"
     },
     {
@@ -2151,7 +2241,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L1",
       "id": "src_config_queue_js",
-      "community": 11,
+      "community": 24,
       "norm_label": "queue.js"
     },
     {
@@ -2160,7 +2250,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L25",
       "id": "config_queue_queueproductingestion",
-      "community": 11,
+      "community": 24,
       "norm_label": "queueproductingestion()"
     },
     {
@@ -2169,7 +2259,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L52",
       "id": "config_queue_startingestionworker",
-      "community": 11,
+      "community": 24,
       "norm_label": "startingestionworker()"
     },
     {
@@ -2232,7 +2322,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L1",
       "id": "src_utils_logger_js",
-      "community": 11,
+      "community": 24,
       "norm_label": "logger.js"
     },
     {
@@ -2241,7 +2331,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L5",
       "id": "utils_logger_logger",
-      "community": 11,
+      "community": 24,
       "norm_label": "logger"
     },
     {
@@ -2250,7 +2340,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L23",
       "id": "utils_logger_getchildlogger",
-      "community": 11,
+      "community": 24,
       "norm_label": "getchildlogger()"
     },
     {
@@ -2259,7 +2349,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L28",
       "id": "utils_logger_log",
-      "community": 11,
+      "community": 24,
       "norm_label": "log"
     },
     {
@@ -2286,7 +2376,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L25",
       "id": "utils_terminology_resolveterminology",
-      "community": 20,
+      "community": 1,
       "norm_label": "resolveterminology()"
     },
     {
@@ -2421,7 +2511,7 @@
       "source_file": "src/utils/slang.js",
       "source_location": "L1",
       "id": "src_utils_slang_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "slang.js"
     },
     {
@@ -2430,7 +2520,7 @@
       "source_file": "src/utils/slang.js",
       "source_location": "L10",
       "id": "utils_slang_discoverslang",
-      "community": 20,
+      "community": 3,
       "norm_label": "discoverslang()"
     },
     {
@@ -2439,7 +2529,7 @@
       "source_file": "src/utils/slang.js",
       "source_location": "L68",
       "id": "utils_slang_learnslangfromanalysis",
-      "community": 20,
+      "community": 3,
       "norm_label": "learnslangfromanalysis()"
     },
     {
@@ -2493,7 +2583,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L1",
       "id": "src_services_ingestionservice_js",
-      "community": 20,
+      "community": 24,
       "norm_label": "ingestionservice.js"
     },
     {
@@ -2502,7 +2592,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L13",
       "id": "services_ingestionservice_processproductanalysis",
-      "community": 20,
+      "community": 3,
       "norm_label": "processproductanalysis()"
     },
     {
@@ -2511,7 +2601,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L127",
       "id": "services_ingestionservice_invalidatelocalsearchcache",
-      "community": 20,
+      "community": 24,
       "norm_label": "invalidatelocalsearchcache()"
     },
     {
@@ -2574,7 +2664,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L1",
       "id": "src_services_discoveryservice_js",
-      "community": 11,
+      "community": 18,
       "norm_label": "discoveryservice.js"
     },
     {
@@ -2583,7 +2673,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L6",
       "id": "services_discoveryservice_official_categories",
-      "community": 1,
+      "community": 18,
       "norm_label": "official_categories"
     },
     {
@@ -2592,7 +2682,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L7",
       "id": "services_discoveryservice_db_schema",
-      "community": 1,
+      "community": 18,
       "norm_label": "db_schema"
     },
     {
@@ -2601,7 +2691,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L13",
       "id": "services_discoveryservice_updatediscovery",
-      "community": 11,
+      "community": 18,
       "norm_label": "updatediscovery()"
     },
     {
@@ -2610,7 +2700,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L129",
       "id": "services_discoveryservice_loadschema",
-      "community": 11,
+      "community": 18,
       "norm_label": "loadschema()"
     },
     {
@@ -2619,7 +2709,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L153",
       "id": "services_discoveryservice_getdynamiccontext",
-      "community": 11,
+      "community": 18,
       "norm_label": "getdynamiccontext()"
     },
     {
@@ -2628,7 +2718,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L167",
       "id": "services_discoveryservice_startdiscoverycron",
-      "community": 11,
+      "community": 18,
       "norm_label": "startdiscoverycron()"
     },
     {
@@ -4969,6 +5059,16 @@
       "target": "config_db_query"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_live_server.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_live_server_js",
+      "target": "scratch_test_live_server_testliveserver",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -5690,6 +5790,38 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/check_timestamps.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_check_timestamps_js",
+      "target": "src_config_db_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_timestamps.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_check_timestamps_js",
+      "target": "config_db_pool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/check_timestamps.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_check_timestamps_js",
+      "target": "scratch_check_timestamps_checktimestamps",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/check_genders.js",
       "source_location": "L1",
       "weight": 1.0,
@@ -6123,12 +6255,77 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/test_session_query.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_session_query_js",
+      "target": "src_services_searchservice_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_session_query.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_session_query_js",
+      "target": "services_searchservice_searchcatalogue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_session_query.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "scratch_test_session_query_js",
+      "target": "src_config_redis_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_session_query.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "scratch_test_session_query_js",
+      "target": "config_redis_redisclient",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_session_query.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "scratch_test_session_query_js",
+      "target": "scratch_test_session_query_testsessionquerydirect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_session_query.js",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "scratch_test_session_query_testsessionquerydirect",
+      "target": "services_searchservice_searchcatalogue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_generalized_only_js",
-      "target": "src_utils_terminology_js",
-      "confidence_score": 1.0
+      "target": "src_utils_terminology_js"
     },
     {
       "relation": "imports",
@@ -6137,9 +6334,9 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_generalized_only_js",
-      "target": "utils_terminology_resolveterminology",
-      "confidence_score": 1.0
+      "target": "utils_terminology_resolveterminology"
     },
     {
       "relation": "contains",
@@ -6147,9 +6344,9 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_generalized_only_js",
-      "target": "scratch_test_generalized_only_runtests",
-      "confidence_score": 1.0
+      "target": "scratch_test_generalized_only_runtests"
     },
     {
       "relation": "calls",
@@ -6158,9 +6355,9 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_generalized_only_runtests",
-      "target": "utils_terminology_resolveterminology",
-      "confidence_score": 1.0
+      "target": "utils_terminology_resolveterminology"
     },
     {
       "relation": "contains",
@@ -6386,6 +6583,70 @@
       "confidence_score": 1.0,
       "source": "scratch_check_sku_checksku",
       "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fetch_09ce2939.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_fetch_09ce2939_js",
+      "target": "src_config_db_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fetch_09ce2939.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_fetch_09ce2939_js",
+      "target": "config_db_pool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fetch_09ce2939.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_fetch_09ce2939_js",
+      "target": "scratch_fetch_09ce2939_fetchsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/analyze_msg4.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_analyze_msg4_js",
+      "target": "src_config_db_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/analyze_msg4.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_analyze_msg4_js",
+      "target": "config_db_pool",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/analyze_msg4.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_analyze_msg4_js",
+      "target": "scratch_analyze_msg4_analyzemessageproducts",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9669,9 +9930,9 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "src_services_searchservice_js",
-      "target": "services_searchservice_exclusion_metal_colors",
-      "confidence_score": 1.0
+      "target": "services_searchservice_exclusion_metal_colors"
     },
     {
       "relation": "contains",
@@ -10358,5 +10619,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "625d2fffe7999da656ccfaebd023499a40acdf6e"
+  "built_at_commit": "3a4a02dcf7ae36fa278ac5b2dacd455c9c8083d0"
 }

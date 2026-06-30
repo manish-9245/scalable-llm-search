@@ -328,5 +328,30 @@
     "mtime": 1782845440.9163752,
     "ast_hash": "39b5125d7417970aa5533b50e7d9ad3e",
     "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/test_live_server.js": {
+    "mtime": 1782846547.3008554,
+    "ast_hash": "81adf437593eb2ab8ce75510d7c3b742",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/check_timestamps.js": {
+    "mtime": 1782846181.4787033,
+    "ast_hash": "4dc5dd8deb09d3560620188c7eaa796f",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/test_session_query.js": {
+    "mtime": 1782846213.250991,
+    "ast_hash": "832d80f083edd5fcaf297b722c61c6f8",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/fetch_09ce2939.js": {
+    "mtime": 1782846146.0673234,
+    "ast_hash": "d80b9a9bc1c2e3f481bcb99eae903fbb",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/analyze_msg4.js": {
+    "mtime": 1782846160.633532,
+    "ast_hash": "3ed663af2af75940130b4cb31f28a4ef",
+    "semantic_hash": ""
   }
 }
