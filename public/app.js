@@ -1026,7 +1026,7 @@ function parseNarrativeToTabs(description, p = {}) {
 
       return {
         isJson: true,
-        curatorNote: story.emotional_indian_luxury_sentence || 'A bespoke design representing the highest tiers of luxury metalworking and Indriya craft.',
+        curatorNote: data.curatorNote || story.emotional_indian_luxury_sentence || 'A bespoke design representing the highest tiers of luxury metalworking and Indriya craft.',
         identity: story.vibe || design.overall_visual_identity || '',
         identification,
         design,
@@ -1034,6 +1034,7 @@ function parseNarrativeToTabs(description, p = {}) {
         materials,
         metal,
         craftsmanship,
+        indian_craftsmanship_cues: craftsmanship,
         motifs,
         styling,
         story,
@@ -1046,6 +1047,7 @@ function parseNarrativeToTabs(description, p = {}) {
         meenakari,
         regional,
         structural,
+        structural_breakdown: structural,
         // Ensure consistent text properties for template fallback
         materialsText: (craftsmanship.techniques?.join(', ') || '') + (craftsmanship.details ? ` \n${craftsmanship.details}` : '') || `Gold: ${p.gold_weight_numeric || 0}g, Diamond: ${p.diamond_weight_numeric || 0}ct`,
         motifsText: motifs.motif_details?.map(m => `<div style="margin-bottom:8px;"><strong>${m.motif_name}</strong> <span style="font-size:10px; opacity:0.7; text-transform:uppercase;">(${m.prominence})</span>: ${m.symbolic_cultural_association}</div>`).join('') || (p.collection ? `Collection: ${p.collection}` : 'Heritage design motifs.'),
@@ -1733,25 +1735,63 @@ window.triggerAnalysis = async function(sku, name, category) {
     
     const data = await res.json();
     if (data.success) {
-      // Refresh local catalogue state
-      const p = loadedProductsMap.get(sku);
-      if (p) {
-        p.is_analyzed = true;
-        p.ai_description = data.aiDescription;
-      }
+      // Ingestion is asynchronous, so we poll /api/products until the AI description is ready
+      let attempts = 0;
+      const maxAttempts = 30; // 45 seconds maximum waiting time
+      const pollInterval = 1500; // Poll every 1.5 seconds
       
-      // Refresh list
-      filterAndRenderAnalysisProducts();
+      const poll = async () => {
+        try {
+          // Fetch products matching the SKU, appending a timestamp to prevent browser-level caching
+          const checkRes = await fetch(`/api/products?search=${sku}&_t=${Date.now()}`);
+          const checkData = await checkRes.json();
+          const updatedProduct = checkData.products?.find(prod => prod.sku === sku);
+          
+          if (updatedProduct && updatedProduct.is_analyzed && updatedProduct.ai_description) {
+            // Update local catalogue state with the complete dossier
+            const localProd = loadedProductsMap.get(sku);
+            if (localProd) {
+              localProd.is_analyzed = true;
+              localProd.ai_description = updatedProduct.ai_description;
+            }
+            
+            // Refresh list in sidebar
+            filterAndRenderAnalysisProducts();
+            
+            // Render the completed visual dossier with all tabs fully populated
+            let imageUrl = 'https://mcprod.noveljewels.com/static/version1777986575/frontend/Magento/luma/en_US/Magento_Catalog/images/product/placeholder/image.jpg';
+            if (localProd && localProd.image_urls && localProd.image_urls.length > 0) {
+              imageUrl = `/api/proxy-image?url=${encodeURIComponent(localProd.image_urls[0])}`;
+            }
+            if (localProd) selectProductForAnalysis(localProd, imageUrl);
+          } else if (attempts < maxAttempts) {
+            attempts++;
+            setTimeout(poll, pollInterval);
+          } else {
+            contentArea.innerHTML = `
+              <div class="empty-state" style="padding: 40px 20px; text-align:center;">
+                <i class="fa-solid fa-triangle-exclamation" style="font-size: 32px; color: var(--accent-orange); margin-bottom: 12px;"></i>
+                <h3 style="color:var(--text-primary); margin-bottom:8px;">Evaluation is taking longer</h3>
+                <p style="color:var(--text-muted); font-size:13px; max-width:350px; margin:0 auto 16px auto;">The AI is still processing the design details. Please refresh the sidebar or search this SKU again in a few moments.</p>
+                <button class="btn-primary" onclick="selectProductForAnalysis(loadedProductsMap.get('${sku}'), '${p && p.image_urls && p.image_urls.length > 0 ? `/api/proxy-image?url=${encodeURIComponent(p.image_urls[0])}` : ''}')">Return to Product</button>
+              </div>
+            `;
+          }
+        } catch (pollErr) {
+          console.error('Polling error:', pollErr);
+          if (attempts < maxAttempts) {
+            attempts++;
+            setTimeout(poll, pollInterval);
+          } else {
+            contentArea.innerHTML = `<div class="dossier-content" style="color: var(--accent-red); text-align:center; padding: 40px 20px;">Failed to fetch updated analysis status.</div>`;
+          }
+        }
+      };
       
-      // Display newly generated tabs
-      let imageUrl = 'https://mcprod.noveljewels.com/static/version1777986575/frontend/Magento/luma/en_US/Magento_Catalog/images/product/placeholder/image.jpg';
-      if (p && p.image_urls && p.image_urls.length > 0) {
-        imageUrl = `/api/proxy-image?url=${encodeURIComponent(p.image_urls[0])}`;
-      }
-      if (p) selectProductForAnalysis(p, imageUrl);
-
+      // Start polling
+      setTimeout(poll, pollInterval);
     } else {
-      contentArea.innerHTML = `<div class="dossier-content" style="color: var(--accent-red);">Error: ${data.error || 'Failed to analyze'}</div>`;
+      contentArea.innerHTML = `<div class="dossier-content" style="color: var(--accent-red); text-align:center; padding: 40px 20px;">Error: ${data.error || 'Failed to analyze'}</div>`;
     }
   } catch (err) {
     console.error(err);

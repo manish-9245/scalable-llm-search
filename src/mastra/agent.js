@@ -76,7 +76,12 @@ export const indriyaAnalyzer = new Agent({
       "materials": {
         "stone_inventory": [{ "name_english": "...", "name_indian_hindi": "...", "cut_style": "...", "setting_style": "...", "color_plain_language": "..." }]
       },
-      "craftsmanship": { "techniques": [], "details": "...", "artisan_detailing_level": "..." },
+      "craftsmanship": { 
+        "techniques": [], 
+        "details": "...", 
+        "artisan_detailing_level": "...",
+        "handcrafted_intricacy_level": "..."
+      },
       "meenakari": { "meenakari_present": "Yes/No", "school_inference": "...", "technique_appearance": "..." },
       "movement": { 
         "static_fluid_swing": "...",
@@ -102,6 +107,29 @@ export const indriyaAnalyzer = new Agent({
       "body": { "skin_tones": [], "face_shapes": [] },
       "colors": { "dominant_color_impression": "...", "stone_colors": [] },
       "regional": [],
+      "styling": {
+        "outfit_pairings": [],
+        "sarees": [],
+        "lehengas": [],
+        "festive_styling": []
+      },
+      "story": {
+        "emotional_indian_luxury_sentence": "...",
+        "vibe": "..."
+      },
+      "scale": {
+        "scale": "...",
+        "weight_appearance": "...",
+        "daily_wear_practicality": "...",
+        "comfort_perception": "..."
+      },
+      "structural": {
+        "main_silhouette": "...",
+        "symmetry": "...",
+        "openwork_vs_dense": "...",
+        "dangling_elements": "...",
+        "filigree_quality": "..."
+      },
       "curatorNote": "..."
     }
   `,

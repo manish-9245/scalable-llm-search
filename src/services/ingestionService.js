@@ -128,11 +128,28 @@ async function invalidateLocalSearchCache(logger = globalLog) {
     try {
         if (redisClient.isOpen) {
             let cursor = 0;
+            let count = 0;
             do {
                 const reply = await redisClient.scan(cursor, { MATCH: 'search:*', COUNT: 100 });
                 cursor = reply.cursor;
-                if (reply.keys.length > 0) await redisClient.del(reply.keys);
+                if (reply.keys.length > 0) {
+                    await redisClient.del(reply.keys);
+                    count += reply.keys.length;
+                }
             } while (cursor !== 0);
+
+            // Also clear product list caches
+            cursor = 0;
+            do {
+                const reply = await redisClient.scan(cursor, { MATCH: 'products:*', COUNT: 100 });
+                cursor = reply.cursor;
+                if (reply.keys.length > 0) {
+                    await redisClient.del(reply.keys);
+                    count += reply.keys.length;
+                }
+            } while (cursor !== 0);
+            
+            logger.info(`⚡ [INGESTION] Cache invalidated. Deleted ${count} keys (search:* and products:*).`);
         }
     } catch (err) {
         logger.warn('⚡ [INGESTION] Cache Invalidation failed', { error: err.message });
