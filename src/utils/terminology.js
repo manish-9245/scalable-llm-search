@@ -315,7 +315,7 @@ export async function resolveTerminology(query, existingFilters = {}) {
         result.broadIntent = true;
     }
 
-    const resetKeywords = ['only', 'just', 'exclusively', 'strictly'];
+    const resetKeywords = ['reset', 'clear', 'start over', 'restart'];
     if (resetKeywords.some(kw => new RegExp(`\\b${kw}\\b`, 'i').test(lowerQuery))) {
         result.resetContext = true;
     }

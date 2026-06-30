@@ -746,10 +746,18 @@ fastify.post('/api/chat/message', async (request, reply) => {
     let agentExecutionSuccess = false;
 
     try {
-      console.log(`[LOCAL_SEARCH] Parsing query and matching products via WASM-native local-first engine...`);
+      console.log(`[LOCAL_SEARCH] Retrieving conversational session context and executing WASM-native hybrid query...`);
+      // Fetch last non-empty tool_params from previous AI messages in this session to maintain active context
+      const lastMsgRes = await query(`
+        SELECT tool_params FROM chat_messages 
+        WHERE session_id = $1 AND sender = 'ai' AND tool_params IS NOT NULL 
+        ORDER BY id DESC LIMIT 1
+      `, [session_id]);
+      const existingFilters = lastMsgRes.rows.length > 0 ? lastMsgRes.rows[0].tool_params : null;
+
       const { searchCatalogue } = await import('./src/services/searchService.js');
       // Pass limit: 500 to ensure all matching available items in db are returned
-      const searchRes = await searchCatalogue({ queryText: text, limit: 500 });
+      const searchRes = await searchCatalogue({ queryText: text, limit: 500, existingFilters });
       products = searchRes.products || [];
       lastToolParams = searchRes.parsedFilters || {};
       

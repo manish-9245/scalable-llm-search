@@ -148,9 +148,12 @@ export function buildDynamicPriceSQL(rates) {
  * @param {number} params.limit - Maximum products to return (default 12)
  * @returns {Promise<object>}
  */
-export async function searchCatalogue({ queryText, limit = 12 }) {
+export async function searchCatalogue({ queryText, limit = 12, existingFilters = null }) {
   // 0. Cache Check
-  const cacheKey = `search:${Buffer.from(queryText.toLowerCase().trim()).toString('base64')}:${limit}`;
+  const cacheKeyPayload = existingFilters 
+    ? `${queryText.toLowerCase().trim()}:${JSON.stringify(existingFilters)}` 
+    : queryText.toLowerCase().trim();
+  const cacheKey = `search:${Buffer.from(cacheKeyPayload).toString('base64')}:${limit}`;
   try {
     if (redisClient.isOpen) {
       const cached = await redisClient.get(cacheKey);
@@ -167,7 +170,12 @@ export async function searchCatalogue({ queryText, limit = 12 }) {
   const start = Date.now();
 
   // 1. Pre-parse search query lexical structures and fetch rates
-  const parsed = await parseQuery(queryText);
+  const parsedRaw = await parseQuery(queryText);
+  let parsed = parsedRaw;
+  if (existingFilters) {
+    const { mergeFilters } = await import('../utils/sessionMerge.js');
+    parsed = mergeFilters(existingFilters, parsedRaw);
+  }
   const rates = await getLatestMetalRates();
   const dynamicPriceSQL = buildDynamicPriceSQL(rates);
 
