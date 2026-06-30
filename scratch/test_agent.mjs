@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 async function testAgent() {
-  console.log('--- Testing Qwen 2.5 (1.5B) Agentic Search ---');
-  console.log('OLLAMA_API_URL:', process.env.OLLAMA_API_URL || 'http://localhost:11434/api');
+  console.log('--- Testing Dynamic Agentic Search ---');
+  console.log('OLLAMA_API_URL:', process.env.OLLAMA_API_URL || 'Not Set (Defaulting to Gemini)');
   
   const query = 'Show me gold bangles under 2 lakhs';
   console.log(`\nQuery: "${query}"`);

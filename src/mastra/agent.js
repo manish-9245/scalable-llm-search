@@ -18,12 +18,20 @@ const google = createGoogleGenerativeAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
-const ollamaBaseUrl = process.env.OLLAMA_API_URL || 'http://localhost:11434/api';
-console.log(`[Ollama] Initializing with baseURL: ${ollamaBaseUrl}`);
+// Dynamic Model Loader to support 100% Lifetime Free & Unlimited Local-Tunnel Inference
+const ollamaBaseUrl = process.env.OLLAMA_API_URL;
+let chatModel;
 
-const ollama = createOllama({
-  baseURL: ollamaBaseUrl,
-});
+if (ollamaBaseUrl) {
+  console.log(`[LLM_CONFIG] Target: Local/Tunnel Ollama at ${ollamaBaseUrl} (100% Lifetime Free & Unlimited)`);
+  const ollama = createOllama({
+    baseURL: ollamaBaseUrl,
+  });
+  chatModel = ollama('qwen2.5:1.5b');
+} else {
+  console.log(`[LLM_CONFIG] Target: Google Gemini Cloud (Default Fallback)`);
+  chatModel = google('gemini-2.5-flash');
+}
 
 /**
  * Indriya Visual Cataloging and Spec-Driven Ingestion Agent.
@@ -127,7 +135,7 @@ export const chatAgent = new Agent({
     ${getDynamicContext()}
     - **Tone**: Sophisticated, ultra-concise, helpful.
   `,
-  model: ollama('qwen2.5:1.5b'),
+  model: chatModel,
   tools: { queryDatabase: queryDatabaseTool }
 });
 
