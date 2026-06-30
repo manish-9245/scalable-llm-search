@@ -1267,7 +1267,7 @@
       "label": "scrollToBottom()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L376",
+      "source_location": "L378",
       "id": "public_app_scrolltobottom",
       "community": 9,
       "norm_label": "scrolltobottom()"
@@ -1276,7 +1276,7 @@
       "label": "targetContent",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L394",
+      "source_location": "L396",
       "id": "public_app_targetcontent",
       "community": 0,
       "norm_label": "targetcontent"
@@ -1285,7 +1285,7 @@
       "label": "addSessionToSidebar()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L400",
+      "source_location": "L402",
       "id": "public_app_addsessiontosidebar",
       "community": 9,
       "norm_label": "addsessiontosidebar()"
@@ -1294,7 +1294,7 @@
       "label": "loadSession()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L410",
+      "source_location": "L412",
       "id": "public_app_loadsession",
       "community": 10,
       "norm_label": "loadsession()"
@@ -1303,7 +1303,7 @@
       "label": "loadAllSessions()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L446",
+      "source_location": "L448",
       "id": "public_app_loadallsessions",
       "community": 0,
       "norm_label": "loadallsessions()"
@@ -1312,7 +1312,7 @@
       "label": "loadLiveRates()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L471",
+      "source_location": "L473",
       "id": "public_app_loadliverates",
       "community": 7,
       "norm_label": "loadliverates()"
@@ -1321,7 +1321,7 @@
       "label": "updateHeaderRatesDisplay()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L475",
+      "source_location": "L477",
       "id": "public_app_updateheaderratesdisplay",
       "community": 7,
       "norm_label": "updateheaderratesdisplay()"
@@ -1330,7 +1330,7 @@
       "label": "startRecordingFlow()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L483",
+      "source_location": "L485",
       "id": "public_app_startrecordingflow",
       "community": 6,
       "norm_label": "startrecordingflow()"
@@ -1339,7 +1339,7 @@
       "label": "stopRecordingFlow()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L521",
+      "source_location": "L523",
       "id": "public_app_stoprecordingflow",
       "community": 6,
       "norm_label": "stoprecordingflow()"
@@ -1348,7 +1348,7 @@
       "label": "encodeWAV()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L574",
+      "source_location": "L576",
       "id": "public_app_encodewav",
       "community": 6,
       "norm_label": "encodewav()"
@@ -1357,7 +1357,7 @@
       "label": "writeString()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L615",
+      "source_location": "L617",
       "id": "public_app_writestring",
       "community": 6,
       "norm_label": "writestring()"
@@ -1366,7 +1366,7 @@
       "label": "setupTabs()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L625",
+      "source_location": "L627",
       "id": "public_app_setuptabs",
       "community": 12,
       "norm_label": "setuptabs()"
@@ -1375,7 +1375,7 @@
       "label": "selectedAnalysisSkus",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L657",
+      "source_location": "L659",
       "id": "public_app_selectedanalysisskus",
       "community": 0,
       "norm_label": "selectedanalysisskus"
@@ -1384,7 +1384,7 @@
       "label": "bulkAnalyzingSkus",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L658",
+      "source_location": "L660",
       "id": "public_app_bulkanalyzingskus",
       "community": 0,
       "norm_label": "bulkanalyzingskus"
@@ -1393,7 +1393,7 @@
       "label": "setupAnalysisControls()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L661",
+      "source_location": "L663",
       "id": "public_app_setupanalysiscontrols",
       "community": 12,
       "norm_label": "setupanalysiscontrols()"
@@ -1402,7 +1402,7 @@
       "label": "filterAndRenderAnalysisProducts()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L765",
+      "source_location": "L767",
       "id": "public_app_filterandrenderanalysisproducts",
       "community": 10,
       "norm_label": "filterandrenderanalysisproducts()"
@@ -1411,7 +1411,7 @@
       "label": "renderFilteredListOnly()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L771",
+      "source_location": "L773",
       "id": "public_app_renderfilteredlistonly",
       "community": 10,
       "norm_label": "renderfilteredlistonly()"
@@ -1420,7 +1420,7 @@
       "label": "updateSelectAllCheckboxState()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L775",
+      "source_location": "L777",
       "id": "public_app_updateselectallcheckboxstate",
       "community": 10,
       "norm_label": "updateselectallcheckboxstate()"
@@ -1429,7 +1429,7 @@
       "label": "updateBulkActionButtonState()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L799",
+      "source_location": "L801",
       "id": "public_app_updatebulkactionbuttonstate",
       "community": 10,
       "norm_label": "updatebulkactionbuttonstate()"
@@ -1438,7 +1438,7 @@
       "label": "queueForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L810",
+      "source_location": "L812",
       "id": "public_app_queueforanalysis",
       "community": 10,
       "norm_label": "queueforanalysis()"
@@ -1447,7 +1447,7 @@
       "label": "loadProductsForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L857",
+      "source_location": "L859",
       "id": "public_app_loadproductsforanalysis",
       "community": 10,
       "norm_label": "loadproductsforanalysis()"
@@ -1456,7 +1456,7 @@
       "label": "updatePaginationControls()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L892",
+      "source_location": "L894",
       "id": "public_app_updatepaginationcontrols",
       "community": 10,
       "norm_label": "updatepaginationcontrols()"
@@ -1465,7 +1465,7 @@
       "label": "renderAnalysisProductList()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L908",
+      "source_location": "L910",
       "id": "public_app_renderanalysisproductlist",
       "community": 10,
       "norm_label": "renderanalysisproductlist()"
@@ -1474,7 +1474,7 @@
       "label": "parseNarrativeToTabs()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L998",
+      "source_location": "L1000",
       "id": "public_app_parsenarrativetotabs",
       "community": 10,
       "norm_label": "parsenarrativetotabs()"
@@ -1483,7 +1483,7 @@
       "label": "selectProductForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1131",
+      "source_location": "L1133",
       "id": "public_app_selectproductforanalysis",
       "community": 10,
       "norm_label": "selectproductforanalysis()"
@@ -1492,7 +1492,7 @@
       "label": "target",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1652",
+      "source_location": "L1654",
       "id": "public_app_target",
       "community": 0,
       "norm_label": "target"
@@ -1501,7 +1501,7 @@
       "label": "inputEl",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1660",
+      "source_location": "L1662",
       "id": "public_app_inputel",
       "community": 0,
       "norm_label": "inputel"
@@ -1510,7 +1510,7 @@
       "label": "contentArea",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1712",
+      "source_location": "L1714",
       "id": "public_app_contentarea",
       "community": 0,
       "norm_label": "contentarea"
@@ -1519,7 +1519,7 @@
       "label": "p",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1723",
+      "source_location": "L1725",
       "id": "public_app_p",
       "community": 0,
       "norm_label": "p"
@@ -1528,7 +1528,7 @@
       "label": "triggerBulkAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1766",
+      "source_location": "L1768",
       "id": "public_app_triggerbulkanalysis",
       "community": 10,
       "norm_label": "triggerbulkanalysis()"
@@ -8034,5 +8034,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ff5793101b2629e8d6d839d09d6deb4a0f85a49d"
+  "built_at_commit": "44b077683f5f0bdd122d0492ce7abe5101982204"
 }

@@ -310,6 +310,7 @@ function appendAIBubble(text, products = []) {
       const goldW = (p.gold_weight_numeric !== null && p.gold_weight_numeric !== undefined) ? `${p.gold_weight_numeric}g` : (p.gold_weight ? `${p.gold_weight}g` : 'N/A');
       const diaW = (p.diamond_weight_numeric !== null && p.diamond_weight_numeric !== undefined) ? `${p.diamond_weight_numeric}ct` : (p.diamond_weight ? `${p.diamond_weight}ct` : 'N/A');
       const gemW = (p.gemstone_weight_numeric !== null && p.gemstone_weight_numeric !== undefined) ? `${p.gemstone_weight_numeric}ct` : (p.gemstone_weight ? `${p.gemstone_weight}ct` : '0ct');
+      const purityText = p.purity || '18K';
       
       const priceToUse = p.calculated_price || p.base_price || p.price || 0;
       const formattedPrice = new Intl.NumberFormat('en-IN', { 
@@ -335,10 +336,11 @@ function appendAIBubble(text, products = []) {
           <div class="card-body">
             <div class="card-category">${p.sub_category || ''}</div>
             <h3 class="card-title">${p.name}</h3>
-            <div class="card-specs-grid" style="grid-template-columns: repeat(3, 1fr);">
-              <div class="spec-metric" title="Gold Weight"><i class="fa-solid fa-weight-hanging"></i> ${goldW}</div>
-              <div class="spec-metric" title="Diamond Weight"><i class="fa-regular fa-gem"></i> ${diaW}</div>
-              <div class="spec-metric" title="Gemstone Weight"><i class="fa-solid fa-ring"></i> ${gemW}</div>
+            <div class="card-specs-grid" style="grid-template-columns: repeat(2, 1fr); gap: 12px 10px;">
+              <div class="spec-metric" title="Gold Weight"><i class="fa-solid fa-weight-hanging"></i> Gold: ${goldW}</div>
+              <div class="spec-metric" title="Gold Purity"><i class="fa-solid fa-award"></i> Purity: ${purityText}</div>
+              <div class="spec-metric" title="Diamond Weight"><i class="fa-regular fa-gem"></i> Diamond: ${diaW}</div>
+              <div class="spec-metric" title="Gemstone Weight"><i class="fa-solid fa-ring"></i> Stones: ${gemW}</div>
             </div>
             
             <div style="margin-bottom: 14px; flex: 1;">
