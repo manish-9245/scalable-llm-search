@@ -1737,9 +1737,12 @@ window.triggerAnalysis = async function(sku, name, category) {
   
   contentArea.innerHTML = `
     <div class="loading-state" style="padding: 60px 0; text-align:center;">
-      <div class="spinner"></div>
-      <p style="color: var(--gold-primary); font-weight: 500; margin-top: 16px;">AI evaluation in progress...</p>
-      <p style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">Triggering Mastra and Google Gemini 2.5 Flash agents...</p>
+      <div class="luxury-jewelry-loader">
+        <div class="luxury-glow"></div>
+        <div class="ring-band"></div>
+        <div class="sparkling-diamond"></div>
+      </div>
+      <p style="color: var(--gold-primary); font-weight: 500; font-family: var(--font-display); letter-spacing: 0.5px; font-size: 16px; margin-top: 16px;">AI evaluation in progress...</p>
     </div>
   `;
 

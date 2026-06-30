@@ -2113,7 +2113,7 @@
       "label": "p",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1747",
+      "source_location": "L1750",
       "id": "public_app_p",
       "community": 0,
       "norm_label": "p"
@@ -2122,7 +2122,7 @@
       "label": "poll()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1763",
+      "source_location": "L1766",
       "id": "public_app_poll",
       "community": 10,
       "norm_label": "poll()"
@@ -2131,7 +2131,7 @@
       "label": "triggerBulkAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1828",
+      "source_location": "L1831",
       "id": "public_app_triggerbulkanalysis",
       "community": 10,
       "norm_label": "triggerbulkanalysis()"
@@ -5389,9 +5389,9 @@
       "source_file": "scratch/db_status.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_db_status_js",
-      "target": "src_config_db_js",
-      "confidence_score": 1.0
+      "target": "src_config_db_js"
     },
     {
       "relation": "imports",
@@ -5400,9 +5400,9 @@
       "source_file": "scratch/db_status.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_db_status_js",
-      "target": "config_db_query",
-      "confidence_score": 1.0
+      "target": "config_db_query"
     },
     {
       "relation": "contains",
@@ -5410,9 +5410,9 @@
       "source_file": "scratch/db_status.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_db_status_js",
-      "target": "scratch_db_status_checkstatus",
-      "confidence_score": 1.0
+      "target": "scratch_db_status_checkstatus"
     },
     {
       "relation": "calls",
@@ -5421,9 +5421,9 @@
       "source_file": "scratch/db_status.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_db_status_checkstatus",
-      "target": "config_db_query",
-      "confidence_score": 1.0
+      "target": "config_db_query"
     },
     {
       "relation": "imports_from",
@@ -6681,9 +6681,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_js",
-      "target": "src_config_db_js",
-      "confidence_score": 1.0
+      "target": "src_config_db_js"
     },
     {
       "relation": "imports",
@@ -6692,9 +6692,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_js",
-      "target": "config_db_query",
-      "confidence_score": 1.0
+      "target": "config_db_query"
     },
     {
       "relation": "imports_from",
@@ -6703,9 +6703,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_js",
-      "target": "src_services_ingestionservice_js",
-      "confidence_score": 1.0
+      "target": "src_services_ingestionservice_js"
     },
     {
       "relation": "imports",
@@ -6714,9 +6714,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_js",
-      "target": "services_ingestionservice_processproductanalysis",
-      "confidence_score": 1.0
+      "target": "services_ingestionservice_processproductanalysis"
     },
     {
       "relation": "imports_from",
@@ -6725,9 +6725,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_js",
-      "target": "src_utils_logger_js",
-      "confidence_score": 1.0
+      "target": "src_utils_logger_js"
     },
     {
       "relation": "imports",
@@ -6736,9 +6736,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_js",
-      "target": "utils_logger_log",
-      "confidence_score": 1.0
+      "target": "utils_logger_log"
     },
     {
       "relation": "contains",
@@ -6746,9 +6746,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_js",
-      "target": "scratch_test_analyze_sku_testanalyze",
-      "confidence_score": 1.0
+      "target": "scratch_test_analyze_sku_testanalyze"
     },
     {
       "relation": "calls",
@@ -6757,9 +6757,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_testanalyze",
-      "target": "config_db_query",
-      "confidence_score": 1.0
+      "target": "config_db_query"
     },
     {
       "relation": "calls",
@@ -6768,9 +6768,9 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_test_analyze_sku_testanalyze",
-      "target": "services_ingestionservice_processproductanalysis",
-      "confidence_score": 1.0
+      "target": "services_ingestionservice_processproductanalysis"
     },
     {
       "relation": "contains",
@@ -6778,9 +6778,9 @@
       "source_file": "scratch/inspect_queue.js",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_inspect_queue_js",
-      "target": "scratch_inspect_queue_connection",
-      "confidence_score": 1.0
+      "target": "scratch_inspect_queue_connection"
     },
     {
       "relation": "contains",
@@ -6788,9 +6788,9 @@
       "source_file": "scratch/inspect_queue.js",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_inspect_queue_js",
-      "target": "scratch_inspect_queue_inspect",
-      "confidence_score": 1.0
+      "target": "scratch_inspect_queue_inspect"
     },
     {
       "relation": "imports_from",
@@ -10945,5 +10945,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "62d2084b36a1b79128ba313227fcf34151c33a06"
+  "built_at_commit": "fc340492cb0f5b132949f81e7cc8ccbb18036b24"
 }
