@@ -1757,7 +1757,7 @@ window.triggerAnalysis = async function(sku, name, category) {
     if (data.success) {
       // Ingestion is asynchronous, so we poll /api/products until the AI description is ready
       let attempts = 0;
-      const maxAttempts = 30; // 45 seconds maximum waiting time
+      const maxAttempts = 80; // 120 seconds maximum waiting time
       const pollInterval = 1500; // Poll every 1.5 seconds
       
       const poll = async () => {

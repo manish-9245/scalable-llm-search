@@ -9,7 +9,7 @@
       "source_file": "test_chat_integration.js",
       "source_location": "L1",
       "id": "test_chat_integration_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "test_chat_integration.js"
     },
     {
@@ -18,7 +18,7 @@
       "source_file": "test_chat_integration.js",
       "source_location": "L3",
       "id": "scalable_llm_search_test_chat_integration_runchatintegrationtest",
-      "community": 20,
+      "community": 3,
       "norm_label": "runchatintegrationtest()"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "test_search.js",
       "source_location": "L1",
       "id": "test_search_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "test_search.js"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "test_search.js",
       "source_location": "L10",
       "id": "scalable_llm_search_test_search_runlogicaltests",
-      "community": 20,
+      "community": 3,
       "norm_label": "runlogicaltests()"
     },
     {
@@ -756,7 +756,7 @@
       "source_file": "scratch/flush_redis.mjs",
       "source_location": "L1",
       "id": "scratch_flush_redis_mjs",
-      "community": 4,
+      "community": 3,
       "norm_label": "flush_redis.mjs"
     },
     {
@@ -765,7 +765,7 @@
       "source_file": "scratch/flush_redis.mjs",
       "source_location": "L3",
       "id": "scratch_flush_redis_run",
-      "community": 4,
+      "community": 3,
       "norm_label": "run()"
     },
     {
@@ -774,7 +774,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L1",
       "id": "scratch_manual_test_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "manual_test.js"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L3",
       "id": "scratch_manual_test_queries",
-      "community": 20,
+      "community": 3,
       "norm_label": "queries"
     },
     {
@@ -792,7 +792,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L17",
       "id": "scratch_manual_test_manualtest",
-      "community": 20,
+      "community": 3,
       "norm_label": "manualtest()"
     },
     {
@@ -846,7 +846,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
       "id": "scratch_test_jewel_search_cases_js",
-      "community": 1,
+      "community": 3,
       "norm_label": "test_jewel_search_cases.js"
     },
     {
@@ -855,7 +855,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L6",
       "id": "scratch_test_jewel_search_cases_runtestcases",
-      "community": 1,
+      "community": 3,
       "norm_label": "runtestcases()"
     },
     {
@@ -940,12 +940,30 @@
       "norm_label": "run()"
     },
     {
+      "label": "db_status.js",
+      "file_type": "code",
+      "source_file": "scratch/db_status.js",
+      "source_location": "L1",
+      "id": "scratch_db_status_js",
+      "community": 20,
+      "norm_label": "db_status.js"
+    },
+    {
+      "label": "checkStatus()",
+      "file_type": "code",
+      "source_file": "scratch/db_status.js",
+      "source_location": "L3",
+      "id": "scratch_db_status_checkstatus",
+      "community": 20,
+      "norm_label": "checkstatus()"
+    },
+    {
       "label": "test_agent.mjs",
       "file_type": "code",
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L1",
       "id": "scratch_test_agent_mjs",
-      "community": 3,
+      "community": 1,
       "norm_label": "test_agent.mjs"
     },
     {
@@ -954,7 +972,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L6",
       "id": "scratch_test_agent_testagent",
-      "community": 3,
+      "community": 1,
       "norm_label": "testagent()"
     },
     {
@@ -963,7 +981,7 @@
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L1",
       "id": "scratch_re_normalize_all_mjs",
-      "community": 27,
+      "community": 20,
       "norm_label": "re_normalize_all.mjs"
     },
     {
@@ -972,7 +990,7 @@
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L5",
       "id": "scratch_re_normalize_all_run",
-      "community": 27,
+      "community": 20,
       "norm_label": "run()"
     },
     {
@@ -1017,7 +1035,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L1",
       "id": "scratch_test_new_pricing_js",
-      "community": 20,
+      "community": 15,
       "norm_label": "test_new_pricing.js"
     },
     {
@@ -1026,7 +1044,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L4",
       "id": "scratch_test_new_pricing_testnewpricing",
-      "community": 20,
+      "community": 15,
       "norm_label": "testnewpricing()"
     },
     {
@@ -1116,7 +1134,7 @@
       "source_file": "scratch/test_tool_output.js",
       "source_location": "L1",
       "id": "scratch_test_tool_output_js",
-      "community": 23,
+      "community": 1,
       "norm_label": "test_tool_output.js"
     },
     {
@@ -1125,7 +1143,7 @@
       "source_file": "scratch/test_tool_output.js",
       "source_location": "L3",
       "id": "scratch_test_tool_output_testtool",
-      "community": 23,
+      "community": 1,
       "norm_label": "testtool()"
     },
     {
@@ -1134,7 +1152,7 @@
       "source_file": "scratch/test_rate_fetcher.mjs",
       "source_location": "L1",
       "id": "scratch_test_rate_fetcher_mjs",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_rate_fetcher.mjs"
     },
     {
@@ -1143,7 +1161,7 @@
       "source_file": "scratch/test_rate_fetcher.mjs",
       "source_location": "L5",
       "id": "scratch_test_rate_fetcher_run",
-      "community": 4,
+      "community": 3,
       "norm_label": "run()"
     },
     {
@@ -1152,7 +1170,7 @@
       "source_file": "scratch/check_timestamps.js",
       "source_location": "L1",
       "id": "scratch_check_timestamps_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "check_timestamps.js"
     },
     {
@@ -1161,7 +1179,7 @@
       "source_file": "scratch/check_timestamps.js",
       "source_location": "L3",
       "id": "scratch_check_timestamps_checktimestamps",
-      "community": 20,
+      "community": 3,
       "norm_label": "checktimestamps()"
     },
     {
@@ -1188,7 +1206,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L1",
       "id": "scratch_test_fix_session_js",
-      "community": 20,
+      "community": 15,
       "norm_label": "test_fix_session.js"
     },
     {
@@ -1197,7 +1215,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L5",
       "id": "scratch_test_fix_session_test",
-      "community": 20,
+      "community": 15,
       "norm_label": "test()"
     },
     {
@@ -1260,7 +1278,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L1",
       "id": "scratch_test_typo_search_mjs",
-      "community": 20,
+      "community": 3,
       "norm_label": "test_typo_search.mjs"
     },
     {
@@ -1269,7 +1287,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L4",
       "id": "scratch_test_typo_search_testtypo",
-      "community": 20,
+      "community": 3,
       "norm_label": "testtypo()"
     },
     {
@@ -1296,7 +1314,7 @@
       "source_file": "scratch/test_session_query.js",
       "source_location": "L1",
       "id": "scratch_test_session_query_js",
-      "community": 4,
+      "community": 3,
       "norm_label": "test_session_query.js"
     },
     {
@@ -1305,7 +1323,7 @@
       "source_file": "scratch/test_session_query.js",
       "source_location": "L4",
       "id": "scratch_test_session_query_testsessionquerydirect",
-      "community": 4,
+      "community": 3,
       "norm_label": "testsessionquerydirect()"
     },
     {
@@ -1314,7 +1332,7 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L1",
       "id": "scratch_test_generalized_only_js",
-      "community": 1,
+      "community": 3,
       "norm_label": "test_generalized_only.js"
     },
     {
@@ -1323,7 +1341,7 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L3",
       "id": "scratch_test_generalized_only_runtests",
-      "community": 1,
+      "community": 3,
       "norm_label": "runtests()"
     },
     {
@@ -1368,7 +1386,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L1",
       "id": "scratch_test_dynamic_spelling_with_op_js",
-      "community": 1,
+      "community": 3,
       "norm_label": "test_dynamic_spelling_with_op.js"
     },
     {
@@ -1377,7 +1395,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L3",
       "id": "scratch_test_dynamic_spelling_with_op_runtest",
-      "community": 1,
+      "community": 3,
       "norm_label": "runtest()"
     },
     {
@@ -1417,6 +1435,51 @@
       "norm_label": "run()"
     },
     {
+      "label": "test_analyze_sku.js",
+      "file_type": "code",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L1",
+      "id": "scratch_test_analyze_sku_js",
+      "community": 4,
+      "norm_label": "test_analyze_sku.js"
+    },
+    {
+      "label": "testAnalyze()",
+      "file_type": "code",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L5",
+      "id": "scratch_test_analyze_sku_testanalyze",
+      "community": 4,
+      "norm_label": "testanalyze()"
+    },
+    {
+      "label": "inspect_queue.js",
+      "file_type": "code",
+      "source_file": "scratch/inspect_queue.js",
+      "source_location": "L1",
+      "id": "scratch_inspect_queue_js",
+      "community": 23,
+      "norm_label": "inspect_queue.js"
+    },
+    {
+      "label": "connection",
+      "file_type": "code",
+      "source_file": "scratch/inspect_queue.js",
+      "source_location": "L13",
+      "id": "scratch_inspect_queue_connection",
+      "community": 23,
+      "norm_label": "connection"
+    },
+    {
+      "label": "inspect()",
+      "file_type": "code",
+      "source_file": "scratch/inspect_queue.js",
+      "source_location": "L17",
+      "id": "scratch_inspect_queue_inspect",
+      "community": 23,
+      "norm_label": "inspect()"
+    },
+    {
       "label": "check_sku.js",
       "file_type": "code",
       "source_file": "scratch/check_sku.js",
@@ -1440,7 +1503,7 @@
       "source_file": "scratch/fetch_09ce2939.js",
       "source_location": "L1",
       "id": "scratch_fetch_09ce2939_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "fetch_09ce2939.js"
     },
     {
@@ -1449,7 +1512,7 @@
       "source_file": "scratch/fetch_09ce2939.js",
       "source_location": "L3",
       "id": "scratch_fetch_09ce2939_fetchsession",
-      "community": 20,
+      "community": 3,
       "norm_label": "fetchsession()"
     },
     {
@@ -1458,7 +1521,7 @@
       "source_file": "scratch/analyze_msg4.js",
       "source_location": "L1",
       "id": "scratch_analyze_msg4_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "analyze_msg4.js"
     },
     {
@@ -1467,7 +1530,7 @@
       "source_file": "scratch/analyze_msg4.js",
       "source_location": "L3",
       "id": "scratch_analyze_msg4_analyzemessageproducts",
-      "community": 20,
+      "community": 3,
       "norm_label": "analyzemessageproducts()"
     },
     {
@@ -1494,7 +1557,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L1",
       "id": "scratch_test_multimodal_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "test_multimodal.js"
     },
     {
@@ -1503,7 +1566,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L4",
       "id": "scratch_test_multimodal_testmultimodal",
-      "community": 3,
+      "community": 1,
       "norm_label": "testmultimodal()"
     },
     {
@@ -1548,7 +1611,7 @@
       "source_file": "scratch/test_session_context.js",
       "source_location": "L1",
       "id": "scratch_test_session_context_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "test_session_context.js"
     },
     {
@@ -1557,7 +1620,7 @@
       "source_file": "scratch/test_session_context.js",
       "source_location": "L4",
       "id": "scratch_test_session_context_runsessioncontextverification",
-      "community": 20,
+      "community": 3,
       "norm_label": "runsessioncontextverification()"
     },
     {
@@ -2079,7 +2142,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L1",
       "id": "src_mastra_tools_js",
-      "community": 23,
+      "community": 1,
       "norm_label": "tools.js"
     },
     {
@@ -2088,7 +2151,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L13",
       "id": "mastra_tools_detectvisualintent",
-      "community": 23,
+      "community": 1,
       "norm_label": "detectvisualintent()"
     },
     {
@@ -2097,7 +2160,7 @@
       "source_file": "src/mastra/tools.js",
       "source_location": "L35",
       "id": "mastra_tools_querydatabasetool",
-      "community": 23,
+      "community": 1,
       "norm_label": "querydatabasetool"
     },
     {
@@ -2106,7 +2169,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L1",
       "id": "src_mastra_agent_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "agent.js"
     },
     {
@@ -2115,7 +2178,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L12",
       "id": "mastra_agent_storage",
-      "community": 3,
+      "community": 1,
       "norm_label": "storage"
     },
     {
@@ -2124,7 +2187,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L17",
       "id": "mastra_agent_google",
-      "community": 3,
+      "community": 1,
       "norm_label": "google"
     },
     {
@@ -2133,7 +2196,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L27",
       "id": "mastra_agent_ollama",
-      "community": 3,
+      "community": 1,
       "norm_label": "ollama"
     },
     {
@@ -2142,7 +2205,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L41",
       "id": "mastra_agent_indriyaanalyzer",
-      "community": 3,
+      "community": 1,
       "norm_label": "indriyaanalyzer"
     },
     {
@@ -2151,7 +2214,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L139",
       "id": "mastra_agent_chatagent",
-      "community": 3,
+      "community": 1,
       "norm_label": "chatagent"
     },
     {
@@ -2160,7 +2223,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L171",
       "id": "mastra_agent_mastra",
-      "community": 3,
+      "community": 1,
       "norm_label": "mastra"
     },
     {
@@ -2241,7 +2304,7 @@
       "source_file": "src/config/db.js",
       "source_location": "L1",
       "id": "src_config_db_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "db.js"
     },
     {
@@ -2250,7 +2313,7 @@
       "source_file": "src/config/db.js",
       "source_location": "L15",
       "id": "config_db_getsslconfig",
-      "community": 20,
+      "community": 4,
       "norm_label": "getsslconfig()"
     },
     {
@@ -2268,7 +2331,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L1",
       "id": "src_config_queue_js",
-      "community": 24,
+      "community": 11,
       "norm_label": "queue.js"
     },
     {
@@ -2277,7 +2340,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L25",
       "id": "config_queue_queueproductingestion",
-      "community": 24,
+      "community": 11,
       "norm_label": "queueproductingestion()"
     },
     {
@@ -2286,7 +2349,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L52",
       "id": "config_queue_startingestionworker",
-      "community": 24,
+      "community": 11,
       "norm_label": "startingestionworker()"
     },
     {
@@ -2295,7 +2358,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L1",
       "id": "src_config_redis_js",
-      "community": 4,
+      "community": 3,
       "norm_label": "redis.js"
     },
     {
@@ -2304,7 +2367,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L29",
       "id": "config_redis_connectredis",
-      "community": 4,
+      "community": 3,
       "norm_label": "connectredis()"
     },
     {
@@ -2331,7 +2394,7 @@
       "source_file": "src/utils/sessionMerge.js",
       "source_location": "L1",
       "id": "src_utils_sessionmerge_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "sessionmerge.js"
     },
     {
@@ -2340,7 +2403,7 @@
       "source_file": "src/utils/sessionMerge.js",
       "source_location": "L6",
       "id": "utils_sessionmerge_mergefilters",
-      "community": 20,
+      "community": 3,
       "norm_label": "mergefilters()"
     },
     {
@@ -2349,7 +2412,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L1",
       "id": "src_utils_logger_js",
-      "community": 24,
+      "community": 4,
       "norm_label": "logger.js"
     },
     {
@@ -2358,7 +2421,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L5",
       "id": "utils_logger_logger",
-      "community": 24,
+      "community": 4,
       "norm_label": "logger"
     },
     {
@@ -2367,7 +2430,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L23",
       "id": "utils_logger_getchildlogger",
-      "community": 24,
+      "community": 11,
       "norm_label": "getchildlogger()"
     },
     {
@@ -2376,7 +2439,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L28",
       "id": "utils_logger_log",
-      "community": 24,
+      "community": 4,
       "norm_label": "log"
     },
     {
@@ -2403,7 +2466,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L25",
       "id": "utils_terminology_resolveterminology",
-      "community": 1,
+      "community": 3,
       "norm_label": "resolveterminology()"
     },
     {
@@ -2430,7 +2493,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L1",
       "id": "src_utils_querybuilder_js",
-      "community": 23,
+      "community": 15,
       "norm_label": "querybuilder.js"
     },
     {
@@ -2439,7 +2502,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L2",
       "id": "utils_querybuilder_getrawsql",
-      "community": 23,
+      "community": 15,
       "norm_label": "getrawsql()"
     },
     {
@@ -2565,7 +2628,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L1",
       "id": "src_services_ratefetcherservice_js",
-      "community": 4,
+      "community": 3,
       "norm_label": "ratefetcherservice.js"
     },
     {
@@ -2574,7 +2637,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L21",
       "id": "services_ratefetcherservice_fetchlivegoldrate",
-      "community": 4,
+      "community": 3,
       "norm_label": "fetchlivegoldrate()"
     },
     {
@@ -2583,7 +2646,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L69",
       "id": "services_ratefetcherservice_getpreviousmetalrates",
-      "community": 4,
+      "community": 3,
       "norm_label": "getpreviousmetalrates()"
     },
     {
@@ -2592,7 +2655,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L102",
       "id": "services_ratefetcherservice_fetchandsyncrates",
-      "community": 4,
+      "community": 3,
       "norm_label": "fetchandsyncrates()"
     },
     {
@@ -2601,7 +2664,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L169",
       "id": "services_ratefetcherservice_startratefetchercron",
-      "community": 4,
+      "community": 3,
       "norm_label": "startratefetchercron()"
     },
     {
@@ -2637,7 +2700,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L1",
       "id": "src_services_searchservice_js",
-      "community": 20,
+      "community": 3,
       "norm_label": "searchservice.js"
     },
     {
@@ -2646,7 +2709,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L9",
       "id": "services_searchservice_exclusion_metal_colors",
-      "community": 20,
+      "community": 3,
       "norm_label": "exclusion_metal_colors"
     },
     {
@@ -2664,7 +2727,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L51",
       "id": "services_searchservice_getlatestmetalrates",
-      "community": 20,
+      "community": 15,
       "norm_label": "getlatestmetalrates()"
     },
     {
@@ -2673,7 +2736,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L111",
       "id": "services_searchservice_builddynamicpricesql",
-      "community": 20,
+      "community": 15,
       "norm_label": "builddynamicpricesql()"
     },
     {
@@ -2682,7 +2745,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L162",
       "id": "services_searchservice_searchcatalogue",
-      "community": 20,
+      "community": 3,
       "norm_label": "searchcatalogue()"
     },
     {
@@ -2691,7 +2754,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L1",
       "id": "src_services_discoveryservice_js",
-      "community": 27,
+      "community": 1,
       "norm_label": "discoveryservice.js"
     },
     {
@@ -2700,7 +2763,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L6",
       "id": "services_discoveryservice_official_categories",
-      "community": 23,
+      "community": 1,
       "norm_label": "official_categories"
     },
     {
@@ -2709,7 +2772,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L7",
       "id": "services_discoveryservice_db_schema",
-      "community": 23,
+      "community": 1,
       "norm_label": "db_schema"
     },
     {
@@ -2718,7 +2781,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L13",
       "id": "services_discoveryservice_updatediscovery",
-      "community": 27,
+      "community": 1,
       "norm_label": "updatediscovery()"
     },
     {
@@ -2727,7 +2790,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L129",
       "id": "services_discoveryservice_loadschema",
-      "community": 27,
+      "community": 1,
       "norm_label": "loadschema()"
     },
     {
@@ -2736,7 +2799,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L153",
       "id": "services_discoveryservice_getdynamiccontext",
-      "community": 3,
+      "community": 1,
       "norm_label": "getdynamiccontext()"
     },
     {
@@ -2745,7 +2808,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L167",
       "id": "services_discoveryservice_startdiscoverycron",
-      "community": 27,
+      "community": 1,
       "norm_label": "startdiscoverycron()"
     },
     {
@@ -2754,7 +2817,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L176",
       "id": "services_discoveryservice_normalizeproductdata",
-      "community": 27,
+      "community": 20,
       "norm_label": "normalizeproductdata()"
     },
     {
@@ -3041,7 +3104,7 @@
       "file_type": "code",
       "source_file": "scratch/flush_redis.js",
       "source_location": "L1",
-      "community": 4,
+      "community": 3,
       "norm_label": "flush_redis.js",
       "id": "scratch_flush_redis_js"
     },
@@ -3050,7 +3113,7 @@
       "file_type": "code",
       "source_file": "scratch/flush_redis.js",
       "source_location": "L3",
-      "community": 4,
+      "community": 3,
       "norm_label": "flush()",
       "id": "scratch_flush_redis_flush"
     },
@@ -3194,7 +3257,7 @@
       "file_type": "code",
       "source_file": "src/config/db.js",
       "source_location": "L23",
-      "community": 20,
+      "community": 3,
       "norm_label": "pool",
       "id": "config_db_pool"
     },
@@ -3203,7 +3266,7 @@
       "file_type": "code",
       "source_file": "src/config/redis.js",
       "source_location": "L13",
-      "community": 4,
+      "community": 3,
       "norm_label": "redisclient",
       "id": "config_redis_redisclient"
     },
@@ -3536,7 +3599,7 @@
       "file_type": "code",
       "source_file": "test_search.js",
       "source_location": "L10",
-      "community": 20,
+      "community": 3,
       "norm_label": "runtests()",
       "id": "scalable_llm_search_test_search_runtests"
     }
@@ -5323,6 +5386,49 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/db_status.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_db_status_js",
+      "target": "src_config_db_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/db_status.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_db_status_js",
+      "target": "config_db_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/db_status.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_db_status_js",
+      "target": "scratch_db_status_checkstatus",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/db_status.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scratch_db_status_checkstatus",
+      "target": "config_db_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L1",
       "weight": 1.0,
@@ -6572,6 +6678,124 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_js",
+      "target": "src_config_db_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_js",
+      "target": "config_db_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_js",
+      "target": "src_services_ingestionservice_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_js",
+      "target": "services_ingestionservice_processproductanalysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_js",
+      "target": "src_utils_logger_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_js",
+      "target": "utils_logger_log",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_js",
+      "target": "scratch_test_analyze_sku_testanalyze",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_testanalyze",
+      "target": "config_db_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_analyze_sku.js",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "scratch_test_analyze_sku_testanalyze",
+      "target": "services_ingestionservice_processproductanalysis",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/inspect_queue.js",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scratch_inspect_queue_js",
+      "target": "scratch_inspect_queue_connection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/inspect_queue.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "scratch_inspect_queue_js",
+      "target": "scratch_inspect_queue_inspect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/check_sku.js",
       "source_location": "L1",
       "weight": 1.0,
@@ -6757,9 +6981,9 @@
       "source_file": "scratch/check_target_sku.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_check_target_sku_js",
-      "target": "src_config_db_js",
-      "confidence_score": 1.0
+      "target": "src_config_db_js"
     },
     {
       "relation": "imports",
@@ -6768,9 +6992,9 @@
       "source_file": "scratch/check_target_sku.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_check_target_sku_js",
-      "target": "config_db_query",
-      "confidence_score": 1.0
+      "target": "config_db_query"
     },
     {
       "relation": "contains",
@@ -6778,9 +7002,9 @@
       "source_file": "scratch/check_target_sku.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_check_target_sku_js",
-      "target": "scratch_check_target_sku_checksku",
-      "confidence_score": 1.0
+      "target": "scratch_check_target_sku_checksku"
     },
     {
       "relation": "calls",
@@ -6789,9 +7013,9 @@
       "source_file": "scratch/check_target_sku.js",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_check_target_sku_checksku",
-      "target": "config_db_query",
-      "confidence_score": 1.0
+      "target": "config_db_query"
     },
     {
       "relation": "imports_from",
@@ -10721,5 +10945,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8aae6ef43c0f9f28d0337ba726dc0e9ac8f09cc5"
+  "built_at_commit": "62d2084b36a1b79128ba313227fcf34151c33a06"
 }
