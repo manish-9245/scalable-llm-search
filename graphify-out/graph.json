@@ -252,7 +252,7 @@
       "source_file": "test_search.js",
       "source_location": "L1",
       "id": "test_search_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "test_search.js"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "test_search.js",
       "source_location": "L10",
       "id": "scalable_llm_search_test_search_runlogicaltests",
-      "community": 3,
+      "community": 1,
       "norm_label": "runlogicaltests()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "package.json",
       "source_location": "L1",
       "id": "package_json",
-      "community": 4,
+      "community": 2,
       "norm_label": "package.json"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "package.json",
       "source_location": "L2",
       "id": "scalable_llm_search_package_name",
-      "community": 4,
+      "community": 2,
       "norm_label": "name"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "package.json",
       "source_location": "L3",
       "id": "scalable_llm_search_package_version",
-      "community": 4,
+      "community": 2,
       "norm_label": "version"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "package.json",
       "source_location": "L4",
       "id": "scalable_llm_search_package_description",
-      "community": 4,
+      "community": 2,
       "norm_label": "description"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L5",
       "id": "scalable_llm_search_package_main",
-      "community": 4,
+      "community": 2,
       "norm_label": "main"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "package.json",
       "source_location": "L6",
       "id": "scalable_llm_search_package_type",
-      "community": 4,
+      "community": 2,
       "norm_label": "type"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "scalable_llm_search_package_scripts",
-      "community": 4,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "scalable_llm_search_package_scripts_start",
-      "community": 4,
+      "community": 2,
       "norm_label": "start"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "scalable_llm_search_package_scripts_db_init",
-      "community": 4,
+      "community": 2,
       "norm_label": "db:init"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "scalable_llm_search_package_scripts_test",
-      "community": 4,
+      "community": 2,
       "norm_label": "test"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "package.json",
       "source_location": "L11",
       "id": "scalable_llm_search_package_scripts_pre_cache",
-      "community": 4,
+      "community": 2,
       "norm_label": "pre-cache"
     },
     {
@@ -369,7 +369,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "id": "scalable_llm_search_package_scripts_ollama_pull",
-      "community": 4,
+      "community": 2,
       "norm_label": "ollama:pull"
     },
     {
@@ -576,7 +576,7 @@
       "source_file": "package.json",
       "source_location": "L37",
       "id": "scalable_llm_search_package_engines",
-      "community": 4,
+      "community": 2,
       "norm_label": "engines"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "package.json",
       "source_location": "L38",
       "id": "scalable_llm_search_package_engines_node",
-      "community": 4,
+      "community": 2,
       "norm_label": "node"
     },
     {
@@ -729,7 +729,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L1",
       "id": "scratch_manual_test_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "manual_test.js"
     },
     {
@@ -738,7 +738,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L3",
       "id": "scratch_manual_test_queries",
-      "community": 3,
+      "community": 1,
       "norm_label": "queries"
     },
     {
@@ -747,7 +747,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L17",
       "id": "scratch_manual_test_manualtest",
-      "community": 3,
+      "community": 1,
       "norm_label": "manualtest()"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L1",
       "id": "scratch_test_agent_mjs",
-      "community": 19,
+      "community": 15,
       "norm_label": "test_agent.mjs"
     },
     {
@@ -792,7 +792,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L6",
       "id": "scratch_test_agent_testagent",
-      "community": 19,
+      "community": 15,
       "norm_label": "testagent()"
     },
     {
@@ -855,7 +855,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L1",
       "id": "scratch_test_new_pricing_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "test_new_pricing.js"
     },
     {
@@ -864,7 +864,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L4",
       "id": "scratch_test_new_pricing_testnewpricing",
-      "community": 3,
+      "community": 1,
       "norm_label": "testnewpricing()"
     },
     {
@@ -936,7 +936,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L1",
       "id": "scratch_test_fix_session_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "test_fix_session.js"
     },
     {
@@ -945,7 +945,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L5",
       "id": "scratch_test_fix_session_test",
-      "community": 3,
+      "community": 1,
       "norm_label": "test()"
     },
     {
@@ -1026,7 +1026,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L1",
       "id": "scratch_test_multimodal_js",
-      "community": 19,
+      "community": 15,
       "norm_label": "test_multimodal.js"
     },
     {
@@ -1035,7 +1035,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L4",
       "id": "scratch_test_multimodal_testmultimodal",
-      "community": 19,
+      "community": 15,
       "norm_label": "testmultimodal()"
     },
     {
@@ -1575,7 +1575,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L1",
       "id": "src_mastra_agent_js",
-      "community": 19,
+      "community": 15,
       "norm_label": "agent.js"
     },
     {
@@ -1584,7 +1584,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L12",
       "id": "mastra_agent_storage",
-      "community": 19,
+      "community": 15,
       "norm_label": "storage"
     },
     {
@@ -1593,7 +1593,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L17",
       "id": "mastra_agent_google",
-      "community": 19,
+      "community": 15,
       "norm_label": "google"
     },
     {
@@ -1602,7 +1602,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L27",
       "id": "mastra_agent_ollama",
-      "community": 19,
+      "community": 15,
       "norm_label": "ollama"
     },
     {
@@ -1611,7 +1611,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L41",
       "id": "mastra_agent_indriyaanalyzer",
-      "community": 19,
+      "community": 15,
       "norm_label": "indriyaanalyzer"
     },
     {
@@ -1620,7 +1620,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L111",
       "id": "mastra_agent_chatagent",
-      "community": 19,
+      "community": 15,
       "norm_label": "chatagent"
     },
     {
@@ -1629,7 +1629,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L143",
       "id": "mastra_agent_mastra",
-      "community": 19,
+      "community": 15,
       "norm_label": "mastra"
     },
     {
@@ -1755,7 +1755,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L29",
       "id": "config_redis_connectredis",
-      "community": 11,
+      "community": 1,
       "norm_label": "connectredis()"
     },
     {
@@ -1845,7 +1845,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L1",
       "id": "src_utils_querybuilder_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "querybuilder.js"
     },
     {
@@ -1854,7 +1854,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L2",
       "id": "utils_querybuilder_getrawsql",
-      "community": 3,
+      "community": 1,
       "norm_label": "getrawsql()"
     },
     {
@@ -2007,7 +2007,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L1",
       "id": "src_services_searchservice_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "searchservice.js"
     },
     {
@@ -2016,7 +2016,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L13",
       "id": "services_searchservice_repairimageurls",
-      "community": 3,
+      "community": 1,
       "norm_label": "repairimageurls()"
     },
     {
@@ -2025,7 +2025,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L40",
       "id": "services_searchservice_getlatestmetalrates",
-      "community": 3,
+      "community": 1,
       "norm_label": "getlatestmetalrates()"
     },
     {
@@ -2034,7 +2034,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L100",
       "id": "services_searchservice_builddynamicpricesql",
-      "community": 3,
+      "community": 1,
       "norm_label": "builddynamicpricesql()"
     },
     {
@@ -2043,7 +2043,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L151",
       "id": "services_searchservice_searchcatalogue",
-      "community": 3,
+      "community": 1,
       "norm_label": "searchcatalogue()"
     },
     {
@@ -2052,7 +2052,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L1",
       "id": "src_services_discoveryservice_js",
-      "community": 1,
+      "community": 15,
       "norm_label": "discoveryservice.js"
     },
     {
@@ -2079,7 +2079,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L13",
       "id": "services_discoveryservice_updatediscovery",
-      "community": 1,
+      "community": 15,
       "norm_label": "updatediscovery()"
     },
     {
@@ -2097,7 +2097,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L146",
       "id": "services_discoveryservice_getdynamiccontext",
-      "community": 19,
+      "community": 15,
       "norm_label": "getdynamiccontext()"
     },
     {
@@ -2106,7 +2106,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L160",
       "id": "services_discoveryservice_startdiscoverycron",
-      "community": 1,
+      "community": 15,
       "norm_label": "startdiscoverycron()"
     },
     {
@@ -2149,7 +2149,7 @@
       "label": "2. Technical Stack",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L15",
+      "source_location": "L17",
       "id": "scalable_llm_search_readme_2_technical_stack",
       "community": 14,
       "norm_label": "2. technical stack"
@@ -2158,7 +2158,7 @@
       "label": "3. System Architecture (HLD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L30",
+      "source_location": "L31",
       "id": "scalable_llm_search_readme_3_system_architecture_hld",
       "community": 14,
       "norm_label": "3. system architecture (hld)"
@@ -2167,7 +2167,7 @@
       "label": "code:mermaid (graph TD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L32",
+      "source_location": "L33",
       "id": "scalable_llm_search_readme_codeblock_1",
       "community": 14,
       "norm_label": "code:mermaid (graph td)"
@@ -2176,7 +2176,7 @@
       "label": "3.5 Infrastructure & Deployment Flow",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L73",
+      "source_location": "L75",
       "id": "scalable_llm_search_readme_3_5_infrastructure_deployment_flow",
       "community": 14,
       "norm_label": "3.5 infrastructure & deployment flow"
@@ -2185,7 +2185,7 @@
       "label": "code:mermaid (graph LR)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L75",
+      "source_location": "L77",
       "id": "scalable_llm_search_readme_codeblock_2",
       "community": 14,
       "norm_label": "code:mermaid (graph lr)"
@@ -2194,7 +2194,7 @@
       "label": "4. Engineering Deep-Dive (LLD)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L100",
+      "source_location": "L101",
       "id": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
       "community": 14,
       "norm_label": "4. engineering deep-dive (lld)"
@@ -2203,7 +2203,7 @@
       "label": "A. Adaptive Hybrid Search (RRF)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L102",
+      "source_location": "L103",
       "id": "scalable_llm_search_readme_a_adaptive_hybrid_search_rrf",
       "community": 14,
       "norm_label": "a. adaptive hybrid search (rrf)"
@@ -2212,25 +2212,25 @@
       "label": "B. Luxury Stability Pricing Algorithm",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L110",
+      "source_location": "L111",
       "id": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm",
       "community": 14,
       "norm_label": "b. luxury stability pricing algorithm"
     },
     {
-      "label": "C. Prompt Injection & Domain Guardrails",
+      "label": "C. Local Query Translation (No LLM required)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L116",
-      "id": "scalable_llm_search_readme_c_prompt_injection_domain_guardrails",
+      "source_location": "L117",
+      "id": "scalable_llm_search_readme_c_local_query_translation_no_llm_required",
       "community": 14,
-      "norm_label": "c. prompt injection & domain guardrails"
+      "norm_label": "c. local query translation (no llm required)"
     },
     {
       "label": "4.5 Observability & Distributed Tracing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L124",
+      "source_location": "L125",
       "id": "scalable_llm_search_readme_4_5_observability_distributed_tracing",
       "community": 14,
       "norm_label": "4.5 observability & distributed tracing"
@@ -2239,7 +2239,7 @@
       "label": "A. BullMQ Dashboard",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L126",
+      "source_location": "L127",
       "id": "scalable_llm_search_readme_a_bullmq_dashboard",
       "community": 14,
       "norm_label": "a. bullmq dashboard"
@@ -2248,7 +2248,7 @@
       "label": "B. Trace-based Distributed Logging",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L132",
+      "source_location": "L133",
       "id": "scalable_llm_search_readme_b_trace_based_distributed_logging",
       "community": 14,
       "norm_label": "b. trace-based distributed logging"
@@ -2257,7 +2257,7 @@
       "label": "`catalog_products`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L140",
+      "source_location": "L142",
       "id": "scalable_llm_search_readme_catalog_products",
       "community": 14,
       "norm_label": "`catalog_products`"
@@ -2266,7 +2266,7 @@
       "label": "`search_ontology`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L147",
+      "source_location": "L149",
       "id": "scalable_llm_search_readme_search_ontology",
       "community": 14,
       "norm_label": "`search_ontology`"
@@ -2275,7 +2275,7 @@
       "label": "6. Setup & Deployment",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L152",
+      "source_location": "L154",
       "id": "scalable_llm_search_readme_6_setup_deployment",
       "community": 14,
       "norm_label": "6. setup & deployment"
@@ -2284,7 +2284,7 @@
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L154",
+      "source_location": "L156",
       "id": "scalable_llm_search_readme_prerequisites",
       "community": 14,
       "norm_label": "prerequisites"
@@ -2293,7 +2293,7 @@
       "label": "Installation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L159",
+      "source_location": "L161",
       "id": "scalable_llm_search_readme_installation",
       "community": 14,
       "norm_label": "installation"
@@ -2302,7 +2302,7 @@
       "label": "6.2 Monitoring & Admin Tools",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L167",
+      "source_location": "L168",
       "id": "scalable_llm_search_readme_6_2_monitoring_admin_tools",
       "community": 14,
       "norm_label": "6.2 monitoring & admin tools"
@@ -2311,7 +2311,7 @@
       "label": "7. Performance Benchmarks",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L175",
+      "source_location": "L176",
       "id": "scalable_llm_search_readme_7_performance_benchmarks",
       "community": 14,
       "norm_label": "7. performance benchmarks"
@@ -2324,6 +2324,15 @@
       "id": "utils_terminology_parsequery",
       "community": 15,
       "norm_label": "parsequery"
+    },
+    {
+      "label": "C. Prompt Injection & Domain Guardrails",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "community": 14,
+      "norm_label": "c. prompt injection & domain guardrails",
+      "id": "scalable_llm_search_readme_c_prompt_injection_domain_guardrails"
     },
     {
       "label": "dbToolRes",
@@ -2348,7 +2357,7 @@
       "file_type": "code",
       "source_file": "src/config/db.js",
       "source_location": "L23",
-      "community": 3,
+      "community": 1,
       "norm_label": "pool",
       "id": "config_db_pool"
     },
@@ -2690,7 +2699,7 @@
       "file_type": "code",
       "source_file": "test_search.js",
       "source_location": "L10",
-      "community": 3,
+      "community": 1,
       "norm_label": "runtests()",
       "id": "scalable_llm_search_test_search_runtests"
     }
@@ -3254,9 +3263,9 @@
       "source_file": "server.js",
       "source_location": "L627",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "server_js",
-      "target": "scalable_llm_search_server_generatetemplateresponse",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_server_generatetemplateresponse"
     },
     {
       "relation": "contains",
@@ -7882,6 +7891,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
+      "target": "scalable_llm_search_readme_c_local_query_translation_no_llm_required",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L116",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -8015,5 +8034,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "0dffb34aa97e1f24c75b31f5eda9bddfb1c9b5d1"
+  "built_at_commit": "3315b12d30b2d79da0b6d75beba7c69499297f61"
 }
