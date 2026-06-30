@@ -756,7 +756,7 @@
       "source_file": "scratch/flush_redis.mjs",
       "source_location": "L1",
       "id": "scratch_flush_redis_mjs",
-      "community": 3,
+      "community": 11,
       "norm_label": "flush_redis.mjs"
     },
     {
@@ -765,7 +765,7 @@
       "source_file": "scratch/flush_redis.mjs",
       "source_location": "L3",
       "id": "scratch_flush_redis_run",
-      "community": 3,
+      "community": 11,
       "norm_label": "run()"
     },
     {
@@ -846,7 +846,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
       "id": "scratch_test_jewel_search_cases_js",
-      "community": 4,
+      "community": 15,
       "norm_label": "test_jewel_search_cases.js"
     },
     {
@@ -855,7 +855,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L6",
       "id": "scratch_test_jewel_search_cases_runtestcases",
-      "community": 4,
+      "community": 15,
       "norm_label": "runtestcases()"
     },
     {
@@ -1152,7 +1152,7 @@
       "source_file": "scratch/test_rate_fetcher.mjs",
       "source_location": "L1",
       "id": "scratch_test_rate_fetcher_mjs",
-      "community": 3,
+      "community": 11,
       "norm_label": "test_rate_fetcher.mjs"
     },
     {
@@ -1161,7 +1161,7 @@
       "source_file": "scratch/test_rate_fetcher.mjs",
       "source_location": "L5",
       "id": "scratch_test_rate_fetcher_run",
-      "community": 3,
+      "community": 11,
       "norm_label": "run()"
     },
     {
@@ -1278,7 +1278,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L1",
       "id": "scratch_test_typo_search_mjs",
-      "community": 4,
+      "community": 15,
       "norm_label": "test_typo_search.mjs"
     },
     {
@@ -1287,7 +1287,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L4",
       "id": "scratch_test_typo_search_testtypo",
-      "community": 4,
+      "community": 15,
       "norm_label": "testtypo()"
     },
     {
@@ -1332,7 +1332,7 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L1",
       "id": "scratch_test_generalized_only_js",
-      "community": 4,
+      "community": 15,
       "norm_label": "test_generalized_only.js"
     },
     {
@@ -1341,7 +1341,7 @@
       "source_file": "scratch/test_generalized_only.js",
       "source_location": "L3",
       "id": "scratch_test_generalized_only_runtests",
-      "community": 4,
+      "community": 15,
       "norm_label": "runtests()"
     },
     {
@@ -1386,7 +1386,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L1",
       "id": "scratch_test_dynamic_spelling_with_op_js",
-      "community": 4,
+      "community": 15,
       "norm_label": "test_dynamic_spelling_with_op.js"
     },
     {
@@ -1395,7 +1395,7 @@
       "source_file": "scratch/test_dynamic_spelling_with_op.js",
       "source_location": "L3",
       "id": "scratch_test_dynamic_spelling_with_op_runtest",
-      "community": 4,
+      "community": 15,
       "norm_label": "runtest()"
     },
     {
@@ -1440,7 +1440,7 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L1",
       "id": "scratch_test_analyze_sku_js",
-      "community": 24,
+      "community": 11,
       "norm_label": "test_analyze_sku.js"
     },
     {
@@ -1449,7 +1449,7 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L5",
       "id": "scratch_test_analyze_sku_testanalyze",
-      "community": 24,
+      "community": 11,
       "norm_label": "testanalyze()"
     },
     {
@@ -1645,7 +1645,7 @@
       "label": "loadedProductsMap",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L13",
+      "source_location": "L14",
       "id": "public_app_loadedproductsmap",
       "community": 0,
       "norm_label": "loadedproductsmap"
@@ -1654,7 +1654,7 @@
       "label": "selectedAnalysisProducts",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L14",
+      "source_location": "L15",
       "id": "public_app_selectedanalysisproducts",
       "community": 0,
       "norm_label": "selectedanalysisproducts"
@@ -1663,7 +1663,7 @@
       "label": "allAnalysisProducts",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L15",
+      "source_location": "L16",
       "id": "public_app_allanalysisproducts",
       "community": 0,
       "norm_label": "allanalysisproducts"
@@ -1672,7 +1672,7 @@
       "label": "searchInput",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L18",
+      "source_location": "L19",
       "id": "public_app_searchinput",
       "community": 0,
       "norm_label": "searchinput"
@@ -1681,7 +1681,7 @@
       "label": "micBtn",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L19",
+      "source_location": "L20",
       "id": "public_app_micbtn",
       "community": 0,
       "norm_label": "micbtn"
@@ -1690,7 +1690,7 @@
       "label": "sendBtn",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L20",
+      "source_location": "L21",
       "id": "public_app_sendbtn",
       "community": 0,
       "norm_label": "sendbtn"
@@ -1699,7 +1699,7 @@
       "label": "voiceWaves",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L21",
+      "source_location": "L22",
       "id": "public_app_voicewaves",
       "community": 0,
       "norm_label": "voicewaves"
@@ -1708,7 +1708,7 @@
       "label": "chatMessagesContainer",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L22",
+      "source_location": "L23",
       "id": "public_app_chatmessagescontainer",
       "community": 0,
       "norm_label": "chatmessagescontainer"
@@ -1717,7 +1717,7 @@
       "label": "chatHistoryList",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L23",
+      "source_location": "L24",
       "id": "public_app_chathistorylist",
       "community": 0,
       "norm_label": "chathistorylist"
@@ -1726,7 +1726,7 @@
       "label": "newChatBtn",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L24",
+      "source_location": "L25",
       "id": "public_app_newchatbtn",
       "community": 0,
       "norm_label": "newchatbtn"
@@ -1735,7 +1735,7 @@
       "label": "welcomeChat",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L25",
+      "source_location": "L26",
       "id": "public_app_welcomechat",
       "community": 0,
       "norm_label": "welcomechat"
@@ -1744,7 +1744,7 @@
       "label": "mobileMenuBtn",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L28",
+      "source_location": "L29",
       "id": "public_app_mobilemenubtn",
       "community": 0,
       "norm_label": "mobilemenubtn"
@@ -1753,7 +1753,7 @@
       "label": "chatSidebar",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L29",
+      "source_location": "L30",
       "id": "public_app_chatsidebar",
       "community": 0,
       "norm_label": "chatsidebar"
@@ -1762,7 +1762,7 @@
       "label": "sidebarOverlay",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L30",
+      "source_location": "L31",
       "id": "public_app_sidebaroverlay",
       "community": 0,
       "norm_label": "sidebaroverlay"
@@ -1771,7 +1771,7 @@
       "label": "recordedSamples",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L36",
+      "source_location": "L37",
       "id": "public_app_recordedsamples",
       "community": 0,
       "norm_label": "recordedsamples"
@@ -1780,7 +1780,7 @@
       "label": "handleRouting()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L50",
+      "source_location": "L51",
       "id": "public_app_handlerouting",
       "community": 18,
       "norm_label": "handlerouting()"
@@ -1789,7 +1789,7 @@
       "label": "setupEventListeners()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L89",
+      "source_location": "L112",
       "id": "public_app_setupeventlisteners",
       "community": 0,
       "norm_label": "setupeventlisteners()"
@@ -1798,16 +1798,16 @@
       "label": "startNewSession()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L182",
+      "source_location": "L243",
       "id": "public_app_startnewsession",
-      "community": 0,
+      "community": 18,
       "norm_label": "startnewsession()"
     },
     {
       "label": "ensureSession()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L196",
+      "source_location": "L259",
       "id": "public_app_ensuresession",
       "community": 9,
       "norm_label": "ensuresession()"
@@ -1816,7 +1816,7 @@
       "label": "handleSendMessage()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L222",
+      "source_location": "L285",
       "id": "public_app_handlesendmessage",
       "community": 9,
       "norm_label": "handlesendmessage()"
@@ -1825,7 +1825,7 @@
       "label": "appendUserBubble()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L261",
+      "source_location": "L324",
       "id": "public_app_appenduserbubble",
       "community": 9,
       "norm_label": "appenduserbubble()"
@@ -1834,7 +1834,7 @@
       "label": "appendTypingBubble()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L269",
+      "source_location": "L332",
       "id": "public_app_appendtypingbubble",
       "community": 9,
       "norm_label": "appendtypingbubble()"
@@ -1843,7 +1843,7 @@
       "label": "removeBubble()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L289",
+      "source_location": "L352",
       "id": "public_app_removebubble",
       "community": 9,
       "norm_label": "removebubble()"
@@ -1852,7 +1852,7 @@
       "label": "appendAIBubble()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L294",
+      "source_location": "L357",
       "id": "public_app_appendaibubble",
       "community": 9,
       "norm_label": "appendaibubble()"
@@ -1861,7 +1861,7 @@
       "label": "scrollToBottom()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L378",
+      "source_location": "L441",
       "id": "public_app_scrolltobottom",
       "community": 9,
       "norm_label": "scrolltobottom()"
@@ -1870,7 +1870,7 @@
       "label": "targetContent",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L396",
+      "source_location": "L459",
       "id": "public_app_targetcontent",
       "community": 0,
       "norm_label": "targetcontent"
@@ -1879,7 +1879,7 @@
       "label": "addSessionToSidebar()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L402",
+      "source_location": "L465",
       "id": "public_app_addsessiontosidebar",
       "community": 9,
       "norm_label": "addsessiontosidebar()"
@@ -1888,7 +1888,7 @@
       "label": "loadSession()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L412",
+      "source_location": "L479",
       "id": "public_app_loadsession",
       "community": 18,
       "norm_label": "loadsession()"
@@ -1897,7 +1897,7 @@
       "label": "loadAllSessions()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L448",
+      "source_location": "L520",
       "id": "public_app_loadallsessions",
       "community": 0,
       "norm_label": "loadallsessions()"
@@ -1906,7 +1906,7 @@
       "label": "loadLiveRates()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L473",
+      "source_location": "L545",
       "id": "public_app_loadliverates",
       "community": 7,
       "norm_label": "loadliverates()"
@@ -1915,7 +1915,7 @@
       "label": "updateHeaderRatesDisplay()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L477",
+      "source_location": "L549",
       "id": "public_app_updateheaderratesdisplay",
       "community": 7,
       "norm_label": "updateheaderratesdisplay()"
@@ -1924,7 +1924,7 @@
       "label": "startRecordingFlow()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L485",
+      "source_location": "L557",
       "id": "public_app_startrecordingflow",
       "community": 6,
       "norm_label": "startrecordingflow()"
@@ -1933,7 +1933,7 @@
       "label": "stopRecordingFlow()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L523",
+      "source_location": "L595",
       "id": "public_app_stoprecordingflow",
       "community": 6,
       "norm_label": "stoprecordingflow()"
@@ -1942,7 +1942,7 @@
       "label": "encodeWAV()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L576",
+      "source_location": "L648",
       "id": "public_app_encodewav",
       "community": 6,
       "norm_label": "encodewav()"
@@ -1951,7 +1951,7 @@
       "label": "writeString()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L617",
+      "source_location": "L689",
       "id": "public_app_writestring",
       "community": 6,
       "norm_label": "writestring()"
@@ -1960,7 +1960,7 @@
       "label": "setupTabs()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L627",
+      "source_location": "L699",
       "id": "public_app_setuptabs",
       "community": 12,
       "norm_label": "setuptabs()"
@@ -1969,7 +1969,7 @@
       "label": "selectedAnalysisSkus",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L659",
+      "source_location": "L747",
       "id": "public_app_selectedanalysisskus",
       "community": 0,
       "norm_label": "selectedanalysisskus"
@@ -1978,7 +1978,7 @@
       "label": "bulkAnalyzingSkus",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L660",
+      "source_location": "L748",
       "id": "public_app_bulkanalyzingskus",
       "community": 0,
       "norm_label": "bulkanalyzingskus"
@@ -1987,7 +1987,7 @@
       "label": "setupAnalysisControls()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L663",
+      "source_location": "L751",
       "id": "public_app_setupanalysiscontrols",
       "community": 12,
       "norm_label": "setupanalysiscontrols()"
@@ -1996,7 +1996,7 @@
       "label": "filterAndRenderAnalysisProducts()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L767",
+      "source_location": "L855",
       "id": "public_app_filterandrenderanalysisproducts",
       "community": 10,
       "norm_label": "filterandrenderanalysisproducts()"
@@ -2005,7 +2005,7 @@
       "label": "renderFilteredListOnly()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L773",
+      "source_location": "L861",
       "id": "public_app_renderfilteredlistonly",
       "community": 10,
       "norm_label": "renderfilteredlistonly()"
@@ -2014,7 +2014,7 @@
       "label": "updateSelectAllCheckboxState()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L777",
+      "source_location": "L865",
       "id": "public_app_updateselectallcheckboxstate",
       "community": 10,
       "norm_label": "updateselectallcheckboxstate()"
@@ -2023,7 +2023,7 @@
       "label": "updateBulkActionButtonState()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L801",
+      "source_location": "L889",
       "id": "public_app_updatebulkactionbuttonstate",
       "community": 10,
       "norm_label": "updatebulkactionbuttonstate()"
@@ -2032,7 +2032,7 @@
       "label": "queueForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L812",
+      "source_location": "L900",
       "id": "public_app_queueforanalysis",
       "community": 10,
       "norm_label": "queueforanalysis()"
@@ -2041,7 +2041,7 @@
       "label": "loadProductsForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L859",
+      "source_location": "L947",
       "id": "public_app_loadproductsforanalysis",
       "community": 10,
       "norm_label": "loadproductsforanalysis()"
@@ -2050,7 +2050,7 @@
       "label": "updatePaginationControls()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L894",
+      "source_location": "L982",
       "id": "public_app_updatepaginationcontrols",
       "community": 10,
       "norm_label": "updatepaginationcontrols()"
@@ -2059,7 +2059,7 @@
       "label": "renderAnalysisProductList()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L910",
+      "source_location": "L998",
       "id": "public_app_renderanalysisproductlist",
       "community": 10,
       "norm_label": "renderanalysisproductlist()"
@@ -2068,7 +2068,7 @@
       "label": "parseNarrativeToTabs()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1000",
+      "source_location": "L1088",
       "id": "public_app_parsenarrativetotabs",
       "community": 10,
       "norm_label": "parsenarrativetotabs()"
@@ -2077,7 +2077,7 @@
       "label": "selectProductForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1149",
+      "source_location": "L1237",
       "id": "public_app_selectproductforanalysis",
       "community": 10,
       "norm_label": "selectproductforanalysis()"
@@ -2086,7 +2086,7 @@
       "label": "target",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1676",
+      "source_location": "L1765",
       "id": "public_app_target",
       "community": 0,
       "norm_label": "target"
@@ -2095,7 +2095,7 @@
       "label": "inputEl",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1684",
+      "source_location": "L1773",
       "id": "public_app_inputel",
       "community": 0,
       "norm_label": "inputel"
@@ -2104,7 +2104,7 @@
       "label": "contentArea",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1736",
+      "source_location": "L1825",
       "id": "public_app_contentarea",
       "community": 0,
       "norm_label": "contentarea"
@@ -2113,7 +2113,7 @@
       "label": "p",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1766",
+      "source_location": "L1855",
       "id": "public_app_p",
       "community": 0,
       "norm_label": "p"
@@ -2122,7 +2122,7 @@
       "label": "poll()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1782",
+      "source_location": "L1871",
       "id": "public_app_poll",
       "community": 10,
       "norm_label": "poll()"
@@ -2131,7 +2131,7 @@
       "label": "triggerBulkAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1847",
+      "source_location": "L1936",
       "id": "public_app_triggerbulkanalysis",
       "community": 10,
       "norm_label": "triggerbulkanalysis()"
@@ -2331,7 +2331,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L1",
       "id": "src_config_queue_js",
-      "community": 24,
+      "community": 11,
       "norm_label": "queue.js"
     },
     {
@@ -2340,7 +2340,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L25",
       "id": "config_queue_queueproductingestion",
-      "community": 24,
+      "community": 11,
       "norm_label": "queueproductingestion()"
     },
     {
@@ -2349,7 +2349,7 @@
       "source_file": "src/config/queue.js",
       "source_location": "L52",
       "id": "config_queue_startingestionworker",
-      "community": 24,
+      "community": 11,
       "norm_label": "startingestionworker()"
     },
     {
@@ -2358,7 +2358,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L1",
       "id": "src_config_redis_js",
-      "community": 3,
+      "community": 11,
       "norm_label": "redis.js"
     },
     {
@@ -2367,7 +2367,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L29",
       "id": "config_redis_connectredis",
-      "community": 3,
+      "community": 11,
       "norm_label": "connectredis()"
     },
     {
@@ -2412,7 +2412,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L1",
       "id": "src_utils_logger_js",
-      "community": 24,
+      "community": 11,
       "norm_label": "logger.js"
     },
     {
@@ -2421,7 +2421,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L5",
       "id": "utils_logger_logger",
-      "community": 24,
+      "community": 11,
       "norm_label": "logger"
     },
     {
@@ -2430,7 +2430,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L23",
       "id": "utils_logger_getchildlogger",
-      "community": 24,
+      "community": 11,
       "norm_label": "getchildlogger()"
     },
     {
@@ -2439,7 +2439,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L28",
       "id": "utils_logger_log",
-      "community": 24,
+      "community": 11,
       "norm_label": "log"
     },
     {
@@ -2448,7 +2448,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L1",
       "id": "src_utils_terminology_js",
-      "community": 4,
+      "community": 15,
       "norm_label": "terminology.js"
     },
     {
@@ -2457,7 +2457,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L6",
       "id": "utils_terminology_protected_words",
-      "community": 4,
+      "community": 15,
       "norm_label": "protected_words"
     },
     {
@@ -2466,7 +2466,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L25",
       "id": "utils_terminology_resolveterminology",
-      "community": 4,
+      "community": 15,
       "norm_label": "resolveterminology()"
     },
     {
@@ -2475,7 +2475,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L528",
       "id": "utils_terminology_loadontologyandslang",
-      "community": 4,
+      "community": 15,
       "norm_label": "loadontologyandslang()"
     },
     {
@@ -2484,7 +2484,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L537",
       "id": "utils_terminology_levenshteindistance",
-      "community": 4,
+      "community": 15,
       "norm_label": "levenshteindistance()"
     },
     {
@@ -2511,7 +2511,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L31",
       "id": "utils_querybuilder_querybuilder",
-      "community": 15,
+      "community": 3,
       "norm_label": "querybuilder"
     },
     {
@@ -2520,7 +2520,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L32",
       "id": "utils_querybuilder_querybuilder_constructor",
-      "community": 15,
+      "community": 3,
       "norm_label": ".constructor()"
     },
     {
@@ -2529,7 +2529,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L46",
       "id": "utils_querybuilder_querybuilder_setdynamicpricesql",
-      "community": 15,
+      "community": 3,
       "norm_label": ".setdynamicpricesql()"
     },
     {
@@ -2538,7 +2538,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L50",
       "id": "utils_querybuilder_querybuilder_addparam",
-      "community": 15,
+      "community": 3,
       "norm_label": ".addparam()"
     },
     {
@@ -2547,7 +2547,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L55",
       "id": "utils_querybuilder_querybuilder_setembedding",
-      "community": 15,
+      "community": 3,
       "norm_label": ".setembedding()"
     },
     {
@@ -2556,7 +2556,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L60",
       "id": "utils_querybuilder_querybuilder_setftsquery",
-      "community": 15,
+      "community": 3,
       "norm_label": ".setftsquery()"
     },
     {
@@ -2565,7 +2565,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L66",
       "id": "utils_querybuilder_querybuilder_addfilter",
-      "community": 15,
+      "community": 3,
       "norm_label": ".addfilter()"
     },
     {
@@ -2574,7 +2574,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L70",
       "id": "utils_querybuilder_querybuilder_addnumericfilter",
-      "community": 15,
+      "community": 3,
       "norm_label": ".addnumericfilter()"
     },
     {
@@ -2583,7 +2583,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L76",
       "id": "utils_querybuilder_querybuilder_addstringfilter",
-      "community": 15,
+      "community": 3,
       "norm_label": ".addstringfilter()"
     },
     {
@@ -2592,7 +2592,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L150",
       "id": "utils_querybuilder_querybuilder_build",
-      "community": 15,
+      "community": 3,
       "norm_label": ".build()"
     },
     {
@@ -2628,7 +2628,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L1",
       "id": "src_services_ratefetcherservice_js",
-      "community": 3,
+      "community": 11,
       "norm_label": "ratefetcherservice.js"
     },
     {
@@ -2637,7 +2637,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L21",
       "id": "services_ratefetcherservice_fetchlivegoldrate",
-      "community": 3,
+      "community": 11,
       "norm_label": "fetchlivegoldrate()"
     },
     {
@@ -2646,7 +2646,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L69",
       "id": "services_ratefetcherservice_getpreviousmetalrates",
-      "community": 3,
+      "community": 11,
       "norm_label": "getpreviousmetalrates()"
     },
     {
@@ -2655,7 +2655,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L102",
       "id": "services_ratefetcherservice_fetchandsyncrates",
-      "community": 3,
+      "community": 11,
       "norm_label": "fetchandsyncrates()"
     },
     {
@@ -2664,7 +2664,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L169",
       "id": "services_ratefetcherservice_startratefetchercron",
-      "community": 3,
+      "community": 11,
       "norm_label": "startratefetchercron()"
     },
     {
@@ -2673,7 +2673,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L1",
       "id": "src_services_ingestionservice_js",
-      "community": 24,
+      "community": 11,
       "norm_label": "ingestionservice.js"
     },
     {
@@ -2682,7 +2682,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L13",
       "id": "services_ingestionservice_processproductanalysis",
-      "community": 24,
+      "community": 11,
       "norm_label": "processproductanalysis()"
     },
     {
@@ -2691,7 +2691,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L127",
       "id": "services_ingestionservice_invalidatelocalsearchcache",
-      "community": 24,
+      "community": 11,
       "norm_label": "invalidatelocalsearchcache()"
     },
     {
@@ -2718,7 +2718,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L24",
       "id": "services_searchservice_repairimageurls",
-      "community": 11,
+      "community": 15,
       "norm_label": "repairimageurls()"
     },
     {
@@ -2754,7 +2754,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L1",
       "id": "src_services_discoveryservice_js",
-      "community": 27,
+      "community": 15,
       "norm_label": "discoveryservice.js"
     },
     {
@@ -2763,7 +2763,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L6",
       "id": "services_discoveryservice_official_categories",
-      "community": 27,
+      "community": 15,
       "norm_label": "official_categories"
     },
     {
@@ -2772,7 +2772,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L7",
       "id": "services_discoveryservice_db_schema",
-      "community": 27,
+      "community": 15,
       "norm_label": "db_schema"
     },
     {
@@ -2781,7 +2781,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L13",
       "id": "services_discoveryservice_updatediscovery",
-      "community": 27,
+      "community": 15,
       "norm_label": "updatediscovery()"
     },
     {
@@ -2790,7 +2790,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L129",
       "id": "services_discoveryservice_loadschema",
-      "community": 27,
+      "community": 15,
       "norm_label": "loadschema()"
     },
     {
@@ -2808,7 +2808,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L167",
       "id": "services_discoveryservice_startdiscoverycron",
-      "community": 27,
+      "community": 15,
       "norm_label": "startdiscoverycron()"
     },
     {
@@ -2923,7 +2923,7 @@
       "label": "Live Gold & Metal Rates Sync (`src/services/rateFetcherService.js`):",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L121",
+      "source_location": "L122",
       "id": "scalable_llm_search_readme_live_gold_metal_rates_sync_src_services_ratefetcherservice_js",
       "community": 14,
       "norm_label": "live gold & metal rates sync (`src/services/ratefetcherservice.js`):"
@@ -2932,7 +2932,7 @@
       "label": "C. Local Query, Fuzzy Spelling Correction & Voice Translation (No LLM required)",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L129",
+      "source_location": "L130",
       "id": "scalable_llm_search_readme_c_local_query_fuzzy_spelling_correction_voice_translation_no_llm_required",
       "community": 14,
       "norm_label": "c. local query, fuzzy spelling correction & voice translation (no llm required)"
@@ -2941,7 +2941,7 @@
       "label": "Multilingual Voice & Concierge Routing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L139",
+      "source_location": "L140",
       "id": "scalable_llm_search_readme_multilingual_voice_concierge_routing",
       "community": 14,
       "norm_label": "multilingual voice & concierge routing"
@@ -2950,7 +2950,7 @@
       "label": "4.5 Observability & Distributed Tracing",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L145",
+      "source_location": "L146",
       "id": "scalable_llm_search_readme_4_5_observability_distributed_tracing",
       "community": 14,
       "norm_label": "4.5 observability & distributed tracing"
@@ -2959,7 +2959,7 @@
       "label": "A. BullMQ Dashboard",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L147",
+      "source_location": "L148",
       "id": "scalable_llm_search_readme_a_bullmq_dashboard",
       "community": 14,
       "norm_label": "a. bullmq dashboard"
@@ -2968,7 +2968,7 @@
       "label": "B. Trace-based Distributed Logging",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L153",
+      "source_location": "L154",
       "id": "scalable_llm_search_readme_b_trace_based_distributed_logging",
       "community": 14,
       "norm_label": "b. trace-based distributed logging"
@@ -2977,7 +2977,7 @@
       "label": "5. Database Schema",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L162",
+      "source_location": "L163",
       "id": "scalable_llm_search_readme_5_database_schema",
       "community": 14,
       "norm_label": "5. database schema"
@@ -2986,7 +2986,7 @@
       "label": "`daily_metal_rates`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L164",
+      "source_location": "L165",
       "id": "scalable_llm_search_readme_daily_metal_rates",
       "community": 14,
       "norm_label": "`daily_metal_rates`"
@@ -2995,7 +2995,7 @@
       "label": "`catalog_products`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L172",
+      "source_location": "L173",
       "id": "scalable_llm_search_readme_catalog_products",
       "community": 14,
       "norm_label": "`catalog_products`"
@@ -3004,7 +3004,7 @@
       "label": "`search_ontology`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L183",
+      "source_location": "L184",
       "id": "scalable_llm_search_readme_search_ontology",
       "community": 14,
       "norm_label": "`search_ontology`"
@@ -3013,7 +3013,7 @@
       "label": "6. Setup & Deployment",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L188",
+      "source_location": "L189",
       "id": "scalable_llm_search_readme_6_setup_deployment",
       "community": 14,
       "norm_label": "6. setup & deployment"
@@ -3022,7 +3022,7 @@
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L190",
+      "source_location": "L191",
       "id": "scalable_llm_search_readme_prerequisites",
       "community": 14,
       "norm_label": "prerequisites"
@@ -3031,7 +3031,7 @@
       "label": "Installation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L195",
+      "source_location": "L196",
       "id": "scalable_llm_search_readme_installation",
       "community": 14,
       "norm_label": "installation"
@@ -3040,7 +3040,7 @@
       "label": "6.2 Monitoring & Admin Tools",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L203",
+      "source_location": "L204",
       "id": "scalable_llm_search_readme_6_2_monitoring_admin_tools",
       "community": 14,
       "norm_label": "6.2 monitoring & admin tools"
@@ -3049,10 +3049,694 @@
       "label": "7. Performance Benchmarks",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L211",
+      "source_location": "L212",
       "id": "scalable_llm_search_readme_7_performance_benchmarks",
       "community": 14,
       "norm_label": "7. performance benchmarks"
+    },
+    {
+      "label": "accessibility_guide.md",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L1",
+      "id": "scratch_accessibility_guide_md",
+      "community": 34,
+      "norm_label": "accessibility_guide.md"
+    },
+    {
+      "label": "Accessibility Coding Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L3",
+      "id": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "community": 34,
+      "norm_label": "accessibility coding guidelines"
+    },
+    {
+      "label": "1. Content Navigability and Structure",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L12",
+      "id": "scratch_accessibility_guide_1_content_navigability_and_structure",
+      "community": 33,
+      "norm_label": "1. content navigability and structure"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L14",
+      "id": "scratch_accessibility_guide_actionable_guidelines",
+      "community": 33,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L16",
+      "id": "scratch_accessibility_guide_dos",
+      "community": 33,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L23",
+      "id": "scratch_accessibility_guide_don_ts",
+      "community": 33,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Examples",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L30",
+      "id": "scratch_accessibility_guide_code_examples",
+      "community": 33,
+      "norm_label": "code examples"
+    },
+    {
+      "label": "code:html (<!-- Good: Semantic landmarks, heading hierarchy, skip link )",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L32",
+      "id": "scratch_accessibility_guide_codeblock_1",
+      "community": 33,
+      "norm_label": "code:html (<!-- good: semantic landmarks, heading hierarchy, skip link )"
+    },
+    {
+      "label": "2. Semantic HTML and ARIA",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L61",
+      "id": "scratch_accessibility_guide_2_semantic_html_and_aria",
+      "community": 34,
+      "norm_label": "2. semantic html and aria"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L63",
+      "id": "scratch_accessibility_guide_actionable_guidelines_63",
+      "community": 34,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L65",
+      "id": "scratch_accessibility_guide_dos_65",
+      "community": 34,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L70",
+      "id": "scratch_accessibility_guide_don_ts_70",
+      "community": 34,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "3. Accessible Names and Descriptions",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L76",
+      "id": "scratch_accessibility_guide_3_accessible_names_and_descriptions",
+      "community": 35,
+      "norm_label": "3. accessible names and descriptions"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L80",
+      "id": "scratch_accessibility_guide_actionable_guidelines_80",
+      "community": 35,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L82",
+      "id": "scratch_accessibility_guide_dos_82",
+      "community": 35,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L89",
+      "id": "scratch_accessibility_guide_don_ts_89",
+      "community": 35,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Example: Visually Hidden Utility",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L99",
+      "id": "scratch_accessibility_guide_code_example_visually_hidden_utility",
+      "community": 35,
+      "norm_label": "code example: visually hidden utility"
+    },
+    {
+      "label": "code:css (/* Hides content visually but keeps it in the accessibility )",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L103",
+      "id": "scratch_accessibility_guide_codeblock_2",
+      "community": 35,
+      "norm_label": "code:css (/* hides content visually but keeps it in the accessibility )"
+    },
+    {
+      "label": "4. Document Metadata and Language",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L122",
+      "id": "scratch_accessibility_guide_4_document_metadata_and_language",
+      "community": 36,
+      "norm_label": "4. document metadata and language"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L124",
+      "id": "scratch_accessibility_guide_actionable_guidelines_124",
+      "community": 36,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L126",
+      "id": "scratch_accessibility_guide_dos_126",
+      "community": 36,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L133",
+      "id": "scratch_accessibility_guide_don_ts_133",
+      "community": 36,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Examples",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L136",
+      "id": "scratch_accessibility_guide_code_examples_136",
+      "community": 36,
+      "norm_label": "code examples"
+    },
+    {
+      "label": "code:html (<!-- Good: Distinct title and language declaration -->)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L138",
+      "id": "scratch_accessibility_guide_codeblock_3",
+      "community": 36,
+      "norm_label": "code:html (<!-- good: distinct title and language declaration -->)"
+    },
+    {
+      "label": "5. Keyboard and Focus Management",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L151",
+      "id": "scratch_accessibility_guide_5_keyboard_and_focus_management",
+      "community": 24,
+      "norm_label": "5. keyboard and focus management"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L153",
+      "id": "scratch_accessibility_guide_actionable_guidelines_153",
+      "community": 24,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L155",
+      "id": "scratch_accessibility_guide_dos_155",
+      "community": 24,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L162",
+      "id": "scratch_accessibility_guide_don_ts_162",
+      "community": 24,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Examples",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L167",
+      "id": "scratch_accessibility_guide_code_examples_167",
+      "community": 24,
+      "norm_label": "code examples"
+    },
+    {
+      "label": "code:css (/* Good: High contrast focus border */)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L169",
+      "id": "scratch_accessibility_guide_codeblock_4",
+      "community": 24,
+      "norm_label": "code:css (/* good: high contrast focus border */)"
+    },
+    {
+      "label": "code:html (<!-- Good: Skip to main content -->)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L177",
+      "id": "scratch_accessibility_guide_codeblock_5",
+      "community": 24,
+      "norm_label": "code:html (<!-- good: skip to main content -->)"
+    },
+    {
+      "label": "code:javascript (// Good: Keyboard handlers for complex custom widgets (e.g.,)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L183",
+      "id": "scratch_accessibility_guide_codeblock_6",
+      "community": 24,
+      "norm_label": "code:javascript (// good: keyboard handlers for complex custom widgets (e.g.,)"
+    },
+    {
+      "label": "6. Alternate Text and Media",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L210",
+      "id": "scratch_accessibility_guide_6_alternate_text_and_media",
+      "community": 29,
+      "norm_label": "6. alternate text and media"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L212",
+      "id": "scratch_accessibility_guide_actionable_guidelines_212",
+      "community": 29,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L214",
+      "id": "scratch_accessibility_guide_dos_214",
+      "community": 29,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L224",
+      "id": "scratch_accessibility_guide_don_ts_224",
+      "community": 29,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Examples",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L228",
+      "id": "scratch_accessibility_guide_code_examples_228",
+      "community": 29,
+      "norm_label": "code examples"
+    },
+    {
+      "label": "code:html (<!-- Decorative -->)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L230",
+      "id": "scratch_accessibility_guide_codeblock_7",
+      "community": 29,
+      "norm_label": "code:html (<!-- decorative -->)"
+    },
+    {
+      "label": "Content Visibility Decision Matrix",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L266",
+      "id": "scratch_accessibility_guide_content_visibility_decision_matrix",
+      "community": 29,
+      "norm_label": "content visibility decision matrix"
+    },
+    {
+      "label": "7. Forms and Input Controls",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L277",
+      "id": "scratch_accessibility_guide_7_forms_and_input_controls",
+      "community": 37,
+      "norm_label": "7. forms and input controls"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L279",
+      "id": "scratch_accessibility_guide_actionable_guidelines_279",
+      "community": 37,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L281",
+      "id": "scratch_accessibility_guide_dos_281",
+      "community": 37,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L288",
+      "id": "scratch_accessibility_guide_don_ts_288",
+      "community": 37,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Examples",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L292",
+      "id": "scratch_accessibility_guide_code_examples_292",
+      "community": 37,
+      "norm_label": "code examples"
+    },
+    {
+      "label": "code:html (<!-- Good: Semantic forms with hints for passwords -->)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L294",
+      "id": "scratch_accessibility_guide_codeblock_8",
+      "community": 37,
+      "norm_label": "code:html (<!-- good: semantic forms with hints for passwords -->)"
+    },
+    {
+      "label": "8. Live Regions",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L303",
+      "id": "scratch_accessibility_guide_8_live_regions",
+      "community": 30,
+      "norm_label": "8. live regions"
+    },
+    {
+      "label": "Live Region Urgency Table",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L307",
+      "id": "scratch_accessibility_guide_live_region_urgency_table",
+      "community": 30,
+      "norm_label": "live region urgency table"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L317",
+      "id": "scratch_accessibility_guide_actionable_guidelines_317",
+      "community": 30,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L319",
+      "id": "scratch_accessibility_guide_dos_319",
+      "community": 30,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L324",
+      "id": "scratch_accessibility_guide_don_ts_324",
+      "community": 30,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Example",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L328",
+      "id": "scratch_accessibility_guide_code_example",
+      "community": 30,
+      "norm_label": "code example"
+    },
+    {
+      "label": "code:html (<!-- Session Timeout Warning with controls -->)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L330",
+      "id": "scratch_accessibility_guide_codeblock_9",
+      "community": 30,
+      "norm_label": "code:html (<!-- session timeout warning with controls -->)"
+    },
+    {
+      "label": "9. Color, Contrast, and Typography",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L338",
+      "id": "scratch_accessibility_guide_9_color_contrast_and_typography",
+      "community": 27,
+      "norm_label": "9. color, contrast, and typography"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L340",
+      "id": "scratch_accessibility_guide_actionable_guidelines_340",
+      "community": 27,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L342",
+      "id": "scratch_accessibility_guide_dos_342",
+      "community": 27,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L356",
+      "id": "scratch_accessibility_guide_don_ts_356",
+      "community": 27,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Examples",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L363",
+      "id": "scratch_accessibility_guide_code_examples_363",
+      "community": 27,
+      "norm_label": "code examples"
+    },
+    {
+      "label": "code:css (/* Good: Relative sizing and line caps */)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L365",
+      "id": "scratch_accessibility_guide_codeblock_10",
+      "community": 27,
+      "norm_label": "code:css (/* good: relative sizing and line caps */)"
+    },
+    {
+      "label": "code:html (<!-- Good: Denotes state without colors alone -->)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L376",
+      "id": "scratch_accessibility_guide_codeblock_11",
+      "community": 27,
+      "norm_label": "code:html (<!-- good: denotes state without colors alone -->)"
+    },
+    {
+      "label": "code:css (/* Dark Mode support variables */)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L384",
+      "id": "scratch_accessibility_guide_codeblock_12",
+      "community": 27,
+      "norm_label": "code:css (/* dark mode support variables */)"
+    },
+    {
+      "label": "10. Motions and Preferences",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L398",
+      "id": "scratch_accessibility_guide_10_motions_and_preferences",
+      "community": 31,
+      "norm_label": "10. motions and preferences"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L400",
+      "id": "scratch_accessibility_guide_actionable_guidelines_400",
+      "community": 31,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L402",
+      "id": "scratch_accessibility_guide_dos_402",
+      "community": 31,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L407",
+      "id": "scratch_accessibility_guide_don_ts_407",
+      "community": 31,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Examples",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L410",
+      "id": "scratch_accessibility_guide_code_examples_410",
+      "community": 31,
+      "norm_label": "code examples"
+    },
+    {
+      "label": "code:css (/* Good: Dampen spin states for reduced motion queries */)",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L412",
+      "id": "scratch_accessibility_guide_codeblock_13",
+      "community": 31,
+      "norm_label": "code:css (/* good: dampen spin states for reduced motion queries */)"
+    },
+    {
+      "label": "11. Modals and Native Dialogs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L422",
+      "id": "scratch_accessibility_guide_11_modals_and_native_dialogs",
+      "community": 32,
+      "norm_label": "11. modals and native dialogs"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L426",
+      "id": "scratch_accessibility_guide_actionable_guidelines_426",
+      "community": 32,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L428",
+      "id": "scratch_accessibility_guide_dos_428",
+      "community": 32,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L432",
+      "id": "scratch_accessibility_guide_don_ts_432",
+      "community": 32,
+      "norm_label": "don'ts"
+    },
+    {
+      "label": "Code Examples",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L435",
+      "id": "scratch_accessibility_guide_code_examples_435",
+      "community": 32,
+      "norm_label": "code examples"
+    },
+    {
+      "label": "code:html (<!-- Dialog opens natively with showModal() and locks focus )",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L438",
+      "id": "scratch_accessibility_guide_codeblock_14",
+      "community": 32,
+      "norm_label": "code:html (<!-- dialog opens natively with showmodal() and locks focus )"
+    },
+    {
+      "label": "12. Testing Validations",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L455",
+      "id": "scratch_accessibility_guide_12_testing_validations",
+      "community": 38,
+      "norm_label": "12. testing validations"
+    },
+    {
+      "label": "Actionable Guidelines",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L457",
+      "id": "scratch_accessibility_guide_actionable_guidelines_457",
+      "community": 38,
+      "norm_label": "actionable guidelines"
+    },
+    {
+      "label": "DOs",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L459",
+      "id": "scratch_accessibility_guide_dos_459",
+      "community": 38,
+      "norm_label": "dos"
+    },
+    {
+      "label": "DON'Ts",
+      "file_type": "document",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L464",
+      "id": "scratch_accessibility_guide_don_ts_464",
+      "community": 38,
+      "norm_label": "don'ts"
     },
     {
       "label": "parseQuery",
@@ -3060,7 +3744,7 @@
       "source_file": "src/utils/terminology.js",
       "source_location": "L527",
       "id": "utils_terminology_parsequery",
-      "community": 4,
+      "community": 15,
       "norm_label": "parsequery"
     },
     {
@@ -3131,7 +3815,7 @@
       "file_type": "code",
       "source_file": "scratch/flush_redis.js",
       "source_location": "L1",
-      "community": 3,
+      "community": 11,
       "norm_label": "flush_redis.js",
       "id": "scratch_flush_redis_js"
     },
@@ -3140,7 +3824,7 @@
       "file_type": "code",
       "source_file": "scratch/flush_redis.js",
       "source_location": "L3",
-      "community": 3,
+      "community": 11,
       "norm_label": "flush()",
       "id": "scratch_flush_redis_flush"
     },
@@ -3293,7 +3977,7 @@
       "file_type": "code",
       "source_file": "src/config/redis.js",
       "source_location": "L13",
-      "community": 3,
+      "community": 11,
       "norm_label": "redisclient",
       "id": "config_redis_redisclient"
     },
@@ -3302,7 +3986,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L4",
-      "community": 4,
+      "community": 15,
       "norm_label": "ontologycache",
       "id": "utils_terminology_ontologycache"
     },
@@ -3311,7 +3995,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L13",
-      "community": 4,
+      "community": 15,
       "norm_label": "slangcache",
       "id": "utils_terminology_slangcache"
     },
@@ -3320,7 +4004,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L57",
-      "community": 4,
+      "community": 15,
       "norm_label": "seeddefaultontology()",
       "id": "utils_terminology_seeddefaultontology"
     },
@@ -3329,7 +4013,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L112",
-      "community": 4,
+      "community": 15,
       "norm_label": "seeddefaultslang()",
       "id": "utils_terminology_seeddefaultslang"
     },
@@ -3338,7 +4022,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L273",
-      "community": 4,
+      "community": 15,
       "norm_label": "createemptyparse()",
       "id": "utils_terminology_createemptyparse"
     },
@@ -3347,7 +4031,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L290",
-      "community": 4,
+      "community": 15,
       "norm_label": "calculatepricevalue()",
       "id": "utils_terminology_calculatepricevalue"
     },
@@ -3356,7 +4040,7 @@
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
       "source_location": "L298",
-      "community": 4,
+      "community": 15,
       "norm_label": "maptoexclusionkeyword()",
       "id": "utils_terminology_maptoexclusionkeyword"
     },
@@ -8029,6 +8713,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "public/app.js",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "public_app_handlerouting",
+      "target": "public_app_startnewsession",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "public/app.js",
       "source_location": "L115",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -10795,6 +11490,756 @@
       "target": "scalable_llm_search_readme_6_2_monitoring_admin_tools"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_md",
+      "target": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_1_content_navigability_and_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_2_semantic_html_and_aria",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_3_accessible_names_and_descriptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_4_document_metadata_and_language",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_5_keyboard_and_focus_management",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_6_alternate_text_and_media",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L277",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_7_forms_and_input_controls",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L303",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_8_live_regions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L338",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_9_color_contrast_and_typography",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L398",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_10_motions_and_preferences",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L422",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_11_modals_and_native_dialogs",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L455",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_accessibility_coding_guidelines",
+      "target": "scratch_accessibility_guide_12_testing_validations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_1_content_navigability_and_structure",
+      "target": "scratch_accessibility_guide_actionable_guidelines",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_1_content_navigability_and_structure",
+      "target": "scratch_accessibility_guide_code_examples",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines",
+      "target": "scratch_accessibility_guide_dos",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines",
+      "target": "scratch_accessibility_guide_don_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples",
+      "target": "scratch_accessibility_guide_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_2_semantic_html_and_aria",
+      "target": "scratch_accessibility_guide_actionable_guidelines_63",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_63",
+      "target": "scratch_accessibility_guide_dos_65",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_63",
+      "target": "scratch_accessibility_guide_don_ts_70",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_3_accessible_names_and_descriptions",
+      "target": "scratch_accessibility_guide_actionable_guidelines_80",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_3_accessible_names_and_descriptions",
+      "target": "scratch_accessibility_guide_code_example_visually_hidden_utility",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_80",
+      "target": "scratch_accessibility_guide_dos_82",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_80",
+      "target": "scratch_accessibility_guide_don_ts_89",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_example_visually_hidden_utility",
+      "target": "scratch_accessibility_guide_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_4_document_metadata_and_language",
+      "target": "scratch_accessibility_guide_actionable_guidelines_124",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_4_document_metadata_and_language",
+      "target": "scratch_accessibility_guide_code_examples_136",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_124",
+      "target": "scratch_accessibility_guide_dos_126",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L133",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_124",
+      "target": "scratch_accessibility_guide_don_ts_133",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_136",
+      "target": "scratch_accessibility_guide_codeblock_3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_5_keyboard_and_focus_management",
+      "target": "scratch_accessibility_guide_actionable_guidelines_153",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_5_keyboard_and_focus_management",
+      "target": "scratch_accessibility_guide_code_examples_167",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_153",
+      "target": "scratch_accessibility_guide_dos_155",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_153",
+      "target": "scratch_accessibility_guide_don_ts_162",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_167",
+      "target": "scratch_accessibility_guide_codeblock_4",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L177",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_167",
+      "target": "scratch_accessibility_guide_codeblock_5",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_167",
+      "target": "scratch_accessibility_guide_codeblock_6",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_6_alternate_text_and_media",
+      "target": "scratch_accessibility_guide_actionable_guidelines_212",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L228",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_6_alternate_text_and_media",
+      "target": "scratch_accessibility_guide_code_examples_228",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_6_alternate_text_and_media",
+      "target": "scratch_accessibility_guide_content_visibility_decision_matrix",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_212",
+      "target": "scratch_accessibility_guide_dos_214",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_212",
+      "target": "scratch_accessibility_guide_don_ts_224",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L230",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_228",
+      "target": "scratch_accessibility_guide_codeblock_7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L279",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_7_forms_and_input_controls",
+      "target": "scratch_accessibility_guide_actionable_guidelines_279",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L292",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_7_forms_and_input_controls",
+      "target": "scratch_accessibility_guide_code_examples_292",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L281",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_279",
+      "target": "scratch_accessibility_guide_dos_281",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_279",
+      "target": "scratch_accessibility_guide_don_ts_288",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L294",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_292",
+      "target": "scratch_accessibility_guide_codeblock_8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L307",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_8_live_regions",
+      "target": "scratch_accessibility_guide_live_region_urgency_table",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L317",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_8_live_regions",
+      "target": "scratch_accessibility_guide_actionable_guidelines_317",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L328",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_8_live_regions",
+      "target": "scratch_accessibility_guide_code_example",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L319",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_317",
+      "target": "scratch_accessibility_guide_dos_319",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L324",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_317",
+      "target": "scratch_accessibility_guide_don_ts_324",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L330",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_example",
+      "target": "scratch_accessibility_guide_codeblock_9",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L340",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_9_color_contrast_and_typography",
+      "target": "scratch_accessibility_guide_actionable_guidelines_340",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L363",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_9_color_contrast_and_typography",
+      "target": "scratch_accessibility_guide_code_examples_363",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L342",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_340",
+      "target": "scratch_accessibility_guide_dos_342",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L356",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_340",
+      "target": "scratch_accessibility_guide_don_ts_356",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L365",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_363",
+      "target": "scratch_accessibility_guide_codeblock_10",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L376",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_363",
+      "target": "scratch_accessibility_guide_codeblock_11",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L384",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_363",
+      "target": "scratch_accessibility_guide_codeblock_12",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L400",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_10_motions_and_preferences",
+      "target": "scratch_accessibility_guide_actionable_guidelines_400",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L410",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_10_motions_and_preferences",
+      "target": "scratch_accessibility_guide_code_examples_410",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L402",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_400",
+      "target": "scratch_accessibility_guide_dos_402",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L407",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_400",
+      "target": "scratch_accessibility_guide_don_ts_407",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L412",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_410",
+      "target": "scratch_accessibility_guide_codeblock_13",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L426",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_11_modals_and_native_dialogs",
+      "target": "scratch_accessibility_guide_actionable_guidelines_426",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L435",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_11_modals_and_native_dialogs",
+      "target": "scratch_accessibility_guide_code_examples_435",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L428",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_426",
+      "target": "scratch_accessibility_guide_dos_428",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L432",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_426",
+      "target": "scratch_accessibility_guide_don_ts_432",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L438",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_code_examples_435",
+      "target": "scratch_accessibility_guide_codeblock_14",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L457",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_12_testing_validations",
+      "target": "scratch_accessibility_guide_actionable_guidelines_457",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L459",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_457",
+      "target": "scratch_accessibility_guide_dos_459",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/accessibility_guide.md",
+      "source_location": "L464",
+      "weight": 1.0,
+      "source": "scratch_accessibility_guide_actionable_guidelines_457",
+      "target": "scratch_accessibility_guide_don_ts_464",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -11003,5 +12448,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9897ff9f8010c3ee9b731816579c671ae00e0513"
+  "built_at_commit": "b9ba43a322ecdb0914a8d5cc8507382f7ccabc8e"
 }

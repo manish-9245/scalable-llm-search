@@ -9,6 +9,7 @@ let currentRates = {
 };
 
 let currentSessionId = null;
+let currentAnalysisSku = null;
 let currentLanguage = 'en-IN';
 const loadedProductsMap = new Map();
 const selectedAnalysisProducts = new Map();
@@ -55,6 +56,9 @@ function handleRouting() {
     const tabBtn = document.querySelector('[data-tab="analysis"]');
     if (tabBtn) tabBtn.click();
     
+    // Set current SKU
+    currentAnalysisSku = sku;
+    
     // Check if product is already loaded
     const p = loadedProductsMap.get(sku);
     if (p) {
@@ -80,9 +84,28 @@ function handleRouting() {
     if (sessionId !== currentSessionId) {
       loadSession(sessionId);
     }
-    // Switch to concierge tab if not already
-    const tabBtn = document.querySelector('[data-tab="concierge"]');
+    // Switch to chat tab if not already (it is 'chat' in index.html, not 'concierge'!)
+    const tabBtn = document.querySelector('[data-tab="chat"]');
     if (tabBtn) tabBtn.click();
+  } else if (!hash || hash === '#' || hash === '# ' || hash === '') {
+    // Reset based on active tab
+    const activeTabBtn = document.querySelector('.tab-btn.active');
+    const tabName = activeTabBtn ? activeTabBtn.dataset.tab : 'chat';
+    if (tabName === 'chat') {
+      if (currentSessionId !== null) {
+        startNewSession(false);
+      }
+    } else if (tabName === 'analysis') {
+      if (currentAnalysisSku !== null) {
+        currentAnalysisSku = null;
+        const welcome = document.getElementById('analysis-welcome');
+        const dossier = document.getElementById('analysis-dossier');
+        if (welcome && dossier) {
+          welcome.classList.remove('hidden');
+          dossier.classList.add('hidden');
+        }
+      }
+    }
   }
 }
 
@@ -106,20 +129,58 @@ function setupEventListeners() {
     newChatBtn.addEventListener('click', startNewSession);
   }
 
-  // Mobile Menu Toggle
+  // Mobile Menu Toggle & Accessibility
+  const sidebarCloseBtn = document.getElementById('sidebar-close-btn');
+
+  function openMobileSidebar() {
+    if (!chatSidebar || !sidebarOverlay || !mobileMenuBtn) return;
+    chatSidebar.classList.add('open');
+    sidebarOverlay.classList.add('active');
+    mobileMenuBtn.setAttribute('aria-expanded', 'true');
+    // Move focus to first element inside sidebar (Close button or New Chat)
+    if (sidebarCloseBtn) {
+      sidebarCloseBtn.focus();
+    } else if (newChatBtn) {
+      newChatBtn.focus();
+    }
+  }
+
+  function closeMobileSidebar() {
+    if (!chatSidebar || !sidebarOverlay || !mobileMenuBtn) return;
+    chatSidebar.classList.remove('open');
+    sidebarOverlay.classList.remove('active');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    // Restore focus to mobile menu button
+    mobileMenuBtn.focus();
+  }
+
   if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
-      chatSidebar.classList.toggle('open');
-      sidebarOverlay.classList.toggle('active');
+      const isOpen = chatSidebar.classList.contains('open');
+      if (isOpen) {
+        closeMobileSidebar();
+      } else {
+        openMobileSidebar();
+      }
     });
   }
 
-  if (sidebarOverlay) {
-    sidebarOverlay.addEventListener('click', () => {
-      chatSidebar.classList.remove('open');
-      sidebarOverlay.classList.remove('active');
-    });
+  if (sidebarCloseBtn) {
+    sidebarCloseBtn.addEventListener('click', closeMobileSidebar);
   }
+
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener('click', closeMobileSidebar);
+  }
+
+  // Escape key support to close mobile sidebar
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (chatSidebar && chatSidebar.classList.contains('open')) {
+        closeMobileSidebar();
+      }
+    }
+  });
 
   // Voice Interaction Events
   if (micBtn) {
@@ -179,7 +240,7 @@ function setupEventListeners() {
 // CHAT SESSION & MESSAGE HANDLING
 // ----------------------------------------------------------------------------
 
-function startNewSession() {
+function startNewSession(shouldUpdateHash = true) {
   currentSessionId = null;
   chatMessagesContainer.innerHTML = '';
   chatMessagesContainer.appendChild(welcomeChat);
@@ -190,7 +251,9 @@ function startNewSession() {
   Array.from(chatHistoryList.children).forEach(el => el.classList.remove('active'));
   
   // Update URL
-  window.location.hash = '';
+  if (shouldUpdateHash) {
+    window.location.hash = '';
+  }
 }
 
 async function ensureSession(titleText = 'New Conversation') {
@@ -401,8 +464,12 @@ window.switchDossierTab = function(event, sku, tabId) {
 
 function addSessionToSidebar(session) {
   const btn = document.createElement('button');
-  btn.className = 'session-item active';
+  btn.className = 'session-item';
+  if (currentSessionId === session.id) {
+    btn.classList.add('active');
+  }
   btn.textContent = session.title || 'New Conversation';
+  btn.dataset.id = session.id;
   btn.onclick = () => loadSession(session.id);
   
   // Insert at top
@@ -414,9 +481,14 @@ async function loadSession(id) {
   welcomeChat.classList.add('hidden');
   chatMessagesContainer.innerHTML = '';
   
-  // A crude way to mark active
-  Array.from(chatHistoryList.children).forEach(el => el.classList.remove('active'));
-  // In a real app we'd attach dataset.id to the buttons, but for now we'll just ignore the visual active state
+  // Mark active state on sidebar button
+  Array.from(chatHistoryList.children).forEach(el => {
+    if (el.dataset.id === id) {
+      el.classList.add('active');
+    } else {
+      el.classList.remove('active');
+    }
+  });
   
   try {
     const res = await fetch(`/api/chat/session/${id}`);
@@ -630,14 +702,30 @@ function setupTabs() {
 
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      const tabName = btn.dataset.tab;
+
       // Remove active from all
       tabBtns.forEach(b => b.classList.remove('active'));
       tabContents.forEach(c => c.classList.remove('active'));
 
       // Set active
       btn.classList.add('active');
-      const targetId = `tab-${btn.dataset.tab}`;
-      document.getElementById(targetId).classList.add('active');
+      const targetId = `tab-${tabName}`;
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) targetEl.classList.add('active');
+
+      // Update URL hash without triggering popstate/re-load loop
+      if (tabName === 'chat') {
+        const targetHash = currentSessionId ? `#session=${currentSessionId}` : '';
+        if (window.location.hash !== targetHash) {
+          window.history.pushState(null, null, targetHash || ' ');
+        }
+      } else if (tabName === 'analysis') {
+        const targetHash = currentAnalysisSku ? `#/analysis/${currentAnalysisSku}` : '';
+        if (window.location.hash !== targetHash) {
+          window.history.pushState(null, null, targetHash || ' ');
+        }
+      }
     });
   });
 
@@ -1147,6 +1235,7 @@ function parseNarrativeToTabs(description, p = {}) {
 // ----------------------------------------------------------------------------
 
 function selectProductForAnalysis(product, imageUrl, pushState = true) {
+  currentAnalysisSku = product.sku; // Save the selected SKU globally
   const welcome = document.getElementById('analysis-welcome');
   const dossier = document.getElementById('analysis-dossier');
   

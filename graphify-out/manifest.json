@@ -25,8 +25,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/public/app.js": {
-    "mtime": 1782852930.3413064,
-    "ast_hash": "26faa816365b66d065e028f1dfd1d75d",
+    "mtime": 1782854882.7758136,
+    "ast_hash": "78ac19a925893588295d4d11f442d816",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/mastra/agent.js": {
@@ -65,8 +65,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/public/index.html": {
-    "mtime": 1782759043.3416643,
-    "ast_hash": "4ccce438f4490e72dd7d55e868914239",
+    "mtime": 1782854888.8199751,
+    "ast_hash": "0aaad90b26172205c4b1a872fef5e8a6",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/test_chat_integration.js": {
@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/README.md": {
-    "mtime": 1782838322.9432924,
-    "ast_hash": "73bb504d7671d49975630ca2e9e0e678",
+    "mtime": 1782854404.2922711,
+    "ast_hash": "009a0236cdde47ec04a20b99be702cf1",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/scratch/inspect_mastra.mjs": {
@@ -372,6 +372,11 @@
   "/Users/manishtiwari/Documents/scalable-llm-search/scratch/inspect_queue.js": {
     "mtime": 1782851973.0610964,
     "ast_hash": "afaa0bde56f3c11b32a26834fa4fa34d",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/accessibility_guide.md": {
+    "mtime": 1782854446.9396102,
+    "ast_hash": "b4ff25afdb7228fba83515db3913fba9",
     "semantic_hash": ""
   }
 }

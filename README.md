@@ -116,6 +116,7 @@ The engine combines three distinct retrieval streams using **Reciprocal Rank Fus
 Jewellery prices fluctuate daily. To ensure accuracy without re-indexing millions of rows, we use a server-side **Delta-Anchor SQL Formula**:
 - **Equation**: $CalculatedPrice = BasePrice + (GoldWeight \times (CurrentRate - BaseGoldRate) \times 1.03)$
 - **GST Implementation**: Formulas include a standard 3% GST multiplier (`1.03`).
+- **Effective Gold Weight Calibration**: Pure silver items (purities like `'925'`, `'925S'`, `'999S'`) and platinum items (`'Pt 950'`) are insulated from fluctuating gold rate price deltas by dynamically treating their gold weight as `0` (`effectiveGoldWeight` logic) inside the SQL and JavaScript dynamic price builders. This completely prevents falling gold rates from driving pure silver or platinum retail prices into negative values.
 - **Fallback**: If an anchor point is missing, the system dynamically reconstructs the price from component weights (Gold + Diamond + Making Charges).
 
 #### Live Gold & Metal Rates Sync (`src/services/rateFetcherService.js`):
@@ -132,7 +133,7 @@ All customer prompts undergo structured parsing in `src/utils/terminology.js` pr
   - **Dynamic Dictionary Compilation**: Compiles spelling candidates directly from live PostgreSQL database schemas and search ontology keys (gemstones, categories, sub-categories, motifs).
   - **Protected Keywords Safeguard**: Core database terms (like metal names, units such as *lakh/k/carat*, operators like *with/without*, and negative words) are protected from being modified by spelling correction to prevent false matches.
   - **Adaptive Scoring Thresholds**: Integrates custom length-based threshold heuristics (e.g., threshold of `0.25` for $\le 4$ chars, `0.35` for $\le 5$ chars, and `0.5` for longer strings) to prevent false corrections of short queries.
-- **Vernacular Translation**: Auto-maps slang / Hindi terminology like *"Jhumkas"* to earrings and *"Thushi"* to necklaces.
+- **Vernacular Translation**: Auto-maps slang / regional terminology (e.g., *"Jhumkas"* to earrings, *"Thushi"* to necklaces, and *"Payal"* or *"Anklet"* directly mapped to the sub-category `'Anklet'` under the `'Wedding Accessories'` catalog category rather than standard accessories, ensuring zero routing leakage).
 - **Shorthand Processing**: Converts monetary terms like *"1.5 Lakhs"* or *"90k"* into raw integer bounds (`150000` and `90000` respectively).
 - **Negation Extraction**: Parses negation keywords (e.g. *"excluding"*, *"without"*, *"no"*) to isolate items to exclude via Postgres GIN array operations.
 

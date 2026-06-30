@@ -26,7 +26,7 @@
   <!-- App Header -->
   <header class="app-header">
     <div class="header-left">
-      <button id="mobile-menu-btn" class="mobile-menu-btn" title="Menu">
+      <button id="mobile-menu-btn" class="mobile-menu-btn" title="Menu" aria-label="Open chat history menu" aria-expanded="false" aria-controls="chat-sidebar">
         <i class="fa-solid fa-bars"></i>
       </button>
       <div class="brand-logo">
@@ -69,7 +69,12 @@
       <div class="chat-layout">
     
     <!-- Sidebar: Chat History -->
-    <aside class="chat-sidebar" id="chat-sidebar">
+    <aside class="chat-sidebar" id="chat-sidebar" aria-label="Chat History">
+      <div class="sidebar-mobile-header" style="display: none; justify-content: flex-end; align-items: center; width: 100%; margin-bottom: -8px;">
+        <button id="sidebar-close-btn" class="sidebar-close-btn" aria-label="Close chat history menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
       <button id="new-chat-btn" class="btn-primary full-width new-chat-btn">
         <i class="fa-solid fa-plus"></i> New Chat
       </button>
