@@ -1,16 +1,16 @@
 # Graph Report - scalable-llm-search  (2026-06-30)
 
 ## Corpus Check
-- 58 files · ~42,606 words
+- 59 files · ~42,681 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 367 nodes · 632 edges · 24 communities (19 shown, 5 thin omitted)
+- 369 nodes · 636 edges · 23 communities (18 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 3 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `efdf4f40`
+- Built from commit: `7214f77a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,7 +19,6 @@
 - [[_COMMUNITY_Community 1|Community 1]]
 - [[_COMMUNITY_Community 2|Community 2]]
 - [[_COMMUNITY_Community 3|Community 3]]
-- [[_COMMUNITY_Community 4|Community 4]]
 - [[_COMMUNITY_Community 6|Community 6]]
 - [[_COMMUNITY_Community 7|Community 7]]
 - [[_COMMUNITY_Community 9|Community 9]]
@@ -43,9 +42,9 @@
 3. `generateEmbedding()` - 13 edges
 4. `redisClient` - 13 edges
 5. `QueryBuilder` - 12 edges
-6. `Indriya AI: The Luxury Concierge Engine` - 10 edges
-7. `getLatestMetalRates()` - 9 edges
-8. `resolveTerminology()` - 8 edges
+6. `resolveTerminology()` - 10 edges
+7. `Indriya AI: The Luxury Concierge Engine` - 10 edges
+8. `getLatestMetalRates()` - 9 edges
 9. `4. Engineering Deep-Dive (LLD)` - 8 edges
 10. `handleSendMessage()` - 7 edges
 
@@ -61,27 +60,23 @@
 - `run()` --calls--> `query()`  [EXTRACTED]
   scratch/view_some_products.mjs → src/config/db.js
 
-## Communities (24 total, 5 thin omitted)
+## Communities (23 total, 5 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.04
 Nodes (45): adminRatesPanel, adminToggleBtn, allAnalysisProducts, bulkAnalyzingSkus, chatHistoryList, chatMessagesContainer, chatSidebar, contentArea (+37 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.14
-Nodes (19): pool, runLogicalTests(), runTests(), manualTest(), queries, runTestCases(), testTypo(), searchCatalogue() (+11 more)
+Cohesion: 0.13
+Nodes (20): pool, runLogicalTests(), runTests(), manualTest(), queries, runTest(), runTestCases(), testTypo() (+12 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.08
-Nodes (24): dependencies, ai, @ai-sdk/google, @bull-board/api, @bull-board/fastify, bullmq, dotenv, fastify (+16 more)
+Cohesion: 0.05
+Nodes (37): dependencies, ai, @ai-sdk/google, @bull-board/api, @bull-board/fastify, bullmq, dotenv, fastify (+29 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.16
 Nodes (16): getSslConfig(), generateEmbedding(), getEmbedder(), getTranscriber(), parseWav(), transcribeAudio(), preCache(), connectRedis() (+8 more)
-
-### Community 4 - "Community 4"
-Cohesion: 0.14
-Nodes (13): description, engines, node, main, name, scripts, db:init, ollama:pull (+5 more)
 
 ### Community 6 - "Community 6"
 Cohesion: 0.29
@@ -146,6 +141,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.13666666666666666 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1282051282051282 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._

@@ -261,7 +261,7 @@
       "source_file": "package.json",
       "source_location": "L1",
       "id": "package_json",
-      "community": 4,
+      "community": 2,
       "norm_label": "package.json"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "package.json",
       "source_location": "L2",
       "id": "scalable_llm_search_package_name",
-      "community": 4,
+      "community": 2,
       "norm_label": "name"
     },
     {
@@ -279,7 +279,7 @@
       "source_file": "package.json",
       "source_location": "L3",
       "id": "scalable_llm_search_package_version",
-      "community": 4,
+      "community": 2,
       "norm_label": "version"
     },
     {
@@ -288,7 +288,7 @@
       "source_file": "package.json",
       "source_location": "L4",
       "id": "scalable_llm_search_package_description",
-      "community": 4,
+      "community": 2,
       "norm_label": "description"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "package.json",
       "source_location": "L5",
       "id": "scalable_llm_search_package_main",
-      "community": 4,
+      "community": 2,
       "norm_label": "main"
     },
     {
@@ -306,7 +306,7 @@
       "source_file": "package.json",
       "source_location": "L6",
       "id": "scalable_llm_search_package_type",
-      "community": 4,
+      "community": 2,
       "norm_label": "type"
     },
     {
@@ -315,7 +315,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "id": "scalable_llm_search_package_scripts",
-      "community": 4,
+      "community": 2,
       "norm_label": "scripts"
     },
     {
@@ -324,7 +324,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "id": "scalable_llm_search_package_scripts_start",
-      "community": 4,
+      "community": 2,
       "norm_label": "start"
     },
     {
@@ -333,7 +333,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "id": "scalable_llm_search_package_scripts_db_init",
-      "community": 4,
+      "community": 2,
       "norm_label": "db:init"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "id": "scalable_llm_search_package_scripts_test",
-      "community": 4,
+      "community": 2,
       "norm_label": "test"
     },
     {
@@ -351,7 +351,7 @@
       "source_file": "package.json",
       "source_location": "L11",
       "id": "scalable_llm_search_package_scripts_pre_cache",
-      "community": 4,
+      "community": 2,
       "norm_label": "pre-cache"
     },
     {
@@ -360,7 +360,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "id": "scalable_llm_search_package_scripts_ollama_pull",
-      "community": 4,
+      "community": 2,
       "norm_label": "ollama:pull"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "package.json",
       "source_location": "L39",
       "id": "scalable_llm_search_package_engines",
-      "community": 4,
+      "community": 2,
       "norm_label": "engines"
     },
     {
@@ -594,7 +594,7 @@
       "source_file": "package.json",
       "source_location": "L40",
       "id": "scalable_llm_search_package_engines_node",
-      "community": 4,
+      "community": 2,
       "norm_label": "node"
     },
     {
@@ -1253,6 +1253,24 @@
       "id": "scratch_check_product_details_checkproductdetails",
       "community": 20,
       "norm_label": "checkproductdetails()"
+    },
+    {
+      "label": "test_dynamic_spelling_with_op.js",
+      "file_type": "code",
+      "source_file": "scratch/test_dynamic_spelling_with_op.js",
+      "source_location": "L1",
+      "id": "scratch_test_dynamic_spelling_with_op_js",
+      "community": 1,
+      "norm_label": "test_dynamic_spelling_with_op.js"
+    },
+    {
+      "label": "runTest()",
+      "file_type": "code",
+      "source_file": "scratch/test_dynamic_spelling_with_op.js",
+      "source_location": "L3",
+      "id": "scratch_test_dynamic_spelling_with_op_runtest",
+      "community": 1,
+      "norm_label": "runtest()"
     },
     {
       "label": "check_daily_rates.mjs",
@@ -2176,7 +2194,7 @@
       "label": "resolveTerminology()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L22",
+      "source_location": "L23",
       "id": "utils_terminology_resolveterminology",
       "community": 1,
       "norm_label": "resolveterminology()"
@@ -2185,7 +2203,7 @@
       "label": "loadOntologyAndSlang()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L420",
+      "source_location": "L421",
       "id": "utils_terminology_loadontologyandslang",
       "community": 1,
       "norm_label": "loadontologyandslang()"
@@ -2194,7 +2212,7 @@
       "label": "levenshteinDistance()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L429",
+      "source_location": "L430",
       "id": "utils_terminology_levenshteindistance",
       "community": 1,
       "norm_label": "levenshteindistance()"
@@ -2761,7 +2779,7 @@
       "label": "parseQuery",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L419",
+      "source_location": "L420",
       "id": "utils_terminology_parsequery",
       "community": 1,
       "norm_label": "parsequery"
@@ -5968,6 +5986,49 @@
       "confidence_score": 1.0,
       "source": "scratch_check_product_details_checkproductdetails",
       "target": "config_db_query"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_dynamic_spelling_with_op.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_dynamic_spelling_with_op_js",
+      "target": "src_utils_terminology_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_dynamic_spelling_with_op.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_dynamic_spelling_with_op_js",
+      "target": "utils_terminology_resolveterminology",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_dynamic_spelling_with_op.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_test_dynamic_spelling_with_op_js",
+      "target": "scratch_test_dynamic_spelling_with_op_runtest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_dynamic_spelling_with_op.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "scratch_test_dynamic_spelling_with_op_runtest",
+      "target": "utils_terminology_resolveterminology",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -9589,9 +9650,9 @@
       "source_file": "README.md",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_4_engineering_deep_dive_lld",
-      "target": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm_live_rates_fetcher",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm_live_rates_fetcher"
     },
     {
       "relation": "contains",
@@ -9649,9 +9710,9 @@
       "source_file": "README.md",
       "source_location": "L121",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_b_luxury_stability_pricing_algorithm_live_rates_fetcher",
-      "target": "scalable_llm_search_readme_live_gold_metal_rates_sync_src_services_ratefetcherservice_js",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_live_gold_metal_rates_sync_src_services_ratefetcherservice_js"
     },
     {
       "relation": "contains",
@@ -9719,9 +9780,9 @@
       "source_file": "README.md",
       "source_location": "L164",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_5_database_schema",
-      "target": "scalable_llm_search_readme_daily_metal_rates",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_daily_metal_rates"
     },
     {
       "relation": "contains",
@@ -9951,5 +10012,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "efdf4f40f1185d12c8811ef19efcafacff9ccaea"
+  "built_at_commit": "7214f77adf8d5a28c50e7dd62ec42bd3aee7bcb4"
 }

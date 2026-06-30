@@ -12,7 +12,8 @@ const PROTECTED_WORDS = new Set([
     'lakh', 'lakhs', 'k', 'thousand', 'thousands', 'rs', 'rupees', 'rupee', 'karat', 'karats', 'carat', 'carats', 'ct', 'cts', 'g', 'gm', 'grams', 'gram',
     // Descriptive, design metadata, & intent keywords
     'price', 'heavy', 'light', 'weight', 'most', 'least', 'cheapest', 'expensive', 'best', 'cheap', 'top', 'first', 'only', 'just', 'plain', 'mostly', 'something', 'anything', 'items', 'products', 'collections', 'show', 'me', 'gift', 'bridal', 'wedding', 'festive', 'party', 'engagement', 'wear', 'daily', 'office',
-    'motif', 'motifs', 'theme', 'themes', 'craftsmanship', 'craft', 'crafts', 'technique', 'techniques'
+    'motif', 'motifs', 'theme', 'themes', 'craftsmanship', 'craft', 'crafts', 'technique', 'techniques',
+    'modern', 'classic', 'traditional', 'statement', 'religious', 'contemporary'
 ]);
 
 /**
@@ -28,7 +29,7 @@ export async function resolveTerminology(query, existingFilters = {}) {
     
     if (DB_SCHEMA.gemstones) DB_SCHEMA.gemstones.forEach(g => dictionary.add(g.toLowerCase()));
     if (ontology.gemstone) Object.keys(ontology.gemstone).forEach(g => dictionary.add(g.toLowerCase()));
-    ['diamond', 'ruby', 'emerald', 'pearl', 'sapphire', 'synthetic', 'polki'].forEach(g => dictionary.add(g));
+    ['diamond', 'ruby', 'emerald', 'pearl', 'sapphire', 'synthetic', 'polki', 'under', 'below', 'above', 'over', 'between'].forEach(g => dictionary.add(g));
 
     if (OFFICIAL_CATEGORIES) OFFICIAL_CATEGORIES.forEach(c => dictionary.add(c.toLowerCase()));
     if (ontology.category) {
@@ -130,16 +131,16 @@ export async function resolveTerminology(query, existingFilters = {}) {
 
     // --- Price Boundary Parsing ---
     const pricePatterns = [
-        { regex: /\b(?:under|below|less than|up to|within|max)\s+(?:rs\.?\s*)?(\d+(?:\.\d+)?)\s*(lakhs?|lakh|k|thousand)?/i, type: 'max' },
-        { regex: /\b(?:above|over|more than|starting from|min)\s+(?:rs\.?\s*)?(\d+(?:\.\d+)?)\s*(lakhs?|lakh|k|thousand)?/i, type: 'min' },
-        { regex: /(?:rs\.?\s*)?(\d+(?:\.\d+)?)\s*(lakhs?|lakh|k|thousand)\b/i, type: 'generic' }
+        { regex: /\b(?:under|below|less than|up to|within|max)\s+(?:rs\.?\s*)?(\d+(?:\.\d+)?)\s*(lakhs?|lakh|l\b|k|thousand)?/i, type: 'max' },
+        { regex: /\b(?:above|over|more than|starting from|min)\s+(?:rs\.?\s*)?(\d+(?:\.\d+)?)\s*(lakhs?|lakh|l\b|k|thousand)?/i, type: 'min' },
+        { regex: /(?:rs\.?\s*)?(\d+(?:\.\d+)?)\s*(lakhs?|lakh|l\b|k|thousand)\b/i, type: 'generic' }
     ];
 
     const parseValue = (val, unit) => {
         let num = parseFloat(val);
         if (unit) {
             const u = unit.toLowerCase();
-            if (u.includes('lakh')) num *= 100000;
+            if (u.includes('lakh') || u === 'l') num *= 100000;
             else if (u === 'k' || u.includes('thousand')) num *= 1000;
         }
         return num;
@@ -162,14 +163,14 @@ export async function resolveTerminology(query, existingFilters = {}) {
     });
 
     // Handle "between 2 and 4 lakhs" specifically
-    const rangeMatch = lowerQuery.match(/\b(?:between|from)\s+(\d+(?:\.\d+)?)\s*(?:and|to)\s+(\d+(?:\.\d+)?)\s*(lakhs?|lakh|k|thousand)?/i);
+    const rangeMatch = lowerQuery.match(/\b(?:between|from)\s+(\d+(?:\.\d+)?)\s*(?:and|to)\s+(\d+(?:\.\d+)?)\s*(lakhs?|lakh|l\b|k|thousand)?/i);
     if (rangeMatch) {
         result.minPrice = parseValue(rangeMatch[1], rangeMatch[3]);
         result.maxPrice = parseValue(rangeMatch[2], rangeMatch[3]);
     }
 
     // Special case for "1.5 lakhs" without explicit under/above
-    const LakhMatch = lowerQuery.match(/(\d+(?:\.\d+)?)\s*lakhs?/i);
+    const LakhMatch = lowerQuery.match(/(\d+(?:\.\d+)?)\s*(?:lakhs?|l\b)/i);
     if (LakhMatch && !result.minPrice && !result.maxPrice) {
         result.maxPrice = parseFloat(LakhMatch[1]) * 100000;
     }

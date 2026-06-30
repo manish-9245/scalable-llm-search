@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/utils/terminology.js": {
-    "mtime": 1782828165.1046362,
-    "ast_hash": "529a803b3373fc7c51677f1265f71d3d",
+    "mtime": 1782842455.2221315,
+    "ast_hash": "b6a8a6c9d8556292c65cab9953cdb97c",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/services/searchService.js": {
@@ -297,6 +297,11 @@
   "/Users/manishtiwari/Documents/scalable-llm-search/src/services/rateFetcherService.js": {
     "mtime": 1782838097.7017555,
     "ast_hash": "5f80d989a6b1f921aaf3e14cf7cdf00d",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/test_dynamic_spelling_with_op.js": {
+    "mtime": 1782842392.551502,
+    "ast_hash": "11bca3031e3fe8fafa0ff295c7c53eeb",
     "semantic_hash": ""
   }
 }
