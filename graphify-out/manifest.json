@@ -55,13 +55,13 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/utils/terminology.js": {
-    "mtime": 1782843858.7098002,
-    "ast_hash": "d1f6f4866f2b7557007a21bc6246a09d",
+    "mtime": 1782845360.4895551,
+    "ast_hash": "d3baac3163b05eab3f379685dbd76f0b",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/services/searchService.js": {
-    "mtime": 1782843887.0979562,
-    "ast_hash": "6975e4fc18adccabecb38b9de52b3ea2",
+    "mtime": 1782845417.677574,
+    "ast_hash": "8d54db80fc815e5e50a89169e31ca4b4",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/public/index.html": {
@@ -322,6 +322,11 @@
   "/Users/manishtiwari/Documents/scalable-llm-search/src/utils/sessionMerge.js": {
     "mtime": 1782843864.1674788,
     "ast_hash": "43c69ca4ca6ad08e51e2f7187fc32326",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/test_generalized_only.js": {
+    "mtime": 1782845440.9163752,
+    "ast_hash": "39b5125d7417970aa5533b50e7d9ad3e",
     "semantic_hash": ""
   }
 }

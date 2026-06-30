@@ -1,16 +1,16 @@
-# Graph Report - scalable-llm-search  (2026-06-30)
+# Graph Report - scalable-llm-search  (2026-07-01)
 
 ## Corpus Check
-- 63 files · ~44,027 words
+- 64 files · ~44,600 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 377 nodes · 654 edges · 22 communities (18 shown, 4 thin omitted)
+- 380 nodes · 659 edges · 23 communities (18 shown, 5 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `64c8ba2f`
+- Built from commit: `625d2fff`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -19,6 +19,7 @@
 - [[_COMMUNITY_Community 1|Community 1]]
 - [[_COMMUNITY_Community 2|Community 2]]
 - [[_COMMUNITY_Community 3|Community 3]]
+- [[_COMMUNITY_Community 4|Community 4]]
 - [[_COMMUNITY_Community 6|Community 6]]
 - [[_COMMUNITY_Community 7|Community 7]]
 - [[_COMMUNITY_Community 9|Community 9]]
@@ -40,8 +41,8 @@
 2. `searchCatalogue()` - 21 edges
 3. `generateEmbedding()` - 13 edges
 4. `redisClient` - 13 edges
-5. `QueryBuilder` - 12 edges
-6. `resolveTerminology()` - 10 edges
+5. `resolveTerminology()` - 12 edges
+6. `QueryBuilder` - 12 edges
 7. `Indriya AI: The Luxury Concierge Engine` - 10 edges
 8. `getLatestMetalRates()` - 9 edges
 9. `4. Engineering Deep-Dive (LLD)` - 8 edges
@@ -59,23 +60,27 @@
 - `run()` --calls--> `query()`  [EXTRACTED]
   scratch/view_some_products.mjs → src/config/db.js
 
-## Communities (22 total, 4 thin omitted)
+## Communities (23 total, 5 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.04
 Nodes (45): adminRatesPanel, adminToggleBtn, allAnalysisProducts, bulkAnalyzingSkus, chatHistoryList, chatMessagesContainer, chatSidebar, contentArea (+37 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.10
-Nodes (16): queryDatabaseTool, runLogicalTests(), runTests(), manualTest(), queries, test(), testNewPricing(), runSessionContextVerification() (+8 more)
+Cohesion: 0.09
+Nodes (28): queryDatabaseTool, runLogicalTests(), runTests(), manualTest(), queries, test(), testNewPricing(), runSessionContextVerification() (+20 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.05
 Nodes (37): dependencies, ai, @ai-sdk/google, @bull-board/api, @bull-board/fastify, bullmq, dotenv, fastify (+29 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.21
-Nodes (13): getSslConfig(), generateEmbedding(), getEmbedder(), getTranscriber(), parseWav(), transcribeAudio(), preCache(), run() (+5 more)
+Cohesion: 0.42
+Nodes (6): getEmbedder(), getTranscriber(), parseWav(), transcribeAudio(), preCache(), startTime
+
+### Community 4 - "Community 4"
+Cohesion: 0.30
+Nodes (8): connectRedis(), redisClient, run(), run(), fetchAndSyncRates(), fetchLiveGoldRate(), getPreviousMetalRates(), startRateFetcherCron()
 
 ### Community 6 - "Community 6"
 Cohesion: 0.29
@@ -95,15 +100,11 @@ Nodes (13): filterAndRenderAnalysisProducts(), handleRouting(), loadProductsForA
 
 ### Community 11 - "Community 11"
 Cohesion: 0.05
-Nodes (43): queueProductIngestion(), startIngestionWorker(), connectRedis(), redisClient, resources, chatAgent, google, indriyaAnalyzer (+35 more)
+Nodes (38): queueProductIngestion(), startIngestionWorker(), resources, chatAgent, google, indriyaAnalyzer, mastra, ollama (+30 more)
 
 ### Community 14 - "Community 14"
 Cohesion: 0.07
 Nodes (29): 1. Zero-Cost "Pure Local" Philosophy, 2. Technical Stack, 3.5 Infrastructure & Deployment Flow, 3. System Architecture (HLD), 4.5 Observability & Distributed Tracing, 4. Engineering Deep-Dive (LLD), 5. Database Schema, 6.2 Monitoring & Admin Tools (+21 more)
-
-### Community 15 - "Community 15"
-Cohesion: 0.20
-Nodes (12): DB_SCHEMA, OFFICIAL_CATEGORIES, calculatePriceValue(), createEmptyParse(), loadOntologyAndSlang(), mapToExclusionKeyword(), ontologyCache, parseQuery (+4 more)
 
 ### Community 16 - "Community 16"
 Cohesion: 0.18
@@ -114,32 +115,32 @@ Cohesion: 0.18
 Nodes (9): corrected, DB_SCHEMA, dictionary, dictionaryList, fuse, OFFICIAL_CATEGORIES, ontology, PROTECTED_WORDS (+1 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.08
-Nodes (29): pool, query(), check(), runChatIntegrationTest(), run(), run(), checkChatHistory(), run() (+21 more)
+Cohesion: 0.07
+Nodes (34): getSslConfig(), pool, query(), generateEmbedding(), check(), run(), runChatIntegrationTest(), run() (+26 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.50
 Nodes (3): content, endIndex, startIndex
 
 ## Knowledge Gaps
-- **151 isolated node(s):** `__filename`, `__dirname`, `fastify`, `publicPath`, `serverAdapter` (+146 more)
+- **152 isolated node(s):** `__filename`, `__dirname`, `fastify`, `publicPath`, `serverAdapter` (+147 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `query()` connect `Community 20` to `Community 3`, `Community 1`, `Community 11`, `Community 15`?**
+- **Why does `query()` connect `Community 20` to `Community 1`, `Community 11`, `Community 4`?**
   _High betweenness centrality (0.084) - this node is a cross-community bridge._
-- **Why does `searchCatalogue()` connect `Community 1` to `Community 3`, `Community 11`, `Community 20`, `Community 15`?**
+- **Why does `QueryBuilder` connect `Community 15` to `Community 1`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `searchCatalogue()` connect `Community 1` to `Community 11`, `Community 20`?**
   _High betweenness centrality (0.020) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `searchCatalogue()` (e.g. with `runChatIntegrationTest()` and `mergeFilters()`) actually correct?**
   _`searchCatalogue()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `__filename`, `__dirname`, `fastify` to the rest of the system?**
-  _151 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _152 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.04 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.10241820768136557 - nodes in this community are weakly interconnected._
-- **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08970099667774087 - nodes in this community are weakly interconnected._

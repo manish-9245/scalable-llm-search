@@ -191,6 +191,17 @@ export async function resolveTerminology(query, existingFilters = {}) {
         return regex.test(lowerQuery);
     };
 
+    // Check for "only" / "strictly" qualifiers (e.g. "diamond only", "only white gold")
+    const isOnlyQualified = (term) => {
+        const lowTerm = term.toLowerCase();
+        const regex = new RegExp(
+            `\\b(?:only|just|exclusively|strictly|pure|plain)\\s+(?:\\w+\\s+){0,2}?${lowTerm}s?\\b|` +
+            `\\b${lowTerm}s?\\s+(?:\\w+\\s+){0,2}?(?:only|just|exclusively|strictly)\\b`, 
+            'i'
+        );
+        return regex.test(lowerQuery);
+    };
+
     // Category Resolution (DB Schema + Ontology)
     const catsToCheck = new Set([...(OFFICIAL_CATEGORIES || []), ...Object.keys(ontology.category || {})]);
     catsToCheck.forEach(c => {
@@ -369,44 +380,85 @@ export async function resolveTerminology(query, existingFilters = {}) {
         result.visualSplits.visible_diamond_pct = 50;
     }
 
-    // Metal Type Heuristics (gold, platinum, silver)
-    const hasPlatinum = /\bplatinum\b/i.test(lowerQuery);
-    const hasSilver = /\bsilver\b/i.test(lowerQuery);
-    const hasGold = /\bgold\b/i.test(lowerQuery);
-
-    if (hasPlatinum) {
-        if (isNegated('platinum')) {
-            if (!result.exclusions.includes('platinum')) result.exclusions.push('platinum');
-        } else {
-            result.product_type = 'platinum';
+    // Metal Type Heuristics & Exclusions (gold, platinum, silver)
+    const METALS = ['platinum', 'gold', 'silver'];
+    
+    METALS.forEach(metal => {
+        if (new RegExp(`\\b${metal}\\b`, 'i').test(lowerQuery)) {
+            if (isNegated(metal)) {
+                if (!result.exclusions.includes(metal)) result.exclusions.push(metal);
+            } else {
+                result.product_type = metal;
+            }
         }
-    } else if (hasSilver) {
-        if (isNegated('silver')) {
-            if (!result.exclusions.includes('silver')) result.exclusions.push('silver');
-        } else {
-            result.product_type = 'silver';
-        }
-    } else if (hasGold) {
-        if (isNegated('gold')) {
-            if (!result.exclusions.includes('gold')) result.exclusions.push('gold');
-        } else {
-            result.product_type = 'gold';
-        }
-    }
+    });
 
-    const isGoldOnly = /\b(?:only\s+gold|gold\s+only|strictly\s+gold|just\s+gold|plain\s+gold)\b/i.test(lowerQuery);
-    if (isGoldOnly) {
-        result.product_type = 'gold';
-        if (!result.exclusions.includes('platinum')) result.exclusions.push('platinum');
-        if (!result.exclusions.includes('silver')) result.exclusions.push('silver');
-    }
+    // Generalized Metal "Only" Exclusions
+    METALS.forEach(metal => {
+        if (isOnlyQualified(metal) && !isNegated(metal)) {
+            result.product_type = metal;
+            METALS.forEach(otherMetal => {
+                if (otherMetal !== metal && !result.exclusions.includes(otherMetal)) {
+                    result.exclusions.push(otherMetal);
+                }
+            });
+        }
+    });
 
-    const isPlatinumOnly = /\b(?:only\s+platinum|platinum\s+only|strictly\s+platinum|just\s+platinum|plain\s+platinum)\b/i.test(lowerQuery);
-    if (isPlatinumOnly) {
-        result.product_type = 'platinum';
-        if (!result.exclusions.includes('gold')) result.exclusions.push('gold');
-        if (!result.exclusions.includes('silver')) result.exclusions.push('silver');
-    }
+    // Generalized Metal Colors Parsing & Exclusions
+    const METAL_COLORS = {
+        'white': 'White',
+        'rose': 'Rose',
+        'pink': 'Rose',
+        'yellow': 'Yellow',
+        'dual-tone': 'Dual-Tone',
+        'dual tone': 'Dual-Tone',
+        'tri-tone': 'Tri-Tone',
+        'tri tone': 'Tri-Tone'
+    };
+
+    // Detect direct metal color mentions
+    Object.entries(METAL_COLORS).forEach(([kw, val]) => {
+        if (new RegExp(`\\b${kw}(?:\\s+gold)?\\b`, 'i').test(lowerQuery)) {
+            if (isNegated(kw)) {
+                if (!result.exclusions.includes(kw)) result.exclusions.push(kw);
+            } else {
+                result.metalColor = val;
+            }
+        }
+    });
+
+    // Generalized Metal Color "Only" Exclusions
+    Object.entries(METAL_COLORS).forEach(([kw, val]) => {
+        if (isOnlyQualified(kw) && !isNegated(kw)) {
+            result.metalColor = val;
+            // Exclude all other distinct metal colors
+            const otherColors = ['white', 'rose', 'yellow', 'dual-tone', 'tri-tone'];
+            otherColors.forEach(otherColor => {
+                if (otherColor !== kw && METAL_COLORS[otherColor] !== val) {
+                    if (!result.exclusions.includes(otherColor)) {
+                        result.exclusions.push(otherColor);
+                    }
+                }
+            });
+        }
+    });
+
+    // Generalized Gemstone "Only" Exclusions
+    const ALL_GEMSTONES = ['diamond', 'ruby', 'emerald', 'pearl', 'sapphire', 'synthetic', 'polki'];
+    ALL_GEMSTONES.forEach(gem => {
+        if (isOnlyQualified(gem) && !isNegated(gem)) {
+            result.gemstone = gem;
+            if (!result.matchedGemstones.includes(gem)) {
+                result.matchedGemstones.push(gem);
+            }
+            ALL_GEMSTONES.forEach(otherGem => {
+                if (otherGem !== gem && !result.exclusions.includes(otherGem)) {
+                    result.exclusions.push(otherGem);
+                }
+            });
+        }
+    });
 
 
     // Metal Purity Resolution (14K, 18K, 22K, 24K and variations, plus typo forms like 18000)

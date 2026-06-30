@@ -6,6 +6,17 @@ import { parseQuery, loadOntologyAndSlang } from '../utils/terminology.js';
 // Pre-load ontology and slang dictionaries on boot
 loadOntologyAndSlang();
 
+const EXCLUSION_METAL_COLORS = {
+  'white': 'White',
+  'rose': 'Rose',
+  'pink': 'Rose',
+  'yellow': 'Yellow',
+  'dual-tone': 'Dual-Tone',
+  'dual tone': 'Dual-Tone',
+  'tri-tone': 'Tri-Tone',
+  'tri tone': 'Tri-Tone'
+};
+
 /**
  * Robust helper to reconstruct Scene7 and other image URLs whose query parameters
  * got split by commas (e.g., during array parsing or database seeding).
@@ -234,6 +245,7 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
   // Hard Negations/Exclusions (Using GIN index array matching)
   if (parsed.exclusions && parsed.exclusions.length > 0) {
     parsed.exclusions.forEach(ex => {
+      const lowerEx = ex.toLowerCase();
       if (ex === 'gemstone') {
         filters.push(`NOT (all_gemstones_array && ARRAY['ruby', 'emerald', 'pearl', 'sapphire', 'synthetic']::text[])`);
       } else if (ex === 'platinum') {
@@ -244,6 +256,9 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
         }
       } else if (ex === 'silver') {
         filters.push(`silver_weight_numeric = 0`);
+      } else if (EXCLUSION_METAL_COLORS[lowerEx]) {
+        filters.push(`metal_color != $${paramCounter++}`);
+        bindings.push(EXCLUSION_METAL_COLORS[lowerEx]);
       } else {
         filters.push(`NOT (all_gemstones_array @> ARRAY[$${paramCounter++}]::text[])`);
         bindings.push(ex);
