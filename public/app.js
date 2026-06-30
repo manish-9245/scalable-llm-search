@@ -1040,6 +1040,7 @@ function parseNarrativeToTabs(description, p = {}) {
         story,
         scale,
         occasions,
+        occasion_mapping_ratings_out_of_10: occasions,
         profile,
         movement,
         body,

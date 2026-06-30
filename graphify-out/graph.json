@@ -1996,7 +1996,7 @@
       "label": "selectProductForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1135",
+      "source_location": "L1136",
       "id": "public_app_selectproductforanalysis",
       "community": 10,
       "norm_label": "selectproductforanalysis()"
@@ -2005,7 +2005,7 @@
       "label": "target",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1656",
+      "source_location": "L1657",
       "id": "public_app_target",
       "community": 0,
       "norm_label": "target"
@@ -2014,7 +2014,7 @@
       "label": "inputEl",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1664",
+      "source_location": "L1665",
       "id": "public_app_inputel",
       "community": 0,
       "norm_label": "inputel"
@@ -2023,7 +2023,7 @@
       "label": "contentArea",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1716",
+      "source_location": "L1717",
       "id": "public_app_contentarea",
       "community": 0,
       "norm_label": "contentarea"
@@ -2032,7 +2032,7 @@
       "label": "p",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1727",
+      "source_location": "L1728",
       "id": "public_app_p",
       "community": 0,
       "norm_label": "p"
@@ -2041,7 +2041,7 @@
       "label": "poll()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1743",
+      "source_location": "L1744",
       "id": "public_app_poll",
       "community": 10,
       "norm_label": "poll()"
@@ -2050,7 +2050,7 @@
       "label": "triggerBulkAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1808",
+      "source_location": "L1809",
       "id": "public_app_triggerbulkanalysis",
       "community": 10,
       "norm_label": "triggerbulkanalysis()"
@@ -7386,9 +7386,9 @@
       "source_file": "public/app.js",
       "source_location": "L1743",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_app_js",
-      "target": "public_app_poll",
-      "confidence_score": 1.0
+      "target": "public_app_poll"
     },
     {
       "relation": "contains",
@@ -7972,9 +7972,9 @@
       "source_file": "public/app.js",
       "source_location": "L1759",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_app_poll",
-      "target": "public_app_filterandrenderanalysisproducts",
-      "confidence_score": 1.0
+      "target": "public_app_filterandrenderanalysisproducts"
     },
     {
       "relation": "calls",
@@ -8137,9 +8137,9 @@
       "source_file": "public/app.js",
       "source_location": "L1766",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_app_poll",
-      "target": "public_app_selectproductforanalysis",
-      "confidence_score": 1.0
+      "target": "public_app_selectproductforanalysis"
     },
     {
       "relation": "calls",
@@ -10660,5 +10660,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f14cb726c10a7f74736f4adabb502b77148bc6c7"
+  "built_at_commit": "f3aa144b5e4ce5b6d6f2896e8394719d6f86cfdc"
 }
