@@ -309,6 +309,7 @@ function appendAIBubble(text, products = []) {
       // Robust attribute extraction with fallbacks for legacy/varied schemas
       const goldW = (p.gold_weight_numeric !== null && p.gold_weight_numeric !== undefined) ? `${p.gold_weight_numeric}g` : (p.gold_weight ? `${p.gold_weight}g` : 'N/A');
       const diaW = (p.diamond_weight_numeric !== null && p.diamond_weight_numeric !== undefined) ? `${p.diamond_weight_numeric}ct` : (p.diamond_weight ? `${p.diamond_weight}ct` : 'N/A');
+      const gemW = (p.gemstone_weight_numeric !== null && p.gemstone_weight_numeric !== undefined) ? `${p.gemstone_weight_numeric}ct` : (p.gemstone_weight ? `${p.gemstone_weight}ct` : '0ct');
       
       const priceToUse = p.calculated_price || p.base_price || p.price || 0;
       const formattedPrice = new Intl.NumberFormat('en-IN', { 
@@ -323,12 +324,9 @@ function appendAIBubble(text, products = []) {
       // Parse AI Description if it's JSON
       const narrative = parseNarrativeToTabs(p.ai_description || p.description, p);
       const identityText = narrative.isJson ? (narrative.identity || narrative.curatorNote) : (p.description || 'A timeless piece of exquisite craftsmanship.');
-      const materialsText = narrative.isJson ? narrative.materialsText : `Gold: ${goldW}, Diamond: ${diaW}`;
-      const motifsText = narrative.isJson ? narrative.motifsText : (p.collection ? `Collection: ${p.collection}` : 'Heritage design motifs.');
-      const stylingText = narrative.isJson ? narrative.stylingText : 'Ideal for festive and special occasions.';
 
       grid += `
-        <div class="product-card">
+        <div class="product-card" onclick="queueForAnalysis('${p.sku}')" style="cursor: pointer;">
           <div class="badge-collection">${p.category || 'Jewellery'}</div>
           <div class="badge-sku">${p.sku}</div>
           <div class="card-image-box">
@@ -337,48 +335,27 @@ function appendAIBubble(text, products = []) {
           <div class="card-body">
             <div class="card-category">${p.sub_category || ''}</div>
             <h3 class="card-title">${p.name}</h3>
-            <div class="card-specs-grid">
-              <div class="spec-metric"><i class="fa-solid fa-weight-hanging"></i> ${goldW}</div>
-              <div class="spec-metric"><i class="fa-regular fa-gem"></i> ${diaW}</div>
-            </div>
-            <div class="card-price-container">
-              <div class="price-tag">
-                <span class="price-label">Estimated Price</span>
-                <span class="price-value">${formattedPrice}</span>
-              </div>
+            <div class="card-specs-grid" style="grid-template-columns: repeat(3, 1fr);">
+              <div class="spec-metric" title="Gold Weight"><i class="fa-solid fa-weight-hanging"></i> ${goldW}</div>
+              <div class="spec-metric" title="Diamond Weight"><i class="fa-regular fa-gem"></i> ${diaW}</div>
+              <div class="spec-metric" title="Gemstone Weight"><i class="fa-solid fa-ring"></i> ${gemW}</div>
             </div>
             
-            <!-- Dossier Tabs -->
-            <div class="dossier-tabs-nav">
-              <button class="dossier-tab-btn active" onclick="switchDossierTab(event, '${p.sku}', 'identity')"><i class="fa-solid fa-crown"></i> Identity</button>
-              <button class="dossier-tab-btn" onclick="switchDossierTab(event, '${p.sku}', 'materials')"><i class="fa-regular fa-gem"></i> Materials</button>
-              <button class="dossier-tab-btn" onclick="switchDossierTab(event, '${p.sku}', 'motifs')"><i class="fa-solid fa-sparkles"></i> Motifs</button>
-              <button class="dossier-tab-btn" onclick="switchDossierTab(event, '${p.sku}', 'styling')"><i class="fa-solid fa-user"></i> Styling</button>
-            </div>
-            
-            <div id="dossier-${p.sku}-identity" class="dossier-tab-content active">
-              <div class="dossier-section-title"><i class="fa-solid fa-crown"></i> Design Identity</div>
-              <p class="dossier-text">${identityText}</p>
-            </div>
-            
-            <div id="dossier-${p.sku}-materials" class="dossier-tab-content">
-              <div class="dossier-section-title"><i class="fa-regular fa-gem"></i> Materials</div>
-              <p class="dossier-text">${materialsText}</p>
+            <div style="margin-bottom: 14px; flex: 1;">
+              <p class="dossier-text" style="font-size: 13px; line-height: 1.5; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin: 0;">
+                ${identityText}
+              </p>
             </div>
 
-            <div id="dossier-${p.sku}-motifs" class="dossier-tab-content">
-              <div class="dossier-section-title"><i class="fa-solid fa-sparkles"></i> Motifs & Themes</div>
-              <p class="dossier-text">${motifsText}</p>
+            <div class="card-price-container" style="margin-top: auto; padding-top: 14px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+              <div class="price-tag">
+                <span class="price-label" style="font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Estimated Price</span>
+                <span class="price-value" style="font-size: 18px; font-weight: 700; color: var(--gold-primary);">${formattedPrice}</span>
+              </div>
+              <span class="analyze-link" style="font-size: 11px; color: var(--gold-primary); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; opacity: 0.8; transition: var(--transition-smooth);">
+                Analyze <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
+              </span>
             </div>
-            
-            <div id="dossier-${p.sku}-styling" class="dossier-tab-content">
-              <div class="dossier-section-title"><i class="fa-solid fa-user"></i> Styling & Occasion</div>
-              <p class="dossier-text">${stylingText}</p>
-            </div>
-            
-            <button class="btn-secondary full-width" style="margin-top: 12px;" onclick="queueForAnalysis('${p.sku}')">
-              <i class="fa-solid fa-microscope"></i> Detailed Dossier Analysis
-            </button>
           </div>
         </div>
       `;
@@ -1640,7 +1617,14 @@ function selectProductForAnalysis(product, imageUrl, pushState = true) {
       <div class="dossier-meta">
         <h2 class="dossier-title">${product.name}</h2>
         <div class="dossier-sku">SKU: ${product.sku}</div>
-        ${metaHtml}
+        <div class="dossier-actions" style="display: flex; gap: 12px; margin-top: auto; flex-wrap: wrap; align-items: center;">
+          ${metaHtml}
+          ${product.product_url ? `
+            <a href="${product.product_url}" target="_blank" class="btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> View on Indriya Website
+            </a>
+          ` : ''}
+        </div>
       </div>
     </div>
     <div id="dossier-content-area">
