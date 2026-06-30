@@ -7,7 +7,17 @@ import { DB_SCHEMA, OFFICIAL_CATEGORIES, loadSchema } from '../services/discover
  */
 export async function resolveTerminology(query, existingFilters = {}) {
     await loadSchema();
-    const lowerQuery = query.toLowerCase();
+    const lowerQuery = query.toLowerCase()
+        .replace(/\bdiamon\b/g, 'diamond')
+        .replace(/\bdimond\b/g, 'diamond')
+        .replace(/\bdiamnd\b/g, 'diamond')
+        .replace(/\bdiamand\b/g, 'diamond')
+        .replace(/\bdimon\b/g, 'diamond')
+        .replace(/\bemrald\b/g, 'emerald')
+        .replace(/\bsafire\b/g, 'sapphire')
+        .replace(/\bsaphire\b/g, 'sapphire')
+        .replace(/\brubi\b/g, 'ruby')
+        .replace(/\bperl\b/g, 'pearl');
     const result = {
         category: null,
         subCategory: null,
@@ -285,6 +295,18 @@ export async function resolveTerminology(query, existingFilters = {}) {
 
     if (lowerQuery.includes('heavy diamond') || lowerQuery.includes('mostly diamond')) {
         result.visualSplits.visible_diamond_pct = 50;
+    }
+
+    // Metal Purity Resolution (14K, 18K, 22K, 24K and variations, plus typo forms like 18000)
+    const purityMatches = lowerQuery.match(/\b(14|18|22|24)\s*(?:k|kt|karat|carat|ct)?s?\b/i);
+    if (purityMatches) {
+        result.purity = purityMatches[1] + 'K';
+    } else if (/\b18000\s*(?:gold)?\b/.test(lowerQuery) && result.maxPrice !== 18000 && result.minPrice !== 18000) {
+        result.purity = '18K';
+    } else if (/\b22000\s*(?:gold)?\b/.test(lowerQuery) && result.maxPrice !== 22000 && result.minPrice !== 22000) {
+        result.purity = '22K';
+    } else if (/\b14000\s*(?:gold)?\b/.test(lowerQuery) && result.maxPrice !== 14000 && result.minPrice !== 14000) {
+        result.purity = '14K';
     }
 
     console.log(`[TERMINOLOGY] Resolved for "${query}":`, {

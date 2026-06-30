@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/utils/terminology.js": {
-    "mtime": 1782803615.9594648,
-    "ast_hash": "8f1bebf9427db4700466c4f30380f2b7",
+    "mtime": 1782820781.1990378,
+    "ast_hash": "8a3a95d5addfbc4d89a986c3209f6b2b",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/services/searchService.js": {
@@ -202,6 +202,11 @@
   "/Users/manishtiwari/Documents/scalable-llm-search/scratch/test_agent.mjs": {
     "mtime": 1782806768.2489812,
     "ast_hash": "da659b3180c2b1f574fe9afb516bcad3",
+    "semantic_hash": ""
+  },
+  "/Users/manishtiwari/Documents/scalable-llm-search/scratch/test_typo_search.mjs": {
+    "mtime": 1782820606.2056422,
+    "ast_hash": "3570707e28cbdc12a2173713ed4f79b4",
     "semantic_hash": ""
   }
 }
