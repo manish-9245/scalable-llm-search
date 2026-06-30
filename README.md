@@ -159,9 +159,16 @@ Self-learning mapping of slang to schema (e.g., *"Jhumka"* -> *"Drop Earrings"*)
 ### Installation
 1. `npm install`
 2. Configure `.env` with your `DATABASE_URL` and optional `GEMINI_API_KEY`.
-3. `npm run db:init` — Seeds the ontology and initializes tables.
-4. `ollama run llama3` — Ensures the local AI concierge is online.
-5. `npm start`
+3. `npm run pre-cache` — Downloads local ONNX models to disk to avoid cold-start latency.
+4. `npm run db:init` — Seeds the ontology and initializes tables.
+5. `ollama run llama3` — Ensures the local AI concierge is online.
+6. `npm start`
+
+### 6.2 Monitoring & Admin Tools
+Once the server is running, you can monitor the system via these built-in tools:
+
+- **🚀 BullMQ Dashboard**: Available at `/admin/queues`. Use this to monitor background ingestion jobs, retry failed tasks, and inspect AI analysis metadata.
+- **🏥 Health Check**: Available at `/health`. Returns the system's uptime and heartbeat status (used by Railway for deployment verification).
 
 ---
 

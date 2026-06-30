@@ -1,6 +1,6 @@
 import { Mastra } from '@mastra/core';
 import { Agent } from '@mastra/core/agent';
-import { PostgresStorage } from '@mastra/pg';
+import { PostgresStore } from '@mastra/pg';
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { createOllama } from 'ollama-ai-provider';
 import dotenv from 'dotenv';
@@ -9,7 +9,8 @@ import { getDynamicContext } from '../services/discoveryService.js';
 
 dotenv.config();
 
-const storage = new PostgresStorage({
+const storage = new PostgresStore({
+  id: 'indriya-storage',
   connectionString: process.env.DATABASE_URL,
 });
 
