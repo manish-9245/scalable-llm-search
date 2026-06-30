@@ -114,22 +114,24 @@ export function buildDynamicPriceSQL(rates) {
   // Luxury Stability Formula: 
   // We prefer: BasePrice + (GoldWeight * (CurrentRate - BaseGoldRate) * 1.03)
   // This preserves the expensive diamond/stone value and adds GST-corrected delta.
+  // For silver and platinum items (purity contains '925', '999S', 'Pt' without gold), we treat gold weight as 0 to avoid false price fluctuation.
+  const effectiveGoldWeight = `(CASE WHEN purity IN ('925', '925S', '999S', 'Pt 950') THEN 0 ELSE COALESCE(gold_weight_numeric, 0) END)`;
   
   return `COALESCE(
     CASE 
       WHEN base_price > 0 AND base_gold_rate > 0 
-      THEN (base_price + (COALESCE(gold_weight_numeric, 0) * (${goldRate} - base_gold_rate) * 1.03))
+      THEN (base_price + (${effectiveGoldWeight} * (${goldRate} - base_gold_rate) * 1.03))
       ELSE NULL 
     END,
     (
       (
         -- Material metal cost
         CASE 
-          WHEN purity = '22K' THEN COALESCE(gold_weight_numeric, 0) * ${rates['22K'] || 0}
-          WHEN purity = '18K' THEN COALESCE(gold_weight_numeric, 0) * ${rates['18K'] || 0}
-          WHEN purity = '14K' THEN COALESCE(gold_weight_numeric, 0) * ${rates['14K'] || 0}
-          WHEN purity = '24K' THEN COALESCE(gold_weight_numeric, 0) * ${rates['24K'] || 0}
-          ELSE COALESCE(gold_weight_numeric, 0) * ${rates['22K'] || 0}
+          WHEN purity = '22K' THEN ${effectiveGoldWeight} * ${rates['22K'] || 0}
+          WHEN purity = '18K' THEN ${effectiveGoldWeight} * ${rates['18K'] || 0}
+          WHEN purity = '14K' THEN ${effectiveGoldWeight} * ${rates['14K'] || 0}
+          WHEN purity = '24K' THEN ${effectiveGoldWeight} * ${rates['24K'] || 0}
+          ELSE ${effectiveGoldWeight} * ${rates['22K'] || 0}
         END +
         (COALESCE(platinum_weight_numeric, 0) * ${rates['Platinum'] || 0}) +
         (COALESCE(silver_weight_numeric, 0) * ${rates['Silver'] || 0})
@@ -141,8 +143,8 @@ export function buildDynamicPriceSQL(rates) {
       -- Labour / Making charges
       (
         CASE 
-          WHEN making_charge_type = 'per_gram' THEN COALESCE(gold_weight_numeric, 0) * COALESCE(making_charge_value, 0)
-          WHEN making_charge_type = 'percentage' THEN (COALESCE(gold_weight_numeric, 0) * ${rates['22K'] || 0}) * (COALESCE(making_charge_value, 0) / 100)
+          WHEN making_charge_type = 'per_gram' THEN ${effectiveGoldWeight} * COALESCE(making_charge_value, 0)
+          WHEN making_charge_type = 'percentage' THEN (${effectiveGoldWeight} * ${rates['22K'] || 0}) * (COALESCE(making_charge_value, 0) / 100)
           ELSE COALESCE(making_charge_value, 0)
         END
       )

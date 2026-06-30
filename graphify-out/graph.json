@@ -4,33 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "test_gemini_direct.js",
-      "file_type": "code",
-      "source_file": "test_gemini_direct.js",
-      "source_location": "L1",
-      "id": "test_gemini_direct_js",
-      "community": 28,
-      "norm_label": "test_gemini_direct.js"
-    },
-    {
-      "label": "google",
-      "file_type": "code",
-      "source_file": "test_gemini_direct.js",
-      "source_location": "L6",
-      "id": "scalable_llm_search_test_gemini_direct_google",
-      "community": 28,
-      "norm_label": "google"
-    },
-    {
-      "label": "testGemini()",
-      "file_type": "code",
-      "source_file": "test_gemini_direct.js",
-      "source_location": "L10",
-      "id": "scalable_llm_search_test_gemini_direct_testgemini",
-      "community": 28,
-      "norm_label": "testgemini()"
-    },
-    {
       "label": "test_chat_integration.js",
       "file_type": "code",
       "source_file": "test_chat_integration.js",
@@ -2770,7 +2743,7 @@
       "label": "searchCatalogue()",
       "file_type": "code",
       "source_file": "src/services/searchService.js",
-      "source_location": "L162",
+      "source_location": "L164",
       "id": "services_searchservice_searchcatalogue",
       "community": 15,
       "norm_label": "searchcatalogue()"
@@ -3089,6 +3062,33 @@
       "id": "utils_terminology_parsequery",
       "community": 4,
       "norm_label": "parsequery"
+    },
+    {
+      "label": "test_gemini_direct.js",
+      "file_type": "code",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L1",
+      "community": 28,
+      "norm_label": "test_gemini_direct.js",
+      "id": "test_gemini_direct_js"
+    },
+    {
+      "label": "google",
+      "file_type": "code",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L6",
+      "community": 28,
+      "norm_label": "google",
+      "id": "scalable_llm_search_test_gemini_direct_google"
+    },
+    {
+      "label": "testGemini()",
+      "file_type": "code",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L10",
+      "community": 28,
+      "norm_label": "testgemini()",
+      "id": "scalable_llm_search_test_gemini_direct_testgemini"
     },
     {
       "label": "B. Luxury Stability Pricing Algorithm",
@@ -3632,37 +3632,6 @@
     }
   ],
   "links": [
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "test_gemini_direct.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "test_gemini_direct_js",
-      "target": "scalable_llm_search_test_gemini_direct_google",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "test_gemini_direct.js",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "test_gemini_direct_js",
-      "target": "scalable_llm_search_test_gemini_direct_testgemini",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "test_gemini_direct.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "scalable_llm_search_test_gemini_direct_testgemini",
-      "target": "scalable_llm_search_test_gemini_direct_google",
-      "confidence_score": 1.0
-    },
     {
       "relation": "imports_from",
       "context": "import",
@@ -10859,6 +10828,37 @@
       "target": "utils_terminology_maptoexclusionkeyword"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_gemini_direct_js",
+      "target": "scalable_llm_search_test_gemini_direct_google"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "test_gemini_direct_js",
+      "target": "scalable_llm_search_test_gemini_direct_testgemini"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "test_gemini_direct.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scalable_llm_search_test_gemini_direct_testgemini",
+      "target": "scalable_llm_search_test_gemini_direct_google"
+    },
+    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -11003,5 +11003,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7c7ef8ebfe909ac0052ae67ebab96bcf68b7b740"
+  "built_at_commit": "9897ff9f8010c3ee9b731816579c671ae00e0513"
 }

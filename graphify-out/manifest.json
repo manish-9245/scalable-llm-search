@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/src/services/searchService.js": {
-    "mtime": 1782845417.677574,
-    "ast_hash": "8d54db80fc815e5e50a89169e31ca4b4",
+    "mtime": 1782854077.1809661,
+    "ast_hash": "02a98faf7b0d4a1ad1c2c2921250f9ee",
     "semantic_hash": ""
   },
   "/Users/manishtiwari/Documents/scalable-llm-search/public/index.html": {
@@ -372,11 +372,6 @@
   "/Users/manishtiwari/Documents/scalable-llm-search/scratch/inspect_queue.js": {
     "mtime": 1782851973.0610964,
     "ast_hash": "afaa0bde56f3c11b32a26834fa4fa34d",
-    "semantic_hash": ""
-  },
-  "/Users/manishtiwari/Documents/scalable-llm-search/test_gemini_direct.js": {
-    "mtime": 1782853210.8993933,
-    "ast_hash": "93157b6d33fc9250e3e97db342dc7e71",
     "semantic_hash": ""
   }
 }
