@@ -381,8 +381,9 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
     vectorOrderByClause = `ORDER BY gold_weight_numeric ASC NULLS LAST, embedding <=> $${paramCounter}::halfvec`;
   }
 
-  // Query Limit (default 12 unless custom specified)
+  // Query Limit (default 12 unless custom specified) and Offset
   const actualLimit = parsed.customLimit ? parsed.customLimit : limit;
+  const actualOffset = parsed.offset ? parsed.offset : 0;
 
   // 3. Strategy A: Local pgvector Semantic Search
   let vectorResults = [];
@@ -405,7 +406,7 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
         ${vectorOrderByClause}
         LIMIT $${paramCounter + 1}
       `;
-      const vectorRes = await query(vectorQuery, [...bindings, embeddingStr, actualLimit * 2]);
+      const vectorRes = await query(vectorQuery, [...bindings, embeddingStr, (actualLimit + actualOffset) * 2]);
       vectorResults = vectorRes.rows;
     }
   } catch (err) {
@@ -433,7 +434,7 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
       LIMIT $${textQueryIdx + 1}
     `;
     const wildcardQuery = `%${queryText}%`;
-    const textRes = await query(textQuery, [...bindings, wildcardQuery, actualLimit * 2]);
+    const textRes = await query(textQuery, [...bindings, wildcardQuery, (actualLimit + actualOffset) * 2]);
     textResults = textRes.rows;
   } catch (err) {
     console.error('Exact text keyword search failed:', err.message);
@@ -482,7 +483,7 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
     mergedProducts.sort((a, b) => b.rrfScore - a.rrfScore);
   }
 
-  mergedProducts = mergedProducts.slice(0, actualLimit);
+  mergedProducts = mergedProducts.slice(actualOffset, actualOffset + actualLimit);
 
   const duration = Date.now() - start;
   console.log(`✨ [SEARCH] "${queryText}" → ${mergedProducts.length} items [${duration}ms]`);

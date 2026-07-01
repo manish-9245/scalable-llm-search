@@ -603,7 +603,7 @@
       "source_file": "db_init.mjs",
       "source_location": "L1",
       "id": "db_init_mjs",
-      "community": 4,
+      "community": 11,
       "norm_label": "db_init.mjs"
     },
     {
@@ -612,7 +612,7 @@
       "source_file": "db_init.mjs",
       "source_location": "L20",
       "id": "scalable_llm_search_db_init_run",
-      "community": 4,
+      "community": 11,
       "norm_label": "run()"
     },
     {
@@ -756,7 +756,7 @@
       "source_file": "scratch/flush_redis.mjs",
       "source_location": "L1",
       "id": "scratch_flush_redis_mjs",
-      "community": 4,
+      "community": 11,
       "norm_label": "flush_redis.mjs"
     },
     {
@@ -765,7 +765,7 @@
       "source_file": "scratch/flush_redis.mjs",
       "source_location": "L3",
       "id": "scratch_flush_redis_run",
-      "community": 4,
+      "community": 11,
       "norm_label": "run()"
     },
     {
@@ -963,7 +963,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L1",
       "id": "scratch_test_agent_mjs",
-      "community": 11,
+      "community": 15,
       "norm_label": "test_agent.mjs"
     },
     {
@@ -972,7 +972,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L6",
       "id": "scratch_test_agent_testagent",
-      "community": 11,
+      "community": 15,
       "norm_label": "testagent()"
     },
     {
@@ -1530,7 +1530,7 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L1",
       "id": "scratch_test_analyze_sku_js",
-      "community": 4,
+      "community": 11,
       "norm_label": "test_analyze_sku.js"
     },
     {
@@ -1539,7 +1539,7 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L5",
       "id": "scratch_test_analyze_sku_testanalyze",
-      "community": 4,
+      "community": 11,
       "norm_label": "testanalyze()"
     },
     {
@@ -1665,7 +1665,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L1",
       "id": "scratch_test_multimodal_js",
-      "community": 11,
+      "community": 15,
       "norm_label": "test_multimodal.js"
     },
     {
@@ -1674,7 +1674,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L4",
       "id": "scratch_test_multimodal_testmultimodal",
-      "community": 11,
+      "community": 15,
       "norm_label": "testmultimodal()"
     },
     {
@@ -1719,7 +1719,7 @@
       "source_file": "scratch/test_whisper_transcription.js",
       "source_location": "L1",
       "id": "scratch_test_whisper_transcription_js",
-      "community": 4,
+      "community": 11,
       "norm_label": "test_whisper_transcription.js"
     },
     {
@@ -1728,7 +1728,7 @@
       "source_file": "scratch/test_whisper_transcription.js",
       "source_location": "L9",
       "id": "scratch_test_whisper_transcription_starttime",
-      "community": 4,
+      "community": 11,
       "norm_label": "starttime"
     },
     {
@@ -1748,6 +1748,24 @@
       "id": "scratch_test_session_context_runsessioncontextverification",
       "community": 1,
       "norm_label": "runsessioncontextverification()"
+    },
+    {
+      "label": "test_pagination_engine.js",
+      "file_type": "code",
+      "source_file": "scratch/test_pagination_engine.js",
+      "source_location": "L1",
+      "id": "scratch_test_pagination_engine_js",
+      "community": 1,
+      "norm_label": "test_pagination_engine.js"
+    },
+    {
+      "label": "testPagination()",
+      "file_type": "code",
+      "source_file": "scratch/test_pagination_engine.js",
+      "source_location": "L3",
+      "id": "scratch_test_pagination_engine_testpagination",
+      "community": 1,
+      "norm_label": "testpagination()"
     },
     {
       "label": "app.js",
@@ -2331,7 +2349,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L1",
       "id": "src_mastra_agent_js",
-      "community": 11,
+      "community": 15,
       "norm_label": "agent.js"
     },
     {
@@ -2340,7 +2358,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L12",
       "id": "mastra_agent_storage",
-      "community": 11,
+      "community": 15,
       "norm_label": "storage"
     },
     {
@@ -2349,7 +2367,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L17",
       "id": "mastra_agent_google",
-      "community": 11,
+      "community": 15,
       "norm_label": "google"
     },
     {
@@ -2358,7 +2376,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L27",
       "id": "mastra_agent_ollama",
-      "community": 11,
+      "community": 15,
       "norm_label": "ollama"
     },
     {
@@ -2367,7 +2385,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L41",
       "id": "mastra_agent_indriyaanalyzer",
-      "community": 11,
+      "community": 15,
       "norm_label": "indriyaanalyzer"
     },
     {
@@ -2376,7 +2394,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L139",
       "id": "mastra_agent_chatagent",
-      "community": 11,
+      "community": 15,
       "norm_label": "chatagent"
     },
     {
@@ -2385,7 +2403,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L171",
       "id": "mastra_agent_mastra",
-      "community": 11,
+      "community": 15,
       "norm_label": "mastra"
     },
     {
@@ -2412,7 +2430,7 @@
       "source_file": "src/config/llm.js",
       "source_location": "L1",
       "id": "src_config_llm_js",
-      "community": 4,
+      "community": 11,
       "norm_label": "llm.js"
     },
     {
@@ -2421,7 +2439,7 @@
       "source_file": "src/config/llm.js",
       "source_location": "L14",
       "id": "config_llm_getembedder",
-      "community": 4,
+      "community": 11,
       "norm_label": "getembedder()"
     },
     {
@@ -2430,7 +2448,7 @@
       "source_file": "src/config/llm.js",
       "source_location": "L24",
       "id": "config_llm_gettranscriber",
-      "community": 4,
+      "community": 11,
       "norm_label": "gettranscriber()"
     },
     {
@@ -2439,7 +2457,7 @@
       "source_file": "src/config/llm.js",
       "source_location": "L43",
       "id": "config_llm_generateembedding",
-      "community": 4,
+      "community": 11,
       "norm_label": "generateembedding()"
     },
     {
@@ -2448,7 +2466,7 @@
       "source_file": "src/config/llm.js",
       "source_location": "L88",
       "id": "config_llm_parsewav",
-      "community": 4,
+      "community": 11,
       "norm_label": "parsewav()"
     },
     {
@@ -2457,7 +2475,7 @@
       "source_file": "src/config/llm.js",
       "source_location": "L138",
       "id": "config_llm_transcribeaudio",
-      "community": 4,
+      "community": 11,
       "norm_label": "transcribeaudio()"
     },
     {
@@ -2475,7 +2493,7 @@
       "source_file": "src/config/db.js",
       "source_location": "L15",
       "id": "config_db_getsslconfig",
-      "community": 4,
+      "community": 11,
       "norm_label": "getsslconfig()"
     },
     {
@@ -2520,7 +2538,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L1",
       "id": "src_config_redis_js",
-      "community": 4,
+      "community": 11,
       "norm_label": "redis.js"
     },
     {
@@ -2529,7 +2547,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L29",
       "id": "config_redis_connectredis",
-      "community": 4,
+      "community": 11,
       "norm_label": "connectredis()"
     },
     {
@@ -2538,7 +2556,7 @@
       "source_file": "src/config/pre_cache.js",
       "source_location": "L1",
       "id": "src_config_pre_cache_js",
-      "community": 4,
+      "community": 11,
       "norm_label": "pre_cache.js"
     },
     {
@@ -2547,7 +2565,7 @@
       "source_file": "src/config/pre_cache.js",
       "source_location": "L3",
       "id": "config_pre_cache_precache",
-      "community": 4,
+      "community": 11,
       "norm_label": "precache()"
     },
     {
@@ -2574,7 +2592,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L1",
       "id": "src_utils_logger_js",
-      "community": 4,
+      "community": 11,
       "norm_label": "logger.js"
     },
     {
@@ -2583,7 +2601,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L5",
       "id": "utils_logger_logger",
-      "community": 4,
+      "community": 11,
       "norm_label": "logger"
     },
     {
@@ -2601,7 +2619,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L28",
       "id": "utils_logger_log",
-      "community": 4,
+      "community": 11,
       "norm_label": "log"
     },
     {
@@ -2635,7 +2653,7 @@
       "label": "loadOntologyAndSlang()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L561",
+      "source_location": "L566",
       "id": "utils_terminology_loadontologyandslang",
       "community": 15,
       "norm_label": "loadontologyandslang()"
@@ -2644,7 +2662,7 @@
       "label": "levenshteinDistance()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L570",
+      "source_location": "L575",
       "id": "utils_terminology_levenshteindistance",
       "community": 15,
       "norm_label": "levenshteindistance()"
@@ -2763,7 +2781,7 @@
       "source_file": "src/utils/slang.js",
       "source_location": "L1",
       "id": "src_utils_slang_js",
-      "community": 4,
+      "community": 11,
       "norm_label": "slang.js"
     },
     {
@@ -2772,7 +2790,7 @@
       "source_file": "src/utils/slang.js",
       "source_location": "L10",
       "id": "utils_slang_discoverslang",
-      "community": 4,
+      "community": 11,
       "norm_label": "discoverslang()"
     },
     {
@@ -2781,7 +2799,7 @@
       "source_file": "src/utils/slang.js",
       "source_location": "L68",
       "id": "utils_slang_learnslangfromanalysis",
-      "community": 4,
+      "community": 11,
       "norm_label": "learnslangfromanalysis()"
     },
     {
@@ -2835,7 +2853,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L1",
       "id": "src_services_ingestionservice_js",
-      "community": 4,
+      "community": 11,
       "norm_label": "ingestionservice.js"
     },
     {
@@ -2844,7 +2862,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L13",
       "id": "services_ingestionservice_processproductanalysis",
-      "community": 4,
+      "community": 11,
       "norm_label": "processproductanalysis()"
     },
     {
@@ -2853,7 +2871,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L127",
       "id": "services_ingestionservice_invalidatelocalsearchcache",
-      "community": 4,
+      "community": 11,
       "norm_label": "invalidatelocalsearchcache()"
     },
     {
@@ -2961,7 +2979,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L153",
       "id": "services_discoveryservice_getdynamiccontext",
-      "community": 11,
+      "community": 15,
       "norm_label": "getdynamiccontext()"
     },
     {
@@ -3949,7 +3967,7 @@
       "label": "parseQuery",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L560",
+      "source_location": "L565",
       "id": "utils_terminology_parsequery",
       "community": 15,
       "norm_label": "parsequery"
@@ -4022,7 +4040,7 @@
       "file_type": "code",
       "source_file": "scratch/flush_redis.js",
       "source_location": "L1",
-      "community": 4,
+      "community": 11,
       "norm_label": "flush_redis.js",
       "id": "scratch_flush_redis_js"
     },
@@ -4031,7 +4049,7 @@
       "file_type": "code",
       "source_file": "scratch/flush_redis.js",
       "source_location": "L3",
-      "community": 4,
+      "community": 11,
       "norm_label": "flush()",
       "id": "scratch_flush_redis_flush"
     },
@@ -4184,7 +4202,7 @@
       "file_type": "code",
       "source_file": "src/config/redis.js",
       "source_location": "L13",
-      "community": 4,
+      "community": 11,
       "norm_label": "redisclient",
       "id": "config_redis_redisclient"
     },
@@ -8334,6 +8352,49 @@
       "target": "services_searchservice_searchcatalogue"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_pagination_engine.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_pagination_engine_js",
+      "target": "src_services_searchservice_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_pagination_engine.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_test_pagination_engine_js",
+      "target": "services_searchservice_searchcatalogue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_pagination_engine.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_test_pagination_engine_js",
+      "target": "scratch_test_pagination_engine_testpagination",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/test_pagination_engine.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "scratch_test_pagination_engine_testpagination",
+      "target": "services_searchservice_searchcatalogue",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "public/app.js",
@@ -11794,9 +11855,9 @@
       "source_file": "README.md",
       "source_location": "L146",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_indriya_ai_the_luxury_concierge_engine",
-      "target": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity"
     },
     {
       "relation": "contains",
@@ -11964,9 +12025,9 @@
       "source_file": "README.md",
       "source_location": "L150",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
-      "target": "scalable_llm_search_readme_a_singular_vs_plural_category_normalization",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_a_singular_vs_plural_category_normalization"
     },
     {
       "relation": "contains",
@@ -11974,9 +12035,9 @@
       "source_file": "README.md",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
-      "target": "scalable_llm_search_readme_b_wildcard_subcategory_matching",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_b_wildcard_subcategory_matching"
     },
     {
       "relation": "contains",
@@ -11984,9 +12045,9 @@
       "source_file": "README.md",
       "source_location": "L166",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
-      "target": "scalable_llm_search_readme_c_multi_metal_extended_purity_normalization",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_c_multi_metal_extended_purity_normalization"
     },
     {
       "relation": "contains",
@@ -11994,9 +12055,9 @@
       "source_file": "README.md",
       "source_location": "L172",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
-      "target": "scalable_llm_search_readme_d_color_mappings_dual_tone_expansion",
-      "confidence_score": 1.0
+      "target": "scalable_llm_search_readme_d_color_mappings_dual_tone_expansion"
     },
     {
       "relation": "contains",
@@ -13057,5 +13118,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f6db51d4a55ad36edbec05d6d9530e73566e1afc"
+  "built_at_commit": "388dcd0608bedb023b1149b4c677da993e7a818b"
 }

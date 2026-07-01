@@ -24,13 +24,15 @@ export function mergeFilters(existing, parsed) {
         merged.motifs = [];
         merged.exclusions = [];
         merged.visualSplits = {};
+        existing.offset = 0;
     }
 
     // Boolean or single fields: overwrite only if parsed value is not null and not empty
     const singleFields = [
         'category', 'subCategory', 'gemstone', 'motif', 'occasion',
         'product_type', 'jewellery_type', 'purity', 'metalColor',
-        'minPrice', 'maxPrice', 'minDiamondCarat', 'sortBy', 'customLimit', 'gender'
+        'minPrice', 'maxPrice', 'minDiamondCarat', 'sortBy', 'customLimit', 'gender',
+        'offset', 'isNextDirective'
     ];
 
     singleFields.forEach(field => {
@@ -38,6 +40,15 @@ export function mergeFilters(existing, parsed) {
             merged[field] = parsed[field];
         }
     });
+
+    // Handle offset accumulation for pagination
+    if (parsed.isNextDirective) {
+        merged.offset = (existing.offset || 0) + (existing.customLimit || 12);
+        merged.isNextDirective = true;
+    } else {
+        merged.offset = 0;
+        merged.isNextDirective = false;
+    }
 
     // Array fields merging:
     // 1. motifs & single motif

@@ -140,6 +140,8 @@ export async function resolveTerminology(query, existingFilters = {}) {
         negativeKeywordsToAdd: [],
         sortBy: null,
         customLimit: null,
+        offset: null,
+        isNextDirective: false,
         gender: null
     };
 
@@ -154,11 +156,14 @@ export async function resolveTerminology(query, existingFilters = {}) {
         result.sortBy = 'weight_asc';
     }
 
-    const limitMatch = lowerQuery.match(/\b(?:top|first)\s+(\d+)\b/i);
+    const limitMatch = lowerQuery.match(/\b(?:top|first|next|another)\s+(\d+)\b/i);
     if (limitMatch) {
         result.customLimit = parseInt(limitMatch[1], 10);
     }
 
+    if (/\b(?:next|more|another|page|offset|forward)\b/i.test(lowerQuery)) {
+        result.isNextDirective = true;
+    }
 
     // --- Price Boundary Parsing ---
     const pricePatterns = [
