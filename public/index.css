@@ -1891,21 +1891,70 @@ button {
   margin-bottom: 6px;
 }
 
+/* Back button container for mobile detail view */
+.dossier-back-btn-wrapper {
+  display: none; /* Hidden on desktop */
+  margin-bottom: 16px;
+}
+
 @media (max-width: 768px) {
   .analysis-layout {
     flex-direction: column;
+    height: 100%;
   }
-  .analysis-sidebar {
+  
+  /* If no selection is active, show only the sidebar (the catalogue list) */
+  .analysis-layout:not(.has-selection) .analysis-sidebar {
     width: 100%;
+    height: 100%;
     border-right: none;
-    border-bottom: 1px solid var(--border-glass);
-    height: 35vh; /* Take up top portion for scrolling list */
-    flex-shrink: 0;
-    padding: 12px;
+    border-bottom: none;
+    display: flex;
   }
-  .analysis-main {
+  .analysis-layout:not(.has-selection) .analysis-main {
+    display: none;
+  }
+
+  /* If a selection is active, show only the main workspace (the dossier) */
+  .analysis-layout.has-selection .analysis-sidebar {
+    display: none;
+  }
+  .analysis-layout.has-selection .analysis-main {
+    width: 100%;
+    height: 100%;
     padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
   }
+
+  .dossier-back-btn-wrapper {
+    display: block; /* Visible on mobile */
+  }
+  
+  .dossier-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-glass);
+    color: var(--gold-primary);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .dossier-back-btn:hover {
+    background: rgba(213, 159, 62, 0.1);
+    border-color: var(--gold-primary);
+    box-shadow: 0 0 10px rgba(213, 159, 62, 0.15);
+  }
+
   .analysis-dossier {
     padding: 20px;
   }

@@ -104,6 +104,10 @@ function handleRouting() {
           welcome.classList.remove('hidden');
           dossier.classList.add('hidden');
         }
+        const layout = document.querySelector('.analysis-layout');
+        if (layout) {
+          layout.classList.remove('has-selection');
+        }
       }
     }
   }
@@ -1242,6 +1246,11 @@ function selectProductForAnalysis(product, imageUrl, pushState = true) {
   welcome.classList.add('hidden');
   dossier.classList.remove('hidden');
 
+  const layout = document.querySelector('.analysis-layout');
+  if (layout) {
+    layout.classList.add('has-selection');
+  }
+
   if (pushState) {
     window.history.pushState({ sku: product.sku }, `Analysis - ${product.sku}`, `#/analysis/${product.sku}`);
   }
@@ -1725,6 +1734,11 @@ function selectProductForAnalysis(product, imageUrl, pushState = true) {
   }
 
   dossier.innerHTML = `
+    <div class="dossier-back-btn-wrapper">
+      <button class="dossier-back-btn" onclick="window.clearProductAnalysisSelection()">
+        <i class="fa-solid fa-arrow-left"></i> Back to Catalogue
+      </button>
+    </div>
     <div class="dossier-header">
       <img src="${imageUrl}" class="dossier-image" />
       <div class="dossier-meta">
@@ -1745,6 +1759,23 @@ function selectProductForAnalysis(product, imageUrl, pushState = true) {
     </div>
   `;
 }
+
+window.clearProductAnalysisSelection = function() {
+  currentAnalysisSku = null;
+  const welcome = document.getElementById('analysis-welcome');
+  const dossier = document.getElementById('analysis-dossier');
+  if (welcome && dossier) {
+    welcome.classList.remove('hidden');
+    dossier.classList.add('hidden');
+  }
+  const layout = document.querySelector('.analysis-layout');
+  if (layout) {
+    layout.classList.remove('has-selection');
+  }
+  if (window.location.hash.startsWith('#/analysis/')) {
+    window.history.pushState(null, null, '#/analysis');
+  }
+};
 
 // Global dossier sub-tabs switcher
 window.switchAnalysisDossierTab = function(event, tabId) {
