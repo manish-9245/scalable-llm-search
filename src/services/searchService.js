@@ -8,8 +8,8 @@ loadOntologyAndSlang();
 
 const EXCLUSION_METAL_COLORS = {
   'white': 'White',
-  'rose': 'Rose',
-  'pink': 'Rose',
+  'rose': 'Pink',
+  'pink': 'Pink',
   'yellow': 'Yellow',
   'dual-tone': 'Dual-Tone',
   'dual tone': 'Dual-Tone',
@@ -218,8 +218,12 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
     bindings.push(parsed.purity);
   }
   if (parsed.metalColor) {
+    let normalizedColor = parsed.metalColor;
+    if (normalizedColor.toLowerCase() === 'rose') {
+      normalizedColor = 'Pink';
+    }
     filters.push(`metal_color = $${paramCounter++}`);
-    bindings.push(parsed.metalColor);
+    bindings.push(normalizedColor);
   }
   if (parsed.occasion) {
     filters.push(`(occasion ILIKE $${paramCounter} OR EXISTS (SELECT 1 FROM product_occasions WHERE product_id = catalog_products.id AND occasion ILIKE $${paramCounter}))`);
