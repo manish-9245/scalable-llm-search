@@ -758,9 +758,20 @@ fastify.post('/api/chat/message', async (request, reply) => {
 
       const { searchCatalogue } = await import('./src/services/searchService.js');
       // Pass limit: 500 to ensure all matching available items in db are returned
-      const searchRes = await searchCatalogue({ queryText: text, limit: 500, existingFilters });
+      let searchRes = await searchCatalogue({ queryText: text, limit: 500, existingFilters });
       products = searchRes.products || [];
       lastToolParams = searchRes.parsedFilters || {};
+
+      // Graceful Conversational Fallback Strategy:
+      // If the merged conversational query yields 0 matches, but we had existing filters from previous turns,
+      // the compounding session context is deadlocked/overly restrictive.
+      // We gracefully break the deadlock by running the search with ONLY the current turn's unmerged filter context.
+      if (products.length === 0 && existingFilters) {
+        console.log(`[CONVERSATIONAL_FALLBACK] Compounded filters returned 0 matches. Resetting compounding context and re-running search on current query...`);
+        searchRes = await searchCatalogue({ queryText: text, limit: 500, existingFilters: null });
+        products = searchRes.products || [];
+        lastToolParams = searchRes.parsedFilters || {};
+      }
       
       const count = products.length;
 

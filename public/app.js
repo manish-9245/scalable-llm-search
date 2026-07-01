@@ -37,6 +37,16 @@ let mediaStream = null;
 let recordedSamples = [];
 let isRecording = false;
 
+// Speech Recognition (Web Speech API) Context
+let recognition = null;
+let isNativeRecognitionSupported = false;
+let isNativeRecognitionActive = false;
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+if (SpeechRecognition) {
+  isNativeRecognitionSupported = true;
+}
+
 window.addEventListener('DOMContentLoaded', async () => {
   setupEventListeners();
   setupTabs();
@@ -562,12 +572,69 @@ async function startRecordingFlow(e) {
   // Prevent ghost clicks if touch triggered
   if (e && e.type === 'touchstart') e.preventDefault();
   
-  if (isRecording) return;
-  isRecording = true;
-  recordedSamples = [];
+  if (isRecording || isNativeRecognitionActive) return;
 
   micBtn.classList.add('recording');
-  if(voiceWaves) voiceWaves.classList.add('active');
+  if (voiceWaves) voiceWaves.classList.add('active');
+
+  if (isNativeRecognitionSupported) {
+    isNativeRecognitionActive = true;
+    try {
+      if (!recognition) {
+        const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+        recognition = new SpeechRec();
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        
+        recognition.onresult = (ev) => {
+          let interimTranscript = '';
+          let finalTranscript = '';
+          for (let i = ev.resultIndex; i < ev.results.length; ++i) {
+            if (ev.results[i].isFinal) {
+              finalTranscript += ev.results[i][0].transcript;
+            } else {
+              interimTranscript += ev.results[i][0].transcript;
+            }
+          }
+          if (finalTranscript || interimTranscript) {
+            searchInput.value = (finalTranscript + interimTranscript).trim();
+          }
+        };
+
+        recognition.onerror = (ev) => {
+          console.error('Native Speech Recognition Error:', ev.error);
+          if (ev.error === 'not-allowed') {
+            searchInput.placeholder = "Microphone access denied!";
+          }
+        };
+
+        recognition.onend = () => {
+          console.log('Native Speech Recognition session ended.');
+          isNativeRecognitionActive = false;
+          micBtn.classList.remove('recording');
+          if (voiceWaves) voiceWaves.classList.remove('active');
+          searchInput.placeholder = "Message Indriya... e.g. 'moti haar under 2 lakhs'";
+        };
+      }
+
+      recognition.lang = currentLanguage;
+      console.log(`Starting native Speech Recognition with locale: ${recognition.lang}`);
+      searchInput.value = '';
+      searchInput.placeholder = "Listening in real-time...";
+      recognition.start();
+    } catch (err) {
+      console.error('Failed to start native Speech Recognition, falling back:', err);
+      isNativeRecognitionActive = false;
+      await startWasmRecordingFlow();
+    }
+  } else {
+    await startWasmRecordingFlow();
+  }
+}
+
+async function startWasmRecordingFlow() {
+  isRecording = true;
+  recordedSamples = [];
 
   try {
     mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true });
@@ -597,11 +664,31 @@ async function startRecordingFlow(e) {
 }
 
 async function stopRecordingFlow() {
+  if (isNativeRecognitionActive) {
+    console.log('Stopping native Speech Recognition...');
+    if (recognition) {
+      recognition.stop();
+    }
+    isNativeRecognitionActive = false;
+    micBtn.classList.remove('recording');
+    if (voiceWaves) voiceWaves.classList.remove('active');
+    searchInput.placeholder = "Message Indriya... e.g. 'moti haar under 2 lakhs'";
+
+    // Slight delay to allow final onresult to flush if needed, then auto-submit if text exists
+    setTimeout(() => {
+      const finalVal = searchInput.value.trim();
+      if (finalVal) {
+        handleSendMessage(); // Auto trigger chat
+      }
+    }, 400);
+    return;
+  }
+
   if (!isRecording) return;
   isRecording = false;
 
   micBtn.classList.remove('recording');
-  if(voiceWaves) voiceWaves.classList.remove('active');
+  if (voiceWaves) voiceWaves.classList.remove('active');
 
   // Close media context streams
   if (scriptProcessor) {
@@ -619,14 +706,39 @@ async function stopRecordingFlow() {
 
   // Compile WAV Data
   const wavBlob = encodeWAV(recordedSamples, 16000);
+
+  // Calculate RMS (Root Mean Square) volume level to filter out silences / Whisper hallucinations
+  let sumSquares = 0;
+  let totalSamples = 0;
+  for (let i = 0; i < recordedSamples.length; i++) {
+    const buf = recordedSamples[i];
+    for (let j = 0; j < buf.length; j++) {
+      sumSquares += buf[j] * buf[j];
+    }
+    totalSamples += buf.length;
+  }
+  const rms = totalSamples > 0 ? Math.sqrt(sumSquares / totalSamples) : 0;
+  console.log(`Audio recording levels - RMS amplitude: ${rms.toFixed(5)}, size: ${wavBlob.size} bytes`);
+
   recordedSamples = [];
   
+  const ogPlaceholder = searchInput.placeholder;
+
+  // If the audio is too quiet (threshold 0.005), discard to prevent Whisper from transcribing noise
+  if (rms < 0.005) {
+    console.warn("Speech-to-Text discarded: Audio input too quiet.");
+    searchInput.placeholder = "Too quiet! Please speak clearly near the microphone.";
+    setTimeout(() => {
+      searchInput.placeholder = ogPlaceholder;
+    }, 3000);
+    return;
+  }
+
   if (wavBlob.size < 100) return; // Ignore accidental micro-taps
 
   const formData = new FormData();
   formData.append('file', wavBlob, 'recording.wav');
 
-  const ogPlaceholder = searchInput.placeholder;
   searchInput.placeholder = "Listening and transcribing...";
 
   try {

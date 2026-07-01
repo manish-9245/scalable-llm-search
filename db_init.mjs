@@ -236,6 +236,11 @@ async function run() {
         
         // Parse raw string lists for hard negation arrays
         const gemstonesArray = [];
+        const nameLower = (p.name || '').toLowerCase();
+        const descLower = (p.description || '').toLowerCase();
+        const rawGemType = (p.gemstone_type || '').toLowerCase();
+        const isPolki = nameLower.includes('polki') || descLower.includes('polki') || rawGemType.includes('polki');
+
         if (p.diamond_weight_numeric > 0) gemstonesArray.push('diamond');
         if (p.gemstone_weight_numeric > 0 && p.gemstone_type) {
           const rawGem = p.gemstone_type.toLowerCase();
@@ -244,6 +249,9 @@ async function run() {
           if (rawGem.includes('pearl')) gemstonesArray.push('pearl');
           if (rawGem.includes('sapphire')) gemstonesArray.push('sapphire');
           if (rawGem.includes('synthetic')) gemstonesArray.push('synthetic');
+        }
+        if (isPolki && !gemstonesArray.includes('polki')) {
+          gemstonesArray.push('polki');
         }
         if (gemstonesArray.length === 0) gemstonesArray.push('none');
 
@@ -260,6 +268,19 @@ async function run() {
           goldPct = parseFloat((((parseFloat(p.gold_weight_numeric) || 0) / totalWeight) * 100).toFixed(2));
           diamondPct = parseFloat(((((parseFloat(p.diamond_weight_numeric) || 0) * 0.2) / totalWeight) * 100).toFixed(2));
           gemstonePct = parseFloat(((((parseFloat(p.gemstone_weight_numeric) || 0) * 0.2) / totalWeight) * 100).toFixed(2));
+        }
+
+        let polkiPct = 0;
+        let enamelPct = 0;
+        if (isPolki) {
+          polkiPct = gemstonePct > 0 ? gemstonePct : 20.00;
+          if (gemstonePct === 0) {
+            const remaining = 100.00 - polkiPct;
+            goldPct = parseFloat((goldPct * (remaining / 100)).toFixed(2));
+            diamondPct = parseFloat((diamondPct * (remaining / 100)).toFixed(2));
+          }
+        } else {
+          enamelPct = gemstonePct > 0 ? gemstonePct : 0.00;
         }
 
         // Subcategory map
@@ -306,7 +327,7 @@ async function run() {
           p.diamond_weight_numeric || 0.000, p.diamond_clarity || 'SI', p.diamond_color || 'G-H', p.gemstone_weight_numeric || 0.000, p.gemstone_type,
           makingChargeType, makingChargeValue, diamondRate, gemstoneRate,
           p.base_price || p.price, p.base_gold_rate || 7335.00,
-          goldPct, diamondPct, 0.00, gemstonePct > 0 ? gemstonePct : 0.00,
+          goldPct, diamondPct, polkiPct, enamelPct,
           gemstonesArray, ['traditional'], ['jaali'],
           embeddingStr
         ];

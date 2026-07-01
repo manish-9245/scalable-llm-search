@@ -25,15 +25,27 @@ const PROTECTED_WORDS = new Set([
 export async function resolveTerminology(query, existingFilters = {}) {
     await loadSchema();
 
-    // Clean up common local ASR (Speech-to-Text) transcription errors/hallucinations
+    // Clean up common local ASR (Speech-to-Text) transcription errors, hallucinations & Indian homophones
     if (query && typeof query === 'string') {
         const asrCorrections = [
+            // Whisper Hallucination loops (triggered during low volume / background silence)
             { pattern: /\bclick on the sun sun\b/gi, replacement: 'necklace' },
             { pattern: /\bsun sun\b/gi, replacement: 'necklace' },
             { pattern: /\b50\/50\s*kk\b/gi, replacement: '50k' },
             { pattern: /\b50\/50\s*k\b/gi, replacement: '50k' },
             { pattern: /\b50\s+50\s*kk\b/gi, replacement: '50k' },
-            { pattern: /\b50\s+50\s*k\b/gi, replacement: '50k' }
+            { pattern: /\b50\s+50\s*k\b/gi, replacement: '50k' },
+            
+            // Common Phonetic Homophones for traditional Indian Jewellery terms
+            { pattern: /\b(to\s+she|two\s+she|tushi|tooshi)\b/gi, replacement: 'thushi' },
+            { pattern: /\b(zoomka|jumka|zoomki|jumki)\b/gi, replacement: 'jhumka' },
+            { pattern: /\b(cada|cardboard|cutter|gaddas|kara|karas)\b/gi, replacement: 'kada' },
+            { pattern: /\b(chanbali|chanbalis|shandbali|shandbalis)\b/gi, replacement: 'chandbalis' },
+            { pattern: /\b(mangal\s+sutra|mangal-sutra)\b/gi, replacement: 'mangalsutra' },
+            { pattern: /\b(motti|motee)\b/gi, replacement: 'moti' },
+            { pattern: /\b(pial|pyl)\b/gi, replacement: 'payal' },
+            { pattern: /\b(koondan|kundun)\b/gi, replacement: 'kundan' },
+            { pattern: /\b(har|hour|our|harm)\b/gi, replacement: 'haar' }
         ];
 
         for (const correction of asrCorrections) {

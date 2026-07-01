@@ -232,7 +232,7 @@
       "label": "productsJson",
       "file_type": "code",
       "source_file": "server.js",
-      "source_location": "L777",
+      "source_location": "L788",
       "id": "scalable_llm_search_server_productsjson",
       "community": 11,
       "norm_label": "productsjson"
@@ -243,7 +243,7 @@
       "source_file": "test_search.js",
       "source_location": "L1",
       "id": "test_search_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_search.js"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "test_search.js",
       "source_location": "L10",
       "id": "scalable_llm_search_test_search_runlogicaltests",
-      "community": 20,
+      "community": 1,
       "norm_label": "runlogicaltests()"
     },
     {
@@ -756,7 +756,7 @@
       "source_file": "scratch/flush_redis.mjs",
       "source_location": "L1",
       "id": "scratch_flush_redis_mjs",
-      "community": 1,
+      "community": 11,
       "norm_label": "flush_redis.mjs"
     },
     {
@@ -765,7 +765,7 @@
       "source_file": "scratch/flush_redis.mjs",
       "source_location": "L3",
       "id": "scratch_flush_redis_run",
-      "community": 1,
+      "community": 11,
       "norm_label": "run()"
     },
     {
@@ -774,7 +774,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L1",
       "id": "scratch_manual_test_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "manual_test.js"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L3",
       "id": "scratch_manual_test_queries",
-      "community": 20,
+      "community": 1,
       "norm_label": "queries"
     },
     {
@@ -792,7 +792,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L17",
       "id": "scratch_manual_test_manualtest",
-      "community": 20,
+      "community": 1,
       "norm_label": "manualtest()"
     },
     {
@@ -981,7 +981,7 @@
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L1",
       "id": "scratch_re_normalize_all_mjs",
-      "community": 4,
+      "community": 20,
       "norm_label": "re_normalize_all.mjs"
     },
     {
@@ -990,7 +990,7 @@
       "source_file": "scratch/re_normalize_all.mjs",
       "source_location": "L5",
       "id": "scratch_re_normalize_all_run",
-      "community": 4,
+      "community": 20,
       "norm_label": "run()"
     },
     {
@@ -1035,7 +1035,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L1",
       "id": "scratch_test_new_pricing_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_new_pricing.js"
     },
     {
@@ -1044,7 +1044,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L4",
       "id": "scratch_test_new_pricing_testnewpricing",
-      "community": 20,
+      "community": 1,
       "norm_label": "testnewpricing()"
     },
     {
@@ -1152,7 +1152,7 @@
       "source_file": "scratch/test_rate_fetcher.mjs",
       "source_location": "L1",
       "id": "scratch_test_rate_fetcher_mjs",
-      "community": 1,
+      "community": 11,
       "norm_label": "test_rate_fetcher.mjs"
     },
     {
@@ -1161,7 +1161,7 @@
       "source_file": "scratch/test_rate_fetcher.mjs",
       "source_location": "L5",
       "id": "scratch_test_rate_fetcher_run",
-      "community": 1,
+      "community": 11,
       "norm_label": "run()"
     },
     {
@@ -1206,7 +1206,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L1",
       "id": "scratch_test_fix_session_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_fix_session.js"
     },
     {
@@ -1215,7 +1215,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L5",
       "id": "scratch_test_fix_session_test",
-      "community": 20,
+      "community": 1,
       "norm_label": "test()"
     },
     {
@@ -1278,7 +1278,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L1",
       "id": "scratch_test_typo_search_mjs",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_typo_search.mjs"
     },
     {
@@ -1287,7 +1287,7 @@
       "source_file": "scratch/test_typo_search.mjs",
       "source_location": "L4",
       "id": "scratch_test_typo_search_testtypo",
-      "community": 20,
+      "community": 1,
       "norm_label": "testtypo()"
     },
     {
@@ -1399,6 +1399,42 @@
       "norm_label": "runtest()"
     },
     {
+      "label": "fetch_specific_session.js",
+      "file_type": "code",
+      "source_file": "scratch/fetch_specific_session.js",
+      "source_location": "L1",
+      "id": "scratch_fetch_specific_session_js",
+      "community": 20,
+      "norm_label": "fetch_specific_session.js"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scratch/fetch_specific_session.js",
+      "source_location": "L3",
+      "id": "scratch_fetch_specific_session_main",
+      "community": 20,
+      "norm_label": "main()"
+    },
+    {
+      "label": "simulate_chat_session.js",
+      "file_type": "code",
+      "source_file": "scratch/simulate_chat_session.js",
+      "source_location": "L1",
+      "id": "scratch_simulate_chat_session_js",
+      "community": 1,
+      "norm_label": "simulate_chat_session.js"
+    },
+    {
+      "label": "simulate()",
+      "file_type": "code",
+      "source_file": "scratch/simulate_chat_session.js",
+      "source_location": "L3",
+      "id": "scratch_simulate_chat_session_simulate",
+      "community": 1,
+      "norm_label": "simulate()"
+    },
+    {
       "label": "check_daily_rates.mjs",
       "file_type": "code",
       "source_file": "scratch/check_daily_rates.mjs",
@@ -1440,7 +1476,7 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L1",
       "id": "scratch_test_analyze_sku_js",
-      "community": 4,
+      "community": 20,
       "norm_label": "test_analyze_sku.js"
     },
     {
@@ -1449,7 +1485,7 @@
       "source_file": "scratch/test_analyze_sku.js",
       "source_location": "L5",
       "id": "scratch_test_analyze_sku_testanalyze",
-      "community": 4,
+      "community": 20,
       "norm_label": "testanalyze()"
     },
     {
@@ -1570,6 +1606,24 @@
       "norm_label": "testmultimodal()"
     },
     {
+      "label": "fix_polki_db.js",
+      "file_type": "code",
+      "source_file": "scratch/fix_polki_db.js",
+      "source_location": "L1",
+      "id": "scratch_fix_polki_db_js",
+      "community": 20,
+      "norm_label": "fix_polki_db.js"
+    },
+    {
+      "label": "fixPolkiDb()",
+      "file_type": "code",
+      "source_file": "scratch/fix_polki_db.js",
+      "source_location": "L3",
+      "id": "scratch_fix_polki_db_fixpolkidb",
+      "community": 20,
+      "norm_label": "fixpolkidb()"
+    },
+    {
       "label": "check_target_sku.js",
       "file_type": "code",
       "source_file": "scratch/check_target_sku.js",
@@ -1611,7 +1665,7 @@
       "source_file": "scratch/test_session_context.js",
       "source_location": "L1",
       "id": "scratch_test_session_context_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "test_session_context.js"
     },
     {
@@ -1620,7 +1674,7 @@
       "source_file": "scratch/test_session_context.js",
       "source_location": "L4",
       "id": "scratch_test_session_context_runsessioncontextverification",
-      "community": 20,
+      "community": 1,
       "norm_label": "runsessioncontextverification()"
     },
     {
@@ -1780,7 +1834,7 @@
       "label": "handleRouting()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L51",
+      "source_location": "L61",
       "id": "public_app_handlerouting",
       "community": 18,
       "norm_label": "handlerouting()"
@@ -1789,7 +1843,7 @@
       "label": "setupEventListeners()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L116",
+      "source_location": "L126",
       "id": "public_app_setupeventlisteners",
       "community": 0,
       "norm_label": "setupeventlisteners()"
@@ -1798,7 +1852,7 @@
       "label": "startNewSession()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L247",
+      "source_location": "L257",
       "id": "public_app_startnewsession",
       "community": 18,
       "norm_label": "startnewsession()"
@@ -1807,7 +1861,7 @@
       "label": "ensureSession()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L263",
+      "source_location": "L273",
       "id": "public_app_ensuresession",
       "community": 9,
       "norm_label": "ensuresession()"
@@ -1816,7 +1870,7 @@
       "label": "handleSendMessage()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L289",
+      "source_location": "L299",
       "id": "public_app_handlesendmessage",
       "community": 9,
       "norm_label": "handlesendmessage()"
@@ -1825,7 +1879,7 @@
       "label": "appendUserBubble()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L328",
+      "source_location": "L338",
       "id": "public_app_appenduserbubble",
       "community": 9,
       "norm_label": "appenduserbubble()"
@@ -1834,7 +1888,7 @@
       "label": "appendTypingBubble()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L336",
+      "source_location": "L346",
       "id": "public_app_appendtypingbubble",
       "community": 9,
       "norm_label": "appendtypingbubble()"
@@ -1843,7 +1897,7 @@
       "label": "removeBubble()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L356",
+      "source_location": "L366",
       "id": "public_app_removebubble",
       "community": 9,
       "norm_label": "removebubble()"
@@ -1852,7 +1906,7 @@
       "label": "appendAIBubble()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L361",
+      "source_location": "L371",
       "id": "public_app_appendaibubble",
       "community": 9,
       "norm_label": "appendaibubble()"
@@ -1861,7 +1915,7 @@
       "label": "scrollToBottom()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L445",
+      "source_location": "L455",
       "id": "public_app_scrolltobottom",
       "community": 9,
       "norm_label": "scrolltobottom()"
@@ -1870,7 +1924,7 @@
       "label": "targetContent",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L463",
+      "source_location": "L473",
       "id": "public_app_targetcontent",
       "community": 0,
       "norm_label": "targetcontent"
@@ -1879,7 +1933,7 @@
       "label": "addSessionToSidebar()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L469",
+      "source_location": "L479",
       "id": "public_app_addsessiontosidebar",
       "community": 9,
       "norm_label": "addsessiontosidebar()"
@@ -1888,7 +1942,7 @@
       "label": "loadSession()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L483",
+      "source_location": "L493",
       "id": "public_app_loadsession",
       "community": 18,
       "norm_label": "loadsession()"
@@ -1897,7 +1951,7 @@
       "label": "loadAllSessions()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L524",
+      "source_location": "L534",
       "id": "public_app_loadallsessions",
       "community": 0,
       "norm_label": "loadallsessions()"
@@ -1906,7 +1960,7 @@
       "label": "loadLiveRates()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L549",
+      "source_location": "L559",
       "id": "public_app_loadliverates",
       "community": 7,
       "norm_label": "loadliverates()"
@@ -1915,7 +1969,7 @@
       "label": "updateHeaderRatesDisplay()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L553",
+      "source_location": "L563",
       "id": "public_app_updateheaderratesdisplay",
       "community": 7,
       "norm_label": "updateheaderratesdisplay()"
@@ -1924,16 +1978,25 @@
       "label": "startRecordingFlow()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L561",
+      "source_location": "L571",
       "id": "public_app_startrecordingflow",
       "community": 6,
       "norm_label": "startrecordingflow()"
     },
     {
+      "label": "startWasmRecordingFlow()",
+      "file_type": "code",
+      "source_file": "public/app.js",
+      "source_location": "L635",
+      "id": "public_app_startwasmrecordingflow",
+      "community": 6,
+      "norm_label": "startwasmrecordingflow()"
+    },
+    {
       "label": "stopRecordingFlow()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L599",
+      "source_location": "L666",
       "id": "public_app_stoprecordingflow",
       "community": 6,
       "norm_label": "stoprecordingflow()"
@@ -1942,7 +2005,7 @@
       "label": "encodeWAV()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L652",
+      "source_location": "L764",
       "id": "public_app_encodewav",
       "community": 6,
       "norm_label": "encodewav()"
@@ -1951,7 +2014,7 @@
       "label": "writeString()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L693",
+      "source_location": "L805",
       "id": "public_app_writestring",
       "community": 6,
       "norm_label": "writestring()"
@@ -1960,7 +2023,7 @@
       "label": "setupTabs()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L703",
+      "source_location": "L815",
       "id": "public_app_setuptabs",
       "community": 12,
       "norm_label": "setuptabs()"
@@ -1969,7 +2032,7 @@
       "label": "selectedAnalysisSkus",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L751",
+      "source_location": "L863",
       "id": "public_app_selectedanalysisskus",
       "community": 0,
       "norm_label": "selectedanalysisskus"
@@ -1978,7 +2041,7 @@
       "label": "bulkAnalyzingSkus",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L752",
+      "source_location": "L864",
       "id": "public_app_bulkanalyzingskus",
       "community": 0,
       "norm_label": "bulkanalyzingskus"
@@ -1987,7 +2050,7 @@
       "label": "setupAnalysisControls()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L755",
+      "source_location": "L867",
       "id": "public_app_setupanalysiscontrols",
       "community": 12,
       "norm_label": "setupanalysiscontrols()"
@@ -1996,7 +2059,7 @@
       "label": "filterAndRenderAnalysisProducts()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L859",
+      "source_location": "L971",
       "id": "public_app_filterandrenderanalysisproducts",
       "community": 10,
       "norm_label": "filterandrenderanalysisproducts()"
@@ -2005,7 +2068,7 @@
       "label": "renderFilteredListOnly()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L865",
+      "source_location": "L977",
       "id": "public_app_renderfilteredlistonly",
       "community": 10,
       "norm_label": "renderfilteredlistonly()"
@@ -2014,7 +2077,7 @@
       "label": "updateSelectAllCheckboxState()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L869",
+      "source_location": "L981",
       "id": "public_app_updateselectallcheckboxstate",
       "community": 10,
       "norm_label": "updateselectallcheckboxstate()"
@@ -2023,7 +2086,7 @@
       "label": "updateBulkActionButtonState()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L893",
+      "source_location": "L1005",
       "id": "public_app_updatebulkactionbuttonstate",
       "community": 10,
       "norm_label": "updatebulkactionbuttonstate()"
@@ -2032,7 +2095,7 @@
       "label": "queueForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L904",
+      "source_location": "L1016",
       "id": "public_app_queueforanalysis",
       "community": 10,
       "norm_label": "queueforanalysis()"
@@ -2041,7 +2104,7 @@
       "label": "loadProductsForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L951",
+      "source_location": "L1063",
       "id": "public_app_loadproductsforanalysis",
       "community": 10,
       "norm_label": "loadproductsforanalysis()"
@@ -2050,7 +2113,7 @@
       "label": "updatePaginationControls()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L986",
+      "source_location": "L1098",
       "id": "public_app_updatepaginationcontrols",
       "community": 10,
       "norm_label": "updatepaginationcontrols()"
@@ -2059,7 +2122,7 @@
       "label": "renderAnalysisProductList()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1002",
+      "source_location": "L1114",
       "id": "public_app_renderanalysisproductlist",
       "community": 10,
       "norm_label": "renderanalysisproductlist()"
@@ -2068,7 +2131,7 @@
       "label": "parseNarrativeToTabs()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1092",
+      "source_location": "L1204",
       "id": "public_app_parsenarrativetotabs",
       "community": 10,
       "norm_label": "parsenarrativetotabs()"
@@ -2077,7 +2140,7 @@
       "label": "selectProductForAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1241",
+      "source_location": "L1353",
       "id": "public_app_selectproductforanalysis",
       "community": 10,
       "norm_label": "selectproductforanalysis()"
@@ -2086,7 +2149,7 @@
       "label": "welcome",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1765",
+      "source_location": "L1877",
       "id": "public_app_welcome",
       "community": 0,
       "norm_label": "welcome"
@@ -2095,7 +2158,7 @@
       "label": "dossier",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1766",
+      "source_location": "L1878",
       "id": "public_app_dossier",
       "community": 0,
       "norm_label": "dossier"
@@ -2104,7 +2167,7 @@
       "label": "layout",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1771",
+      "source_location": "L1883",
       "id": "public_app_layout",
       "community": 0,
       "norm_label": "layout"
@@ -2113,7 +2176,7 @@
       "label": "target",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1796",
+      "source_location": "L1908",
       "id": "public_app_target",
       "community": 0,
       "norm_label": "target"
@@ -2122,7 +2185,7 @@
       "label": "inputEl",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1804",
+      "source_location": "L1916",
       "id": "public_app_inputel",
       "community": 0,
       "norm_label": "inputel"
@@ -2131,7 +2194,7 @@
       "label": "contentArea",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1856",
+      "source_location": "L1968",
       "id": "public_app_contentarea",
       "community": 0,
       "norm_label": "contentarea"
@@ -2140,7 +2203,7 @@
       "label": "p",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1886",
+      "source_location": "L1998",
       "id": "public_app_p",
       "community": 0,
       "norm_label": "p"
@@ -2149,7 +2212,7 @@
       "label": "poll()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1902",
+      "source_location": "L2014",
       "id": "public_app_poll",
       "community": 10,
       "norm_label": "poll()"
@@ -2158,7 +2221,7 @@
       "label": "triggerBulkAnalysis()",
       "file_type": "code",
       "source_file": "public/app.js",
-      "source_location": "L1967",
+      "source_location": "L2079",
       "id": "public_app_triggerbulkanalysis",
       "community": 10,
       "norm_label": "triggerbulkanalysis()"
@@ -2385,7 +2448,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L1",
       "id": "src_config_redis_js",
-      "community": 1,
+      "community": 11,
       "norm_label": "redis.js"
     },
     {
@@ -2394,7 +2457,7 @@
       "source_file": "src/config/redis.js",
       "source_location": "L29",
       "id": "config_redis_connectredis",
-      "community": 1,
+      "community": 11,
       "norm_label": "connectredis()"
     },
     {
@@ -2421,7 +2484,7 @@
       "source_file": "src/utils/sessionMerge.js",
       "source_location": "L1",
       "id": "src_utils_sessionmerge_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "sessionmerge.js"
     },
     {
@@ -2430,7 +2493,7 @@
       "source_file": "src/utils/sessionMerge.js",
       "source_location": "L6",
       "id": "utils_sessionmerge_mergefilters",
-      "community": 20,
+      "community": 1,
       "norm_label": "mergefilters()"
     },
     {
@@ -2500,7 +2563,7 @@
       "label": "loadOntologyAndSlang()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L544",
+      "source_location": "L556",
       "id": "utils_terminology_loadontologyandslang",
       "community": 15,
       "norm_label": "loadontologyandslang()"
@@ -2509,7 +2572,7 @@
       "label": "levenshteinDistance()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L553",
+      "source_location": "L565",
       "id": "utils_terminology_levenshteindistance",
       "community": 15,
       "norm_label": "levenshteindistance()"
@@ -2520,7 +2583,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L1",
       "id": "src_utils_querybuilder_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "querybuilder.js"
     },
     {
@@ -2529,7 +2592,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L2",
       "id": "utils_querybuilder_getrawsql",
-      "community": 20,
+      "community": 1,
       "norm_label": "getrawsql()"
     },
     {
@@ -2655,7 +2718,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L1",
       "id": "src_services_ratefetcherservice_js",
-      "community": 1,
+      "community": 11,
       "norm_label": "ratefetcherservice.js"
     },
     {
@@ -2664,7 +2727,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L21",
       "id": "services_ratefetcherservice_fetchlivegoldrate",
-      "community": 1,
+      "community": 11,
       "norm_label": "fetchlivegoldrate()"
     },
     {
@@ -2673,7 +2736,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L69",
       "id": "services_ratefetcherservice_getpreviousmetalrates",
-      "community": 1,
+      "community": 11,
       "norm_label": "getpreviousmetalrates()"
     },
     {
@@ -2682,7 +2745,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L102",
       "id": "services_ratefetcherservice_fetchandsyncrates",
-      "community": 1,
+      "community": 11,
       "norm_label": "fetchandsyncrates()"
     },
     {
@@ -2691,7 +2754,7 @@
       "source_file": "src/services/rateFetcherService.js",
       "source_location": "L169",
       "id": "services_ratefetcherservice_startratefetchercron",
-      "community": 1,
+      "community": 11,
       "norm_label": "startratefetchercron()"
     },
     {
@@ -2700,7 +2763,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L1",
       "id": "src_services_ingestionservice_js",
-      "community": 4,
+      "community": 20,
       "norm_label": "ingestionservice.js"
     },
     {
@@ -2709,7 +2772,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L13",
       "id": "services_ingestionservice_processproductanalysis",
-      "community": 4,
+      "community": 20,
       "norm_label": "processproductanalysis()"
     },
     {
@@ -2718,7 +2781,7 @@
       "source_file": "src/services/ingestionService.js",
       "source_location": "L127",
       "id": "services_ingestionservice_invalidatelocalsearchcache",
-      "community": 4,
+      "community": 20,
       "norm_label": "invalidatelocalsearchcache()"
     },
     {
@@ -2727,7 +2790,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L1",
       "id": "src_services_searchservice_js",
-      "community": 20,
+      "community": 1,
       "norm_label": "searchservice.js"
     },
     {
@@ -2736,7 +2799,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L9",
       "id": "services_searchservice_exclusion_metal_colors",
-      "community": 20,
+      "community": 1,
       "norm_label": "exclusion_metal_colors"
     },
     {
@@ -2745,7 +2808,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L24",
       "id": "services_searchservice_repairimageurls",
-      "community": 11,
+      "community": 1,
       "norm_label": "repairimageurls()"
     },
     {
@@ -2754,7 +2817,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L51",
       "id": "services_searchservice_getlatestmetalrates",
-      "community": 20,
+      "community": 1,
       "norm_label": "getlatestmetalrates()"
     },
     {
@@ -2763,7 +2826,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L111",
       "id": "services_searchservice_builddynamicpricesql",
-      "community": 20,
+      "community": 1,
       "norm_label": "builddynamicpricesql()"
     },
     {
@@ -2772,7 +2835,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L164",
       "id": "services_searchservice_searchcatalogue",
-      "community": 20,
+      "community": 1,
       "norm_label": "searchcatalogue()"
     },
     {
@@ -2844,7 +2907,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L176",
       "id": "services_discoveryservice_normalizeproductdata",
-      "community": 4,
+      "community": 20,
       "norm_label": "normalizeproductdata()"
     },
     {
@@ -3769,7 +3832,7 @@
       "label": "parseQuery",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L543",
+      "source_location": "L555",
       "id": "utils_terminology_parsequery",
       "community": 15,
       "norm_label": "parsequery"
@@ -3842,7 +3905,7 @@
       "file_type": "code",
       "source_file": "scratch/flush_redis.js",
       "source_location": "L1",
-      "community": 1,
+      "community": 11,
       "norm_label": "flush_redis.js",
       "id": "scratch_flush_redis_js"
     },
@@ -3851,7 +3914,7 @@
       "file_type": "code",
       "source_file": "scratch/flush_redis.js",
       "source_location": "L3",
-      "community": 1,
+      "community": 11,
       "norm_label": "flush()",
       "id": "scratch_flush_redis_flush"
     },
@@ -4004,7 +4067,7 @@
       "file_type": "code",
       "source_file": "src/config/redis.js",
       "source_location": "L13",
-      "community": 1,
+      "community": 11,
       "norm_label": "redisclient",
       "id": "config_redis_redisclient"
     },
@@ -4337,7 +4400,7 @@
       "file_type": "code",
       "source_file": "test_search.js",
       "source_location": "L10",
-      "community": 20,
+      "community": 1,
       "norm_label": "runtests()",
       "id": "scalable_llm_search_test_search_runtests"
     }
@@ -7330,6 +7393,92 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "scratch/fetch_specific_session.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_fetch_specific_session_js",
+      "target": "src_config_db_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fetch_specific_session.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_fetch_specific_session_js",
+      "target": "config_db_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fetch_specific_session.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_fetch_specific_session_js",
+      "target": "scratch_fetch_specific_session_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fetch_specific_session.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "scratch_fetch_specific_session_main",
+      "target": "config_db_query",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/simulate_chat_session.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_simulate_chat_session_js",
+      "target": "src_services_searchservice_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/simulate_chat_session.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "scratch_simulate_chat_session_js",
+      "target": "services_searchservice_searchcatalogue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/simulate_chat_session.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "scratch_simulate_chat_session_js",
+      "target": "scratch_simulate_chat_session_simulate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/simulate_chat_session.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "scratch_simulate_chat_session_simulate",
+      "target": "services_searchservice_searchcatalogue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "scratch/check_daily_rates.mjs",
       "source_location": "L1",
       "weight": 1.0,
@@ -7711,6 +7860,38 @@
       "confidence_score": 1.0,
       "source": "scratch_test_multimodal_js",
       "target": "scratch_test_multimodal_testmultimodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fix_polki_db.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_fix_polki_db_js",
+      "target": "src_config_db_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fix_polki_db.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_fix_polki_db_js",
+      "target": "config_db_pool"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scratch/fix_polki_db.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scratch_fix_polki_db_js",
+      "target": "scratch_fix_polki_db_fixpolkidb"
     },
     {
       "relation": "imports_from",
@@ -8192,6 +8373,16 @@
       "confidence_score": 1.0,
       "source": "public_app_js",
       "target": "public_app_startrecordingflow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "public/app.js",
+      "source_location": "L635",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_app_js",
+      "target": "public_app_startwasmrecordingflow"
     },
     {
       "relation": "contains",
@@ -8924,10 +9115,32 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "public/app.js",
+      "source_location": "L628",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_app_startrecordingflow",
+      "target": "public_app_startwasmrecordingflow"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "public/app.js",
       "source_location": "L231",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "public_app_startrecordingflow",
+      "target": "public_app_stoprecordingflow"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "public/app.js",
+      "source_location": "L662",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "public_app_startwasmrecordingflow",
       "target": "public_app_stoprecordingflow"
     },
     {
@@ -12505,5 +12718,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1e4f84f41333844bf553f75cd7b2693d76ac0edb"
+  "built_at_commit": "bdfe9c19437888d0a7a20d19893ec980073873e4"
 }

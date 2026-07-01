@@ -1,16 +1,16 @@
 # Graph Report - scalable-llm-search  (2026-07-01)
 
 ## Corpus Check
-- 74 files · ~50,279 words
+- 77 files · ~51,737 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 482 nodes · 779 edges · 39 communities (32 shown, 7 thin omitted)
+- 489 nodes · 793 edges · 39 communities (32 shown, 7 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1e4f84f4`
+- Built from commit: `bdfe9c19`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -52,8 +52,8 @@
 - [[_COMMUNITY_Community 38|Community 38]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `query()` - 69 edges
-2. `searchCatalogue()` - 23 edges
+1. `query()` - 71 edges
+2. `searchCatalogue()` - 25 edges
 3. `redisClient` - 14 edges
 4. `generateEmbedding()` - 13 edges
 5. `Accessibility Coding Guidelines` - 13 edges
@@ -64,8 +64,6 @@
 10. `getLatestMetalRates()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `testSessionQueryDirect()` --calls--> `searchCatalogue()`  [EXTRACTED]
-  scratch/test_session_query.js → src/services/searchService.js
 - `runChatIntegrationTest()` --calls--> `searchCatalogue()`  [INFERRED]
   test_chat_integration.js → src/services/searchService.js
 - `runLogicalTests()` --calls--> `searchCatalogue()`  [EXTRACTED]
@@ -74,6 +72,8 @@
   db_init.mjs → src/config/db.js
 - `check()` --calls--> `query()`  [EXTRACTED]
   check_synonyms.js → src/config/db.js
+- `run()` --calls--> `query()`  [EXTRACTED]
+  scratch/view_some_products.mjs → src/config/db.js
 
 ## Communities (39 total, 7 thin omitted)
 
@@ -82,20 +82,20 @@ Cohesion: 0.04
 Nodes (48): adminRatesPanel, adminToggleBtn, allAnalysisProducts, bulkAnalyzingSkus, chatHistoryList, chatMessagesContainer, chatSidebar, contentArea (+40 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.25
-Nodes (9): connectRedis(), redisClient, run(), run(), testSessionQueryDirect(), fetchAndSyncRates(), fetchLiveGoldRate(), getPreviousMetalRates() (+1 more)
+Cohesion: 0.14
+Nodes (17): runLogicalTests(), runTests(), manualTest(), queries, simulate(), test(), testNewPricing(), runSessionContextVerification() (+9 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.05
 Nodes (37): dependencies, ai, @ai-sdk/google, @bull-board/api, @bull-board/fastify, bullmq, dotenv, fastify (+29 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.16
-Nodes (16): getSslConfig(), generateEmbedding(), getEmbedder(), getTranscriber(), parseWav(), transcribeAudio(), preCache(), run() (+8 more)
+Cohesion: 0.23
+Nodes (11): getSslConfig(), generateEmbedding(), getEmbedder(), getTranscriber(), parseWav(), transcribeAudio(), preCache(), run() (+3 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.29
-Nodes (8): encodeWAV(), encodeWavHeader(), executeSearch(), renderNlpInsights(), renderProductsList(), startRecordingFlow(), stopRecordingFlow(), writeString()
+Cohesion: 0.28
+Nodes (9): encodeWAV(), encodeWavHeader(), executeSearch(), renderNlpInsights(), renderProductsList(), startRecordingFlow(), startWasmRecordingFlow(), stopRecordingFlow() (+1 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.50
@@ -111,7 +111,7 @@ Nodes (12): filterAndRenderAnalysisProducts(), loadProductsForAnalysis(), parseN
 
 ### Community 11 - "Community 11"
 Cohesion: 0.06
-Nodes (29): queueProductIngestion(), startIngestionWorker(), resources, content, dbToolRes, __dirname, endIdx, fastify (+21 more)
+Nodes (36): queueProductIngestion(), startIngestionWorker(), connectRedis(), redisClient, resources, content, dbToolRes, __dirname (+28 more)
 
 ### Community 14 - "Community 14"
 Cohesion: 0.07
@@ -134,8 +134,8 @@ Cohesion: 0.18
 Nodes (9): corrected, DB_SCHEMA, dictionary, dictionaryList, fuse, OFFICIAL_CATEGORIES, ontology, PROTECTED_WORDS (+1 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.06
-Nodes (37): pool, query(), check(), runChatIntegrationTest(), runLogicalTests(), runTests(), run(), run() (+29 more)
+Cohesion: 0.07
+Nodes (29): pool, query(), check(), runChatIntegrationTest(), run(), run(), checkChatHistory(), run() (+21 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.50
@@ -198,16 +198,16 @@ Nodes (5): 12. Testing Validations, Accessibility Coding Guidelines, Actionable 
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `query()` connect `Community 20` to `Community 1`, `Community 11`, `Community 4`, `Community 15`?**
-  _High betweenness centrality (0.061) - this node is a cross-community bridge._
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
 - **Why does `Accessibility Coding Guidelines` connect `Community 38` to `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 37`, `Community 24`, `Community 27`, `Community 29`, `Community 30`, `Community 31`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
-- **Why does `QueryBuilder` connect `Community 3` to `Community 20`, `Community 15`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `searchCatalogue()` connect `Community 1` to `Community 11`, `Community 20`, `Community 4`, `Community 15`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `searchCatalogue()` (e.g. with `runChatIntegrationTest()` and `mergeFilters()`) actually correct?**
   _`searchCatalogue()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `__filename`, `__dirname`, `fastify` to the rest of the system?**
   _196 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.038461538461538464 - nodes in this community are weakly interconnected._
-- **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.05263157894736842 - nodes in this community are weakly interconnected._
+- **Should `Community 1` be split into smaller, more focused modules?**
+  _Cohesion score 0.1402116402116402 - nodes in this community are weakly interconnected._

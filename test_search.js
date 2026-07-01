@@ -239,6 +239,32 @@ async function runLogicalTests() {
     }
 
 
+    // Stage 9: Polki Gemstone & Conversational Category Shift Verification
+    console.log('\n--- STAGE 9: Polki Gemstone & Conversational Category Shift Assertions ---');
+    
+    // Test Case I: Polki Search
+    const queryI = await searchCatalogue({ queryText: 'polki necklaces' });
+    assert(queryI.parsedFilters.matchedGemstones.includes('polki'), 'Query "polki necklaces" parsed "polki" as a matched gemstone.');
+    assert(queryI.products.length > 0, `Polki necklaces search successfully returned ${queryI.products.length} products.`);
+
+    // Test Case J: Session Filter Merging with Category Shift
+    const initialFilters = {
+      category: 'Necklaces',
+      gemstone: 'polki',
+      matchedGemstones: ['polki'],
+      visualSplits: { visible_polki_pct: 20.00 }
+    };
+    // Shifting to rings
+    const queryJ = await searchCatalogue({ 
+      queryText: 'rings for men', 
+      existingFilters: initialFilters 
+    });
+    assert(queryJ.parsedFilters.category === 'Finger Rings', 'Conversational shift correctly set category to "Finger Rings".');
+    assert(queryJ.parsedFilters.gender === 'Men', 'Conversational shift correctly set gender to "Men".');
+    assert(!queryJ.parsedFilters.matchedGemstones.includes('polki'), 'Category-shift protection successfully cleared the "polki" gemstone constraint.');
+    assert(Object.keys(queryJ.parsedFilters.visualSplits || {}).length === 0, 'Category-shift protection successfully cleared the previous visual splits.');
+
+
     // Summarize
     console.log('\n========================================================================');
     console.log(`               LOGICAL VERIFICATION RESULTS:`);
