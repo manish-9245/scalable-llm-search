@@ -679,21 +679,21 @@ function generateTemplateResponse(queryText, products, language = 'en-IN') {
     const parts = [];
     const purity = p.purity || '18K';
     
-    if (p.gold_weight_numeric || p.gold_weight) {
-      const weight = p.gold_weight_numeric || p.gold_weight;
-      parts.push(i18next.t('details.gold_weight', { purity, weight, lng: lang }));
+    const goldWeight = parseFloat(p.gold_weight_numeric || p.gold_weight || 0);
+    if (goldWeight > 0) {
+      parts.push(i18next.t('details.gold_weight', { purity, weight: goldWeight.toFixed(2), lng: lang }));
     } else {
       parts.push(i18next.t('details.gold', { purity, lng: lang }));
     }
 
-    if (p.diamond_weight_numeric || p.diamond_weight) {
-      const weight = p.diamond_weight_numeric || p.diamond_weight;
-      parts.push(i18next.t('details.diamonds', { weight, lng: lang }));
+    const diaWeight = parseFloat(p.diamond_weight_numeric || p.diamond_weight || 0);
+    if (diaWeight > 0) {
+      parts.push(i18next.t('details.diamonds', { weight: diaWeight.toFixed(2), lng: lang }));
     }
 
-    if (p.gemstone_weight_numeric && p.gemstone_weight_numeric > 0) {
-      const weight = p.gemstone_weight_numeric;
-      parts.push(i18next.t('details.gemstones', { weight, lng: lang }));
+    const gemWeight = parseFloat(p.gemstone_weight_numeric || 0);
+    if (gemWeight > 0) {
+      parts.push(i18next.t('details.gemstones', { weight: gemWeight.toFixed(2), lng: lang }));
     }
 
     if (parts.length === 0) {

@@ -2,18 +2,18 @@
 export const resources = {
   'en-IN': {
     translation: {
-      welcome: "Namaste and Welcome to Indriya. It is my pleasure to guide you through our private vault today.",
-      foundCount: "I have uncovered {{count}} exquisite, hand-selected masterpieces that match your precise criteria.",
-      curatedHighlights: "Here are some stunning highlights from our collection:",
-      cta: "Please tap on any product card below to open its materials dossier, analyze physical specifications, or view it on the official Indriya website.",
-      noResults: "I couldn't locate any direct matches in our active vault. However, I warmly invite you to explore our general collections of Gold, Diamonds, and custom-crafted traditional jewellery.",
+      welcome: "Welcome to Indriya. How may I assist you with our exquisite jewellery collection today?",
+      foundCount: "I found {{count}} exquisite pieces matching your request.",
+      curatedHighlights: "Top recommendations:",
+      cta: "Tap any product card below to view details or explore further.",
+      noResults: "I couldn't locate any direct matches. Please feel free to search our Gold, Diamonds, and custom-crafted traditional collections.",
       details: {
-        gold_weight: "crafted in {{purity}} gold ({{weight}}g)",
-        gold: "crafted in {{purity}} gold",
-        diamonds: "adorned with {{weight}}ct diamonds",
-        gemstones: "featuring {{weight}}ct gemstone details",
-        fallback: "a masterfully designed jewellery masterpiece",
-        item_format: "\n{{idx}}. {{name}} - {{details}}"
+        gold_weight: "{{purity}} Gold ({{weight}}g)",
+        gold: "{{purity}} Gold",
+        diamonds: "{{weight}}ct Diamonds",
+        gemstones: "{{weight}}ct Gemstones",
+        fallback: "Jewellery Piece",
+        item_format: "\n{{idx}}. {{name}} ({{price}}) - {{details}}"
       }
     }
   },
