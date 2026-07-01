@@ -2500,7 +2500,7 @@
       "label": "loadOntologyAndSlang()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L528",
+      "source_location": "L544",
       "id": "utils_terminology_loadontologyandslang",
       "community": 15,
       "norm_label": "loadontologyandslang()"
@@ -2509,7 +2509,7 @@
       "label": "levenshteinDistance()",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L537",
+      "source_location": "L553",
       "id": "utils_terminology_levenshteindistance",
       "community": 15,
       "norm_label": "levenshteindistance()"
@@ -3769,7 +3769,7 @@
       "label": "parseQuery",
       "file_type": "code",
       "source_file": "src/utils/terminology.js",
-      "source_location": "L527",
+      "source_location": "L543",
       "id": "utils_terminology_parsequery",
       "community": 15,
       "norm_label": "parsequery"
@@ -8369,9 +8369,9 @@
       "source_file": "public/app.js",
       "source_location": "L1765",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_app_js",
-      "target": "public_app_welcome",
-      "confidence_score": 1.0
+      "target": "public_app_welcome"
     },
     {
       "relation": "contains",
@@ -8379,9 +8379,9 @@
       "source_file": "public/app.js",
       "source_location": "L1766",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_app_js",
-      "target": "public_app_dossier",
-      "confidence_score": 1.0
+      "target": "public_app_dossier"
     },
     {
       "relation": "contains",
@@ -8389,9 +8389,9 @@
       "source_file": "public/app.js",
       "source_location": "L1771",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "public_app_js",
-      "target": "public_app_layout",
-      "confidence_score": 1.0
+      "target": "public_app_layout"
     },
     {
       "relation": "contains",
@@ -12505,5 +12505,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d3c03a793abe5a54de5ccfe91556a8362750c5ca"
+  "built_at_commit": "1e4f84f41333844bf553f75cd7b2693d76ac0edb"
 }

@@ -630,7 +630,7 @@ async function stopRecordingFlow() {
   searchInput.placeholder = "Listening and transcribing...";
 
   try {
-    const response = await fetch('/api/transcribe', {
+    const response = await fetch(`/api/transcribe?language=${encodeURIComponent(currentLanguage)}`, {
       method: 'POST',
       body: formData
     });

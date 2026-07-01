@@ -25,6 +25,22 @@ const PROTECTED_WORDS = new Set([
 export async function resolveTerminology(query, existingFilters = {}) {
     await loadSchema();
 
+    // Clean up common local ASR (Speech-to-Text) transcription errors/hallucinations
+    if (query && typeof query === 'string') {
+        const asrCorrections = [
+            { pattern: /\bclick on the sun sun\b/gi, replacement: 'necklace' },
+            { pattern: /\bsun sun\b/gi, replacement: 'necklace' },
+            { pattern: /\b50\/50\s*kk\b/gi, replacement: '50k' },
+            { pattern: /\b50\/50\s*k\b/gi, replacement: '50k' },
+            { pattern: /\b50\s+50\s*kk\b/gi, replacement: '50k' },
+            { pattern: /\b50\s+50\s*k\b/gi, replacement: '50k' }
+        ];
+
+        for (const correction of asrCorrections) {
+            query = query.replace(correction.pattern, correction.replacement);
+        }
+    }
+
     // 1. Dynamically build spelling correction dictionary from live schema & ontology
     const ontology = DB_SCHEMA.ontology || {};
     const dictionary = new Set();
