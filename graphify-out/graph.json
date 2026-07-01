@@ -243,7 +243,7 @@
       "source_file": "test_search.js",
       "source_location": "L1",
       "id": "test_search_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "test_search.js"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "test_search.js",
       "source_location": "L10",
       "id": "scalable_llm_search_test_search_runlogicaltests",
-      "community": 4,
+      "community": 1,
       "norm_label": "runlogicaltests()"
     },
     {
@@ -774,7 +774,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L1",
       "id": "scratch_manual_test_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "manual_test.js"
     },
     {
@@ -783,7 +783,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L3",
       "id": "scratch_manual_test_queries",
-      "community": 4,
+      "community": 1,
       "norm_label": "queries"
     },
     {
@@ -792,7 +792,7 @@
       "source_file": "scratch/manual_test.js",
       "source_location": "L17",
       "id": "scratch_manual_test_manualtest",
-      "community": 4,
+      "community": 1,
       "norm_label": "manualtest()"
     },
     {
@@ -846,7 +846,7 @@
       "source_file": "scratch/test_jewel_search_cases.js",
       "source_location": "L1",
       "id": "scratch_test_jewel_search_cases_js",
-      "community": 4,
+      "community": 15,
       "norm_label": "test_jewel_search_cases.js"
     },
     {
@@ -963,7 +963,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L1",
       "id": "scratch_test_agent_mjs",
-      "community": 15,
+      "community": 11,
       "norm_label": "test_agent.mjs"
     },
     {
@@ -972,7 +972,7 @@
       "source_file": "scratch/test_agent.mjs",
       "source_location": "L6",
       "id": "scratch_test_agent_testagent",
-      "community": 15,
+      "community": 11,
       "norm_label": "testagent()"
     },
     {
@@ -1035,7 +1035,7 @@
       "source_file": "scratch/simulate_rose_session.js",
       "source_location": "L1",
       "id": "scratch_simulate_rose_session_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "simulate_rose_session.js"
     },
     {
@@ -1044,7 +1044,7 @@
       "source_file": "scratch/simulate_rose_session.js",
       "source_location": "L3",
       "id": "scratch_simulate_rose_session_simulate",
-      "community": 4,
+      "community": 1,
       "norm_label": "simulate()"
     },
     {
@@ -1053,7 +1053,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L1",
       "id": "scratch_test_new_pricing_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "test_new_pricing.js"
     },
     {
@@ -1062,7 +1062,7 @@
       "source_file": "scratch/test_new_pricing.js",
       "source_location": "L4",
       "id": "scratch_test_new_pricing_testnewpricing",
-      "community": 3,
+      "community": 1,
       "norm_label": "testnewpricing()"
     },
     {
@@ -1224,7 +1224,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L1",
       "id": "scratch_test_fix_session_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "test_fix_session.js"
     },
     {
@@ -1233,7 +1233,7 @@
       "source_file": "scratch/test_fix_session.js",
       "source_location": "L5",
       "id": "scratch_test_fix_session_test",
-      "community": 3,
+      "community": 1,
       "norm_label": "test()"
     },
     {
@@ -1332,7 +1332,7 @@
       "source_file": "scratch/test_session_query.js",
       "source_location": "L1",
       "id": "scratch_test_session_query_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "test_session_query.js"
     },
     {
@@ -1341,7 +1341,7 @@
       "source_file": "scratch/test_session_query.js",
       "source_location": "L4",
       "id": "scratch_test_session_query_testsessionquerydirect",
-      "community": 4,
+      "community": 1,
       "norm_label": "testsessionquerydirect()"
     },
     {
@@ -1476,7 +1476,7 @@
       "source_file": "scratch/simulate_chat_session.js",
       "source_location": "L1",
       "id": "scratch_simulate_chat_session_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "simulate_chat_session.js"
     },
     {
@@ -1485,7 +1485,7 @@
       "source_file": "scratch/simulate_chat_session.js",
       "source_location": "L3",
       "id": "scratch_simulate_chat_session_simulate",
-      "community": 4,
+      "community": 1,
       "norm_label": "simulate()"
     },
     {
@@ -1665,7 +1665,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L1",
       "id": "scratch_test_multimodal_js",
-      "community": 15,
+      "community": 11,
       "norm_label": "test_multimodal.js"
     },
     {
@@ -1674,7 +1674,7 @@
       "source_file": "scratch/test_multimodal.js",
       "source_location": "L4",
       "id": "scratch_test_multimodal_testmultimodal",
-      "community": 15,
+      "community": 11,
       "norm_label": "testmultimodal()"
     },
     {
@@ -1737,7 +1737,7 @@
       "source_file": "scratch/test_session_context.js",
       "source_location": "L1",
       "id": "scratch_test_session_context_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "test_session_context.js"
     },
     {
@@ -1746,7 +1746,7 @@
       "source_file": "scratch/test_session_context.js",
       "source_location": "L4",
       "id": "scratch_test_session_context_runsessioncontextverification",
-      "community": 4,
+      "community": 1,
       "norm_label": "runsessioncontextverification()"
     },
     {
@@ -2331,7 +2331,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L1",
       "id": "src_mastra_agent_js",
-      "community": 15,
+      "community": 11,
       "norm_label": "agent.js"
     },
     {
@@ -2340,7 +2340,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L12",
       "id": "mastra_agent_storage",
-      "community": 15,
+      "community": 11,
       "norm_label": "storage"
     },
     {
@@ -2349,7 +2349,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L17",
       "id": "mastra_agent_google",
-      "community": 15,
+      "community": 11,
       "norm_label": "google"
     },
     {
@@ -2358,7 +2358,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L27",
       "id": "mastra_agent_ollama",
-      "community": 15,
+      "community": 11,
       "norm_label": "ollama"
     },
     {
@@ -2367,7 +2367,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L41",
       "id": "mastra_agent_indriyaanalyzer",
-      "community": 15,
+      "community": 11,
       "norm_label": "indriyaanalyzer"
     },
     {
@@ -2376,7 +2376,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L139",
       "id": "mastra_agent_chatagent",
-      "community": 15,
+      "community": 11,
       "norm_label": "chatagent"
     },
     {
@@ -2385,7 +2385,7 @@
       "source_file": "src/mastra/agent.js",
       "source_location": "L171",
       "id": "mastra_agent_mastra",
-      "community": 15,
+      "community": 11,
       "norm_label": "mastra"
     },
     {
@@ -2475,7 +2475,7 @@
       "source_file": "src/config/db.js",
       "source_location": "L15",
       "id": "config_db_getsslconfig",
-      "community": 20,
+      "community": 4,
       "norm_label": "getsslconfig()"
     },
     {
@@ -2556,7 +2556,7 @@
       "source_file": "src/utils/sessionMerge.js",
       "source_location": "L1",
       "id": "src_utils_sessionmerge_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "sessionmerge.js"
     },
     {
@@ -2565,7 +2565,7 @@
       "source_file": "src/utils/sessionMerge.js",
       "source_location": "L6",
       "id": "utils_sessionmerge_mergefilters",
-      "community": 4,
+      "community": 1,
       "norm_label": "mergefilters()"
     },
     {
@@ -2574,7 +2574,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L1",
       "id": "src_utils_logger_js",
-      "community": 11,
+      "community": 4,
       "norm_label": "logger.js"
     },
     {
@@ -2583,7 +2583,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L5",
       "id": "utils_logger_logger",
-      "community": 11,
+      "community": 4,
       "norm_label": "logger"
     },
     {
@@ -2601,7 +2601,7 @@
       "source_file": "src/utils/logger.js",
       "source_location": "L28",
       "id": "utils_logger_log",
-      "community": 11,
+      "community": 4,
       "norm_label": "log"
     },
     {
@@ -2655,7 +2655,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L1",
       "id": "src_utils_querybuilder_js",
-      "community": 3,
+      "community": 1,
       "norm_label": "querybuilder.js"
     },
     {
@@ -2664,7 +2664,7 @@
       "source_file": "src/utils/QueryBuilder.js",
       "source_location": "L2",
       "id": "utils_querybuilder_getrawsql",
-      "community": 3,
+      "community": 1,
       "norm_label": "getrawsql()"
     },
     {
@@ -2862,7 +2862,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L1",
       "id": "src_services_searchservice_js",
-      "community": 4,
+      "community": 1,
       "norm_label": "searchservice.js"
     },
     {
@@ -2871,7 +2871,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L9",
       "id": "services_searchservice_exclusion_metal_colors",
-      "community": 4,
+      "community": 1,
       "norm_label": "exclusion_metal_colors"
     },
     {
@@ -2880,7 +2880,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L24",
       "id": "services_searchservice_repairimageurls",
-      "community": 11,
+      "community": 1,
       "norm_label": "repairimageurls()"
     },
     {
@@ -2889,7 +2889,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L51",
       "id": "services_searchservice_getlatestmetalrates",
-      "community": 3,
+      "community": 1,
       "norm_label": "getlatestmetalrates()"
     },
     {
@@ -2898,7 +2898,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L111",
       "id": "services_searchservice_builddynamicpricesql",
-      "community": 3,
+      "community": 1,
       "norm_label": "builddynamicpricesql()"
     },
     {
@@ -2907,7 +2907,7 @@
       "source_file": "src/services/searchService.js",
       "source_location": "L164",
       "id": "services_searchservice_searchcatalogue",
-      "community": 4,
+      "community": 1,
       "norm_label": "searchcatalogue()"
     },
     {
@@ -2961,7 +2961,7 @@
       "source_file": "src/services/discoveryService.js",
       "source_location": "L153",
       "id": "services_discoveryservice_getdynamiccontext",
-      "community": 15,
+      "community": 11,
       "norm_label": "getdynamiccontext()"
     },
     {
@@ -3109,10 +3109,55 @@
       "norm_label": "multilingual voice & concierge routing"
     },
     {
-      "label": "4.5 Observability & Distributed Tracing",
+      "label": "4.1 Dynamic Database Mapping & Normalization Layer (Proactive Integrity)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": "L146",
+      "id": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
+      "community": 14,
+      "norm_label": "4.1 dynamic database mapping & normalization layer (proactive integrity)"
+    },
+    {
+      "label": "A. Singular vs. Plural Category Normalization",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L150",
+      "id": "scalable_llm_search_readme_a_singular_vs_plural_category_normalization",
+      "community": 14,
+      "norm_label": "a. singular vs. plural category normalization"
+    },
+    {
+      "label": "B. Wildcard Subcategory Matching",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L163",
+      "id": "scalable_llm_search_readme_b_wildcard_subcategory_matching",
+      "community": 14,
+      "norm_label": "b. wildcard subcategory matching"
+    },
+    {
+      "label": "C. Multi-Metal & Extended Purity Normalization",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L166",
+      "id": "scalable_llm_search_readme_c_multi_metal_extended_purity_normalization",
+      "community": 14,
+      "norm_label": "c. multi-metal & extended purity normalization"
+    },
+    {
+      "label": "D. Color Mappings & Dual-Tone Expansion",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L172",
+      "id": "scalable_llm_search_readme_d_color_mappings_dual_tone_expansion",
+      "community": 14,
+      "norm_label": "d. color mappings & dual-tone expansion"
+    },
+    {
+      "label": "4.5 Observability & Distributed Tracing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L182",
       "id": "scalable_llm_search_readme_4_5_observability_distributed_tracing",
       "community": 14,
       "norm_label": "4.5 observability & distributed tracing"
@@ -3121,7 +3166,7 @@
       "label": "A. BullMQ Dashboard",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L148",
+      "source_location": "L184",
       "id": "scalable_llm_search_readme_a_bullmq_dashboard",
       "community": 14,
       "norm_label": "a. bullmq dashboard"
@@ -3130,7 +3175,7 @@
       "label": "B. Trace-based Distributed Logging",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L154",
+      "source_location": "L190",
       "id": "scalable_llm_search_readme_b_trace_based_distributed_logging",
       "community": 14,
       "norm_label": "b. trace-based distributed logging"
@@ -3139,7 +3184,7 @@
       "label": "5. Database Schema",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L163",
+      "source_location": "L199",
       "id": "scalable_llm_search_readme_5_database_schema",
       "community": 14,
       "norm_label": "5. database schema"
@@ -3148,7 +3193,7 @@
       "label": "`daily_metal_rates`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L165",
+      "source_location": "L201",
       "id": "scalable_llm_search_readme_daily_metal_rates",
       "community": 14,
       "norm_label": "`daily_metal_rates`"
@@ -3157,7 +3202,7 @@
       "label": "`catalog_products`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L173",
+      "source_location": "L209",
       "id": "scalable_llm_search_readme_catalog_products",
       "community": 14,
       "norm_label": "`catalog_products`"
@@ -3166,7 +3211,7 @@
       "label": "`search_ontology`",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L184",
+      "source_location": "L220",
       "id": "scalable_llm_search_readme_search_ontology",
       "community": 14,
       "norm_label": "`search_ontology`"
@@ -3175,7 +3220,7 @@
       "label": "6. Setup & Deployment",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L189",
+      "source_location": "L225",
       "id": "scalable_llm_search_readme_6_setup_deployment",
       "community": 14,
       "norm_label": "6. setup & deployment"
@@ -3184,7 +3229,7 @@
       "label": "Prerequisites",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L191",
+      "source_location": "L227",
       "id": "scalable_llm_search_readme_prerequisites",
       "community": 14,
       "norm_label": "prerequisites"
@@ -3193,7 +3238,7 @@
       "label": "Installation",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L196",
+      "source_location": "L232",
       "id": "scalable_llm_search_readme_installation",
       "community": 14,
       "norm_label": "installation"
@@ -3202,7 +3247,7 @@
       "label": "6.2 Monitoring & Admin Tools",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L204",
+      "source_location": "L240",
       "id": "scalable_llm_search_readme_6_2_monitoring_admin_tools",
       "community": 14,
       "norm_label": "6.2 monitoring & admin tools"
@@ -3211,7 +3256,7 @@
       "label": "7. Performance Benchmarks",
       "file_type": "document",
       "source_file": "README.md",
-      "source_location": "L212",
+      "source_location": "L248",
       "id": "scalable_llm_search_readme_7_performance_benchmarks",
       "community": 14,
       "norm_label": "7. performance benchmarks"
@@ -3870,7 +3915,7 @@
       "source_file": "scratch/accessibility_guide.md",
       "source_location": "L455",
       "id": "scratch_accessibility_guide_12_testing_validations",
-      "community": 38,
+      "community": 34,
       "norm_label": "12. testing validations"
     },
     {
@@ -3879,7 +3924,7 @@
       "source_file": "scratch/accessibility_guide.md",
       "source_location": "L457",
       "id": "scratch_accessibility_guide_actionable_guidelines_457",
-      "community": 38,
+      "community": 34,
       "norm_label": "actionable guidelines"
     },
     {
@@ -3888,7 +3933,7 @@
       "source_file": "scratch/accessibility_guide.md",
       "source_location": "L459",
       "id": "scratch_accessibility_guide_dos_459",
-      "community": 38,
+      "community": 34,
       "norm_label": "dos"
     },
     {
@@ -3897,7 +3942,7 @@
       "source_file": "scratch/accessibility_guide.md",
       "source_location": "L464",
       "id": "scratch_accessibility_guide_don_ts_464",
-      "community": 38,
+      "community": 34,
       "norm_label": "don'ts"
     },
     {
@@ -4472,7 +4517,7 @@
       "file_type": "code",
       "source_file": "test_search.js",
       "source_location": "L10",
-      "community": 4,
+      "community": 1,
       "norm_label": "runtests()",
       "id": "scalable_llm_search_test_search_runtests"
     }
@@ -7468,9 +7513,9 @@
       "source_file": "scratch/analyze_db_mapping.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_analyze_db_mapping_js",
-      "target": "src_config_db_js",
-      "confidence_score": 1.0
+      "target": "src_config_db_js"
     },
     {
       "relation": "imports",
@@ -7479,9 +7524,9 @@
       "source_file": "scratch/analyze_db_mapping.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_analyze_db_mapping_js",
-      "target": "config_db_query",
-      "confidence_score": 1.0
+      "target": "config_db_query"
     },
     {
       "relation": "contains",
@@ -7489,9 +7534,9 @@
       "source_file": "scratch/analyze_db_mapping.js",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_analyze_db_mapping_js",
-      "target": "scratch_analyze_db_mapping_analyzemappings",
-      "confidence_score": 1.0
+      "target": "scratch_analyze_db_mapping_analyzemappings"
     },
     {
       "relation": "calls",
@@ -7500,9 +7545,9 @@
       "source_file": "scratch/analyze_db_mapping.js",
       "source_location": "L23",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scratch_analyze_db_mapping_analyzemappings",
-      "target": "config_db_query",
-      "confidence_score": 1.0
+      "target": "config_db_query"
     },
     {
       "relation": "imports_from",
@@ -11747,6 +11792,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_indriya_ai_the_luxury_concierge_engine",
+      "target": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L124",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -11902,6 +11957,46 @@
       "confidence_score": 1.0,
       "source": "scalable_llm_search_readme_c_local_query_voice_translation_no_llm_required",
       "target": "scalable_llm_search_readme_multilingual_voice_concierge_routing"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
+      "target": "scalable_llm_search_readme_a_singular_vs_plural_category_normalization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
+      "target": "scalable_llm_search_readme_b_wildcard_subcategory_matching",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
+      "target": "scalable_llm_search_readme_c_multi_metal_extended_purity_normalization",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "scalable_llm_search_readme_4_1_dynamic_database_mapping_normalization_layer_proactive_integrity",
+      "target": "scalable_llm_search_readme_d_color_mappings_dual_tone_expansion",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -12962,5 +13057,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "fe53a5376f85ee758e10c9a761c47613610ed048"
+  "built_at_commit": "f6db51d4a55ad36edbec05d6d9530e73566e1afc"
 }

@@ -139,7 +139,43 @@ All customer prompts undergo structured parsing in `src/utils/terminology.js` pr
 
 #### Multilingual Voice & Concierge Routing
 - **ASR Routing**: The `/api/transcribe` endpoint extracts the request locale query parameter (e.g., `?language=hi-IN`). It programmatically routes speech packets to native Whisper-base settings (e.g. `'hindi'`, `'tamil'`, `'telugu'`, `'kannada'`), producing highly accurate, language-specific transcriptions.
-- **`i18next` Concierge Templates**: Transcription outcomes are handed directly to the specialized localization compiler. Standard greetings, result statistics, product details, metal purity metrics, and CTAs are translated programmatically using highly structured language dictionaries inside [translations.js](file:///Users/manishtiwari/Documents/scalable-llm-search/src/config/translations.js).
+- **`i18next` Concierge Templates**: Transcription outcomes are handed directly to the specialized localization compiler. Standard greetings, result statistics, product details, metal purity metrics, and CTAs are translated programmatically using highly structured language dictionaries inside `translations.js`.
+
+---
+
+## 4.1 Dynamic Database Mapping & Normalization Layer (Proactive Integrity)
+
+To eliminate the "0 results" bug and prevent conversational context drop-offs, Indriya AI implements a zero-result safeguard layer directly matching NLP parser terminology with database values.
+
+### A. Singular vs. Plural Category Normalization
+The PostgreSQL database catalogs items under exact pluralized terms (e.g., `"Pendants"`, `"Bangles"`, `"Finger Rings"`). Direct NLP queries often supply singular forms (e.g., `"Bangle"`, `"Finger Ring"`). The mapping layer resolves these using relational `IN` clauses across all major catalog designations:
+* `"Necklaces" / "Necklace"`
+* `"Earrings" / "Earring" / "Drop Earrings"`
+* `"Coins" / "Coin"`
+* `"Bangles" / "Bangle"`
+* `"Pendants" / "Pendant"`
+* `"Bracelets" / "Bracelet"`
+* `"Chains" / "Chain"`
+* `"Finger Rings" / "Finger Ring" / "Rings" / "Ring"`
+* `"Mangalsutras" / "Mangalsutra"`
+* `"Nosepins" / "Nosepin"`
+
+### B. Wildcard Subcategory Matching
+To accommodate suffix differences (e.g., `"chandbalis"` vs. `"Chandbali"`), the query engine strips trailing `'s'` suffixes from parsed subcategories and utilizes a wildcard `ILIKE 'base_subcategory%'` query. This yields suffix-agnostic match precision on database indexes.
+
+### C. Multi-Metal & Extended Purity Normalization
+While gold is normalized across standard limits (14K, 18K, 22K, 24K/24KT), our catalog contains silver and platinum jewelry that requires tailored extraction and pricing rules:
+* **Silver Alignment**: Extracts silver queries (`'925'`, `'999'`) and maps them to database-specific purities `('925', '925S', '999S')`.
+* **Platinum Alignment**: Extracts platinum queries (`'pt'`) and maps them to catalog-specific values `('Pt 950', 'Pt+18K')`.
+* **Insulated Weight Calculations**: Silver and platinum weights are calibrated dynamically as `0` inside gold price anchors, preventing falling gold market rates from driving silver or platinum pricing to zero.
+
+### D. Color Mappings & Dual-Tone Expansion
+Metal colors frequently exhibit textual variations. The parser maps these directly onto database schemas:
+* **Rose Gold**: Translates the query term `'Rose'` to match `'Pink'` (the database enum).
+* **Dual-Tone Expansion**: Expands `'Dual-Tone'` queries to match any multi-tone variant: `('White and Pink', 'Yellow and White', 'Yellow and Pink', 'Dual-Tone')`.
+* **Tri-Tone Expansion**: Expands `'Tri-Tone'` queries to match `('Yellow Pink and White', 'Tri-Tone')`.
+* **Composite Yellow**: Uses `ILIKE 'Yellow%'` to catch standard and hybrid gold.
+* **Logical Negation Checks**: Exclusion negation algorithms employ strict negative wildcards (e.g. `NOT ILIKE '%Pink%'`) rather than simple exact inequality, ensuring rose gold items are correctly excluded when rose gold gold is negated.
 
 ---
 
