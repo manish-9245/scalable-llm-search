@@ -77,13 +77,60 @@ export class QueryBuilder {
         const op = isNegation ? 'NOT ILIKE' : 'ILIKE';
 
         if (key === 'category') {
-            const idx = this.addParam(value.includes('%') ? value : `%${value}%`);
-            this.addFilter(`p.category ${op} $${idx}`);
+            let normalizedCategory = value;
+            if (normalizedCategory === 'Necklaces' || normalizedCategory === 'Necklace') {
+                if (isNegation) {
+                    this.addFilter(`p.category NOT IN ('Necklaces', 'Necklace')`);
+                } else {
+                    this.addFilter(`p.category IN ('Necklaces', 'Necklace')`);
+                }
+            } else if (normalizedCategory === 'Earrings' || normalizedCategory === 'Drop Earrings') {
+                if (isNegation) {
+                    this.addFilter(`p.category NOT IN ('Earrings', 'Drop Earrings')`);
+                } else {
+                    this.addFilter(`p.category IN ('Earrings', 'Drop Earrings')`);
+                }
+            } else if (normalizedCategory === 'Coins' || normalizedCategory === 'Coin') {
+                if (isNegation) {
+                    this.addFilter(`p.category NOT IN ('Coin', 'Coins')`);
+                } else {
+                    this.addFilter(`p.category IN ('Coin', 'Coins')`);
+                }
+            } else {
+                const idx = this.addParam(normalizedCategory.includes('%') ? normalizedCategory : `%${normalizedCategory}%`);
+                this.addFilter(`p.category ${op} $${idx}`);
+            }
         } else if (key === 'metal_color') {
             let normalizedValue = value;
             if (value && value.toLowerCase() === 'rose') normalizedValue = 'Pink';
+            
+            if (normalizedValue === 'Dual-Tone') {
+                if (isNegation) {
+                    this.addFilter(`p.metal_color NOT IN ('White and Pink', 'Yellow and White', 'Yellow and Pink', 'Dual-Tone')`);
+                } else {
+                    this.addFilter(`p.metal_color IN ('White and Pink', 'Yellow and White', 'Yellow and Pink', 'Dual-Tone')`);
+                }
+            } else if (normalizedValue === 'Tri-Tone') {
+                if (isNegation) {
+                    this.addFilter(`p.metal_color NOT IN ('Yellow Pink and White', 'Tri-Tone')`);
+                } else {
+                    this.addFilter(`p.metal_color IN ('Yellow Pink and White', 'Tri-Tone')`);
+                }
+            } else if (normalizedValue === 'Yellow') {
+                if (isNegation) {
+                    this.addFilter(`p.metal_color NOT ILIKE 'Yellow%'`);
+                } else {
+                    this.addFilter(`p.metal_color ILIKE 'Yellow%'`);
+                }
+            } else {
+                const idx = this.addParam(normalizedValue.includes('%') ? normalizedValue : `%${normalizedValue}%`);
+                this.addFilter(`p.metal_color ${op} $${idx}`);
+            }
+        } else if (key === 'purity') {
+            let normalizedValue = value;
+            if (value === '24K') normalizedValue = '24KT';
             const idx = this.addParam(normalizedValue.includes('%') ? normalizedValue : `%${normalizedValue}%`);
-            this.addFilter(`p.metal_color ${op} $${idx}`);
+            this.addFilter(`p.purity ${op} $${idx}`);
         } else if (key === 'gender') {
             if (isNegation) {
                 const idx = this.addParam(value);

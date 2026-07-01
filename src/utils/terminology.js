@@ -489,10 +489,15 @@ export async function resolveTerminology(query, existingFilters = {}) {
     });
 
 
-    // Metal Purity Resolution (14K, 18K, 22K, 24K and variations, plus typo forms like 18000)
-    const purityMatches = lowerQuery.match(/\b(14|18|22|24)\s*(?:k|kt|karat|carat|ct)?s?\b/i);
+    // Metal Purity Resolution (14K, 18K, 22K, 24K and variations, silver 925/999, platinum Pt, plus typo forms like 18000)
+    const purityMatches = lowerQuery.match(/\b(14|18|22|24|925|999)\s*(?:k|kt|karat|carat|ct|s)?s?\b|\b(pt)\b/i);
     if (purityMatches) {
-        result.purity = purityMatches[1] + 'K';
+        if (purityMatches[1]) {
+            result.purity = ['925', '999'].includes(purityMatches[1]) ? purityMatches[1] : purityMatches[1] + 'K';
+        } else if (purityMatches[2]) {
+            result.purity = 'Pt';
+        }
+
     } else if (/\b18000\s*(?:gold)?\b/.test(lowerQuery) && result.maxPrice !== 18000 && result.minPrice !== 18000) {
         result.purity = '18K';
     } else if (/\b22000\s*(?:gold)?\b/.test(lowerQuery) && result.maxPrice !== 22000 && result.minPrice !== 22000) {

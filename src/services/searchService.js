@@ -128,9 +128,9 @@ export function buildDynamicPriceSQL(rates) {
         -- Material metal cost
         CASE 
           WHEN purity = '22K' THEN ${effectiveGoldWeight} * ${rates['22K'] || 0}
-          WHEN purity = '18K' THEN ${effectiveGoldWeight} * ${rates['18K'] || 0}
+          WHEN purity = '18K' OR purity = 'Pt+18K' THEN ${effectiveGoldWeight} * ${rates['18K'] || 0}
           WHEN purity = '14K' THEN ${effectiveGoldWeight} * ${rates['14K'] || 0}
-          WHEN purity = '24K' THEN ${effectiveGoldWeight} * ${rates['24K'] || 0}
+          WHEN purity IN ('24K', '24KT') THEN ${effectiveGoldWeight} * ${rates['24K'] || 0}
           ELSE ${effectiveGoldWeight} * ${rates['22K'] || 0}
         END +
         (COALESCE(platinum_weight_numeric, 0) * ${rates['Platinum'] || 0}) +
@@ -206,24 +206,67 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
   }
 
   if (parsed.category) {
-    filters.push(`category = $${paramCounter++}`);
-    bindings.push(parsed.category);
+    let normalizedCategory = parsed.category;
+    if (normalizedCategory === 'Necklaces' || normalizedCategory === 'Necklace') {
+      filters.push(`category IN ('Necklaces', 'Necklace')`);
+    } else if (normalizedCategory === 'Earrings' || normalizedCategory === 'Earring' || normalizedCategory === 'Drop Earrings') {
+      filters.push(`category IN ('Earrings', 'Earring', 'Drop Earrings')`);
+    } else if (normalizedCategory === 'Coins' || normalizedCategory === 'Coin') {
+      filters.push(`category IN ('Coin', 'Coins')`);
+    } else if (normalizedCategory === 'Bangles' || normalizedCategory === 'Bangle') {
+      filters.push(`category IN ('Bangles', 'Bangle')`);
+    } else if (normalizedCategory === 'Pendants' || normalizedCategory === 'Pendant') {
+      filters.push(`category IN ('Pendants', 'Pendant')`);
+    } else if (normalizedCategory === 'Bracelets' || normalizedCategory === 'Bracelet') {
+      filters.push(`category IN ('Bracelets', 'Bracelet')`);
+    } else if (normalizedCategory === 'Chains' || normalizedCategory === 'Chain') {
+      filters.push(`category IN ('Chains', 'Chain')`);
+    } else if (normalizedCategory === 'Finger Rings' || normalizedCategory === 'Finger Ring' || normalizedCategory === 'Rings' || normalizedCategory === 'Ring') {
+      filters.push(`category IN ('Finger Rings', 'Finger Ring', 'Rings', 'Ring')`);
+    } else if (normalizedCategory === 'Mangalsutras' || normalizedCategory === 'Mangalsutra') {
+      filters.push(`category IN ('Mangalsutras', 'Mangalsutra')`);
+    } else if (normalizedCategory === 'Nosepins' || normalizedCategory === 'Nosepin') {
+      filters.push(`category IN ('Nosepins', 'Nosepin')`);
+    } else {
+      filters.push(`category = $${paramCounter++}`);
+      bindings.push(normalizedCategory);
+    }
   }
   if (parsed.subCategory) {
-    filters.push(`sub_category = $${paramCounter++}`);
-    bindings.push(parsed.subCategory);
+    // Robust subCategory matching for plural/singular cases using ILIKE and wildcards
+    const baseSub = parsed.subCategory.endsWith('s') ? parsed.subCategory.slice(0, -1) : parsed.subCategory;
+    filters.push(`sub_category ILIKE $${paramCounter++}`);
+    bindings.push(`${baseSub}%`);
   }
   if (parsed.purity) {
-    filters.push(`purity = $${paramCounter++}`);
-    bindings.push(parsed.purity);
+    let normalizedPurity = parsed.purity;
+    if (normalizedPurity === '24K') {
+      filters.push(`purity IN ('24K', '24KT')`);
+    } else if (normalizedPurity === '925') {
+      filters.push(`purity IN ('925', '925S', '999S')`);
+    } else if (normalizedPurity.toLowerCase().includes('pt')) {
+      filters.push(`purity IN ('Pt 950', 'Pt+18K')`);
+    } else {
+      filters.push(`purity = $${paramCounter++}`);
+      bindings.push(normalizedPurity);
+    }
   }
   if (parsed.metalColor) {
     let normalizedColor = parsed.metalColor;
     if (normalizedColor.toLowerCase() === 'rose') {
       normalizedColor = 'Pink';
     }
-    filters.push(`metal_color = $${paramCounter++}`);
-    bindings.push(normalizedColor);
+    
+    if (normalizedColor === 'Dual-Tone') {
+      filters.push(`metal_color IN ('White and Pink', 'Yellow and White', 'Yellow and Pink', 'Dual-Tone')`);
+    } else if (normalizedColor === 'Tri-Tone') {
+      filters.push(`metal_color IN ('Yellow Pink and White', 'Tri-Tone')`);
+    } else if (normalizedColor === 'Yellow') {
+      filters.push(`metal_color ILIKE 'Yellow%'`);
+    } else {
+      filters.push(`metal_color = $${paramCounter++}`);
+      bindings.push(normalizedColor);
+    }
   }
   if (parsed.occasion) {
     filters.push(`(occasion ILIKE $${paramCounter} OR EXISTS (SELECT 1 FROM product_occasions WHERE product_id = catalog_products.id AND occasion ILIKE $${paramCounter}))`);
@@ -263,8 +306,17 @@ export async function searchCatalogue({ queryText, limit = 12, existingFilters =
       } else if (ex === 'silver') {
         filters.push(`silver_weight_numeric = 0`);
       } else if (EXCLUSION_METAL_COLORS[lowerEx]) {
-        filters.push(`metal_color != $${paramCounter++}`);
-        bindings.push(EXCLUSION_METAL_COLORS[lowerEx]);
+        const color = EXCLUSION_METAL_COLORS[lowerEx];
+        if (color === 'Yellow') {
+          filters.push(`metal_color NOT ILIKE '%Yellow%'`);
+        } else if (color === 'Pink') {
+          filters.push(`metal_color NOT ILIKE '%Pink%' AND metal_color NOT ILIKE '%Rose%'`);
+        } else if (color === 'White') {
+          filters.push(`metal_color NOT ILIKE '%White%'`);
+        } else {
+          filters.push(`metal_color != $${paramCounter++}`);
+          bindings.push(color);
+        }
       } else {
         filters.push(`NOT (all_gemstones_array @> ARRAY[$${paramCounter++}]::text[])`);
         bindings.push(ex);
